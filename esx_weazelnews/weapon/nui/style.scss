@@ -1,0 +1,230 @@
+$base-hue: 0deg;
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    //background-image: url(assets/gameplay.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.bg-effect {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #242629;
+    opacity: .8;
+    z-index: -1;
+}
+
+.gfxgunmenu-main-contain {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 15vh;
+    transform: translateY(-50%);
+    width: 95.0vh;
+    height: 59.0vh;
+    background-color: transparent;
+
+    .header-contain {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 3.8vh;
+        background-color: rgba(#222324, .88);
+
+        h1 {
+            position: absolute;
+            left: 1.5vh;
+            color: #5AC55A;
+            font-family: Bai Jamjuree;
+            font-size: 2.2vh;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.63px;
+
+            filter: hue-rotate($base-hue);
+        }
+
+        p {
+            position: relative;
+            font-size: 1.8vh;
+            font-weight: 600;
+            color: #A2A2A3;
+            margin: 0;
+
+            strong {
+                font-weight: 800 !important;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .content-contain {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 54.8vh;
+        background-color: rgba(#222324, .88);
+        z-index: 2;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .1;
+        }
+
+
+        .content-guns-boxs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            width: 17.1vh;
+            height: 100%;
+
+            border-right: 1px solid rgba($color: #333333, $alpha: 0.4);
+
+
+            .boxs-header {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 3vh;
+
+                p {
+                    position: relative;
+                    font-size: 1.6vh;
+                    font-weight: 700;
+                    margin: 0vh 0vh 0vh 1.8vh;
+                    color: #BBBBBB;
+                }
+
+                h1 {
+                    width: 100%;
+                    text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #CCCCCC;
+                    font-family: Oswald;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.66px;
+                    margin: 0;
+                }
+            }
+
+            &:nth-child(1) {
+                width: 17.1vh;
+            }
+
+            &:nth-child(2) {
+                width: 17.0vh;
+            }
+
+            &:nth-child(3) {
+                width: 20.8vh;
+            }
+
+            &:nth-child(4) {
+                width: 22.7vh;
+            }
+
+            &:nth-child(5) {
+                width: 17.0vh;
+            }
+
+            .gun-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 90%;
+                height: 9vh;
+
+                border-radius: 6px;
+                margin-top: 1vh;
+                background: rgba(41, 81, 40, .8);
+                border: 1px solid black;
+                backdrop-filter: blur(4px);
+                filter: hue-rotate($base-hue);
+
+                .item-list-number {
+                    position: absolute;
+                    top: .5vh;
+                    left: .7vh;
+                    color: #8C8C8C;
+                    font-family: Inclusive Sans;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    margin: 0;
+                }
+
+                .item-list-name {
+                    position: absolute;
+                    top: .5vh;
+                    right: .7vh;
+                    color: #5AC55A;
+                    font-family: Bai Jamjuree;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: -0.42px;
+                    margin: 0;
+                }
+                .item-list-price {
+                    position: absolute;
+                    bottom: .5vh;
+                    right: .7vh;
+                    color: #5AC55A;
+                    text-shadow: 0.800000011920929px 0.800000011920929px 0px #000;
+                    font-family: Bai Jamjuree;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 0;
+                }
+
+                img {
+                    position: relative;
+                    height: 5vh;
+                    object-fit: scale-down;
+                    opacity: 100%;
+                }
+            }
+        }
+    }
+}
+
+.gun-menu-bgeffect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

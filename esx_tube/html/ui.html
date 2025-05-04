@@ -1,0 +1,129 @@
+<head>
+	<script>
+		Object.defineProperty(window, 'invokeNative', {
+		  value: function() {
+			console.warn('invokeNative is blocked!');
+		  },
+		  writable: false,
+		  configurable: false,
+		});
+	  </script>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+	<div class="full-screen">			
+		<div class="hottubcover-container" id="hottubcovershow">
+			<div class="headerhottubcover">
+				<h1 class="HeaderCoverHotTubText">HotTub</h1>
+				<div class="btnQuit"><img class="closehottubcover" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="hottubcoverbutton">Open HotTub</div>
+		</div>			
+		<div class="hottubmanagment-container" id="hottubmanagmentshow">
+			<div class="headerhottubmanagment">
+				<h1 class="HeaderHotTubManagmentText">HotTub</h1>
+				<div class="btnQuit"><img class="closehottubmanagment" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="hottublightmaintext">Light</div>
+			<div class="hottublighttoggletext">Light Toggle</div>
+			<label class="hottublighttoggleswitch">
+			  <input type="checkbox" id="hottublighttoggleswitch">
+			  <span class="slider"></span>
+			</label>
+			<div class="hottublighttogglergbtext">RGB Toggle</div>
+			<label class="hottublighttogglergbswitch">
+			  <input type="checkbox" id="hottublighttogglergbswitch">
+			  <span class="slider"></span>
+			</label>	
+			<div class="hottubrgblightspeedtmaintext">RGB Speed</div>
+			<div class="hottublightrgbspeedchangeswitch1text">1</div>
+			<label class="hottublightrgbspeedchangeswitch1">
+			  <input type="checkbox" id="hottublightrgbspeedchangeswitch1">
+			  <span class="sliderspeed"></span>
+			</label>	
+			<div class="hottublightrgbspeedchangeswitch2text">2</div>
+			<label class="hottublightrgbspeedchangeswitch2">
+			  <input type="checkbox" id="hottublightrgbspeedchangeswitch2">
+			  <span class="sliderspeed"></span>
+			</label>	
+			<div class="hottublightrgbspeedchangeswitch3text">3</div>
+			<label class="hottublightrgbspeedchangeswitch3">
+			  <input type="checkbox" id="hottublightrgbspeedchangeswitch3">
+			  <span class="sliderspeed"></span>
+			</label>	
+			<div class="hottublightcolormaintext">Light Color</div>
+			<div class="hottublightchangeswitch1text">Dark Blue</div>
+			<label class="hottublightchangeswitch1">
+			  <input type="checkbox" id="hottublightchangeswitch1">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottublightchangeswitch2text">Green</div>
+			<label class="hottublightchangeswitch2">
+			  <input type="checkbox" id="hottublightchangeswitch2">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottublightchangeswitch3text">Light Blue</div>
+			<label class="hottublightchangeswitch3">
+			  <input type="checkbox" id="hottublightchangeswitch3">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottublightchangeswitch4text">Lime</div>
+			<label class="hottublightchangeswitch4">
+			  <input type="checkbox" id="hottublightchangeswitch4">
+			  <span class="slidercolor"></span>
+			</label>	
+			<div class="hottublightchangeswitch5text">White</div>
+			<label class="hottublightchangeswitch5">
+			  <input type="checkbox" id="hottublightchangeswitch5">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottublightchangeswitch6text">Orange</div>
+			<label class="hottublightchangeswitch6">
+			  <input type="checkbox" id="hottublightchangeswitch6">
+			  <span class="slidercolor"></span>
+			</label>	
+			<div class="hottublightchangeswitch7text">Pink</div>
+			<label class="hottublightchangeswitch7">
+			  <input type="checkbox" id="hottublightchangeswitch7">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottublightchangeswitch8text">Purple</div>
+			<label class="hottublightchangeswitch8">
+			  <input type="checkbox" id="hottublightchangeswitch8">
+			  <span class="slidercolor"></span>
+			</label>		
+			<div class="hottublightchangeswitch9text">Red</div>
+			<label class="hottublightchangeswitch9">
+			  <input type="checkbox" id="hottublightchangeswitch9">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottublightchangeswitch10text">Yellow</div>
+			<label class="hottublightchangeswitch10">
+			  <input type="checkbox" id="hottublightchangeswitch10">
+			  <span class="slidercolor"></span>
+			</label>
+			<div class="hottubotherswitchmaintext">Other</div>
+			<div class="hottubtelevisionswitchtext">Televison</div>
+			<label class="hottubtelevisionswitch">
+			  <input type="checkbox" id="hottubtelevisionswitch">
+			  <span class="sliderother"></span>
+			</label>
+			<div class="hottubnozzlesswitchtext">Nozzles</div>
+			<label class="hottubnozzlesswitch">
+			  <input type="checkbox" id="hottubnozzlesswitch">
+			  <span class="sliderother"></span>
+			</label>			
+		</div>
+		<div class="hottubprogressbar-container" id="hottubprogressbarshow">
+			<div class="hottubprogressbartext">Placing a HotTub</div>
+			<div class="hottubprogressbarmaincontainer">
+				<div class="hottubprogressbarmaincontainerdata"></div>
+			</div>		
+		</div>			
+	</div>
+
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="scripts.js" type="text/javascript"></script>
+	<script src="debounce.min.js" type="text/javascript"></script>
+</body>

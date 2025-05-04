@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+	font-weight: 300;
+    overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+	user-select: none;
+    color: rgb(202, 202, 202);
+}
+@import url('https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css');
+
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(BebasNeueBold.ttf);
+}
+html {
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+body{
+display: none;
+color: #a8a8aa00;  
+}
+.card { 
+    width: 457px;
+	height: 272px;
+	margin: 0;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+	background-color: rgba(0, 0, 0, 0.884);
+    border-radius: 10%;
+	border: 3px solid rgba(0, 0, 0, 0.849)
+}
+.card img {
+    max-width: 100%;
+    height: 100%;
+}
+.Name {
+    width: 100px;
+	height: 20px;
+    background-color: rgba(167, 167, 167, 0);
+    margin: 0;
+    font-size: 20px;
+	position: absolute;
+    top: 5%;
+	left: 5%;
+    color: rgb(255, 255, 255);
+
+}
+.citizen {
+    width: 100px;
+	height: 20px;
+    background-color: rgba(167, 167, 167, 0);
+    margin: 0;
+	position: absolute;
+    top: 25%;
+    font-size: 20px;
+	left: 5%;
+    color: rgb(255, 255, 255);
+
+}
+.showname { 
+    width: 100px;
+	height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+    top: 17%;
+	left: 6%;
+    color: rgb(202, 202, 202);
+}
+.showid { 
+    width: 100px;
+	height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+	position: absolute;
+    top: 37%;
+	left: 6%;
+    color: rgb(202, 202, 202);
+}
+.country { 
+    width: 100px;
+	height: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+	position: absolute;
+   
+    top: 67%;
+	left: 6%;
+    color: rgb(255, 255, 255);
+}
+.country1{ 
+    width: 100px;
+	height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+	position: absolute;
+    top: 78%;
+    left: 6%;
+    color: rgb(202, 202, 202);
+}
+.job {
+    width: 100px;
+	height: 20px;
+    font-family: 'Times New Roman', sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    font-size: 20px;
+	position: absolute;
+    top: 45%;
+	left: 6%;
+    color: rgb(255, 255, 255);
+ }
+ .showjob { 
+    width: 100px;
+	height: 20px;
+    font-family: Arial, Helvetica, sans-serif;  
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+	position: absolute;
+    top: 57%;
+	left: 6%;
+    color: rgb(202, 202, 202);
+ }
+ .imagepd {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagepd img {
+     max-width: 100%;
+ }
+
+
+ .imagesh {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+    display: none;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagesh img {
+     max-width: 100%;
+ }
+
+
+ .imagemd {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagemd img {
+     max-width: 100%;
+ }
+
+ .imagemecano {
+    width: 200px;
+    display: none;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagemecano img {
+     max-width: 100%;
+ }
+
+
+ .imagetaxi {
+    display: none;
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagetaxi img {
+     max-width: 100%;
+ }
+
+
+
+
+ .other {
+    display: none;
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .other img {
+     max-width: 100%;
+ }
+
+
+
+ .imageforces {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imageforces img {
+     max-width: 100%;
+ }
+
+ .imagefbi {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagefbi img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }
+
+ .imageweazel {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imageweazel img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }
+
+ .imagejustice {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagejustice img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }
+
+ .imagebahamas {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagebahamas img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }
+
+ .imagecatcafe {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagecatcafe img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }
+
+ .imagebenny {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagebenny img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }
+
+ .imagemedic {
+    width: 200px;
+	height: 200px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 77%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+    display: none;
+	z-index: 9999999; 
+  /* background-image: url(https://cdn.discordapp.com/attachments/978371309849428028/983735785423515678/idcard_custom.png);*/
+
+ }
+ .imagemedic img {
+     max-width: 100%;
+     width: 100% ; 
+     height: 100%;
+ }

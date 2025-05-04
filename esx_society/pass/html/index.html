@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            Object.defineProperty(window, 'invokeNative', {
+              value: function() {
+                console.warn('invokeNative is blocked!');
+              },
+              writable: false,
+              configurable: false,
+            });
+          </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <title>Fully Custom Battle Pass UI</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body style="display: none;">
+        <div id="app">
+            <transition mode="in-out" name="next-level" enter-active-class="animate__animated animate__bounceIn" leave-active-class="animate__animated animate__bounceOut">
+                <div class="circle-container rela" v-if="showLevelUp">
+                    <div class="circle small font-sans  ">
+                        <div class="circle-box flex items-center justify-center text-lg text-white font-bold">
+                            LEVEL UP
+                        </div>
+                        <div class="level-box flex items-center justify-center font-extrabold text-xl text-white">
+                            {{this.currentLevel}}
+                        </div>
+                    </div>
+                </div>
+            </transition>
+
+            <div class="item-box-container">
+                <transition name="next-level" enter-active-class="animate__animated animate__bounceInLeft" leave-active-class="animate__animated animate__backOutLeft" >
+                    <div class="item-box rounded my-8 w-48 h-40 flex flex-col items-center justify-around" v-if="showLevelUp && !IsPlayerInMaxLevel">
+                        <img class="w-28 h-28" style="width:50%" :src="'./assets/' + nextReward.image">
+                        <p class="font-bold text-xl text-white">Next level reward</p>
+                    </div>
+                </transition>
+                <transition name="avaliable-item" enter-active-class="animate__animated animate__bounceInLeft" leave-active-class="animate__animated animate__backOutLeft">
+                    <div class="item-box rounded w-48 h-40 flex flex-col items-center justify-around"  v-if="showLevelUp">
+                        <img class="w-28 h-28" style="width:50%" :src="'./assets/' + currentReward.image">
+                        <p class="font-bold text-xl text-white">Now it's avaliable!</p>
+                    </div>
+                </transition>
+            </div>
+
+            <div class="main-panel flex flex-col h-full items-center" v-if="show">
+                <div class="w-full" style="height: 5%;">
+                    <button @click="CloseUI" class="w-full h-full bg-gray-600 text-white hover:opacity-80 uppercase">Close</button>
+                </div>
+
+                <div class="w-3/12 flex flex-col" style="height: 28%;">
+                    <div class="my-auto w-full">
+                        <div class="flex justify-center mb-4">
+                            <h1 class="font-bold text-3xl text-white">Season {{season}}</h1>
+                        </div>
+                        <div class="bg-gray-600 flex flex-col items-center justify-center p-2 rounded-2xl text-white mb-2">
+                            <p class="text-center">Remaining Days</p>
+                            <p class="text-sm" id="time-display">{{ time != null ? time : '0 Day, 0 hour, 0 minute, 0 second'}}</p>
+                            <p class="text-center text-white text-xs mt-1">Claimed Rewards {{takenRewards}}/{{maximumItems}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex flex-wrap content-start" style="height: 67%;">
+                    <div class="w-full flex flex-nowrap justify-center" style="height: 12%;">
+                        <button v-if="itemToClaim != null && itemToClaim != -1" @click="ClaimReward" class="my-auto bg-blue-600 px-5 p-2 text-white rounded-3xl uppercase hover:opacity-80">Claim Reward</button>
+                        <button v-else-if="itemToClaim == -1" class="my-auto bg-green-600 px-5 p-2 text-white rounded-3xl uppercase pointer-events-none">Already Claimed</button>
+                    </div>
+                    <div class="w-full px-2 py-4 flex flex-nowrap bg-gray-800 bg-opacity-80" style="height: 80%;">
+                        <div class="flex w-24 h-full items-center justify-center">
+                            <div class="swiper-button-prev" style="position: initial;"></div>
+                        </div>
+                        <div id="itensSwiper" class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h-full" style="transition-delay: 2.5s;height: calc(95% - 4px);" v-for="(reward, index) in rewards"
+                                    :class="{'filter grayscale' : currentLevel != reward.level && currentLevel < reward.level, 'filter brightness-50' : !reward.canClaimItem && currentLevel > reward.level}">
+                                    <div class="box flex flex-col h-full rounded-2xl w-full">
+                                        <div class="p-2 flex flex-nowrap">
+                                            <div class="w-3/12 h-full px-2 border rounded">
+                                                <p class="font-black text-lg text-right text-white uppercase">Day</p>
+                                                <p class="font-black text-3xl text-right text-white uppercase">{{reward.level}}</p>
+                                            </div>
+                                            <div class="w-9/12 h-full px-2 flex flex-col justify-center">
+                                                <div class="bg-blue-300 border border-blue-400 font-medium rounded text-lg" v-if="currentLevel >= reward.level">
+                                                    <p class="absolute" style="left: calc(53.5% + 4px);">{{ currentLevel == reward.level ? GetWidth : '100%' }}</p>
+                                                    <div class="h-8 progress-bar rounded flex justify-center" :style="{'width': currentLevel == reward.level ? GetWidth : '100%' }">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h-full flex items-center justify-center">
+                                            <img :src="'./assets/' + reward.image" class="object-none w-36 h-36">
+                                        </div>
+                                        <div class="p-1 bg-gray-900 bg-opacity-75">
+                                            <p class="text-right text-xs text-white">{{reward.amount}}x</p>
+                                        </div>
+                                        <div class="p-2 bg-gray-900 border-t-2 rounded-b-2xl">
+                                            <p class="text-center font-bold text-2xl text-white truncate">{{reward.label}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-24 h-full items-center justify-center">
+                            <div class="swiper-button-next" style="position: initial;"></div>
+                        </div>
+                    </div>
+                    <div class="w-full pb-1.5 flex items-center bg-gray-700" style="height: 8%;">
+                        <div class="swiper-pagination" style="position: initial;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/app.js"></script>
+    </body>
+</html>

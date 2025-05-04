@@ -1,0 +1,1022 @@
+:root {
+  --color: #ff66ff;
+}
+
+@import url('https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css');
+
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(BebasNeueBold.ttf);
+}
+
+*{
+	user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+html {
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	display: none;
+	color: #a8a8aa;
+}
+
+.btnQuit {
+	width:100%;
+}
+
+.hottubcoverbutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 3px solid var(--color);
+	color: #ffffff;
+	font-size: 45px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 60%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 60%;
+	border-radius: 10px;
+}
+
+.hottubcoverbutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.hottubcover-container {
+	width: 30%;
+	height: 20%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	border-radius: 10px;
+}
+
+.headerhottubcover {
+  width:100%;
+  height: 6%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:6%;
+}
+
+.HeaderCoverHotTubText {
+	position: absolute;
+	margin: 0;
+	font-size: 40px;
+	color: #ffffff;
+	text-align: center;
+	top: 11%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.closehottubcover {
+	position: absolute;
+	left: 95%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 11%
+}
+
+.hottubmanagment-container {
+	width: 30%;
+	height: 80%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 10px;	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 82%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.headerhottubmanagment {
+  width:100%;
+  height: 3%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:3%;
+}
+
+.HeaderHotTubManagmentText {
+	position: absolute;
+	margin: 0;
+	font-size: 40px;
+	color: #ffffff;
+	text-align: center;
+	top: 2.5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.closehottubmanagment {
+	position: absolute;
+	left: 95%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 2.5%
+}
+
+.hottublightmaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 9%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublighttoggletext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 14%;
+	left: 30%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublighttoggleswitch {
+	display: inline-block;
+	width: 25%;
+	height: 6%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 30%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublighttoggleswitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublighttogglergbtext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 14%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublighttogglergbswitch {
+	display: inline-block;
+	width: 25%;
+	height: 6%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublighttogglergbswitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottubrgblightspeedtmaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 28%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch1text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 33%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch1 {
+	display: inline-block;
+	width: 18%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 37%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch1 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightrgbspeedchangeswitch2text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 33%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch2 {
+	display: inline-block;
+	width: 18%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 37%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch2 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightrgbspeedchangeswitch3text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 33%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch3 {
+	display: inline-block;
+	width: 18%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 37%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightrgbspeedchangeswitch3 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightcolormaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 44%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch1text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 48%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch1 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 52%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch1 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch2text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 48%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch2 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 52%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch2 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch3text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 48%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch3 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 52%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch3 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch4text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 58%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch4 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 62%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch4 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch5text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 58%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch5 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 62%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch5 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch6text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 58%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch6 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 62%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch6 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch7text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 68%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch7 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 72%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch7 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch8text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 68%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch8 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 72%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch8 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch9text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 68%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch9 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 72%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch9 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottublightchangeswitch10text {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 78%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottublightchangeswitch10 {
+	display: inline-block;
+	width: 20%;
+	height: 4.5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 82%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottublightchangeswitch10 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottubotherswitchmaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 88%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottubtelevisionswitchtext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 90%;
+	left: 30%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottubtelevisionswitch {
+	display: inline-block;
+	width: 22%;
+	height: 5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 95%;
+	left: 30%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottubtelevisionswitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hottubnozzlesswitchtext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 90%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottubnozzlesswitch {
+	display: inline-block;
+	width: 22%;
+	height: 5%;	
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 95%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	text-align:center;
+}
+
+.hottubnozzlesswitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);    
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	width: 35%;
+	height: 70%;	
+	top: 50%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);		
+	background-color: #ffffff;
+	border-radius: 5px;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider:before {
+	top: 50%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+}
+
+.sliderspeed {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);    
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderspeed:before {
+	position: absolute;
+	content: "";
+	width: 35%;
+	height: 70%;	
+	top: 50%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);		
+	background-color: #ffffff;
+	border-radius: 5px;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .sliderspeed:before {
+	top: 50%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+}
+
+.slidercolor {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);    
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slidercolor:before {
+	position: absolute;
+	content: "";
+	width: 35%;
+	height: 70%;	
+	top: 50%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);		
+	background-color: #ffffff;
+	border-radius: 5px;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slidercolor:before {
+	top: 50%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+}
+
+.sliderother {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);    
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderother:before {
+	position: absolute;
+	content: "";
+	width: 35%;
+	height: 70%;	
+	top: 50%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);		
+	background-color: #ffffff;
+	border-radius: 5px;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .sliderother:before {
+	top: 50%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+}
+
+.hottubprogressbar-container {
+	width: 40%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);	
+	margin: 0;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	border-radius: 10px;
+}
+
+.hottubprogressbartext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.hottubprogressbarmaincontainer {
+	width: 90%;
+	height: 25%;
+	background-color: rgba(255, 255, 255, 0.70);
+	margin: 0;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	border-radius: 5px;
+}
+
+.hottubprogressbarmaincontainerdata {
+	width: 0%;
+	height: 100%;
+	background-color: var(--color);
+	z-index: 9999999;
+}
+
+.full-screen {
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+
+*{
+	font-family: BebasNeueBold;
+}

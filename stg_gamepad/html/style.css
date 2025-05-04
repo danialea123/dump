@@ -1,0 +1,341 @@
+@font-face {
+    font-family: druk;
+    src: url(fonts/DrukCyr-Bold.ttf);
+}
+@font-face {
+    font-family: oxanium;
+    src: url(fonts/Oxanium-Light.ttf);
+}
+@font-face {
+    font-family: akroblack;
+    src: url(fonts/Akrobat-Black.otf);
+}
+
+body{
+    overflow: hidden;
+    display: none;
+}
+
+#consoleBox{
+    position: absolute;
+    height: 36vw;
+    width: 90vw;
+    
+    left: 6vw;
+    top: 65vw;
+    transition:0.5s
+}
+#consolePng{
+    position: absolute;
+    height: 47.5vw;
+    width: 94.55vw;
+    left: -4.5vw;
+    top: -4.56vw;
+}
+#consoleBackground{
+    position: absolute;
+    height: 31.1vw;
+    width: 50vw;
+    left: 18.7vw;
+    top: 2.4vw;
+    overflow-y: scroll;
+}
+
+#gamesBox{
+    position: absolute;
+    height: 18vw;
+    width: 46vw;
+    left:3.5vw;
+    top: 7.9vw;
+
+}
+.gameOne{
+    position: relative;
+    height: 18vw;
+    width: 10.5vw;
+    float: left;
+    margin-left: 4vw;
+    left: -4vw;
+    
+}
+#gamePhoto{
+    position: absolute;
+    height: 14vw;
+    width: 14vw;
+    top: 0.5vw;
+    left: 0.4vw;
+    z-index:5555;
+    transition:0.3s
+}
+#gamePhoto:hover{
+    transform:scale(0.95)
+}
+#titleBox{
+    position: absolute;
+    height: 3vw;
+    width: 8vw;
+    top: 15vw;
+    left: 0.3vw;
+}
+#gameNameText{
+    position: absolute;
+    font-family: oxanium;
+    color: white;
+    font-size: 1.25vw;
+    top: 13.7vw;
+    left: 0.6vw;
+}
+#DetailsText{
+    position: absolute;
+    position: absolute;
+    font-family: oxanium;
+    color: white;
+    font-size: 1vw;
+    top: 15.55vw;
+    left: 0.6vw;
+}
+ #borderBox{
+    position: absolute;
+    height: 14.9vw;
+    width: 10.5vw;
+    left: 0.06vw;
+ }
+ #LastGameText{
+    position: absolute;
+    font-size: 1.25vw;
+    font-family: oxanium;
+    left: 4.1vw;
+    top: 4.7vw;
+    color: white;
+ }
+
+
+
+#consoleTime{
+    position: absolute;
+    font-size: 1.25vw;
+    font-family: oxanium;
+    left: 1vw;
+    top: 0.55vw;
+    color: white;
+
+}
+#ConsoleName{
+    position: absolute;
+    font-size: 1vw;
+    font-family: oxanium;
+    left:40.9vw;
+    top: 0.55vw;
+    color: white;
+}
+#dateText{
+    position: absolute;
+    font-size: 1vw;
+    font-family: oxanium;
+    left: 40.9vw;
+    top: 1.8vw;
+    color: 00D1FF;
+}
+#profilePhoto{
+    position: absolute;
+    height: 3.05vw;
+    width: 3vw;
+    left:46.7vw;
+    top: 1.2vw;
+}
+.pp{
+    position: absolute;
+    height: 2.44vw;
+    width: 2.35vw;
+    left:47vw;
+    top: 1.29vw;
+}
+#SelectedBox{
+    position: absolute;
+    height: 2vw;
+    width: 7vw;
+    top: 26.6vw;
+    left: 18vw;
+}
+#newsText{
+    position: absolute;
+    font-size: 1.2vw;
+    color: white;
+    left: 19.7vw;
+    top: 25.7vw;
+    font-family: oxanium;
+}
+#recommendedText{
+    position: absolute;
+    font-size: 1.2vw;
+    color: white;
+    left: 27.4vw;
+    top: 25.7vw;
+    font-family: oxanium;
+}
+#showText{
+    position: absolute;
+    font-size: 1.4vw;
+    color: white;
+    left:1.9vw;
+    top: 27.8vw;
+    font-family: oxanium;
+}
+
+#gameScreen{
+    position: absolute;
+    height: 31.1vw;
+    width: 50vw;
+    left: 18.7vw;
+    top: 2.4vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 555;
+}
+#gameScreen::-webkit-scrollbar {
+    width: 0vw;
+}
+#showPicture{
+    position: absolute;
+    top: 32vw;
+    left: 1vw;
+    width:30vw;
+    height: 18vw;
+}
+#searchGame{
+    position: absolute;
+    top: 58.3vw;
+    left: 9vw;
+    border-radius: 0.3vw;
+    text-align: left;
+    padding-left: 15;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1vw;
+    width: 12vw;
+    height: 1.7vw;
+    background-color: rgba(19, 31, 46, 0.425);
+    border: none;
+    outline: none;
+    z-index: 999;
+    color: #fff;
+}
+#allgamesText{
+    position: absolute;
+    font-size: 1.3vw;
+    font-family: Oxanium;
+    color: white;
+    top: 57vw;
+    left: 2vw;
+}
+
+.allGamesBox{
+    position: relative;
+    height: 12vw;
+    width: 10.7vw;
+    float: left;
+    margin-left: 3.6vw;
+    margin-top:1.4vw;
+    left: 0.4vw;
+    top: 60vw;
+    border-radius:0.5vw;
+
+}
+#allGameSett{
+    position: absolute;
+    height: 12.5vw;
+    width: 13.5vw;
+    border-radius:0.5vw;
+    border: 0.2vw solid #ffffff00;
+}
+#allGameSett:hover{
+    border: 0.2vw solid white;
+}
+#borderGame{
+    position: absolute;
+    height: 14.4vw;
+    width: 10.5vw;
+    left: -0.225vw;
+    top: -0.2vw;
+}
+#searchPng{
+    position: absolute;
+    height: 1vw;
+    width: 1vw;
+    top: 58.6vw;
+    left:19.5vw;
+}
+#textDeatils{
+    position: absolute;
+    font-size: 1vw;
+    font-family: oxanium;
+    color: white;
+    left: 32vw;
+    top: 32vw;
+    right: 2vw;
+}
+#titleBoxDetails{
+    position: absolute;
+    height: 13vw;
+    width: 18vw;
+    top: 32vw;
+    left: 31vw;
+}
+#playButton{
+    position: absolute;
+    height: 1.6vw;
+    width: 5.5vw;
+    top: 45.8vw;
+    left: 32vw;
+}
+#playText{
+    position: absolute;
+    font-size: 1vw;
+    font-family: akroblack;
+    top: 45vw;
+    left: 33.8vw;
+    color: white;
+}
+
+#lastPage{
+    position: absolute;
+    top:-5vw
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+*:not(input):not(textarea) {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#game{
+    position: absolute;
+    height: 31.1vw;
+    width: 50vw;
+    left: 18.7vw;
+    top: 2.4vw;
+    z-index: 556;
+}
+
+.home{
+    position: absolute;
+    width: 3vw;
+    height: 2.9vw;
+    z-index: 999;
+    left:19.5vw;
+    top:3vw
+}
+
+#gameArea{
+    display: none;
+}

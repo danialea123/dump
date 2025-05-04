@@ -1,0 +1,384 @@
+@font-face {
+  font-family: Joyride;
+  src: url(../font/JoyrideSTD.otf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: D_kallisto;
+  src: url(../font/D_kallisto.otf);
+}
+body {
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --scrolbar: #eac43d;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f232b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrolbar);
+  border-radius: 1px;
+  box-shadow: 0px 0px 4px #1900ff;
+}
+
+#app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.information {
+  box-sizing: border-box;
+  position: absolute;
+  width: 20.875rem;
+  height: 2.9375rem;
+  left: 55rem;
+  top: 63.1875rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90.26deg, #4C4388 -1%, #100F1E 100.94%);
+  border-radius: 4.625rem;
+}
+.information .time {
+  margin-top: 0.71rem;
+  margin-left: 9rem;
+  margin-right: 0.5rem;
+  max-height: 1rem;
+  max-width: 18rem;
+  border-radius: 2.875rem;
+  text-align: center;
+  white-space: nowrap;
+  height: 1.3rem;
+  padding: 0.15rem 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-indent: 0rem;
+  color: #FFFFFF;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.information .price {
+  margin-top: 0.7rem;
+  background: radial-gradient(114.29% 114.29% at 50% 50%, #74973B 0%, #6A8C31 100%);
+  border-radius: 2.875rem;
+  max-width: 20rem;
+  max-height: 1.03rem;
+  text-align: center;
+  white-space: nowrap;
+  height: 1.3rem;
+  padding: 0.2rem 1rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.075rem;
+  text-indent: 0rem;
+  color: #FFFFFF;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.information .icon {
+  position: absolute;
+  width: 1.8125rem;
+  height: 2.1875rem;
+  left: 0.8125rem;
+  top: 0.35rem;
+  background-image: url("../img/time.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.information .icon h1 {
+  position: absolute;
+  width: 10rem;
+  left: 2.5rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #FFFFFF;
+}
+
+.menu {
+  position: absolute;
+  width: 75.5rem;
+  height: 56.8125rem;
+  left: calc(50% - 37.75rem);
+  top: 5.3125rem;
+}
+
+.search {
+  position: absolute;
+  width: 7.1875rem;
+  height: 0.9375rem;
+  left: 48.25rem;
+  top: 9.04rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+.search > input {
+  text-align: left;
+  border: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.55);
+  outline: none;
+  width: 11.35rem;
+  font-size: 0.8rem;
+}
+
+.car {
+  position: absolute;
+  overflow: auto;
+  left: 23.9rem;
+  top: 13.2rem;
+  height: 46.5rem;
+  width: 54rem;
+}
+.car .list {
+  position: relative;
+  z-index: 9999;
+  display: inline-flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 4px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 0.95rem;
+  margin-top: 0.6rem;
+}
+.car .list .images {
+  position: absolute;
+  width: 10.9375rem;
+  height: 6.75rem;
+  left: 2.375rem;
+  top: 1.4rem;
+  background-image: url("../car/car.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.car .list .info-container {
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.car .list .info-container .price {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.23rem 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: radial-gradient(114.29% 114.29% at 50% 50%, #74973B 0%, #6A8C31 100%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.car .list .info-container .select {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.1875rem 1.875rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #B1FF33;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.buy {
+  position: absolute;
+  left: 18.7rem;
+  font-family: "d_Kallisto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  z-index: 9999999999;
+  animation-name: fadeInDown;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.bar {
+  transition: width 0.5s ease-out;
+}
+
+.payload {
+  position: absolute;
+  width: 19.1875rem;
+  height: 12.8125rem;
+  left: 75.5125rem;
+  top: 45.4125rem;
+}
+
+.features {
+  position: absolute;
+  width: 19.125rem;
+  height: 9.625rem;
+  left: 75.5625rem;
+  top: 32.0625rem;
+}
+
+.selection {
+  position: absolute;
+  width: 22.25rem;
+  height: 17.625rem;
+  left: 72.6875rem;
+  top: 11.5rem;
+}
+
+.position {
+  position: absolute;
+  left: 75.72rem;
+  top: 53rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (width: 3440px) and (height: 1440px) {
+  html {
+    font-size: 21.5px;
+  }
+}
+@media screen and (width: 4096px) and (height: 2160px) {
+  html {
+    font-size: 31px;
+  }
+}
+@media screen and (width: 2560px) and (height: 1440px) {
+  html {
+    font-size: 21.5px;
+  }
+}
+@media screen and (width: 1920px) and (height: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (width: 1920px) and (height: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (width: 1920px) and (height: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (width: 1600px) and (height: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1440px) and (height: 900px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (width: 1680px) and (height: 1050px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1600px) and (height: 900px) {
+  html {
+    font-size: 13.3px;
+  }
+}
+@media screen and (width: 1600px) and (height: 1024px) {
+  html {
+    font-size: 13.3px;
+  }
+}
+@media screen and (width: 1768px) and (height: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (width: 1366px) and (height: 768px) {
+  html {
+    font-size: 11.3px;
+  }
+}
+@media screen and (width: 1400px) and (height: 1050px) {
+  html {
+    font-size: 11.7px;
+  }
+}
+@media screen and (width: 1280px) and (height: 1024px) {
+  html {
+    font-size: 11.7px;
+  }
+}
+@media screen and (width: 1280px) and (height: 720px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media screen and (width: 1024px) and (height: 768px) {
+  html {
+    font-size: 10.05px;
+  }
+}
+@media screen and (width: 832px) and (height: 624px) {
+  html {
+    font-size: 8.05px;
+  }
+}
+@media screen and (width: 800px) and (height: 600px) {
+  html {
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=app.css.map */

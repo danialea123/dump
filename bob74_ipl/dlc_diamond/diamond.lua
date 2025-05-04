@@ -1,0 +1,5 @@
+CreateThread(function()
+    RequestIpl('vw_casino_garage')
+    RequestIpl('vw_casino_carpark')
+    RequestIpl('vw_casino_penthouse')
+end)

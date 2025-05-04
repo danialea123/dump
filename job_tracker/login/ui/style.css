@@ -1,0 +1,187 @@
+*{
+  margin: 0; padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+#container {
+  width: 800px;
+  height: 600px;
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  border-radius: 10px;
+}
+
+.mapa {
+  top: 5%;
+  right: 3.5%;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  background: url("./map.png");
+  background-size: 100% 100%;
+  border-radius: 7px;
+}
+
+.local {
+  width: 15px;
+  height: 25px;
+  background-image: url("./mark.png");
+  background-size: 100% 100%;
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.local:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.tooltip {
+  display: block;
+  min-width: 100px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  top: -25px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.local:hover .tooltip {
+  visibility: visible;
+}
+
+#logo {
+  width: 160px;
+  height: 37px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: 100% 100%;
+  background-image: url("./info.png");
+}
+
+#botoes {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  margin: auto;
+}
+
+#botoes div {
+  width: 150px;
+  float: left;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#botoes div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#modal {
+  width: 260px;
+  height: 350px;
+  background: #00000033;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#fotoDiv {
+  width: 80%;
+  height: 180px;
+  border: 1px solid #ffffffc4;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 1.5%;
+  -webkit-box-shadow: 0px 0px 10px #fff;
+          box-shadow: 0px 0px 10px #fff;
+}
+
+#foto {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: 170%;
+  background-position: center;
+}
+
+#nome {
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13.5px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#00000000), color-stop(#00000080), color-stop(#00000080), to(#00000000));
+  background-image: linear-gradient(to left, #00000000, #00000080, #00000080, #00000000);
+  color: #fff;
+}
+
+.botaoFavorito {
+  width: 150px;
+  height: 35px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 35px;
+  background-image: linear-gradient(5deg, #0689E7, #229FF9 );
+  color: white;
+  font-weight: 800;
+  font-size: 12px;
+  transition: all .3s ease-in-out;
+  border-radius: 10px;
+}
+
+#fundo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  /* display: none; */
+}
+
+.botaoFavorito:hover {
+  transform: scale(1.05);
+}
+/*# sourceMappingURL=style.css.map */

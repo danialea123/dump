@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+
+html {
+  overflow: hidden;
+}
+
+.boxen {
+  position: fixed;
+  top: 90%;
+  left: 18.8%;
+  width: 10%;
+  height: 10%;
+
+}
+
+.boxl1 {
+  position: fixed;
+  width: 3.4%;
+  height: 3.5%;
+  background-color: #000000ad;
+  border-top: 4px solid red;
+  border-radius: 19px;
+  margin-left: 15.5%;
+  bottom: 9.4%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.boxl2 {
+  position: fixed;
+  width: 4.0%;
+  height: 4.0%;
+  margin-left: 18.2%;
+  bottom: 9.4%;
+  border-radius: 100px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.boxl3 {
+  position: fixed;
+  width: 7%;
+  height: 3.5%;
+  background-color: #000000ad;
+  border-top: 4px solid red;
+  border-radius: 19px;
+  margin-left: 21.5%;
+  bottom: 9.4%;
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.middle {
+  position: fixed;
+  width: 5.7%;
+  height: 2.9%;
+  background-color: #000000ad;
+  border-top: 4px solid red;
+  border-radius: 19px;
+  margin-left: 28.3%;
+  margin-top: 1%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.boxr3 {
+  position: fixed;
+  width: 7%;
+  height: 3.5%;
+  background-color: #000000ad;
+  border-radius: 19px;
+  border-top: 4px solid red;
+  margin-left: 33.7%;
+  bottom: 9.4%;
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.boxr2 {
+  position: fixed;
+  width: 4.0%;
+  height: 4.0%;
+
+  margin-left: 39.9%;
+  bottom: 9.4%;
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.boxr1 {
+  position: fixed;
+  width: 3.4%;
+  height: 3.5%;
+  background-color: #000000ad;
+  border-top: 4px solid red;
+  border-radius: 19px;
+  margin-left: 43.0%;
+  bottom: 9.4%;
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.zeit {
+
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 7%;
+
+}
+
+.punkter {
+  position: relative;
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 9%;
+
+}
+
+.punktel {
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 8%;
+}
+
+.jobr {
+
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 4%;
+}
+
+.jobl {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 4%;
+}
+
+.jobrechts {
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.joblinks {
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.schwerter {
+  position: fixed;
+  width: 2.76%;
+  left: 48.6%;
+  bottom: 9%;
+}

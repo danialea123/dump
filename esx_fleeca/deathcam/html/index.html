@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>gfx-deathcam</title>
+</head>
+
+<body>
+    <style>
+
+    </style>
+    <div id="app" style="display: none;">
+        <div class="deathcam-info" v-if="display">
+            <div class="top">
+                <div class="img">
+                    <img :src="avatar" alt="">
+                </div>
+                <div class="info">
+                    <div class="description">
+                        <div class="killer">
+                            <h1>
+                                KILLER NAME
+                            </h1>
+                            <h2>
+                                {{ name }}
+                            </h2>
+                        </div>
+                        <div class="damage">
+                            {{hpDamage.toFixed(0)}}HP {{apDamage.toFixed(0)}}AP in {{ hit }}
+                        </div>
+                    </div>
+                    <div class="hp">
+                        <div class="bar health">
+                            <span>
+                                {{health}}
+                            </span>
+                            <img src="./health.svg">
+                        </div>
+                        <div class="bar armor">
+                            <span>
+                                {{armor}}
+                            </span>
+                            <img src="./armor.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lines">
+                <div class="health line">
+                    <div class="fill" :style="{width: health + '%'}">
+                    </div>
+                </div>
+                <div class="armor line">
+                    <div class="fill" :style="{width: armor + '%'}">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>
+                    KILLED YOU WITH
+                </span>
+                <span class="accent">
+                    {{weaponName}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    display: false,
+                    avatar: "",
+                    weaponName: "CARBINERIFLE",
+                    name: "NITROS",
+                    health: 70,
+                    armor: 40,
+                    hpDamage: 99,
+                    apDamage: 99,
+                    hit: 1
+                }
+            },
+            mounted() {
+                window.addEventListener('message', (event) => {
+                    const item = event.data;
+                    if (item.type === "show") {
+                        var foo = document.getElementById('app');
+                        foo.style.display = 'block';
+                        this.display = true;
+                        this.weaponName = item.weaponName;
+                        this.name = item.name;
+                        this.health = item.health;
+                        this.armor = item.armor;
+                        this.hpDamage = item.hpDamage;
+                        this.apDamage = item.apDamage;
+                        this.hit = item.hit;
+                    }
+                    if (item.type === "hide") {
+                        var foo = document.getElementById('app');
+                        foo.style.display = 'none';
+                        this.display = false;
+                        this.avatar = "";
+                        this.weaponName = "";
+                        this.name = "";
+                        this.health = 0;
+                        this.armor = 0;
+                        this.hpDamage = 0;
+                        this.apDamage = 0;
+                        this.hit = 0;
+                    }
+
+                    if (item.type === "setavatar") {
+                        this.avatar = item.avatar;
+                    }
+                })
+            }
+        })
+        app.mount('#app')
+    </script>
+</body>
+
+</html>

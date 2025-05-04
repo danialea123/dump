@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Premium Deluxe Motorsport</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
+        />
+        <link
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+    </head>
+    <body>
+        <div class="test-drive-timer">
+            <span class="timer-text">Test Drive:</span>
+            <span class="timer-seconds">30</span>s
+        </div>
+
+        <div id="container" class="hidden">
+            <div class="sidebar">
+                <div class="logo">
+                    <img
+                        src="assets/logo.png"
+                        alt="Premium Deluxe Motorsport Logo"
+                        loading="lazy"
+                    />
+                    <div class="watermark">Premium Deluxe Motorsport</div>
+                </div>
+
+                <div class="vehicle-counter">
+                    <span id="vehicleCount">0</span> vehicles available
+                </div>
+
+                <div class="filters">
+                    <div class="search-container">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search vehicles..."
+                        />
+                    </div>
+
+                    <div class="sort-container">
+                        <div class="custom-select" id="sortSelectWrapper">
+                            <button class="selected-option" aria-expanded="false" aria-haspopup="true">
+                                <span>Name (A-Z)</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </button>
+                            <div class="options-container" role="listbox" aria-label="Sort options">
+                                <div class="option selected" data-value="name-asc" role="option">Name (A-Z)</div>
+                                <div class="option" data-value="name-desc" role="option">Name (Z-A)</div>
+                                <div class="option" data-value="price-asc" role="option">Price (Low to High)</div>
+                                <div class="option" data-value="price-desc" role="option">Price (High to Low)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sort-container brand-filter-container">
+                        <div class="custom-select" id="brandSelectWrapper">
+                            <button class="selected-option" aria-expanded="false" aria-haspopup="true">
+                                <span>All Brands</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </button>
+                            <div class="options-container" role="listbox" aria-label="Brand options"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="categories"></div>
+            </div>
+
+            <div class="main-content">
+                <div class="vehicle-grid"></div>
+            </div>
+
+            <div class="vehicle-info hidden"></div>
+        </div>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>

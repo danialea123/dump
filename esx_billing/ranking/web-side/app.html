@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <script>
+      Object.defineProperty(window, 'invokeNative', {
+        value: function() {
+          console.warn('invokeNative is blocked!');
+        },
+        writable: false,
+        configurable: false,
+      });
+    </script>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+   <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+   <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body style="display: none;">
+
+   <score class="center nuiCenter generateCategory">
+      <section>
+         <div class="user center">
+            <div class="column center">
+               <div class="user-info">
+                  <small>User Name</small>
+                  <span id="plyName"></span>
+               </div>
+               <div class="user-info">
+                  <small>ranking</small>
+                  <span id="plyRanking">0</span>
+               </div>
+            </div>
+            <div class="user-icon center"><img src="src/perfil.png" /></div>
+            <div class="column center smallteme">
+               <div class="user-info">
+                  <small>kills</small>
+                  <span id="plyKills">0</span>
+               </div>
+               <div class="user-info">
+                  <small>deaths</small>
+                  <span id="plyDeaths">0</span>
+               </div>
+               <div class="user-info">
+                  <small>kd</small>
+                  <span id="plyKd">0</span>
+               </div>
+            </div>
+         </div>
+         <div class="board center">
+            <table>
+               <tr>
+                  <th>Pos</th>
+                  <th>Name</th>
+                  <th>kills</th>
+                  <th>deaths</th>
+                  <th>kd</th>
+               </tr>
+            </table>
+            <img id="bg-board" src="src/bg.png">
+         </div>
+      </section>
+   </score>
+
+</body>
+<script src="js/app.js"></script>
+
+</html>

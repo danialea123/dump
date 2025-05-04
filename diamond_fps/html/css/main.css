@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 56.25vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  user-select: none;
+  overflow: hidden;
+  display: none;
+  /* background-image: url("../imgs/Bg.png"); */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(16, 16, 16, 0) 0%,
+    rgba(16, 16, 16, 0.5) 100%
+  );
+}
+
+.FpsMenu {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(18, 19, 21, 0.9) 0%,
+    rgba(18, 19, 21, 0.95) 100%
+  );
+  width: 56.4063vw;
+  height: 49.5833vw;
+  flex-shrink: 0;
+}
+
+.FpsMenuTop {
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(
+    50% 143.89% at 50% 50%,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 7.2598vw;
+  width: 100%;
+}
+
+.FpsMenuTopDetails {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imgs/TopDetails.png");
+  width: 56.4063vw;
+  height: 7.2598vw;
+}
+
+.FpsMenuTopNameMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.FpsMenuTopRight,
+.FpsMenuTopLeft {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.9871vw;
+  height: 2.9871vw;
+  margin-left: 0.5vw;
+  background-image: url("../imgs/NextIcon.png");
+}
+
+.FpsMenuTopRight {
+  margin-right: 0.5vw;
+  transform: rotate(180deg);
+}
+
+.FpsMenuTopName {
+  margin-top: -0.8vw;
+  text-align: center;
+  text-shadow: 0px 0px 1.8119vw rgba(192, 203, 225, 0.25);
+  font-family: Oswald;
+  font-size: 4.1399vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0414vw;
+  background: linear-gradient(180deg, #c0cbe1 26.8%, #9fa9bf 59.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.FpsMenuTopName p {
+  margin-top: -1vw;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Montserrat;
+  font-size: 1.6799vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 0.5vw;
+  letter-spacing: 0.336vw;
+}
+
+.FpsMenuCodeAndDetails {
+  display: flex;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1.0417vw;
+  height: 2.8125vw;
+}
+
+#EnterCode {
+  height: 2.8125vw;
+  width: 10.8854vw;
+  border-radius: 0.0521vw;
+  padding: 0.833vw 0.0271vw 0.8333vw 0.3646vw;
+  border: 0.03vw solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Montserrat;
+  font-size: 0.9375vw;
+  font-style: normal;
+  font-weight: 500;
+  outline: none;
+}
+
+.ApplyCode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #feab30;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.0417vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 8.8021vw;
+  height: 2.8125vw;
+  border-radius: 0.0521vw;
+  background: rgba(254, 171, 48, 0.07);
+  margin-left: 0.4167vw;
+  transition: 0.35s;
+}
+
+.TotalFPS {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Montserrat;
+  font-size: 1.1341vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 0.1042vw;
+  border: 0.03vw solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  width: 6.4798vw;
+  height: 2.8125vw;
+  margin-left: 3.5938vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.TotalFPS t {
+  color: #c0cbe1;
+  font-weight: 600;
+  margin-left: 0.3vw;
+  text-shadow: 0px 0px 0.792vw rgba(192, 203, 225, 0.25);
+}
+
+.CreateCode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4.6661vw;
+  width: 7.7604vw;
+  height: 2.8125vw;
+  border-radius: 0.0521vw;
+  background: rgba(103, 255, 146, 0.07);
+  color: #67ff92;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.9417vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.35s;
+}
+
+.Code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 0.4167vw;
+  width: 10.3954vw;
+  height: 2.8125vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Montserrat;
+  font-size: 0.7417vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 0.0521vw;
+  border: 0.03vw solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.FpsMenus {
+  display: flex;
+  height: 34.1667vw;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1.0417vw;
+}
+
+.FpsMenuP {
+  border-radius: 1.152px;
+  border: 0.576px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  height: 100%;
+  width: 17.1354vw;
+  margin-left: 1.25vw;
+}
+
+.FpsMenuP:nth-child(1) {
+  margin-left: 0;
+}
+
+.SettingsName {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.6599vw;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Oswald;
+  font-size: 1.1999vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.072vw;
+}
+
+.SettingsLorem {
+  width: 15.5395vw;
+  margin-top: 0.4016vw;
+  margin-left: 0.7053vw;
+  color: rgba(255, 255, 255, 0.34);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.72vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.WarningBox {
+  display: flex;
+  width: 95%;
+  margin-left: 2.5%;
+  height: 1.7999vw;
+  margin-top: 0.6583vw;
+}
+
+.WarningIconBox {
+  height: 100%;
+  width: 1.7999vw;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.WarningText {
+  display: flex;
+  align-items: center;
+  margin-left: 0.3vw;
+  background: rgba(255, 255, 255, 0.02);
+  width: 13.8396vw;
+  color: rgba(254, 50, 62, 0.6);
+  font-family: Montserrat;
+  font-size: 0.66vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0198vw;
+  padding-left: 0.5vw;
+}
+
+.WarningIcon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imgs/Warning-Icon.png");
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  margin-top: 25%;
+}
+
+.Settings {
+  width: 95%;
+  height: 23.3vw;
+  margin-top: 1.1156vw;
+  margin-left: 2.5%;
+}
+
+.Setting {
+  width: 100%;
+  margin-top: 0.4349vw;
+  transition: 0.35s;
+}
+
+.Setting1 {
+  height: 3.4799vw;
+}
+
+.Setting2 {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  height: 2.4599vw;
+}
+
+.Setting:nth-child(1) {
+  margin-top: 0;
+}
+
+.SettingName {
+  color: rgba(255, 255, 255, 0.65);
+  font-family: Montserrat;
+  font-size: 0.84vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.RangerBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2.4599vw;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+.NextRange {
+  width: 2.0999vw;
+  height: 2.0999vw;
+  margin-left: -0.85vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imgs/NextIcon.png");
+  transform: rotate(180deg);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-left: 0.6599vw;
+  width: 13.0796vw;
+  height: 0.24vw;
+  border-radius: 0.0573vw;
+  background: rgba(255, 255, 255, 0.11);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.0199vw;
+  width: 0.48vw;
+  background: #c0cbe1;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+.SettingText {
+  margin-left: 0.6599vw;
+  color: #c0cbe1;
+  text-shadow: 0px 0px 0.8646vw rgba(192, 203, 225, 0.25);
+  font-family: Montserrat;
+  font-size: 0.84vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.BottomSide {
+  justify-content: center;
+  width: 100%;
+  height: 2.0865vw;
+  display: flex;
+  align-items: center;
+  margin-top: 0.65vw;
+  gap: 1.5625vw;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.625vw;
+  height: 1.5625vw;
+  color: #7eff5e;
+  font-family: Montserrat;
+  font-size: 0.625vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 157.5%; /* 25.2px */
+  text-transform: uppercase;
+  border: 0.0390625vw solid rgba(126, 255, 94, 0.6);
+  background: linear-gradient(
+    0deg,
+    rgba(126, 255, 94, 0.04) 0%,
+    rgba(126, 255, 94, 0.01) 100%
+  );
+  box-shadow: 0px 0px 1.56484375vw 0px rgba(126, 255, 94, 0.38) inset;
+  transition: 0.35s;
+}
+
+.resetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.625vw;
+  height: 1.5625vw;
+  color: #ff881b;
+  font-family: Montserrat;
+  font-size: 0.625vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 157.5%; /* 25.2px */
+  text-transform: uppercase;
+  border: 0.0390625vw solid rgba(255, 136, 27, 0.6);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 136, 27, 0.04) 0%,
+    rgba(255, 136, 27, 0.01) 100%
+  );
+  box-shadow: 0px 0px 1.56484375vw 0px rgba(255, 136, 27, 0.38) inset;
+  transition: 0.35s;
+}
+
+.ExitButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 24vw;
+  margin-top: 2.5vw;
+  width: 2.0683vw;
+  height: 2.0683vw;
+  border: 1.152px solid #fe323e;
+  background: linear-gradient(0deg, #fe323e 0%, rgba(254, 50, 62, 0) 100%);
+  box-shadow: 0px 4.608px 64.51px 0px rgba(254, 50, 62, 0.25),
+    0px 0px 42.623px 0px #fe323e inset;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.ExitText {
+  font-family: Montserrat;
+  color: #ffffff;
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+.ApplyCode:hover,
+.CreateCode:hover,
+.resetButton:hover,
+.saveButton:hover,
+.ExitButton:hover {
+  opacity: 0.75;
+  cursor: pointer;
+  scale: 0.98;
+}
+
+.Setting:hover {
+  scale: 1.01;
+  cursor: pointer;
+}

@@ -1,0 +1,165 @@
+Vue.config.productionTip = false
+Vue.config.devtools = false
+
+const app = new Vue({
+    el: "#visors",
+  
+    data: {
+        page: 0,
+        menu : false,
+        isAnyVehicle: false,
+        infos: { street: "Trigueiro Street", time: 0 , armour: 0, health: 0, oxygen:0, stamina:0, hunger:0, thirst: 0 },
+        vehicle : { velocity : 0, belt: false, fuel : 50, speed : 0, vehicleVelocityPercentage: 0, fuelRotate: 0,fuel : 0,engineRotate:0,engine:0},
+        belt: false,
+        locked: false,
+        power: false,
+        lockstatus: 1
+    },
+
+    methods: {
+        checkPage(page) {
+            return this.page == page
+        },
+
+        attInfos(data){
+            this.infos['street'] = data.street
+
+            if (data.date.hour < 10) {
+                data.date.hour = "0"+data.date.hour
+            } else if (data.date.minute < 10 ){
+                data.date.minute = "0"+data.date.minute
+            }
+            this.menu = data.menu
+            this.infos['time'] = data.date.hour+":"+data.date.minute
+            if(data.health < 0 ) {
+                data.health = 0
+            }
+            this.infos['health'] = data.health
+            this.infos['armour'] = data.armour
+            this.infos['thirst'] = data.thirst
+
+            this.infos['oxygen'] = data.oxygen
+            this.infos['stamina'] = data.stamina
+            this.infos['hunger'] = data.hunger
+        },
+
+        resetVehicle(){
+            this.isAnyVehicle = false
+            this.locked = false
+        },
+
+        attVehicle(veh,action){
+
+            if (action == 'hide') {
+                this.resetVehicle()
+                return
+            } else if (action == 'show') {
+                this.isAnyVehicle = true
+                return
+            }
+            this.vehicle['speed'] = veh.speed
+            this.vehicle['vehicleVelocityPercentage'] = veh.vehicleVelocityPercentage
+            this.vehicle['fuel'] = veh.fuel
+            this.vehicle['engine'] = veh.status
+            if (veh.lockstatus == 1) {
+                this.locked = false
+            } else {
+                this.locked = true
+            }
+
+            this.power = veh.power
+           
+        },
+        attBelt(status) {
+            this.belt = status
+        } 
+    },
+
+    
+    computed: {
+        staminaWidht() {
+            return this.infos.stamina + '%'
+        },
+        oxygenWidth() {
+            return this.infos.oxygen + '%'
+        },
+        healthWidth() {
+            return this.infos.health + '%'
+        },
+        armourWidht() {
+            return this.infos.armour + '%'
+        },
+        hungerWidth() {
+            return this.infos.hunger + '%'
+        },
+        thirstWidth() {
+            return this.infos.thirst + '%'
+        },
+        vehicleVelocity() {
+            return this.vehicle.speed
+        },
+        vehicleVelocityPercentage() {
+            this.vehicle.vehicleVelocityPercentage = (this.vehicle.vehicleVelocityPercentage > 800 ? 800 : this.vehicle.vehicleVelocityPercentage)
+            return this.vehicle.vehicleVelocityPercentage
+        },
+        getFuelRotate() {
+            let n = (((this.vehicle.fuel/100)*70)+50)*-1
+            return "rotate("+n+"deg"+")"
+        },
+        getEngineRotate(){
+            let n = (((this.vehicle.engine/100)*60)-30)
+            return "rotate("+n+"deg"+")"
+        }
+    },
+
+    mounted(){
+		$.post('https://diamond_hud/NUIReady', JSON.stringify({}));
+		
+        window.addEventListener('message',function(event){
+            var action = event.data;
+
+            if (action.type == "info"){
+                app.attInfos(action.data)
+            } else if (action.type == "vehicle") {
+                app.attVehicle(action.vehicle,action.action)
+            } else if (action.action == "belt") {
+                app.attBelt(action.belt)
+            }
+			else if(action.type == "updateStatusUP")
+			{
+				$('#name').text(action.name);
+				$('#id').text(action.id);
+				$('#money').text('$' + action.money);
+				$('#job').text(action.job);
+				$('#gang').text(action.gang);
+				$('#coin').text(action.coin);
+			}
+			else if(action.type == "ShowHUD") $('.new-hud').fadeIn(500);
+            else if(action.type == "HideHUD") $('.new-hud').fadeOut(500);
+			else if(action.type == "SetVoice")
+			{
+				console.log(action.mode);
+				
+				if(action.mode == 1)
+				{
+					$('#static-01').css('background-color', '#90EE90');
+					$('#static-02').css('background-color', '#232C37');
+					$('#static-03').css('background-color', '#232C37');
+				}
+				else if(action.mode == 2)
+				{
+					$('#static-01').css('background-color', '#90EE90');
+					$('#static-02').css('background-color', '#90EE90');
+					$('#static-03').css('background-color', '#232C37');
+				}
+				else if(action.mode == 3)
+				{
+					$('#static-01').css('background-color', '#90EE90');
+					$('#static-02').css('background-color', '#90EE90');
+					$('#static-03').css('background-color', '#90EE90');
+				}
+			}
+        });
+    }
+
+})

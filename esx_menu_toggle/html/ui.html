@@ -1,0 +1,23 @@
+<!-- SUNRISE RP -->
+<html>
+	<head>
+		<script>
+			Object.defineProperty(window, 'invokeNative', {
+			  value: function() {
+				console.warn('invokeNative is blocked!');
+			  },
+			  writable: false,
+			  configurable: false,
+			});
+		  </script>
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+	<body>
+		<div id="menus"></div>
+
+		<script src="nui://game/ui/jquery.js"></script>
+		<script src="nui://essentialmode/html/js/wrapper.js"></script>
+		<script src="js/mustache.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

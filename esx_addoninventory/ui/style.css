@@ -1,0 +1,30 @@
+.container {
+    width: 450px;
+    margin: 200px auto;
+    text-align: center;
+    background-color: rgb(230, 230, 245);
+    border-radius: 10px;
+}
+
+#uiPage {
+    display: none;
+}
+
+h1 {
+    color: #272727;
+}
+
+p {
+    color: #505050;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

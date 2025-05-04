@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Nexa-Bold;
+    src: url(../web/Nexa-Bold.otf);
+}
+
+@font-face {
+    font-family: Gratis;
+    src: url(../web/GRATIS.ttf);
+}
+
+body {
+    overflow: hidden;
+}
+
+.killleaders{
+    position: absolute;
+    height: 10%;
+    width: 12.5%;
+    top: 78%;
+    left: 86.5%;
+    box-sizing: border-box;
+}
+
+.option{
+    position: relative;
+    height: 25%;
+    width: 100%;
+    background:  linear-gradient(to right, #4d1a1a,#fe0000);
+    font-size: 12.5px;
+    border-radius: 0px 0px 10px 0px;
+    margin-top: 1%;
+}
+
+.option span{
+    font-family: Nexa-Bold;
+    position: relative;
+    color: white;
+}
+
+
+.pos{
+    font-family: Nexa-Bold;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.line{
+    position: absolute;
+    height: 100%;
+    width: 1%;
+    left: 19.5%;
+    background-color: rgb(250, 250, 250);
+}
+
+.playerName{
+    font-family: Nexa-Bold;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 5%;
+    font-size: 16px;
+}
+
+
+#mvp{
+    position: relative;
+    height: 35%;
+    bottom: 33%;
+    right: 41.3%;
+    z-index: 1;
+}
+
+.gunGameWinners{
+    font-family: Nexa-Bold;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    top: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.gunGameBox{
+    position: relative;
+    height: 65%;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#firstName{
+    top: 25%;
+    font-size: 24px;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+#firstK{
+    color: #fdd74f;
+    font-size: 20px;
+    top: 52.5%;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+
+#callingCard{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.img{
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    bottom: 4.5%;
+    width: 25%;
+    display: flex;
+}
+
+.img img{
+    height: 60%;
+}
+
+.name{
+    position: absolute;
+    top: 17%;
+    font-size: 12.5px;
+}
+
+.kills{
+    top: 50%;
+    position: absolute;
+    font-size: 12.5px;
+}
+
+
+@media screen and (max-width: 1280px) and (max-height: 960px) and (min-height: 801px) {
+    .pos{
+        font-size: 14px;
+    }
+    .playerName{
+        font-size: 14px;
+    }
+    
+    #Outline{
+        position: absolute;
+        left: -6%;
+        bottom: -33%;
+        height: 150%;
+        width: 68%;
+    }
+    
+    #small{
+        position: absolute;
+        font-size: 12.5px;
+        bottom: 45%;
+        margin-left: 2px;
+        color: rgb(170, 170, 170);
+    }
+
+    .AmmoCount{
+        margin-left: 7%;
+        font-size: 18px;
+    }
+    #small{
+        font-size: 10px;
+    }
+    .WeaponIMGCont img{
+        height: 60%;
+    }
+    .WeaponName{
+        position: absolute;
+        top: 90%;
+        left: 86.5%;
+        width: 12.5%;
+        height: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+    #GunModel{
+        font-size: 9.5px;
+    }
+    .interactionUI{
+        font-size: 10px;
+    }    
+}
+
+
+#gold{
+    font-size: 20px;
+    color: rgb(199, 184, 100);
+}
+
+#white{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+
+.countdownUI{
+    font-family: Gratis;
+    font-size: 20px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 0, 0);
+}

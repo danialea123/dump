@@ -1,0 +1,28 @@
+<div class="w-full h-full flex items-start flex-wrap content-start justify-center no-scrollbar" style="overflow: auto;">
+    <div class="w-[90%] h-[8%]  flex items-center justify-start">
+        <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[0.1vw]">Neck</h2>
+        <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+    </div>
+    <div class="w-[90%] h-[44%]   flex flex-wrap items-start justify-center">
+        <div class="w-full h-[45%] flex  flex-wrap items-start mt-[0.1vw] " v-for="data in neckData">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">
+                    {{data.label}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]"
+                    style="background: rgba(217, 217, 217, 0.15)">
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                    </div>
+                    <input @change="changeSkin(data.name, $event.target.value)" class="rangeForInput" type="range"
+                        step="1" :value="getSkinByName(data.name)" min="-10" max="10">
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,1045 @@
+* {
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    /* font-family: 'Trebuchet MS', sans-serif; */
+    /* font-style: none;
+	font-kerning: none; */
+    color: #dfe6e9;
+    /* user-select: none; */
+    font-family: 'Roboto', Sans-serif;
+}
+
+@import url('https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Gluten&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@700&display=swap");
+
+html {
+    overflow: hidden;
+    /* font-family: 'Tahoma', sans-serif; */
+}
+
+body {
+    display: block;
+    color: #a8a8aa00;
+}
+.Scoreboard {
+    width: 900px;
+    height: 550px;
+    margin: 0;
+    position: absolute;
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to left, rgba(11, 12, 17, 0.91), #01060cc2);
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.291);
+    border-radius: 15px;
+    animation-name: changePostwo;
+    animation-duration: 1s;
+}
+
+.Top {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    z-index: 11;
+    background: #fafafa27;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.Top img {
+    width: 40px;
+    height: 100%;
+    position: relative;
+    animation-name: changePos;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.Top span {
+    position: absolute;
+    left: 43%;
+    font-size: 20px;
+    font-weight: bolder;
+    z-index: 13;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.info {
+    width: 50px;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 95%;
+    z-index: 11;
+    background: #fafafa27;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info i {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 20px;
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    border: none;
+}
+
+.info .Home {
+    color:#08daff;
+    top: 70%;
+    left: 15px;
+}
+
+.info .Jobs {
+    color:#08daff;
+    position: absolute;
+    top: 15%;
+    left: 15px;
+}
+
+.info .Robs {
+    color:#08daff;
+    position: absolute;
+    top: 30%;
+    left: 13px;
+}
+
+.info .users {
+    color:#08daff;
+    position: absolute;
+    top: 85%;
+    left: 13px;
+}
+
+.info .diamondB {
+    position: absolute;
+    top: 46%;
+    left: 0;
+
+}
+
+.info :hover {
+    color: #ffffff;
+
+
+}
+
+.info img {
+    width: 50px;
+    height: 50px;
+}
+
+.HomePage {
+    width: 100%;
+    height: 100%;
+
+}
+
+.PlayerName {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    background-color: #d1d1d139;
+    border-radius: 9.6px;
+    border: 1.8px solid #bfbfbf;
+}
+
+.PlayerName i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerName span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerSteam {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid #08daff;
+
+}
+
+.PlayerSteam i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerSteam span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerPhone {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid rgb(191, 191, 191);
+
+}
+
+.PlayerPhone i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerPhone span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerHex {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid #08daff;
+
+}
+
+.PlayerHex i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerHex span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerJob {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid rgb(191, 191, 191);
+
+}
+
+.PlayerJob i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerJob span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerHex .Copy {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15%;
+    left: 102%;
+
+    background: rgba(245, 245, 220, 0);
+    border: none;
+
+}
+
+.PlayerHex .Copy i {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.PlayerHex .Copy :hover {
+    color: rgb(252, 192, 82);
+}
+
+
+.PlayerPhone .Copy {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15%;
+    left: 102%;
+
+    background: rgba(245, 245, 220, 0);
+    border: none;
+
+}
+
+.PlayerPhone .Copy i {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.PlayerPhone .Copy :hover {
+    color: rgb(252, 192, 82);
+}
+
+.PlayerLeveL {
+    width: 238px;
+    height: 25px;
+    position: absolute;
+    top: 75%;
+    left: 37%;
+
+
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid #08daff;
+}
+
+.PlayerLeveL i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerLeveL span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.drp {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid rgb(191, 191, 191);
+
+}
+
+.drp i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.drp span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.Discord {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 84%;
+    left: 10%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid #08daff;
+}
+
+.Discord i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.Discord span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.Discord .Copy {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15%;
+    left: 102%;
+
+    background: rgba(245, 245, 220, 0);
+    border: none;
+
+}
+
+.Discord .Copy i {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.Discord .Copy :hover {
+    color: rgb(252, 192, 82);
+}
+
+
+
+
+.Rules {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 84%;
+    left: 70%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid #08daff;
+}
+
+.Rules i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.Rules span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.Rules .Copy {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15%;
+    left: 102%;
+
+    background: rgba(245, 245, 220, 0);
+    border: none;
+
+}
+
+.Rules .Copy i {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.Rules .Copy :hover {
+    color: rgb(252, 192, 82);
+}
+
+
+
+.PlayerJob2 {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid rgb(191, 191, 191);
+}
+
+.PlayerJob2 i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerJob2 span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerGang {
+    width: 170px;
+    height: 25px;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid rgb(191, 191, 191);
+}
+
+.PlayerGang i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerGang span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.PlayerId {
+    width: 238px;
+    height: 25px;
+    position: absolute;
+    top: 84%;
+    left: 37%;
+    background-color: rgba(209, 209, 209, 0.224);
+    border-radius: 9.6px;
+    border: 1.8px solid #08daff;
+}
+
+.PlayerId i {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+
+.PlayerId span {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bolder;
+    font-size: 10px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.DiamondRP {
+    /* width: 50%; */
+    height: 100%;
+    transform: scale(0.9);
+    position: absolute;
+    top: 0%;
+    left: 29%;
+    z-index: 5;
+}
+
+.DiamondRP img {
+    width: 405px;
+    height: 70%;
+    z-index: 5;
+    animation: 2s ease 0s infinite alternate-reverse none running logo;
+    cursor: pointer;
+}
+
+.ShowAllPlayer {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    font-weight: bolder;
+    font-size: 23px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.ShowAllPlayer span {
+    position: absolute;
+    top: 47%;
+    left: 35%;
+
+}
+
+.SetTime {
+    width: 250px;
+    height: 100px;
+    display: inline;
+    position: absolute;
+    top: 34%;
+    left: 16%;
+    font-weight: bolder;
+    font-size: 25px;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.Clock {
+    width: 50px;
+    height: 50px;
+    display: inline;
+    font-size: 28px;
+    position: absolute;
+    top: 44.5%;
+    left: 18.25%;
+}
+
+@keyframes logo {
+    0% {
+      filter: drop-shadow(rgba(221, 221, 221, 0.68) 0px 0px 5px);
+    }
+    100% {
+      filter: drop-shadow(rgba(221, 221, 221, 0.68) 0px 0px 25px);
+    }
+    }
+
+.ShowInfoJob {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    direction: ltr;
+    transform: scale(0.9);
+    top: 6%;
+    left: 72.5%;
+    z-index: 20;
+}
+
+.ShowInfoJob img {
+    display: inline;
+    width: 150px;
+    height: 150px;
+    z-index: 20;
+}
+
+.ShowTextInfo {
+    width: 500px;
+    height: 200px;
+    direction: ltr;
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-size: 30px;
+    font-weight: bolder;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.ShowTextInfo p {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.joblist {
+    width: 100%;
+    height: 225px;
+    position: absolute;
+    top: 58%;
+    transform: scale(0.8);
+    right: -1.5%;
+    direction: rtl;
+}
+
+.joblist img {
+    width: 100px;
+    height: 100px;
+    border-radius: 53%;
+    background-color: #d1d1d1;
+    border: 3px solid rgb(29, 29, 29);
+    display: inline;
+    animation-name: Jobs;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.joblist img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.policeimg {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -25%;
+}
+
+.ambulanceimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+}
+
+.sheriffimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30%;
+    right: 0%;
+
+}
+
+.taxiimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30%;
+    right: 60%;
+
+
+}
+
+.mecanoimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+
+
+}
+
+.weazelimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30%;
+    right: 75%;
+
+}
+
+.force {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -25%;
+    right: 15%;
+
+
+}
+
+.benny {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30%;
+    right: 45%;
+
+}
+
+.FBI-1img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -25%;
+    right: 30%;
+
+
+}
+
+.justiceimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -25%;
+    right: 45%;
+
+
+}
+
+.uwu {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -25%;
+    right: 60%;
+
+
+}
+
+.bahamasimg {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -25%;
+    right: 75%;
+
+
+}
+
+.ShowInfoRob {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    direction: ltr;
+    top: 10%;
+    left: 55%;
+    z-index: 25;
+}
+
+.ShowTextInfoRob {
+    width: 450px;
+    height: 200px;
+    direction: ltr;
+    position: absolute;
+    top: 7%;
+    left: -1%;
+    transform: scale(0.85);
+    font-size: 30px;
+    font-weight: bolder;
+    font-optical-sizing: inherit;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.ShowTextInfoRob p {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.Roblist {
+    width: 100%;
+    height: 225px;
+    position: absolute;
+    top: 52%;
+    right: 2%;
+    direction: rtl;
+    transform: scale(0.7);
+
+}
+
+.Roblist img {
+    width: 100px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    border: 3px solid rgb(255 255 255);
+    display: inline;
+    animation-name: Jobs;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    box-shadow:
+    -0.052vw -0.052vw 0.26vw #0000006b,
+    0.052vw -0.052vw 0.26vw #0000006b,
+    -0.052vw 0.052vw 0.26vw #0000006b,
+    
+}
+  
+
+.Roblist img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img {
+    transition: all ease 0.3s;
+}
+
+img:hover {
+    transform: scale(0.85);
+}
+  
+
+.ShowInfoRob video {
+    display: none;
+}
+
+.ShowInfoRob img {
+    display: none;
+    transform: scale(0.6);
+    border-radius: 14px;
+    position: absolute;
+    top: -57.6px;
+    height: 326.4px;
+    width: 403.2px;
+    box-shadow: 0 0 10px #0000007d;
+}
+
+.movlist {
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 1%;
+    left: 10%;
+    direction: ltr;
+
+
+}
+
+.movlist video {
+    width: 340px;
+    height: 240px;
+    display: inline;
+    border-radius: 7px;
+}
+
+@keyframes Jobs {
+    0% {
+      box-shadow: rgb(189, 189, 189) 0px 0px 13px 0px;
+    }
+    50% {
+      box-shadow: rgb(189, 189, 189) 0px 0px 13px 10px;
+    }
+    100% {
+        box-shadow: rgb(189, 189, 189) 0px 0px 13px 0px;
+    }
+  }
+@keyframes ChangeColor {
+   from { border-color: #00415f; }
+   to { border-color: rgb(0, 255, 255);}
+  }
+  @keyframes changePos {
+    0%   {left:0%; top:0px;}
+    25%  { left: 39%; top:0px;}
+    50%  {left:56%; top:0;}
+    75%  {left:95%; top:0px;}
+    100% {left:0%; top:0px;}
+  }
+  @keyframes changePostwo {
+    0%   {top:-50%;}
+    100% { top:50%;}
+  }
+  @keyframes changePosThree {
+    0%   {left:55%; top:0px;}
+    100% {left:0%; top:0px;}
+  }

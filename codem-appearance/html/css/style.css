@@ -1,0 +1,188 @@
+
+
+@font-face {
+  src: url("../fonts/SF-PRO-ROUNDED-BOLD.OTF");
+  font-family: "sf-pro-rounded-bold";
+}
+@font-face {
+  src: url("../fonts/SF-PRO-ROUNDED-MEDIUM.OTF");
+  font-family: "sf-pro-rounded-medium";
+}
+
+@font-face {font-family: "Proxima Nova"; src: url("//db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.eot"); src: url("//db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.woff") format("woff"), url("//db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.svg#Proxima Nova") format("svg"); }
+
+@import url('/pages/call/style.css');
+
+body {
+    overflow: hidden;
+    user-select: none;
+}
+
+
+
+  .categoryImage-enter-active {
+    animation: categoryImage-enter 0.3s ease forwards;
+  }
+  .categoryImage-leave-active {
+    animation: categoryImage-leave 0.3s  ease forwards ;
+  }
+
+  @keyframes categoryImage-enter {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  @keyframes categoryImage-leave {
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
+  }  
+
+  .unpaidclothing-enter-active {
+    animation: unpaid-clothing-enter 0.1s ease forwards;
+  }
+  .unpaidclothing-leave-active {
+    animation: unpaid-clothing-leave 0.1s  ease forwards ;
+  }
+
+  @keyframes unpaid-clothing-enter {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  @keyframes unpaid-clothing-leave {
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
+  } 
+
+  .seactbarplaceholder::placeholder{
+    color: #FFE58A;
+
+  }
+  .no-scrollbar::-webkit-scrollbar{
+    display: none;
+  }
+
+  .clothes-inputplaceholder::placeholder{
+    color: white;
+  }
+  
+  .rangeForInput{
+    -webkit-appearance: none !important;
+    background-color: #bdc3c7;
+    width: 17vw;
+    height: 0.2vw;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+  }
+  .rangeForInput::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+ 
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.rangeForInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color:#AFAFB2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+
+.buynowtext {
+
+  background: linear-gradient(to right, #675119a2 0%, #825f05fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.buynowtext-ponson{
+
+  background: linear-gradient(to right, #6B419D 0%, #340271 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.buynowtextsuburban{
+  
+  background: linear-gradient(90deg, #FEE173 0%, #7FD1FB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.blur-menu{
+    position: relative;
+  background-color: rgba(0, 0, 0, 0.04);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  width: -webkit-fill-available;
+
+}
+
+
+.text-1{
+  color: #FFF;
+
+
+  font-family: "sf-pro-rounded-medium";
+  font-size: 1.1vw;
+  font-weight: 400;
+ 
+}
+
+
+
+.inactive-dropdown-list{
+  display: none;
+}
+.active-dropdown-list {
+  display: block;
+  height: 10vh;
+
+ 
+  transition: height 0.4s ease-in-out;
+}
+.dropmenu-enter-active, .dropmenu-leave-active {
+  opacity: 1;
+}
+.dropmenu-enter-from, .dropmenu-leave-to {
+  opacity: 0;
+}
+
+
+.dropmenu-enter-to {
+  height: 10vh;
+}
+.dropmenu-leave-from {
+  height: 10vh;
+}
+.dropmenu-leave-to {
+  height: 0;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.5s ease;
+  
+}
+.fade-enter {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.fade-enter-to{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-leave-to{
+  opacity: 0;
+  transform: translateX(10vw);
+}

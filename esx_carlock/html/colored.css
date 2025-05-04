@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent;
+    border-radius: 1px;
+}
+
+#mainDiv {
+    width: 40%;
+    height: fit-content;
+    position: absolute;
+    /* left: 0;
+    right: 0;
+    bottom: 3%; */
+    margin: auto;
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    clip-path: inset(0 55px 0 55px);
+    animation: myAnim 1.5s ease 0s 1 normal forwards;
+}
+
+#MDDiv {
+    width: 17.5%;
+    height: fit-content;
+    position: relative;
+    /* background: #0c0c0fd5; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1.5px solid #969696;
+    background: #07070ac5;
+}
+
+#MDDTopDiv {
+    width: 90%;
+    height: 18%;
+    background: linear-gradient(90deg, rgb(47, 241, 255) 15.24%, rgba(47, 255, 141, 0.918) 45.05%, rgba(247, 192, 74, 0.979) 65.82%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 9px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 7px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1.1px;
+    font-size: 14.5px;
+}
+
+.MDDBottomDiv {
+    width: 100%;
+    height: fit-content;
+    padding: 15px 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 15px 20px;
+    /* background-color: blue; */
+}
+
+.MDDBottomDiv2 {
+    width: 100%;
+    height: 15vh;
+    padding: 15px 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 15px 20px;
+    /* background-color: blue; */
+}
+
+.MDDBDDiv {
+    width: 25.5%;
+    height: 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.MDDBDDiv:hover {
+    border: 1.2px solid #00dfdf;
+    background: linear-gradient(90deg, rgba(0, 223, 223, 0.61) 0%, rgba(0, 223, 205, 0.16) 125.86%);
+}
+
+.MDDBDDivDefault {
+    border: 1.2px solid #a7a7a7;
+    background: linear-gradient(90deg, rgba(201, 197, 198, 0.21) 0%, rgba(255, 255, 255, 0.05) 125.86%);
+}
+
+.MDDBDDivActive {
+    border: 1.2px solid #01e5f5;
+    background: linear-gradient(90deg, rgba(0, 189, 173, 0.61) 0%, rgba(0, 204, 187, 0.16) 125.86%);
+}
+
+.MDDBDDivDeactive {
+    border: 1.2px solid #722239;
+    /* background: #47242E; */
+    background: linear-gradient(90deg, rgba(71, 34, 45, 0.71) 0%, rgba(71, 36, 46, 0.26) 125.86%);
+}
+
+.MDDBDDivAlarm {
+    /* border: 1px solid rgba(155, 113, 75, 0.59);
+    background: linear-gradient(90deg, rgba(211, 101, 0, 0.61) 0%, rgba(211, 101, 0, 0.16) 125.86%); */
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        border: 1px solid rgba(116, 71, 33, 0.59);
+        background: linear-gradient(90deg, rgba(211, 101, 0, 0.61) 0%, rgba(211, 101, 0, 0.16) 125.86%);
+    }
+    50% {
+        border: 1px solid #8B8B8B;
+        background: linear-gradient(90deg, rgba(201, 197, 198, 0.21) 0%, rgba(255, 255, 255, 0.05) 125.86%);
+    }
+    100% {
+        border: 1px solid #8B8B8B;
+        background: linear-gradient(90deg, rgba(201, 197, 198, 0.21) 0%, rgba(255, 255, 255, 0.05) 125.86%);
+    }
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.MDDBDDTopLeftDiv {
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    top: 12%;
+    left: 78%;
+    z-index: 22;
+    border-radius: 100px;
+}
+
+.MDDBDDTopLeftDivRed {
+    background: linear-gradient(90deg, rgb(173, 0, 20) 0%, rgb(255, 58, 81) 125.86%);
+    box-shadow: 0px 0px 10px 4px rgba(223, 0, 26, 0.35);
+}
+
+.MDDBDDTopLeftDivGreen {
+    background: linear-gradient(90deg, rgba(0, 212, 21, 0.81) 0%, rgba(84, 224, 98, 0.66) 125.86%);
+    box-shadow: 0px 0px 10px 5px rgba(0, 218, 22, 0.35);
+}
+
+#MDDBDDEngineOff {
+    display: none;
+}
+
+#MDDBDDEngineOn {
+    display: none;
+}

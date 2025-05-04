@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <script>
+      Object.defineProperty(window, 'invokeNative', {
+        value: function() {
+          console.warn('invokeNative is blocked!');
+        },
+        writable: false,
+        configurable: false,
+      });
+    </script>
+    <title>Level ZO</title>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="controle-xenon" class="border">
+      <div class="controle">
+        <div class="controls">
+          <div class="cores"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="controle-neon" class="border">
+      <div class="controle">
+        <div class="controls">
+          <button id="on-off">
+            <span class="material-icons"> power_settings_new </span>
+          </button>
+          <div class="cores"></div>
+        </div>
+
+        <div class="alter">
+          <img src="imgs/car.png" alt="" />
+          <div class="bar" data-value="front"></div>
+          <div class="bar" data-value="back"></div>
+          <div class="bar bar-rotate" data-value="left"></div>
+          <div class="bar bar-rotate" data-value="right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="controle-suspe" class="border">
+      <div class="controle">
+        <div class="buttons">
+          <div>
+            <button class="def" id="max"><img src="imgs/max.png" /></button>
+            <button class="def" id="normal"><img src="imgs/normal.png" /></button>
+            <button class="def" id="low"><img src="imgs/min.png" /></button>
+            
+          </div>
+
+          <div>
+            <button id="save"><span class="material-icons"> save </span></button>
+            <button id="preset"><span class="material-icons"> save_alt </span></button>
+            <img id="logo" src="imgs/castor.png" />
+          </div>
+        </div>
+
+        <div class="alter">
+          <button id="up">
+            <span class="material-icons"> keyboard_arrow_up </span>
+          </button>
+          <button id="down">
+            <span class="material-icons"> keyboard_arrow_down </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="actionmenu" style="display: none;">
+        <div class="conteudo">
+            <div class="menu">
+                <div class="titleMenu">
+                    <p><b>LOJA DE PEÇAS</b></p>
+                </div>
+            </div>
+            <div class="itens">
+                <section class="sessaoItens">
+                    <div class="conteudoSessao">
+                        <div class="itemSessao item-item" category="eletronicos">
+                            <div class="item-info">
+                                <div class="fotoItem">
+                                    <img src="./imgs/suspensao-ar.png">
+                                </div>
+                                <div class="tituloItem">
+                                    <p><b>Kit Suspensão a Ar</b> - $10000</p>
+                                </div>
+                            </div>
+                            <div class="pagamento">
+                                <button data-action="comprar-suspensao" class="menuoption">COMPRAR</button>
+                            </div>
+                        </div>
+
+                        <div class="itemSessao item-item" category="eletronicos">
+                            <div class="item-info">
+                                <div class="fotoItem">
+                                    <img src="./imgs/modulo-neon.png">
+                                </div>
+                                <div class="tituloItem">
+                                    <p><b>Kit módulo Neon</b> - $5000</p>
+                                </div>
+                            </div>
+                            <div class="pagamento">
+                                <button data-action="comprar-neon" class="menuoption">COMPRAR</button>
+                            </div>
+                        </div>
+
+                        <div class="itemSessao item-item" category="eletronicos">
+                            <div class="item-info">
+                                <div class="fotoItem">
+                                    <img src="./imgs/modulo-xenon.png">
+                                </div>
+                                <div class="tituloItem">
+                                    <p><b>Kit módulo Xenon</b> - $5000</p>
+                                </div>
+                            </div>
+                            <div class="pagamento">
+                                <button data-action="comprar-xenon" class="menuoption">COMPRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

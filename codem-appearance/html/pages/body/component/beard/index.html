@@ -1,0 +1,177 @@
+
+
+
+<div class="w-full h-full flex items-start flex-wrap content-start justify-center no-scrollbar " style="overflow: auto;">
+        <div class="w-full h-[95%] flex items-start justify-center flex-wrap content-start ">
+            <div class="w-[90%] h-[8%]  flex items-center justify-start">
+                <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[0.1vw]">Beard</h2>
+                <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+            </div>
+            <div class="w-[90%] h-[44%]   flex flex-wrap items-start justify-center">
+                <div class="w-full h-[45%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-between">
+                            <div  @click="changeSkin('beard_1', getSkinByName('beard_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                                <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                            </div>
+                            <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                                <input  @change="changeSkin('beard_1', $event.target.value)"   type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('beard_1')">
+                            </div>
+                            <div @click="changeSkin('beard_1', getSkinByName('beard_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                                <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[45%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                            <div class="w-[65%] h-full  flex items-center justify-center">
+                                <input  @change="changeSkin('beard_2', $event.target.value)"   type="range" class=" rangeForInput" step="1" :value="getSkinByName('beard_2')" min="0" max="10">  
+                            </div>
+                             
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[95%] flex   flex-wrap items-start  ">
+                    <div class="w-full h-[100%] flex  flex-wrap items-start mt-[0.5vw] ">
+                        <div class="w-full h-[15%]  ">
+                            <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">Color</h2>
+                        </div>
+                        <div class="w-full h-[85%] rounded-[0.5vw] flex flex-wrap items-center justify-center  " style="background-color: rgba(217, 217, 217, 0.15);">
+                            <div class="w-[94%] h-[90%]  flex-wrap flex content-start cursor-pointer" >
+                                <div @click="changeSkin('beard_3', data.index)" v-for="data in this.$store.state.bodypage.hairColorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+        <div class="w-full h-[40%] flex items-start justify-center flex-wrap content-start ">
+            <div class="w-[90%] h-[8%]  flex items-center justify-start">
+                <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[0.1vw]">Jaw</h2>
+                <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+            </div>
+            <div class="w-[90%] h-[100%]   flex flex-wrap items-start justify-center">
+                <div class="w-full h-[50%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Jaw Width</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]" style="background: rgba(217, 217, 217, 0.15)">
+                            <div  @click="changeSkin('jaw_1', getSkinByName('jaw_1')-1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                            </div>
+                            <input @change="changeSkin('jaw_1', $event.target.value)"  class="rangeForInput "  type="range" step="1" :value="getSkinByName('jaw_1')" min="-10" max="10">   
+                            <div  @click="changeSkin('jaw_1', getSkinByName('jaw_1')+1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[50%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Jaw Size</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]" style="background: rgba(217, 217, 217, 0.15)">
+                            <div @click="changeSkin('jaw_2', getSkinByName('jaw_2')-1)"  class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                            </div>
+                            <input @change="changeSkin('jaw_2', $event.target.value)"  class="rangeForInput"  type="range"  step="1" :value="getSkinByName('jaw_2')" min="-10" max="10">   
+                            <div @click="changeSkin('jaw_2', getSkinByName('jaw_2')+1)"  class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+           
+            </div>
+        </div>
+        <div class="w-full h-[40%] flex mt-[1.5vw] items-start justify-center flex-wrap content-start ">
+            <div class="w-[90%] h-[8%]  flex items-center justify-start">
+                <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Chin</h2>
+                <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+            </div>
+            <div class="w-[90%] h-[100%]   flex flex-wrap items-start justify-center">
+                <div class="w-full h-[50%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Chin Lovering</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]" style="background: rgba(217, 217, 217, 0.15)">
+                            <div  @click="changeSkin('chin_1', getSkinByName('chin_1')-1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                            </div>
+                            <input  @change="changeSkin('chin_1', $event.target.value)" class="rangeForInput"  type="range"  step="1" :value="getSkinByName('chin_1')" min="-10" max="10">   
+                            <div  @click="changeSkin('chin_1', getSkinByName('chin_1')+1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[50%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Ching length</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]" style="background: rgba(217, 217, 217, 0.15)">
+                            <div @click="changeSkin('chin_2', getSkinByName('chin_2')-1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                            </div>
+                            <input  @change="changeSkin('chin_2', $event.target.value)"  class="rangeForInput"  type="range"  step="1" :value="getSkinByName('chin_2')" min="-10" max="10">   
+                            <div @click="changeSkin('chin_2', getSkinByName('chin_2')+1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[50%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Ching Size</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]" style="background: rgba(217, 217, 217, 0.15)">
+                            <div  @click="changeSkin('chin_3', getSkinByName('chin_3')-1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                            </div>
+                            <input @change="changeSkin('chin_3', $event.target.value)"  class="rangeForInput"  type="range"  step="1" :value="getSkinByName('chin_3')" min="-10" max="10">   
+                            <div  @click="changeSkin('chin_3', getSkinByName('chin_3')+1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[50%] flex  flex-wrap items-start  ">
+                    <div class="w-full h-[30%]  ">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Ching Hole Size</h2>
+                    </div>
+                    <div class="w-full h-[60%]   ">
+                        <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]" style="background: rgba(217, 217, 217, 0.15)">
+                            <div  @click="changeSkin('chin_4', getSkinByName('chin_4')-1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                            </div>
+                            <input @change="changeSkin('chin_4', $event.target.value)" class="rangeForInput"  type="range"  step="1" :value="getSkinByName('chin_4')" min="-10" max="10">   
+                            <div  @click="changeSkin('chin_4', getSkinByName('chin_4')+1)" class="w-[15%] h-full  flex items-center justify-center">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+           
+            </div>
+        </div>
+
+
+
+
+</div>

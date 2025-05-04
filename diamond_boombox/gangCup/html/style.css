@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.leaderboard {
+  max-width: 35rem;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  font-family: sans-serif;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+}
+
+header {
+  background-color: #00aaff;
+  color: white;
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 14rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  position: absolute;
+  margin-left: 2rem;
+  top: 4rem;
+}
+
+h1 span.premium {
+  color: #FFD700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  font-weight: bold;
+}
+
+.head-img {
+  height: 12.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: -1.6rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  margin-top: auto;
+  width: 100%;
+  font-size: 3.9rem;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 10%,
+    rgba(22, 22, 22, 0.5) 90%,
+    rgba(22, 22, 22, 0.7)
+  );
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.1rem;
+}
+
+.active-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background: #0095ff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #0095ff, 0 0 10px #0095ff, 0 0 20px #0095ff;
+}
+
+nav a {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.72rem;
+  letter-spacing: -0.2px;
+  margin: 0 0.175rem;
+  transition: text-shadow 0.3s ease;
+}
+
+nav a.active {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+table {
+  background-color: #16181e;
+  color: #999;
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+thead {
+  background-color: transparent;
+  font-size: 0.7rem;
+  color: #555;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: table;
+  width: calc(100% - 8px);
+  table-layout: fixed;
+}
+
+tbody {
+  display: block;
+  height: 26.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody tr {
+  display: table;
+  width: calc(100% - 0px);
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th:first-child,
+td:first-child {
+  width: 15%;
+}
+th:nth-child(2),
+td:nth-child(2) {
+  width: 45%;
+}
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4) {
+  width: 20%;
+}
+
+tbody .gname {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+tbody tr:nth-child(1n) {
+  background-color: #18191f;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: #1f232c;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+}
+
+th {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.gname,
+th.gname {
+  text-align: left;
+}
+
+tbody::-webkit-scrollbar {
+  width: 8px;
+}
+
+tbody::-webkit-scrollbar-track {
+  background: #16181e;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+tbody::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.empty-state {
+  display: table;
+  width: 100%;
+}
+
+.empty-state td {
+  text-align: center;
+  padding: 8rem 1rem;
+  color: #555;
+  height: 26.5rem;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-size: 1.4rem;
+}
+
+.rank {
+  width: 15%;
+}
+
+.gname {
+  width: 45%;
+}
+
+.cup,
+.points {
+  width: 20%;
+}
+
+.rank,
+.cup,
+.points {
+  text-align: center;
+}
+
+.gname {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.cup-image {
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.leaderboard.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+tr.current-gang {
+  outline: 2px dashed #FFD700;
+  outline-offset: -2px;
+  box-sizing: border-box;
+}

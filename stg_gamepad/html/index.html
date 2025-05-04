@@ -1,0 +1,102 @@
+ <html>
+
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <title>S5 Market</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+    <script src="main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body> 
+    <div id="consoleBox">
+        <img id="consolePng" src="images/console.png">
+        <img id="consoleBackground" src="images/background.png">
+        <div id="gameScreen">
+            <img id="profilePhoto" src="images/pp.png">
+            <img class="pp">
+            <p id="ConsoleName">Baran Kaya</p>
+            <p id="dateText">29.06.23</p>
+            <p id="consoleTime">18:05</p>
+            <p id="LastGameText">Last Games</p>
+            <div id="gamesBox">
+                <!-- <div class="gameOne">
+                    <img id="gamePhoto" src="images/gameName.png">
+                    <img id="titleBox" src="images/titleBoz.png">
+                    <p id="gameNameText">GTA:SA</p>
+                    <p id="DetailsText">San Andreas</p>
+                    <img id="borderBox" src="images/border.png">
+                </div>
+                <div class="gameOne">
+                    <img id="gamePhoto" src="images/suıper.jpg">
+                </div>
+                <div class="gameOne">
+                    <img id="gamePhoto" src="images/superm.jpg">
+                </div>
+                <div class="gameOne">
+                    <img id="gamePhoto" src="images/gameName.png">
+                </div> -->
+            </div>
+            <img id="showPicture" src="images/cover.jpg">
+            <img id="SelectedBox" src="images/newsBox.png">
+            <p id="textDeatils">Among Us is a social deception game which can be downloaded for free on Android and iOs, or to purchase for use on a PC. It can be played with a group of between 4 and 10 players either online by joining a game with strangers, or players can host or join games with friends.</p>
+            <img id="titleBoxDetails" src="images/backTitle.png">
+            <img onclick="openGame('https://amongusplay.online/')" id="playButton" src="images/PlayButton.png">
+            <p onclick="openGame('https://amongusplay.online/')" id="playText">PLAY</p>
+            <p id="recommendedText">Recommended</p>
+            <p id="newsText">New's</p>
+            <p id="showText">Show; New Game</p>
+
+            <div id="lastPage">
+                <input type="text" id="searchGame" placeholder="Search..">
+                <img id="searchPng" src="images/search.png">
+                <p id="allgamesText">All Games</p>
+                <!-- <div class="allGamesBox">
+                    <img id="allGameSett" src="images/gameName.png">
+                    <img id="borderGame" src="images/border.png">
+                </div>
+                <div class="allGamesBox">
+                    <img id="allGameSett" src="images/gameName.png">
+                </div>
+                <div class="allGamesBox">
+                    <img id="allGameSett" src="images/superm.jpg">
+                </div>
+                <div class="allGamesBox">
+                    <img id="allGameSett" src="images/rdr2.jpg">
+                </div>
+                <div class="allGamesBox">
+                    <img id="allGameSett" src="images/suıper.jpg">
+                </div>
+                <div class="allGamesBox">
+                    <img id="allGameSett" src="images/rdr2.jpg">
+                </div>
+                <div class="allGamesBox">
+                    <img id="allGameSett" src="images/gtav.jpg">
+                </div> -->
+            </div>
+        </div>
+        <div id="gameArea">
+            <!-- <iframe src="https://files.ufreegame.net/1024/Subway-Surfers-Zurich/" id="game"></iframe> -->
+            <img onclick="exitGame()" class="home" src="images/home.png">
+        </div>
+    </div>
+</body>
+
+</html>

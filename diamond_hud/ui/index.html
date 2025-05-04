@@ -1,0 +1,459 @@
+<html>
+
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <script src="modules/vue@2.js"></script>
+    <script src="modules/axios.min.js"></script>
+    <script src="modules/vue-axios.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="modules/7e8b976a2c.js" crossorigin="anonymous"></script>
+	<script src="modules/jquery-3.4.1.min.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="todoelhud" style="display: block;">
+        <div class="statusHUD" id="statusHUD" style="display: none; visibility: hidden;">
+            <div id="co2" class="ldBar" data-preset="circle" data-value="10" style="display: none; color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="co2p">100%</h1>
+                <img class="ico2" src="https://cdn.discordapp.com/attachments/933891151885381682/937139491896979516/02.png" alt="">
+            </div>
+
+            <div id="vida" class="ldBar" data-preset="circle" data-value="10" style="color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="vidap">100%</h1>
+                <img class="ivida" src="https://cdn.discordapp.com/attachments/933891151885381682/937141823930007623/heart.png" alt="">
+            </div>
+
+            <div id="comida" class="ldBar" data-preset="circle" data-value="10" style="color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="comidap">100%</h1>
+                <img class="icomida" src="https://cdn.discordapp.com/attachments/933891151885381682/937142029115355136/burger.png" alt="">
+            </div>
+
+            <div id="agua" class="ldBar" data-preset="circle" data-value="10" style="color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="aguap">100%</h1>
+                <img class="iagua" src="https://cdn.discordapp.com/attachments/933891151885381682/937143089196318770/water1.png" alt="">
+            </div>
+
+            <div id="stamina" class="ldBar" data-preset="circle" data-value="10" style="color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="staminap">100%</h1>
+                <img class="istamina" src="https://cdn.discordapp.com/attachments/933891151885381682/937143374220259348/runer.png" alt="">
+            </div>
+
+            
+            <div id="stress" class="ldBar" data-preset="circle" data-value="10" style="color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="stressp">100%</h1>
+                <img class="istress" src="https://cdn.discordapp.com/attachments/941780399883960360/950038856944738314/streess.png" alt="">
+            </div>
+
+            <div id="chaleco" class="ldBar" data-preset="circle" data-value="10" style="color: transparent; position: relative; margin-right: 2.5vw; width: 2.3vw; height: 2.3vw; transform: translate(-90deg);">
+                <h1 class="chalecop">100%</h1>
+                <img class="ichaleco" src="https://cdn.discordapp.com/attachments/933891151885381682/937143989612707840/armor.png" alt="">
+            </div>
+        </div>
+
+        <div class="carposition">
+            <div class="carhud" id="carhud" style="display: none;">
+                <h1 class="velojs" id="velojs">500</h1>
+                <h2 class="kmh">KM/H</h2>
+                <h2 class="mph"></h2>
+                <img class="igaso" src="https://cdn.discordapp.com/attachments/933891151885381682/937152934863581225/gas.png" alt="">
+                <h3 class="gasojs">100%</h3>
+                <div id="carhudjs" data-preset="fan" class="ldBar" data-value="60" style="transform: scaleX(-1) rotate(-90deg) scaleY(1); position: relative; color: transparent; height: 8vw; width: 8vw; right: -0.5vw; bottom: -4vw"></div>
+                <img class="cinto" src="https://media.discordapp.net/attachments/933891151885381682/937154076368572456/belt.png" alt="">
+                <i id="vidamotor" class="fas fa-cogs"><span class="motorjs">100%</span></i>
+                <img class="motor" src="https://cdn.discordapp.com/attachments/933891151885381682/937152305889951804/engine.png" alt="">
+            </div>
+        </div>
+
+            <div class="keybindsall" id="keybindsall" style="visibility: hidden;">
+                <div class="textito">
+                    <h1>Phone</h1>
+                    <h1>Inventory</h1>
+                    <h1>Chat</h1>
+                    <h1>Help</h1>
+                </div>
+                <div class="keybinds">
+                    <div class="circulo"><span>F1</span></div>
+                    <div class="circulo"><span>F2</span></div>
+                    <div class="circulo"><span>T</span></div>
+                    <div class="circulo"><span>F10</span></div>
+                </div>
+            </div>
+            
+            <!-- <div class="OpcionPanel" id="OpcionPanel" "> -->
+            <div class="OpcionPanel" id="OpcionPanel" style="display: none;">
+
+                <div class="titlePanel">
+                    <h1>Here you can turn off what you don't want to use, move what you want, and reset everything back to default.</h1>
+                </div>
+
+                <button class="bottonpanel styled" id="movehud" type="button"> MOVE HUD </button>
+                <!-- <button class="bottonpanel styled" id="resethud" type="button"> RESET HUD </button> -->
+                <button class="bottonpanel styled" id="microhud" type="button">Show┃Hide MICRO </button>
+                <button class="bottonpanel styled" id="jobhud" type="button"> Show┃Hide JOB </button>
+                <!-- <button class="bottonpanel styled" id="zonehud" type="button"> ZONE </button> -->
+
+                <div class="colortitles">
+                    <h1>Here you can choose the color of all the options!.. choose the category and then the color.</h2>
+                </div>
+
+                <div class="bottonshowhide" >
+                    <img class="ico2" src="https://cdn.discordapp.com/attachments/933891151885381682/937139491896979516/02.png" alt=""> <input id="switch1" type="checkbox" >Show ┃ Hide Oxigen Status
+                    <br>
+                    <img class="ivida" src="https://cdn.discordapp.com/attachments/933891151885381682/937141823930007623/heart.png" alt=""> <input id="switch2" type="checkbox" checked="true" >Show ┃ Hide Health Status
+                    <br>
+                    <img class="icomida" src="https://cdn.discordapp.com/attachments/933891151885381682/937142029115355136/burger.png" alt=""> <input id="switch3" type="checkbox" checked="true" >Show ┃ Hide Hunger Status
+                    <br>
+                    <img class="iagua" src="https://cdn.discordapp.com/attachments/933891151885381682/937143089196318770/water1.png" alt=""> <input id="switch4" type="checkbox" checked="true" >Show ┃ Hide Thirst Status
+                    <br>
+                    <img class="istamina" src="https://cdn.discordapp.com/attachments/933891151885381682/937143374220259348/runer.png" alt=""> <input id="switch5" type="checkbox" checked="true" >Show ┃ Hide Stamina Status
+                    <br>
+                    <img class="istress" src="https://cdn.discordapp.com/attachments/941780399883960360/950038856944738314/streess.png" alt=""> <input id="switch15" type="checkbox" checked="true" >Show ┃ Hide Stress Status
+                    <br>
+                    <img class="ichaleco" src="https://cdn.discordapp.com/attachments/933891151885381682/937143989612707840/armor.png" alt=""> <input id="switch6" type="checkbox" checked="true" >Show ┃ Hide Armor Status
+                </div>
+
+
+                <div class="bottonshowhide2" >
+                    <i class="fas fa-user"></i> <input id="switch7" type="checkbox" checked="true" >Show ┃ Hide Player ID
+                    <br>
+                    <i class="fas fa-user-friends"></i> <input id="switch8" type="checkbox"  >Show ┃ Hide Player Online
+                    <br>
+                    <i class="fas fa-money-bill"></i> <input id="switch9" type="checkbox" checked="true" >Show ┃ Hide Cash
+                    <br>
+                    <i class="fas fa-wallet"></i> <input id="switch10" type="checkbox"  >Show ┃ Hide Bank
+                    <br>
+                    <i class="fas fa-sack-dollar"></i> <input id="switch11" type="checkbox" checked="true" >Show ┃ Hide Duty Money
+                    <br>
+                    <i class="fas fa-clock"></i> <input id="switch12" type="checkbox"  >Show ┃ Hide Clock
+                </div>
+
+                <div class="ColorPicker" style="position: absolute; top: 10vw;">
+
+                    <input style="width: 9vw; height: 2vw" id="color-block" class="color-block " type="color"  data-wheelcolorpicker="" data-wcp-format="css" />
+
+                    <select id="selection" style="position: relative; border-radius: .4vw; width: 8.5vw; height: 2vw;background: rgb(255, 255, 255);border-style: none;color: rgb(139, 139, 139);text-align: center; bottom: .4vw;">
+                        <optgroup  label="CHANGE COLOR">
+                            <option class="options" value="playersID-option">Player ID</option>
+                            <option class="options" value="playersONLINE-option">Player Online</option>
+                            <option class="options" value="playersCASH-option">Money Cash</option>
+                            <option class="options" value="playersBANK-option">Money Bank</option>
+                            <option class="options" value="playersDUTY-option">Money Black</option>
+                            <option class="options" value="CLOCK-option">Clock</option>
+                            <option class="options" value="logotext-option">Name Server</option>
+                            <option class="options" value="playerJOB-option">Player Job</option>
+                            <option class="options" value="playergang-option">Player Gang</option>
+                            <option class="options" value="notification-option">Notify</option>
+                            <option class="options" value="co2-option">Oxygen</option>
+                            <option class="options" value="vida-option">Heart</option>
+                            <option class="options" value="agua-option">Water</option>
+                            <option class="options" value="comida-option">Hunger</option>
+                            <option class="options" value="stamina-option">Stamina</option>
+                            <option class="options" value="stress-option">Stress</option>
+                            <option class="options" value="chaleco-option">Armor</option>
+                            <option class="options" value="carhudjs-option">Car Gasoline</option>
+                            <option class="options" value="mapborde-option">Map Radar</option>
+                        </optgroup>
+                    </select>
+                    
+                    <button class="btn btn-danger btn-sm d-flex" id="reset-color" type="button" style="position: relative; background-color: rgb(101, 142, 255);border-radius: .4vw; bottom: .3vw;  height: 2vw; width: 8vw;font-size: .8vw;color: rgb(255, 255, 255); font-family: ClauFont;">RESET COLOR</button>
+                    <button class="btn btn-danger btn-sm d-flex" id="reset-position" type="button" style="position: relative; background-color: rgb(101, 142, 255);border-radius: .4vw; bottom: .3vw;  height: 2vw; width: 8vw;font-size: .8vw;color: rgb(255, 255, 255); font-family: ClauFont;">RESET POSITION</button>
+
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    <!-- <div id="logo">
+        <img src="./serverlogo.png" alt="">
+    </div> -->
+    <div id="wrap" style="display:block">
+		<div id="bottom-left-weapon" style="display:block">
+			<div id="weapon-img" style="display:block"></div>
+			<div id="weapon-ammo" style="display:block"><div id="weapon-ammo-icon"></div> <span id='weapon-info'>30/150</span></div>
+			<br/>
+		</div>
+	</div>
+    <!-- New Hud -->
+    <!--<div class="new-hud" style="display: block;">
+        <h3>Diamond</h3>
+        <ul>
+            <li>
+                <i class="fa-solid fa-id-card"></i>
+                <span id="name"></span>
+            </li>
+            <li>
+                <i class="fa-solid fa-briefcase"></i>
+                <span id="job"></span>
+            </li>
+            <li>
+                <i class="fa-solid fa-skull-crossbones"></i>
+                <span id="gang"></span>
+            </li>
+            <li>
+                <i class="fa-solid fa-wallet"></i>
+                <span id="money"></span>
+            </li>
+            <li>
+                <i class="fa-solid fa-coins"></i>
+                <span id="coin" dir="ltr">
+                    
+                </span>
+            </li>
+            <li>
+                <i class="fa-solid fa-user"></i>
+                <span id="id"></span>
+            </li>
+        </ul>
+    </div>-->
+
+    <section id="visors" v-if="!menu">
+
+        <main>
+
+            <aside>
+                <div id="static-01"></div>
+                <div id="static-02"></div>
+                <div id="static-03"></div>
+            </aside>
+
+            <div id="content">
+                <section class="velocityDiv" v-if="isAnyVehicle">
+                    <div id="main">
+                        <div id="velocityBar">
+                            <svg width="270px" height="270px">
+                                <circle class="velocityCircle" cx="125" cy="125" r="125" stroke="black"
+                                    stroke-width="3" />
+                                <circle class="velocityCircle" cx="125" cy="125" r="125" stroke="black" stroke-width="3"
+                                    :style="{strokeDashoffset:vehicleVelocityPercentage}" />
+                            </svg>
+                        </div>
+
+                        <div class="slicerFuel">
+                            <div class="fuelLevelMarker" :style="{ transform: getFuelRotate}">
+
+                            </div>
+                        </div>
+
+                        <div class="slicerEngine">
+                            <div class="engineLevelMarker" :style="{transform: getEngineRotate}">
+
+                            </div>
+                        </div>
+
+                        <div id="components">
+
+
+                            <svg id="key" width="43" height="42" viewBox="0 0 28 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path :class="[locked? 'locked' : 'unlocked']"
+                                        d="M14.0544 13.8004L4.71864 22.4938C4.61743 22.588 4.62272 22.742 4.73018 22.8301L4.86704 22.9422C4.92256 22.9877 4.99703 23.0079 5.07017 22.9972L6.61857 22.7712C6.6686 22.7639 6.71474 22.7429 6.7513 22.7103C7.11806 22.3839 7.82601 21.7431 8.22206 21.3473C8.26417 21.3052 8.28629 21.2495 8.28903 21.1921C8.34479 20.0199 9.4907 19.5783 10.1424 19.49C10.197 19.4826 10.248 19.4612 10.2879 19.4257C10.6513 19.102 11.3066 18.5094 11.5832 18.2273C11.6232 18.1865 11.6434 18.1329 11.6459 18.0778C11.6985 16.907 12.8248 16.4773 13.4698 16.3947C13.5274 16.3873 13.5813 16.3643 13.6224 16.3261L15.1983 14.8625C15.2954 14.7723 15.2954 14.626 15.1983 14.5358L14.4063 13.8002C14.3091 13.7099 14.1514 13.71 14.0544 13.8004Z" />
+                                    <path :class="[locked? 'locked' : 'unlocked']"
+                                        d="M13.9047 13.6152L4.54505 22.2863C4.44358 22.3803 4.27779 22.3754 4.18297 22.2756L4.06221 22.1485C4.01322 22.0969 3.99152 22.0278 4.00302 21.9598L4.24634 20.5217C4.2542 20.4752 4.27683 20.4323 4.31187 20.3984C4.66327 20.0577 5.35322 19.4002 5.7794 19.0323C5.82472 18.9932 5.88471 18.9727 5.94651 18.9701C7.20849 18.9183 7.68393 17.854 7.77906 17.2487C7.78704 17.1979 7.81003 17.1506 7.84826 17.1136C8.19674 16.776 8.83478 16.1673 9.13851 15.9104C9.1824 15.8733 9.24019 15.8545 9.2995 15.8522C10.56 15.8033 11.0227 14.7573 11.1116 14.1582C11.1195 14.1047 11.1443 14.0546 11.1854 14.0164L12.7613 12.5528C12.8584 12.4626 13.0158 12.4626 13.1129 12.5528L13.9049 13.2884C14.0021 13.3786 14.002 13.525 13.9047 13.6152Z" />
+                                    <path :class="[locked? 'locked' : 'unlocked']" fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M15.0123 4.43202L11.9731 7.4209C11.4373 7.94778 11.1489 8.65076 11.1712 9.37519C11.1934 10.0996 11.5246 10.7862 12.0919 11.2838L16.389 15.0533C17.5814 16.088 19.446 16.0385 20.5685 14.9346L23.5956 11.9577C23.8654 11.6924 24.0106 11.3384 23.9994 10.9737C23.9882 10.6089 23.8214 10.2632 23.5358 10.0127L17.1106 4.37635C16.8244 4.1253 16.4425 3.99012 16.049 4.00056C15.6555 4.011 15.2826 4.1662 15.0123 4.43202ZM19.8304 11.0843C19.8192 10.721 19.6531 10.3767 19.3686 10.1271L18.4949 9.00139L17.2233 8.24521C16.9388 7.99566 16.5592 7.86128 16.1681 7.87166C15.7769 7.88204 15.4063 8.03631 15.1376 8.30055C14.8689 8.56478 14.7242 8.91733 14.7354 9.28063C14.7466 9.64394 14.9127 9.98824 15.1971 10.2378L16.6179 10.8092L17.3425 12.1197C17.6269 12.3693 18.0065 12.5036 18.3977 12.4933C18.7888 12.4829 19.1595 12.3286 19.4282 12.0644C19.6969 11.8001 19.8415 11.4476 19.8304 11.0843Z" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d" x="0.874072" y="0.874072" width="26.2519" height="25.2519"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                        <feOffset />
+                                        <feGaussianBlur stdDeviation="1.56296" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 1 0 0 0 0 0.195833 0 0 0 0 0.195833 0 0 0 0.65 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <svg id="engine" width="43" height="42" viewBox="0 0 26 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path :class="[power? 'power' : 'poweroff']"
+                                        d="M8.99982 9.1667H16.9998V16.5H11.9998L9.99982 14.6667H7.99982V10.0834L8.99982 9.1667ZM7.99982 3.66669V5.50003H10.9998V7.33336H7.99982L5.99982 9.1667V11.9167H3.99982V9.1667H1.99982V16.5H3.99982V13.75H5.99982V16.5H8.99982L10.9998 18.3334H18.9998V14.6667H20.9998V17.4167H23.9998V8.25003H20.9998V11H18.9998V7.33336H12.9998V5.50003H15.9998V3.66669H7.99982Z" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d" x="-0.619479" y="-1.61948" width="27.239" height="25.239"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                        <feOffset />
+                                        <feGaussianBlur stdDeviation="0.809739" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 0.182482 0 0 0 0.5 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+
+
+                            <svg id="belt" width="43" height="42" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <!-- filter="url(#filter0_d)" -->
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M14.9933 14.1737L16.0436 13.1637L17.9064 14.9548L16.856 15.9648L14.9933 14.1737Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M15.0684 18.2918C15.0306 18.3281 14.9858 18.3569 14.9366 18.3765C14.8873 18.3961 14.8344 18.4062 14.7811 18.4062C14.7277 18.4062 14.6749 18.3961 14.6256 18.3765C14.5763 18.3569 14.5315 18.3281 14.4938 18.2918L12.0563 15.9481C12.0186 15.9118 11.9887 15.8687 11.9682 15.8213C11.9478 15.774 11.9373 15.7232 11.9373 15.6719C11.9373 15.6206 11.9478 15.5698 11.9682 15.5224C11.9887 15.475 12.0186 15.4319 12.0563 15.3956L13.394 14.1094L12.7498 13.4899L8.85562 17.2344L9.3808 17.7393L12.6308 20.8643L13.1561 21.3695L17.0503 17.625L16.4061 17.0055L15.0684 18.2918ZM10.5996 17.9012L10.0251 17.3488L11.2438 16.1769L11.8184 16.7293L10.5996 17.9012Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M4.38699 23.0937L7.06245 25.6663L11.7692 21.1406L9.0937 18.568L4.38699 23.0937ZM5.72472 23.7606L5.15018 23.2081L7.30839 21.1329L7.88293 21.6854L5.72472 23.7606ZM8.35687 21.2297L7.78238 20.6773L8.40019 20.0831L8.97472 20.6355L8.35687 21.2297Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M15.052 14.8995L16.1023 13.8896L17.1526 14.8995L16.1023 15.9094L15.052 14.8995Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M19.8804 14.394L16.105 10.7636L15.0544 11.7737L19.355 15.9088L20.4055 14.8987L19.8804 14.394Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M26.0931 7.8675L23.4176 5.29489L17.4922 10.9925L20.1676 13.5651L26.0931 7.8675ZM21.9116 7.59128L22.4862 8.14367L21.8683 8.73781L21.2938 8.18542L21.9116 7.59128ZM18.6616 10.7163L20.8198 8.64108L21.3944 9.19352L19.2362 11.2687L18.6616 10.7163Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M15.5937 4.34371H16.4062V6.68746H15.5937V4.34371Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M15.5937 22.3125H16.4062V24.6562H15.5937V22.3125Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M5.43744 14.1094H7.87494V14.8906H5.43744V14.1094Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M24.1249 14.1094H26.5624V14.8906H24.1249V14.1094Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M8.24268 7.59467L8.81711 7.04233L10.5404 8.69936L9.96599 9.2517L8.24268 7.59467Z" />
+                                    <path :class="[belt? 'beltUse' : 'beltNoUse']"
+                                        d="M21.4537 20.3004L22.0282 19.748L23.7515 21.4051L23.177 21.9574L21.4537 20.3004Z" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d" x="-0.431172" y="-1.43117" width="32.8623" height="31.8623"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                        <feOffset />
+                                        <feGaussianBlur stdDeviation="1.71559" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.972549 0 0 0 0 0.298039 0 0 0 0 0.298039 0 0 0 0.5 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+
+                            <svg id="fuelIcon" width="18" height="16" viewBox="0 0 8 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.74229 0.76281C4.77294 0.719414 4.81299 0.684135 4.85919 0.659832C4.90539 0.635529 4.95645 0.622886 5.00822 0.622925H6.98623C7.07366 0.622925 7.15752 0.659047 7.21934 0.723345C7.28117 0.787643 7.3159 0.87485 7.3159 0.965781V2.68006C7.31583 2.69844 7.31436 2.71678 7.3115 2.73492C7.45042 2.85271 7.56235 3.00123 7.63914 3.16966C7.71594 3.3381 7.75567 3.52222 7.75546 3.70863V8.50861C7.75546 8.6737 7.72419 8.83717 7.66344 8.98969C7.6027 9.14222 7.51366 9.2808 7.40141 9.39754C7.28917 9.51428 7.15591 9.60688 7.00925 9.67005C6.8626 9.73323 6.70541 9.76575 6.54667 9.76575H1.93132C1.61073 9.76575 1.30327 9.6333 1.07658 9.39754C0.849888 9.16178 0.722534 8.84202 0.722534 8.50861V3.70863C0.722534 3.54354 0.7538 3.38006 0.814547 3.22754C0.875295 3.07502 0.964333 2.93643 1.07658 2.8197C1.30327 2.58394 1.61073 2.45149 1.93132 2.45149H2.26099V2.3372C2.26099 2.12503 2.17994 1.92155 2.03568 1.77152C1.89143 1.62149 1.69577 1.53721 1.49176 1.53721H1.0522C0.964769 1.53721 0.880917 1.50108 0.819092 1.43679C0.757267 1.37249 0.722534 1.28528 0.722534 1.19435C0.722534 1.10342 0.757267 1.01621 0.819092 0.951916C0.880917 0.887618 0.964769 0.851495 1.0522 0.851495H1.49176C1.87064 0.851495 2.234 1.00802 2.50191 1.28665C2.76981 1.56527 2.92032 1.94317 2.92032 2.3372V2.45149H3.55197L4.74229 0.76281ZM6.65656 1.30864H5.17525L4.36954 2.45149H6.54667C6.5836 2.45149 6.62052 2.45332 6.65656 2.45652V1.30864ZM2.57747 4.38062C2.51573 4.44491 2.48105 4.53205 2.48105 4.62291C2.48105 4.71377 2.51573 4.80091 2.57747 4.86519L3.77306 6.10862L2.57747 7.35204C2.54508 7.38343 2.5191 7.42128 2.50108 7.46334C2.48306 7.50539 2.47337 7.5508 2.47259 7.59683C2.47181 7.64287 2.47995 7.68859 2.49653 7.73128C2.51312 7.77398 2.53779 7.81276 2.5691 7.84531C2.6004 7.87787 2.63769 7.90354 2.67874 7.92078C2.71979 7.93802 2.76376 7.94649 2.80803 7.94568C2.85229 7.94487 2.89594 7.93479 2.93638 7.91605C2.97682 7.89731 3.01322 7.8703 3.0434 7.83661L4.239 6.59319L5.43459 7.83661C5.46477 7.8703 5.50117 7.89731 5.54161 7.91605C5.58205 7.93479 5.6257 7.94487 5.66997 7.94568C5.71423 7.94649 5.7582 7.93802 5.79925 7.92078C5.8403 7.90354 5.87759 7.87787 5.90889 7.84531C5.9402 7.81276 5.96488 7.77398 5.98146 7.73128C5.99804 7.68859 6.00618 7.64287 6.0054 7.59683C6.00462 7.5508 5.99493 7.50539 5.97691 7.46334C5.95889 7.42128 5.93291 7.38343 5.90052 7.35204L4.70493 6.10862L5.90052 4.86519C5.93291 4.83381 5.95889 4.79595 5.97691 4.7539C5.99493 4.71184 6.00462 4.66644 6.0054 4.6204C6.00618 4.57437 5.99804 4.52864 5.98146 4.48595C5.96488 4.44326 5.9402 4.40448 5.90889 4.37192C5.87759 4.33936 5.8403 4.3137 5.79925 4.29645C5.7582 4.27921 5.71423 4.27074 5.66997 4.27155C5.6257 4.27237 5.58205 4.28244 5.54161 4.30118C5.50117 4.31992 5.46477 4.34694 5.43459 4.38062L4.239 5.62405L3.0434 4.38062C2.98159 4.31642 2.8978 4.28035 2.81043 4.28035C2.72307 4.28035 2.63928 4.31642 2.57747 4.38062Z"
+                                    fill="white" />
+                            </svg>
+                            <svg id="toolsIcon" width="14" height="12" viewBox="0 0 9 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.86915 7.31571L8.2302 7.88369C8.1459 7.95818 8.03185 8 7.91298 8C7.7941 8 7.68006 7.95818 7.59575 7.88369L2.25018 3.13988C2.10385 3.17756 1.95253 3.19773 1.80021 3.19987C1.51372 3.19969 1.23142 3.13872 0.976775 3.02203C0.72213 2.90533 0.502501 2.73629 0.336148 2.52895C0.169795 2.32161 0.0615245 2.08197 0.020338 1.82995C-0.0208484 1.57792 0.00623921 1.3208 0.0993489 1.07996L1.24226 2.09592L1.48074 1.88393L2.11969 1.31595L2.35817 1.10396L1.21526 0.0879965C1.4862 0.0052291 1.77545 -0.0188498 2.05896 0.0177619C2.34248 0.0543735 2.61207 0.150618 2.84531 0.298493C3.07856 0.446368 3.26873 0.641602 3.4 0.867962C3.53128 1.09432 3.59987 1.34527 3.60007 1.59994C3.59766 1.73534 3.57497 1.86985 3.53258 1.99992L8.86915 6.75173C8.95296 6.82667 9 6.92805 9 7.03372C9 7.13939 8.95296 7.24077 8.86915 7.31571ZM0.130846 6.75173C0.0470401 6.82667 0 6.92805 0 7.03372C0 7.13939 0.0470401 7.24077 0.130846 7.31571L0.769796 7.88369C0.854102 7.95818 0.968146 8 1.08702 8C1.20589 8 1.31994 7.95818 1.40425 7.88369L3.86555 5.69977L2.59215 4.56782L0.130846 6.75173ZM8.09971 0L6.29986 0.799968V1.59994L5.32343 2.4679L6.22336 3.26787L7.19979 2.3999H8.09971L8.99964 0.799968L8.09971 0Z"
+                                    fill="#2A2A2A" />
+                            </svg>
+
+                            <div id="velocity">
+                                <p id="velocityCount">{{vehicleVelocity}}</p>
+                                <p id="velocityAnalog">KM/H</p>
+                            </div>
+                            <!--    <div id="engineBar">
+                                    
+                                </div> -->
+                        </div>
+                    </div>
+                </section>
+<!-- 
+                <div class="svIp" v-if="!isAnyVehicle">
+                    <p>DiamondRP.ir</p>
+                </div> -->
+
+
+                <header>
+                    <div id="health" class="marginRight">
+                        <div id="healthProgress" :style="{width: healthWidth}"></div>
+                        <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.99984 1.44695C9.32834 -1.97455 17.6503 4.0127 5.99984 11.7114C-5.65066 4.01345 2.67134 -1.97455 5.99984 1.44695Z"
+                                fill="#BAD1FF" />
+                        </svg>
+                    </div>
+                    <div id="armour" class="marginRight">
+                        <div id="armourProgress" :style="{width: armourWidht}"></div>
+                        <svg width="20" height="20" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.6476 2.54251L5.79259 0.196022C5.70813 0.154924 5.61486 0.133414 5.52024 0.133211C5.42561 0.133007 5.33225 0.154114 5.2476 0.194848L0.359728 2.54133C0.178877 2.62933 0.0540462 2.79769 0.0284712 2.99127C0.0205551 3.04817 -0.668752 8.70555 5.22933 11.7953C5.31999 11.8429 5.4218 11.8674 5.52507 11.8665C5.62834 11.8656 5.72965 11.8393 5.81938 11.79C11.4867 8.70496 11.0038 3.24117 10.9807 3.01004C10.9707 2.91134 10.9349 2.81669 10.8767 2.73493C10.8184 2.65316 10.7396 2.58696 10.6476 2.54251Z"
+                                fill="#BAD1FF" />
+                        </svg>
+                    </div>
+                    <div id="thirst" class="marginRight">
+                        <div id="thirstProgress" :style="{width: thirstWidth}"></div>
+                        <svg width="20" height="20" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.24939 0.643792C4.21858 0.607818 4.18036 0.578938 4.13733 0.559137C4.09431 0.539336 4.04751 0.529083 4.00015 0.529083C3.95279 0.529083 3.90599 0.539336 3.86297 0.559137C3.81994 0.578938 3.78172 0.607818 3.75091 0.643792C2.88521 1.65633 0.0625134 5.15688 0.0625134 7.74989C0.0625134 10.1663 1.58392 11.6874 4.00001 11.6874C6.41611 11.6874 7.93751 10.1663 7.93751 7.74989C7.93751 5.15688 5.11482 1.65633 4.24939 0.643792ZM4.43751 10.2655C4.38496 10.2656 4.33314 10.2531 4.28643 10.229C4.23972 10.205 4.19948 10.17 4.16909 10.1271C4.1387 10.0842 4.11905 10.0347 4.1118 9.98265C4.10456 9.93059 4.10992 9.87756 4.12743 9.82801C4.14981 9.76336 4.19201 9.70742 4.24803 9.66814C4.30404 9.62887 4.37102 9.60826 4.43943 9.60926C4.87375 9.60832 5.29002 9.43537 5.59713 9.12826C5.90425 8.82114 6.0772 8.40488 6.07814 7.97055C6.07714 7.90214 6.09774 7.83517 6.13702 7.77915C6.17629 7.72313 6.23224 7.68093 6.29689 7.65856C6.34644 7.64104 6.39947 7.63568 6.45152 7.64293C6.50357 7.65018 6.55312 7.66982 6.596 7.70021C6.63888 7.7306 6.67383 7.77084 6.69791 7.81756C6.72199 7.86427 6.7345 7.91608 6.73439 7.96864C6.73374 8.57761 6.49154 9.16145 6.06093 9.59205C5.63032 10.0227 5.04648 10.2649 4.43751 10.2655Z"
+                                fill="#DEDCFF" />
+                        </svg>
+                    </div>
+                    <div id="hunger" class="marginRight">
+                        <div id="hungerProgress" :style="{width: hungerWidth}"></div>
+                        <svg width="20" height="20" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.08 6.36487C10.4125 6.03281 10.6661 5.63025 10.8221 5.18696C10.978 4.74367 11.0323 4.27099 10.981 3.80388C10.9296 3.33677 10.7739 2.88718 10.5253 2.48838C10.2768 2.08957 9.94174 1.75174 9.54501 1.49987C8.54001 0.834873 7.19501 0.829873 6.18001 1.48487C5.30001 2.04987 4.81501 2.92987 4.73001 3.83987C4.66501 4.49987 4.41501 5.11487 3.95501 5.57487L3.94001 5.58987C3.36001 6.16987 3.36001 7.05487 3.90501 7.59487L4.40001 8.08987C4.66197 8.35166 5.01716 8.49872 5.38751 8.49872C5.75786 8.49872 6.11305 8.35166 6.37501 8.08987C6.86001 7.60487 7.50001 7.33987 8.19501 7.26487C8.88001 7.18987 9.55001 6.88987 10.08 6.36487ZM3.13001 9.92987C3.26501 10.2099 3.22001 10.5499 2.98501 10.7799C2.88323 10.8832 2.75351 10.9545 2.61176 10.9852C2.47002 11.0159 2.3224 11.0045 2.18703 10.9524C2.05166 10.9004 1.93441 10.81 1.84968 10.6923C1.76494 10.5746 1.7164 10.4348 1.71001 10.2899C1.56512 10.2835 1.42526 10.2349 1.30756 10.1502C1.18986 10.0655 1.09946 9.94823 1.04743 9.81285C0.995407 9.67748 0.984023 9.52987 1.01468 9.38812C1.04533 9.24637 1.1167 9.11665 1.22001 9.01487C1.45001 8.78487 1.79501 8.73487 2.07001 8.86987L3.31001 7.65487C3.38001 7.74987 3.46001 7.85987 3.55001 7.94987L4.04501 8.44487C4.15001 8.54487 4.25001 8.62987 4.38001 8.70487L3.13001 9.92987Z"
+                                fill="#E9BB84" />
+                        </svg>
+                    </div>
+                    <div id="energy">
+                        <div id="energyProgress" :style="{width:staminaWidht}"></div>
+                        <svg width="20" height="20" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.562178 11.6994C0.426378 11.6168 2.76928 7.0454 2.68878 6.84455C2.60758 6.6437 0.123278 5.91115 0.00217802 5.5582C-0.119622 5.20525 4.90708 -0.101351 5.03938 0.0013493C5.17098 0.104049 2.84908 4.70605 2.91208 4.8562C2.97578 5.0057 5.52168 5.7688 5.59868 6.14255C5.67638 6.5163 0.697278 11.7819 0.562178 11.6994Z"
+                                fill="#ACFFE4" />
+                        </svg>
+                    </div>
+                </header>
+
+                <footer>
+                    <div id="oxigen">
+                        <div id="oxigenProgress" :style="{width: oxygenWidth}"></div>
+                        <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.25 6H7.5C7.94501 6 8.38002 5.86804 8.75003 5.62081C9.12004 5.37357 9.40843 5.02217 9.57873 4.61104C9.74903 4.19991 9.79358 3.74751 9.70677 3.31105C9.61995 2.87459 9.40566 2.47368 9.09099 2.15901C8.77632 1.84434 8.37541 1.63005 7.93895 1.54323C7.5025 1.45642 7.0501 1.50097 6.63896 1.67127C6.22783 1.84157 5.87643 2.12996 5.62919 2.49997C5.38196 2.86998 5.25 3.30499 5.25 3.75"
+                                stroke="#30D0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M2.99998 12H11.25C11.695 12 12.13 12.132 12.5 12.3792C12.87 12.6264 13.1584 12.9778 13.3287 13.389C13.499 13.8001 13.5436 14.2525 13.4568 14.689C13.3699 15.1254 13.1556 15.5263 12.841 15.841C12.5263 16.1557 12.1254 16.37 11.6889 16.4568C11.2525 16.5436 10.8001 16.499 10.3889 16.3287C9.97781 16.1584 9.62641 15.87 9.37918 15.5C9.13194 15.13 8.99998 14.695 8.99998 14.25"
+                                stroke="#30D0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M1.49999 9H14.25C14.695 9 15.13 8.86804 15.5 8.62081C15.87 8.37357 16.1584 8.02217 16.3287 7.61104C16.499 7.1999 16.5436 6.7475 16.4568 6.31105C16.3699 5.87459 16.1557 5.47368 15.841 5.15901C15.5263 4.84434 15.1254 4.63005 14.6889 4.54323C14.2525 4.45642 13.8001 4.50097 13.389 4.67127C12.9778 4.84157 12.6264 5.12996 12.3792 5.49997C12.132 5.86998 12 6.30499 12 6.75"
+                                stroke="#30D0E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div id="street">
+                        <p>DiamondRP.ir</b></p>
+                    </div>
+                </footer>
+            </div>
+
+
+        </main>
+
+    </section>
+    <script src="./gui.js"></script>
+    <script src="./app.js"></script>
+    <script src="dist/loading-bar.js"></script>
+    <script type="text/javascript" src="dist/jquery.wheelcolorpicker.js"></script>
+    <link rel="stylesheet" href="dist/loading-bar.css">
+    <link rel="stylesheet" href="dist/Colorpicker.css">
+</body>
+
+</html>

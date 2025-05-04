@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+html, body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.kills {
+    position: absolute;
+    bottom: 45%;
+    left: 1.5%;
+}
+
+.killContainer {
+    height: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    color: #FFF;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 34px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+}
+
+.weapon {
+    height: 20px;
+    padding-top: 6px;
+    display: inline;
+    vertical-align: top;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.killer {
+    color: rgb(0, 165, 0);
+}
+
+.killed {
+    color: rgb(255, 35, 35);
+}
+
+.clear {
+    clear: both;
+}
+
+
+.hud {
+    position: relative;
+    margin-top: -0.4%;
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.hud.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+table{
+    background-color: rgba(0, 0, 0, 0.54);
+    border: none;
+    border-collapse: collapse;
+    width: 18%;
+}
+
+td{
+    padding-bottom: 1%;
+}
+
+.progress {
+    margin: 4%;
+    height: 6vh;
+}
+
+.progress > svg {
+    height: 100%;
+    display: block;
+}
+
+.progressbar__label {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}

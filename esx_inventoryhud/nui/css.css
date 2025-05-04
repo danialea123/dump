@@ -1,0 +1,1555 @@
+body{
+    user-select: none;
+    overflow: hidden;
+    
+}
+
+@font-face{
+    font-family: poppinsSemiBold;
+    src: url('app/Poppins-SemiBold.ttf')
+}
+
+@font-face{
+    font-family: poppinslight;
+    src: url('app/Poppins-Light.ttf')
+}
+
+@font-face{
+    font-family: poppinsregular;
+    src: url('app/Poppins-Regular.ttf')
+}
+
+#menu-principal{
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loading{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(8, 8, 8);
+    filter: blur(5vw);
+    z-index: 999999;
+    top: 0vw;
+    left: 0vw;
+}
+
+.gif-loading{
+    width: 3vw;
+    position: absolute;
+    z-index: 9999999;
+    left: 50vw;
+    top: 50vh;
+}
+
+.grid{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.3;
+    background-image: url('app/grid.png');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background-color{
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+}
+
+.top-menu{
+    position: relative;
+    /* top: 1.4vw;     */
+    display: none;
+    top: 0;
+    transition: 1s;
+    padding-top: 3.5vw;
+    width: 100vw;
+    height: 4vw;
+}
+
+.escolha-menu{
+    font-family: poppinsSemiBold;
+    color: white;
+    float: left;
+    left: 5vw;
+    position: relative;
+    margin-left: 2vw;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+}
+
+.personagem:hover{
+    transform: translateY(-3px);
+}
+
+.identidade:hover{
+    transform: translateY(-3px);
+}
+
+.identidade{
+    opacity: 0.3;
+}
+
+.top-menu .line{
+    position: relative;
+    top: 1.2vw;
+    left: 27vw;
+    width: 44vw;
+    height: 0.1vw;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.top-menu .line2{
+    position: relative;
+    top: 0.9vw;
+    left: 80.5vw;
+    width: 3vw;
+    height: 0.1vw;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.top-menu .esc{
+    position: absolute;
+    right: 8vw;
+    top: 0vw;
+    width: 3vw;
+    height: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 0.5vw;
+
+}
+
+.esc .texto{
+    font-family: poppinslight;
+    font-weight: 300;
+    font-size: 0.8vw;
+    color: white;
+    width: 6vw;
+    position: relative;
+    left: 0.85vw;
+    top: 0.1vw
+}
+
+.esc .texto span{
+    position: relative;
+    left: 1.2vw;
+}
+
+.margin-bottom-escolha{
+    position: relative;
+    top: 2.5vw;
+    left: 8.8vw;
+    width: 7vw;
+    height: 0.2vw;
+    transition: 0.5s;
+    background-color: white;
+}
+
+.person-menu{
+    position: relative;
+    top: 0.2vw;
+    width: 35vw;
+    height: 84.1vh;
+}
+
+.identity-inicial{
+    position: relative;
+    /* left: 10vw; */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.048);
+    top: 1.3vw;
+    display: none;
+    height: 60.1vh;
+    width: 24vw;
+    border-radius: 0.2vw;
+    transition: 1s;
+}
+
+.itens-identity{
+    top: 6vw;
+    position: relative;
+}
+
+.title-identity{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    line-height: 1.2vw;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    top: 2.6vw;
+    font-weight: 500;
+    font-size: 1.6vw;
+}
+
+.title-identity img{
+    width: 6.4vw;
+}
+
+.primeiro-identity{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    line-height: 1.2vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    width: 50%;
+    margin-bottom: 1.2vw;
+    font-size: 1vw;
+    text-shadow: 0px 2px 5px  rgb(0, 0, 0);
+
+}
+
+.primeiro{
+    float: left;
+    text-align: left;
+    left: 1.4vw;
+    position: relative;
+    opacity: 0.6;
+
+}
+
+.segundo{
+    text-align: right;
+    right: 1.4vw;
+    position: relative;
+    float: left;
+}
+
+.identity-secundaria{
+    display: none;
+    position: relative;
+    left: 10vw;
+    top: 4vw;
+}
+
+.hud{
+    position: relative;
+    left: -1.6vw;
+    top: 8vw;
+    width: 27vw;
+    height: 7vw;
+}
+
+.bar{
+    width: 9vw;
+    height: 0.25vw;
+    border-radius: 100vw;
+    background-color: rgba(95, 95, 95, 0.541);
+    float: left;
+    margin-left: 4vw;
+    margin-bottom: 2.1vw;
+}
+
+.bar img{
+    position: relative;
+    right: 1.4vw;
+    bottom: 0.5vw;
+    width: 0.7vw;
+    display: block;
+}
+
+.barra-preenchida{
+    top: 0vw;
+    left: 0vw;
+    border-radius: 100vw;
+    position: relative;
+    width: 9vw;
+    background-color: white;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.vida2{
+    width: 30%;
+}
+
+.colete2{
+    width: 0%;
+}
+
+.sede2{
+    width: 55%;
+}
+
+.fome2{
+    width: 60%;
+}
+
+.filter-menu{
+    position: absolute;
+    top: 8.7vw;
+    /* left: 39vw; */
+    left: 23vw;
+    display: none;
+
+    width: 9vw;
+    height: 18vw;
+    transition: 1s;
+}
+
+.filter-menu .title{
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.65vw;
+}
+
+.gun-image{
+    position: relative;
+    left: 0.65vw;
+    top: 0.6vw;
+    transform: rotate(-35deg);
+    width: 0.8vw;
+    display: block;
+
+}
+
+.soda-image{
+    position: relative;
+    left: 0.6vw;
+    top: 0.6vw;
+    width: 0.8vw;
+    display: block;
+
+}
+
+.box-image{
+    position: relative;
+    left: 0.6vw;
+    top: 0.6vw;
+    width: 0.8vw; 
+    display: block;
+
+}
+
+.food-image{
+    position: relative;
+    left: 0.6vw;
+    top: 0.6vw;
+    width: 0.8vw;
+    display: block;
+
+}
+
+.filtro-button{
+    margin-bottom: 1.5vw;
+    position: relative;
+    left: 0.5vw;
+    top: 1vw;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100vw;
+    background-color: rgba(0, 0, 0, 0.616);
+    transition: 0.4s;
+}
+
+.filtro-button:hover{
+    background-color: rgba(92, 92, 92, 0.795);
+}
+
+.clear-filter{
+    font-family: poppinslight;
+    font-size: 0.5vw;
+    text-align: center;
+    width: 5vw;
+    height: 1vw;
+    position: relative;
+    right: 1vw;
+    top: 1vw;
+    line-height: 1vw;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    border-radius: 0.2vw;
+    transition: 0.2s;
+}
+
+.clear-filter:hover{
+    transform: scale(1.1)
+}
+
+#box-menu-item{
+    position: absolute;
+    top: 8.7vw;
+    z-index: 99999;
+    display: none;
+
+    /* right: 16.5vw; */
+    width: 38vw;
+    right: 0;
+    padding-top: 0.9vw;
+    height: 33vw;
+    overflow-x: hidden;
+    transition: 1s;
+    overflow-y: auto;
+}
+
+
+#box-menu-item::-webkit-scrollbar {
+    width: 0.3vw;
+    background-color: rgba(221, 221, 221, 0.205);
+    border-radius: 5vw;
+}
+
+
+#box-menu-item::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(215, 215, 215, 0.527);
+}
+
+#box-menu-item::-webkit-scrollbar-thumb {
+    background: #ffffffda;
+    border-radius: 5vw;
+    border-radius: 1vw;
+}
+
+.keyBind{
+    position: relative;
+    top: 2vw;
+    left: 1.5vw;
+}
+
+.title-keyBind{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.715);
+    font-size: 0.9vw;
+}
+
+.number-keyBind{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.653);
+    font-size: 1.4vw;
+    position: relative;
+    top: 0.5vw;
+    width: 2vw;
+    left: 0.7vw;
+    height: 2vw;
+    text-align: center;
+    border-radius: 0.3vw;
+    border: solid 0.1vw rgba(255, 255, 255, 0.653);
+}
+
+.keyBind-usade{
+    position: relative;
+    bottom: 2vw;
+    left: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 0.6vw;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 4vw;
+    height: 1vw;
+    line-height: 1vw;
+    border-radius: 0.1vw;
+    text-align: center;
+}
+
+.slot{
+    width: 6.8vw;
+    height: 8vw;
+    z-index: 999999999;
+    position: relative;
+    bottom: 0.7vw;
+    margin: 0.2vw;
+    border: solid 0.1vw rgba(255, 255, 255, 0);
+    float: left;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: 0.5s;
+}
+
+.slot:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+    border: solid 0.1vw rgba(255, 255, 255, 0.473);
+}
+
+.item-player{
+    position: absolute;
+    top: -0.1vw;
+    left: -0.1vw;
+    width: 7vw;
+    height: 8.2vw;
+    background-image: url('app/fries.png');
+    background-size: 5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.13);
+
+}
+
+
+.top-item{
+    position: relative;
+    top: 0.5vw;
+    width: 100%;
+    height: 1.5vw;
+
+}
+
+.bottom-item{
+    position: absolute;
+    bottom: 0vw;
+    width: 100%;
+    height: 1.5vw;
+}
+
+.name-item{
+    text-align: center;
+    font-family: poppinslight;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.64vw;
+    position: relative;
+    top: 0.4vw;
+    text-shadow: 0px 2px 5px  rgb(0, 0, 0);
+}
+
+.amount{
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.6vw;
+    position: relative;
+    left: 0.3vw;
+    text-align: left;
+    float: left;
+}
+
+
+.peso{
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.6vw;
+    position: relative;
+    right: 0.3vw;
+    text-align: right;
+}
+
+.descricao-menu{
+    position: absolute;
+    width: 44.5vw;
+    display: none;
+    height: 15vw;
+    bottom: 1vw;
+    right: 9.7vw;
+}
+
+.title-descricao{
+    font-family: poppinsSemiBold;
+    color: white;
+    font-size: 1vw;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+}
+
+.primeira-descricao{
+    position: relative;
+    top: 1.2vw;
+    width: 25vw;
+    height: 7vw;
+    font-family: poppinslight;
+    color: white;
+    font-size: 1vw;
+}
+
+.funcao-descricao{
+    position: relative;
+    top: 0vw;
+    width: 34vw;
+    height: 1.4vw;
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.9vw;
+}
+
+.peso-descricao{
+    position: relative;
+    top: 0vw;
+    width: 18vw;
+    height: 1vw;
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.9vw;
+}
+
+.bloco-image{
+    position: absolute;
+    bottom: 4vw;
+    right: 2vw;
+    background-image: url('app/fries.png');
+    background-size: 10vw;
+    background-position: 6.7vw  2.4vw;
+    background-repeat: no-repeat;
+    width: 23vw;
+    height: 12vw;
+}
+
+.item-name-desc{
+    text-align: center;
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.9vw;
+    position: relative;
+    top: 0.8vw;
+    text-transform: uppercase;
+}
+
+.right-menu{
+    width: 18vw;
+    height: 35vw;
+    position: absolute;
+    display: none;
+    /* right: 0vw; */
+    right: -14vw;
+    top: 6vw;
+    transition: 1s;
+}
+
+.carteira-box{
+    position: relative;
+    top: 3vw;
+    font-family: poppinslight;
+    text-align: center;
+}
+
+.title-carteira{
+    color: white;
+    font-size: 0.9vw;
+}
+
+.saldo-carteira{
+    color: white;
+    letter-spacing: 0.12vw;
+    font-size: 1.2vw;
+}
+
+.banco-box{
+    position: relative;
+    top: 4vw;
+    font-family: poppinslight;
+    text-align: center;
+}
+
+.title-banco{
+    color: white;
+    font-size: 0.9vw;
+}
+
+.saldo-banco{
+    color: white;
+    letter-spacing: 0.12vw;
+    font-size: 1.2vw;
+}
+
+#barra-pesquisa{
+    position: absolute;
+    top: 3.8vw;
+    background-color: transparent;
+    border: transparent;
+    width: 8vw;
+    right: 20.2vw;
+    text-align: center;
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.9vw;
+
+    outline: none;
+}
+
+#barra-pesquisa::placeholder{
+    color:  rgba(255, 255, 255, 0.678);
+    font-family: poppinslight;
+    font-size: 0.8vw;
+}
+
+.typeFilter{
+    display: none;
+}
+
+.box-peso{
+    position: relative;
+    top: 4vw;
+    left: 5vw;
+    width: 8vw;
+    height: 8vw;
+}
+
+#circle{
+    position: relative;
+    left: -0.05vw;
+    top: -0.5vw;
+    width: 8.5vw;
+    height: 8.5vw;
+}
+
+.peso-texto{
+    position: relative;
+    font-family: poppinslight;
+    color: white;
+    text-align: center;
+    font-size: 0.9vw;
+    top: 6vw;
+}
+
+.peso-sobrando{
+    position: relative;
+    font-family: poppinslight;
+    color: white;
+    text-align: center;
+    font-size: 0.7vw;
+    top: 2.5vw;
+}
+
+.box-action{
+    position: absolute;
+    top: 27.2vw;
+    right: 0.4vw;
+    width: 14vw;
+    height: 13vw;
+}
+
+.action{
+    width: 11vw;
+    text-align: center;
+    color: white;
+    height: 2.3vw;
+    border-radius: 0.1vw;
+    line-height: 2.3vw;
+    font-family: poppinslight;
+    border: 0.1px solid rgba(255, 255, 255, 0.164);
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    background-color: rgba(255, 255, 255, 0.048);
+    transition: 0.5s;
+}
+
+.actionDropp{
+    background-color: rgba(255, 255, 255, 0.267);
+    border: 0.1px solid rgba(151, 121, 121, 0.712);
+    transform: translateY(-2px);
+
+    transition: 0.5s;
+
+}
+
+.weapon-box{
+    position: relative;
+    left: 3vw;
+    width: 34vw;
+    top: 2vw;
+    height: 30vw;
+}
+
+.name-weapon{
+    position: relative;
+    top: 0.4vw;
+    font-family: poppinsregular;
+    color: white;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.weapon-box-image{
+    position: relative;
+    top: 3vw;
+    left: 2vw;
+    width: 32vw;
+    height: 17vw;
+    background-image: url('app/weapon_assaultrifle.png');
+    background-size: 21vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.attachs{
+    position: relative;
+    top: 9.65vw;
+    left: 2.3vw;
+    border-radius: 0.3vw;
+    margin: -0.5vw;
+    background-color: rgba(255, 255, 255, 0.137);
+    border: 0.1px solid rgba(255, 255, 255, 0.342);
+    background-size: 4vw;
+    background-position: 0.9vw 1.3vw;
+    background-repeat: no-repeat;
+    width: 5.7vw;
+    height: 5.7vw;
+    float: left;
+}
+
+.attachs img{
+    width: 4.5vw;
+    position: relative;
+    opacity: 0.3;
+    top: 1vw;
+    left: 0.6vw;
+    display: block;
+}
+
+
+.hoverControl2{
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+.hoverControl3{
+    background-color: rgb(187, 0, 0);
+}
+
+.hoverControl{
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+.remove{
+    position: relative;
+    top: 15.6vw;
+    left: -0.9vw;
+    float: left;
+    width: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.041);
+    border: 0.1vw solid rgba(255, 255, 255, 0.075);
+    height: 1.5vw;
+    border-radius: 0.1vw;
+    background-image: url('app/cancel.png');
+    background-size: 0.7vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.remove:hover{
+    transform: scale(1.1);
+}
+
+.limpar-attachs{
+    position: absolute;
+    font-family: poppinslight;
+    color: white;
+    width: 11vw;
+    bottom: -10vw;
+    left: 11.8vw;
+    height: 2vw;
+    text-align: center;
+    line-height: 2vw;
+    border-radius: 0.2vw;
+    font-size: 0.8vw;
+    background-color: rgba(255, 255, 255, 0.041);
+    border: 0.1px solid rgba(255, 255, 255, 0.075);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+
+.limpar-attachs:after {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.479),rgba(255, 255, 255, 0));
+    content: "";
+    height: 550%;
+    left: -4.6vw;
+    position: absolute;
+    top: -4vw;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 3vw;
+    z-index: 109999;
+  }
+  
+
+.limpar-attachs:hover{
+    transform: scale(1.07);
+    opacity: 1;
+}
+
+
+.limpar-attachs:hover:after{
+    left: 150%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.close-weapons{
+    position: relative;
+    bottom: 19.5vw;
+    left: -0.4vw;
+    float: left;
+    width: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.041);
+    border: 0.1px solid rgba(255, 255, 255, 0.075);
+    height: 1.5vw;
+    border-radius: 0.1vw;
+    background-image: url('appcancel.png');
+    background-size: 0.7vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    transition: 0.3s;
+}
+
+.close-weapons span{
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.5vw;
+    left: 0vw;
+    position: relative;
+    top: 1.2vw;
+}
+
+.close-weapons:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.desc-normal{
+    position: relative;
+    bottom: 1vw;
+    width: 18vw;
+    height: 12vw;
+}
+
+.desc-weapon{
+    position: relative;
+    bottom: 1vw;
+    width: 18vw;
+    height: 12vw;
+}
+
+.informacao{
+    position: relative;
+    top: 1vw;
+    font-family: poppinsregular;
+    color: white;
+    margin-bottom: 1.2vw;
+    font-size: 0.62vw
+}
+
+.backbar{
+    position: relative;
+    top: 0.1vw;
+    width: 15vw;
+    height: 0.25vw;
+    border-radius: 100vw;
+    background-color: rgba(95, 95, 95, 0.541);
+}
+
+.frontbar{
+    width: 80%;
+    background-color: white;
+    height: 100%;
+    border-radius: 100vw;
+    transition: 0.3s;
+}
+
+.frontbar.cadencia{
+    width: 40%;
+}
+
+.frontbar.recuo{
+    width: 80%;
+}
+
+.frontbar.dano{
+    width: 10%;
+}
+
+.frontbar.precisao{
+    width: 90%;
+}
+
+.tirar-attachs{
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url('app/cancel2.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.418);
+    opacity: 0.3;
+    z-index: 999999;
+}
+
+.toltip-pesquisa{
+    position: absolute;
+    right: 20vw;
+    top: 0vw;
+    width: 9vw;
+    height: 3vw;
+    background-color: white;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    display: none;
+}
+
+.toltip-pesquisa:after{
+    content: " ";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 0.7vw solid transparent;
+    border-right: 0.7vw solid transparent;
+    border-top: 0.9vw solid #ffffff;
+    top: 2.8vw;
+    right: 3.8vw;
+
+}
+
+.text-toltip{
+    font-family: poppinslight;
+    color: black; 
+    font-size: 0.8vw;
+    text-align: center;
+    position: relative;
+    top: 0.2vw;
+}
+
+
+
+.craft{
+    display: none;
+    width: 26vw;
+    height: 40vw;
+    position: relative;
+    left: 10vw;
+}
+
+.box-craft-slot{
+    position: relative;
+    top: 2vw;
+    width: 26vw;
+    height: 27vw;
+}
+
+.slot-craft{
+    width: 6.8vw;
+    height: 8vw;
+    position: relative;
+    bottom: 0.7vw;
+    margin: 0.2vw;
+    border: solid 0.1vw transparent;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: 0.5s;
+    background-size: 6vw;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    background-position: center;
+}
+
+.box-result{
+    position: relative;
+    top: 5vw;
+    right: 2vw;
+    width: 26vw;
+    height: 11vw;
+}
+
+.arrows-craft{
+    position: relative;
+    left: 10.25vw;
+    width: 7vw;
+    bottom: 2vw;
+    height: 5vw;
+}
+
+.arrows-craft img{
+    width: 2.3vw;
+}
+
+.arrow-cima{
+    transform: rotate(-90deg);
+}
+
+.arrow-baixo{
+    transform: rotate(90deg);
+}
+
+.result-craft{
+    width: 6.8vw;
+    height: 8vw;
+    position: relative;
+    bottom: 1.5vw;
+    margin: 0.4vw;
+    border: solid 0.1vw transparent;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: 0.5s;
+    left: 9vw;
+    background-size: 6vw;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.name-craft{
+    text-align: center;
+    font-family: poppinslight;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.64vw;
+    position: relative;
+    top: 7vw;
+    text-shadow: 0px 2px 5px  rgb(0, 0, 0);
+}
+
+.amount-craft{
+    font-family: poppinslight;
+    color: white;
+    font-size: 0.6vw;
+    top: 0.2vw;
+    position: relative;
+    left: 0.3vw;
+    text-align: left;
+    float: left;
+}
+
+.result-item-player{
+    position: absolute;
+    width: 6.8vw;
+    height: 8vw;
+    background-image: url('app/fries.png');
+    background-size: 6vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+.box-circle-mochila{
+    position: relative;
+    top: 2.6vw;
+    left: 0.4vw;
+}
+
+.title-circle{
+    position: relative;
+    top: 2.8vw;
+    text-align: center;
+    color: white;
+    font-family: poppinslight;
+    font-size: 0.8vw;
+}
+
+.circle-mochila{
+    width: 1.6vw;
+    height: 0.5vw;
+    background-color: rgba(133, 133, 133, 0.356);
+    border-radius: 100vw;
+    float: left;
+    margin: 0.5vw;
+}
+
+.slotVenda{
+    width: 6.8vw;
+    height: 8vw;
+    position: relative;
+    bottom: 0.7vw;
+    margin: 0.2vw;
+    border: solid 0.1vw transparent;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: 0.5s;
+}
+
+.price{
+    position: relative;
+    top: 0.8vw;
+    font-family: poppinslight;
+    font-size: 0.8vw;
+    text-align: center;
+    color: white;
+}
+
+.price b{
+    position: relative;
+    top: 0.5vw;
+    font-size: 1vw
+}
+
+.button-slot-buy{
+    text-align: center;
+    position: relative;
+    left: 0.8vw;
+    top: 2.5vw;
+    font-family: poppinslight;
+    font-size: 0.9vw;
+    width: 5vw;
+    height: 1.3vw;
+    border-radius: 0.1vw;
+    line-height: 1.3vw;
+    color: black;
+    background-color: rgba(151, 151, 151, 0.664);
+    transition: 0.3s;
+}
+
+.button-slot-buy:hover{
+    color: white;
+    background-color: rgba(19, 19, 19, 0.774);
+    transform: translateY(-2px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.name-car{
+    font-family: poppinsSemiBold;
+    color: white;
+    float: left;
+    left: 3.2vw;
+    position: absolute;
+    margin-left: 2vw;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+}
+
+.name-inventory{
+    font-family: poppinsSemiBold;
+    color: white;
+    float: left;
+    left: 67.3vw;
+    position: absolute;
+    margin-left: 2vw;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+}
+
+.line-chest{
+    position: absolute;
+    top: 4.6vw;
+    left: 13.5vw;
+    width: 53vw;
+    height: 0.1vw;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.left-menu-chest{
+    position: relative;
+    top: 22.6vw;
+    left: 86.1vw;
+    width: 10vw;
+    height: 16vw;
+}
+
+.line-circle{
+    width: 7vw;
+    position: relative;
+    left: 1.5vw;
+    height: 0.1vw;
+    background-color: rgba(255, 255, 255, 0.432);
+}
+
+#circleChest{
+    position: relative;
+    left: 0.8vw;
+    top: -0.5vw;
+    width: 8.5vw;
+    height: 8.5vw;
+}
+
+.peso-texto-chest{
+    position: relative;
+    font-family: poppinslight;
+    color: white;
+    text-align: center;
+    font-size: 0.9vw;
+    top: 6vw;
+}
+
+.desc-bau{
+    font-family: poppinslight;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 6vw;
+    font-size: 0.8vw;
+}
+
+.peso-sobrando-chest{
+    position: relative;
+    font-family: poppinslight;
+    color: white;
+    text-align: center;
+    font-size: 0.7vw;
+    top: 2.5vw;
+}
+
+#box-menu-item-chest{
+    bottom: 15vw;
+    position: relative;
+    width: 30.3vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 0.6vw;
+    display: none;
+    height: 33vw;
+    /* left: 5vw; */
+    left: 0;
+    transition: 1s;
+}
+
+#box-menu-item-chest::-webkit-scrollbar {
+    width: 0.3vw;
+    background-color: rgba(221, 221, 221, 0.205);
+    border-radius: 5vw;
+}
+
+
+#box-menu-item-chest::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(215, 215, 215, 0.527);
+}
+
+#box-menu-item-chest::-webkit-scrollbar-thumb {
+    background: #ffffffda;
+    border-radius: 5vw;
+    border-radius: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-amount-player{
+    position: relative;
+    left: -2.3vw;
+    height: 5vw;
+    width: 8vw;
+    top: 2.4vw;
+}
+
+#quantidade{
+    width: 7.3vw;
+    height: 1.75vw;
+    background-color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+    outline: none;
+    border-radius: 0.2vw;
+    border: transparent;
+    
+}
+
+#quantidade::placeholder{
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.metade-item{
+    top: 0.5vw;
+    position: relative;
+
+}
+
+.dividendo{
+    font-family: poppinslight;
+    font-size: 0.7vw;
+    text-align: center;
+    width: 7.5vw;
+    height: 1.75vw;
+    position: relative;
+    line-height: 1.75vw;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    border-radius: 0.2vw;
+    transition: 0.3s;
+}
+
+.dividendo.active{
+    background-color: rgb(197, 197, 197);
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    color: black;
+}
+
+.dividendo:hover{
+    background-color: rgba(197, 197, 197, 0.336);
+
+}
+
+.todos-itens{
+    position: relative;
+    top: 1vw;
+
+}
+
+
+
+
+
+
+
+
+.hover-price{
+    font-family: poppinslight;
+    background-color: rgba(0, 0, 0, 0.342);
+    width: 7vw;
+    height: 8.2vw;
+    color: white;
+    font-size: 1.1vw;
+    position: absolute;
+    box-shadow: inset 0px 0px 25px 3px rgba(0, 0, 0, 0.651);
+    top: 0vw;
+    left: 0vw;
+}
+
+.hover-price span{
+    position: relative;
+    top: 3.2vw;
+    left: 1.4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chest */
+
+
+.slotChest{
+    width: 6.8vw;
+    height: 8vw;
+    position: relative;
+    bottom: 0.7vw;
+    margin: 0.2vw;
+    z-index: 9999999999;
+    border: solid 0.1vw transparent;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: 0.5s;
+}
+
+.slotChest:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+    border: solid 0.1vw rgba(255, 255, 255, 0.473);
+}
+
+
+
+.closeDividendo{
+    position: relative;
+    left: 6.5vw;
+    bottom: 1.5vw;
+    width: 1vw;
+    height: 1vw;
+    z-index: 999999;
+    background-color: black;
+    border: 0.1vw solid rgba(255, 255, 255, 0.5);
+    /* background-image: url('');
+    background-size: 0.4vw;
+    background-position: 0.3vw 0.35vw;
+    background-repeat: no-repeat; */
+    border-radius: 100vw;
+    transition: 0.4s;
+}
+
+.closeDividendo:hover{
+    transform: scale(1.1)
+}
+
+.closeDividendo img{
+    width: 0.42vw;
+    position: relative;
+    bottom: 0.35vw;
+    left: 0.01vw;
+}
+
+.in-use{
+    color: white;
+    position: relative;
+    left: 2vw;
+    top: 10vw;
+    font-family: poppinslight;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.in-use img{
+    position: relative;
+    top: 4vw;
+    right: 13vw;
+    width: 3vw;
+}

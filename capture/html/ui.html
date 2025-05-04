@@ -1,0 +1,205 @@
+<html lang="en">
+
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=10" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Capture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Mulish:wght@200&display=swap"
+        rel="stylesheet" />
+    <!-- <script src="nui://game/ui/jquery.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: none;
+            background: transparent;
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        @media only screen and (min-width: 600px) {}
+
+        @media only screen and (min-width: 768px) {}
+
+        .killbord {
+            width: 20vw;
+            height: 15vw;
+            float: right;
+            background-size: 11vw 100%;
+            margin-top: 65vh;
+            margin-right: -86vw;
+        }
+
+        .killbord ul {
+            list-style: none;
+            margin-left: 3em;
+            counter-reset: line;
+        }
+
+        .killbord ul>li {
+            /* border: 2px groove #ecedb7; */
+            font-size: 0.8vw;
+            height: 1vw;
+            border-radius: 5px;
+            position: relative;
+            margin-bottom: 0.5em;
+            text-align: left;
+            padding-left: 0.5vw;
+            /* padding-top: 4px; */
+            /* font-weight: bold; */
+            color: #fff;
+            font-family: Vazir;
+            animation: animateBg 3s linear infinite;
+            background-image: linear-gradient(90deg, #b1b1b1, #383838, #b1b1b1, #b1b1b1, #383838);
+            background-size: 400% 100%;
+        }
+
+        @keyframes animateBg {
+            0% {
+                background-position: 100% 0%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+
+        .killbord ul>li>span {
+            position: absolute;
+            display: inline-block;
+            font-family: Vazir;
+            text-align: center;
+            right: 0.2vw;
+            padding-right: 0.2vw;
+            color: rgb(255, 255, 255);
+        }
+
+        .killbord ul>li:before {
+            position: absolute;
+            left: -1.5em;
+            display: inline-block;
+            width: 1vw;
+            height: 1vw;
+            margin-right: 0.1em;
+            background-color: #009dc4;
+            border-radius: 50%;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 1vw;
+            counter-increment: line;
+            content: counter(line);
+            font-weight: bold;
+        }
+
+        .org-style {
+            width: 12vw;
+            border-radius: 7vw;
+        }
+
+        .top-title {
+            width: 7vw;
+            margin-left: 9vw;
+            padding: 0.2vw;
+            /* border-style: groove; */
+            font-size: 1vw;
+            text-align: center;
+            border-radius: 0.5vw;
+            font-family: Vazir;
+            color: #fff;
+            animation: animateBg 3s linear infinite;
+            background-image: linear-gradient(90deg, #00fffb, #009491, #00fffb, #00fffb, #009491);
+            background-size: 400% 100%;
+        }
+
+        @keyframes animateBg {
+            0% {
+                background-position: 100% 0%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+
+        @keyframes sex {
+            0% {
+                background-position: -100px;
+            }
+
+            100% {
+                background-position: 300px;
+            }
+        }
+
+        @keyframes sex2 {
+            0% {
+                background-position: -400px;
+            }
+
+            100% {
+                background-position: 900px;
+            }
+        }
+
+        #myProgress {
+            width: 12vw;
+            margin-left: 7vw;
+            background-color: #00000033;
+            margin-top: 1vw;
+            border-radius: 1vw;
+            text-align: center;
+            /* background-image: url("assets/imgs/proccess.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%; */
+            background: rgb(255, 201, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="org-style">
+        <div class="killbord">
+            <h1 class="top-title">Top Kills</h1>
+            <div id="killlist">
+                <ul class="KillerList">
+                    <!-- <li class="item">test ( 1) [Admins] <span>100</span></li>
+                    <li class="item">test ( 1) [Admins] <span>5</span></li>
+                    <li class="item">test ( 1) [Admins] <span>1</span></li>
+                    <li class="item">test ( 1) [Admins] <span>1</span></li>
+                    <li class="item">test ( 1) [Admins] <span>1</span></li>
+                    <li class="item">test ( 1) [Admins] <span>1</span></li> -->
+                </ul>
+            </div>
+
+            <div id="GangList" style="display: none">
+                <ul class="KillerList">
+                    <!-- <li class="item">Gang [Admins] <span>100</span></li>
+                    <li class="item">Gang [Reza] <span>50</span></li>
+                    <li class="item">Gang [Hamid] <span>10</span></li> -->
+                </ul>
+            </div>
+            <div id="myProgress">
+                <p class="processtTime time" style="font-family: 'Orbitron', sans-serif;color: #fff;">10:00</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

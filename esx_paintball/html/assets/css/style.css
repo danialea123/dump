@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #545454; 
+}
+:disabled {
+    background-color: #545454 !important;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.lobby {
+    background-image: url(https://media.diamondrp.ir/back.png);
+padding: 10%;
+margin: 5%;
+background-size: cover;
+border-radius: 15px;
+/* margin-top: 6%; */
+}
+.header {
+    margin-left: 41%;
+    font-family: fantasy;
+    color: white;
+    padding-bottom: 7vh;
+    font-size: 2vw;
+}
+
+.join {
+    margin: 0;
+    margin-top: -4vw;
+    position: absolute;
+    font-family: monospace;
+    color: #ffffff;
+    font-size: 2vw;
+}
+
+.list-group{
+    /* background-color: #b6b6b6; */
+    /* border-radius: 49px; */
+background: #e0e0e023;
+backdrop-filter: blur(7px);
+/* border: 1px solid #fff; */
+/* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;} */
+}
+.inputs-pass {
+    position: absolute;
+    top: 18vh;
+}
+
+.elb {
+    margin-left: 16vw;
+    border-radius: 15vw;
+    padding: 0.3vw;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+.enter {
+    background: #66b300;
+}
+
+.left {
+    background: #c10000;
+}
+
+.lobbeys {
+    margin: 0vw;
+    margin-bottom: 0.4vw;
+    overflow: hidden;
+    text-shadow: 2px -1px 7px black;
+    box-shadow: 1px 4px 3px 1px black;
+    color: black;
+    background-color: #cacaca;
+    font-family: cursive;
+    text-align: center;
+    font-size: 1.0vw;
+}
+
+.player {
+    margin: 0vw;
+    margin-bottom: 0.4vw;
+    overflow: hidden;
+    text-shadow: 2px -1px 7px black;
+    box-shadow: 1px 4px 3px 1px black;
+    color: black;
+    background-color: #cacaca91;
+    font-family: cursive;
+    text-align: center;
+    font-size: 1.6vw;
+}
+
+.player.ready{
+    background-color: #31d20370;
+}
+
+.buttom {
+    float: left;
+    text-align: center;
+    padding: 2vw;
+    padding-bottom: 0.6vw;
+    border-radius: 5vw;
+    border: double 0.5vw;
+    position: relative;
+    margin-left: 2vw;
+    margin-top: 3vh;
+}
+
+.buttom-text {
+    margin: auto;
+    font-size: 3vw;
+    margin-top: -1.5vw;
+    font-family: monospace;
+}
+
+.start {
+    background: #005416;
+    float: right;
+    margin-right: 2vw;
+}
+
+.leave {
+    background: #610000;
+}
+
+.box {
+    width: 21vw;
+    height: 48vh;
+    margin-left: 2.7vw;
+    background: white;
+    border: double 1vw;
+    overflow-x: auto;
+    float: left;
+}
+
+.box {
+    width: 21vw;
+    height: 48vh;
+    margin-left: 2.7vw;
+    background: #397f9c78;
+    border: double 1vw;
+    overflow-x: auto;
+}
+
+.boxlobbeys {
+    /* width: 21vw;
+    height: 48vh;
+    margin-left: 4.0vw;
+    background: #397f9c78;
+    border: double 1vw;
+    overflow-x: auto; */
+    overflow:hidden; overflow-y:auto;height:200px;
+    background: #e0e0e023;backdrop-filter: blur(7px);
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+
+
+
+
+.select {
+    margin: 4vw;
+    color: white;
+}
+
+.footer {
+    bottom: 9vh;
+    position: absolute;
+}
+
+.right {
+    margin-right: 12vw;
+    right: 0;
+}
+
+.ready {
+    background: #fbff00;
+}
+
+.weapon-select {
+    margin-top: 35vh;
+}
+
+.weapon {
+    height: 16vh;
+    max-width: 34vw;
+}
+
+.selector {
+    color: white;
+    font-size: 21vh;
+    margin-top: -27vh;
+}
+
+.sleft {
+    margin-left: -51vw;
+    position: relative;
+}
+
+#sbutton-left {
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 0;
+    color: white;
+    font-family: cursive;
+    font-size: 21vh;
+    outline: none;
+}
+
+.sright {
+    margin-left: 37vw;
+    margin-top: -50.2vh;
+}
+
+#sbutton-right {
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 0;
+    color: white;
+    font-family: cursive;
+    font-size: 21vh;
+    outline: none;
+}
+
+.weapon-title {
+    color: white;
+    font-size: 2vw;
+    margin-top: -14vh;
+    padding-bottom: 11vh;
+}
+
+.weapon-name {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: -15vh;
+    font-size: 2vw;
+}
+
+.weapon-price {
+    color: #00ce06;
+    font-size: 1.5vw
+}
+
+.title {
+    color: white;
+    font-size: 4vw;
+    font-family: fantasy;
+    text-shadow: 5px 5px black;
+}
+
+p {
+    color: white;
+}
+
+.setting {
+    text-align: center;
+}
+
+#lpass {
+    width: 17vw;
+}
+
+input, select {
+    width: 20vw;
+    padding: 1vh 0.5vw;
+    margin: 1vh 2vw;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form {
+    margin-top: 18vh;
+    margin-left: -5vh;
+}
+
+.form ul {
+    list-style-type: none;
+    list-style-position: outside;
+    margin:0px;
+    padding:0px;
+}
+
+.form li{
+    padding: 4px; 
+    position: relative;
+} 
+
+.form label {
+    color: white;
+    font-family: monospace;
+    font-size: 1.5vw;
+    display: inline-block;
+    text-align: right;
+    width: 11vw;
+    text-shadow: 3px 2px 0px black;
+}
+
+/* .boxlobbeys {
+    margin: 18vh;
+    padding: 0px;
+    margin-left: 28vw;
+} */
+
+.question {
+    margin-left: 25%;
+    /* margin-top: 10%; */
+}
+
+
+/* Soucre And Timer Edit By Ahmad */
+
+.red {color: #db2828;}
+.blue {color: #2185d0;}
+.white {color:white}
+.orange {color:orange}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+#headerss {
+    width: 1050px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+
+    left: 50%;
+    margin-left: -525px;
+}
+
+#match_teams {
+    width: 100%;
+    margin-top: 10px;
+    height: 55px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+.team_info {
+    width: 45%;
+    font-size:30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#team_score{
+    margin-top:5px;
+}
+
+#team_1 > #team_logo > #team_flag {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    left: -6px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    width: 90px;
+    height: 55px;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+#team_2 > #team_logo > #team_flag {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    left: -8px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 90px;
+    height: 55px;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+#team_name{
+    text-shadow: 0 0 10px black;
+}
+.bg-info2 {width:25%;margin:0 auto;height: 90%; color: #fff; background-color:rgba(0, 0, 0, 0.26);}
+#time_counter {
+    font-size: 25px;
+    font-weight: bold;
+    /* width: 10%; */
+    width:100%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+}
+#round_counter {
+    /* width: 15%; */
+    width:100%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#team_1 {
+    text-align:right;
+    float: left;
+}
+.ct-color{
+    color:#00a0ff;
+}
+.t-color{
+    color:#ffa000;
+}
+
+#team_2 {
+    text-align: left;
+    float: right;
+}
+#team_score{
+    margin-top:5px;
+}
+#team_1 > #team_name{
+    margin-top:5px;
+    float:right;
+}
+#avatar_container img {
+    width:139px;
+    height:139px;
+    margin-top:1px;
+    margin-left:1px;
+}
+
+#team_2 > #team_name{
+    margin-top:5px;
+    float:left;
+}
+#team_1 > #team_score{
+    margin-right:10px;
+    float:right;
+}
+#team_2 > #team_score{
+    margin-left:10px;
+    float:left;
+}
+#team_logo{
+    position: relative;
+    width:10%;
+    height:100%;
+    margin-right:20px;
+    margin-left:20px;
+}
+#team_logo.empty{
+    width:0%;
+}
+#team_logo > img{
+    position: absolute;
+    margin-top:8px;
+    max-height: 80%;
+    max-width: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(3px 3px 4px black);
+    
+}
+#team_1>#team_logo{
+    float:right;
+}
+#team_2>#team_logo{
+    float:left;
+}

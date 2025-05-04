@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="theforce.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="menu">
+            <div class="menu">
+                <div style="display:none" class="item" data-menu="roleta">
+                    <svg class="svgs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                        <g id="Camada_2" data-name="Camada 2">
+                            <g id="Camada_1-2" data-name="Camada 1">
+                                <path d="M.63,90.18H76.94a.62.62,0,0,0,.43-1.06L23.11,34.86a.62.62,0,0,0-.92,0A97.14,97.14,0,0,0,0,89.5.63.63,0,0,0,.63,90.18Z"/>
+                                <path d="M88.4,78.09a.62.62,0,0,0,1.06-.44V.63A.63.63,0,0,0,88.78,0,97.17,97.17,0,0,0,34.1,22.84a.62.62,0,0,0,0,.91Z"/>
+                                <path d="M106.13,78.09l54.33-54.34a.61.61,0,0,0,0-.91A97.2,97.2,0,0,0,105.75,0a.63.63,0,0,0-.68.63v77A.62.62,0,0,0,106.13,78.09Z"/>
+                                <path d="M117.6,90.17h18.73a21.82,21.82,0,0,1,10.74-11.63l40-19.61a97.28,97.28,0,0,0-14.68-24,.62.62,0,0,0-.92,0L117.16,89.12A.62.62,0,0,0,117.6,90.17Z"/>
+                                <path d="M23.82,160.4l53.55-53.56a.61.61,0,0,0-.43-1H.77a.63.63,0,0,0-.63.68A97.05,97.05,0,0,0,22.9,160.36.62.62,0,0,0,23.82,160.4Z"/>
+                                <path d="M88.4,117.88,34.93,171.35a.63.63,0,0,0,0,.92A96.9,96.9,0,0,0,88.78,194.4a.63.63,0,0,0,.68-.62V118.32A.62.62,0,0,0,88.4,117.88Z"/>
+                                <path d="M105.07,118.32v75.46a.63.63,0,0,0,.68.62,97,97,0,0,0,53.82-22.12.62.62,0,0,0,0-.92l-53.48-53.48A.62.62,0,0,0,105.07,118.32Z"/>
+                                <path d="M136.16,105.78H117.6a.62.62,0,0,0-.44,1.06l53.55,53.55a.63.63,0,0,0,.92,0,97.2,97.2,0,0,0,14-21.73l-39.29-21.15A21.82,21.82,0,0,1,136.16,105.78Z"/>
+                                <circle cx="97.27" cy="97.2" r="8.87" transform="translate(-29.76 149.87) rotate(-67.5)"/><path d="M205.74,66.47,153.68,92a6.89,6.89,0,0,0-.23,12.26l51.63,27.8a6.89,6.89,0,0,0,10.16-6l.43-53.33A6.9,6.9,0,0,0,205.74,66.47Z"/><path d="M166,231.38h-8.69l-9-29.13-18.36,6.62a129.81,129.81,0,0,1-62.86.09l-18.95-6.71-7,30.52H29.69a13.57,13.57,0,0,0,0,27.13H166a13.58,13.58,0,0,0,13.57-13.57v-1.39A13.57,13.57,0,0,0,166,231.38Z"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="hover">Bet</div>
+                </div>
+                <div class="item" data-menu="shop">
+                    <svg class="svgs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="left: 15px;">
+                        <g id="Camada_2" data-name="Camada 2">
+                            <g id="Camada_1-2" data-name="Camada 1">
+                                <path d="M259.44,51.16h2.26a9.57,9.57,0,0,0,9.51-10.78l-5-31.64A10,10,0,0,0,256.3,0h-242A10,10,0,0,0,4.41,8.94L.05,40.58A9.59,9.59,0,0,0,9.59,51.16h2.27L2.6,103.49a30.75,30.75,0,0,0,14.82,31.94v106a18.9,18.9,0,0,0,18.9,18.91H232.08A18.91,18.91,0,0,0,251,241.45V136.91a30.76,30.76,0,0,0,17.71-33.42Zm-17.16,9.78,7.65,43.41A18.15,18.15,0,1,1,214,109l-3.95-48Zm-93.67,0h32.26l3.51,45.41c0,.47.06.94.06,1.39a17.92,17.92,0,0,1-35.83,0Zm-60,45.41,3.52-45.41h32.26v46.79a17.92,17.92,0,0,1-35.83,0C88.6,107.29,88.62,106.82,88.65,106.35Zm-64.46-2,7.64-43.41H64.08L60.13,109a18.14,18.14,0,0,1-36.22-1.45A17.5,17.5,0,0,1,24.19,104.35Zm94.06,80.84a8.15,8.15,0,0,1-8.15,8.16H57.45a8.15,8.15,0,0,1-8.15-8.16V168.87a8.16,8.16,0,0,1,8.15-8.15H110.1a8.15,8.15,0,0,1,8.15,8.15Zm98.63,37.08a8.15,8.15,0,0,1-8.16,8.15H171.65a8.15,8.15,0,0,1-8.16-8.15V173.33a8.15,8.15,0,0,1,8.16-8.15h37.07a8.15,8.15,0,0,1,8.16,8.15Z"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="hover" >SHOP</div>
+                </div>
+                <div class="item" data-menu="qrcode">
+                    <svg class="svgs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="left: 15px;">
+                        <g id="Camada_2" data-name="Camada 2">
+                            <g id="Camada_1-2" data-name="Camada 1">
+                                <path d="M85.67.5H.59V85.59H85.67Zm-19,66.09H19.59V19.5H66.67Z"/>
+                                <path d="M256.11.5H171V85.59h85.09Zm-19,66.09H190V19.5h47.09Z"/>
+                                <rect x="32.57" y="32.35" width="20.61" height="20.61"/>
+                                <rect x="203.96" y="32.35" width="20.61" height="20.61"/>
+                                <path d="M.59,256.37H85.67V171.28H.59Zm19-66.09H66.67v47.09H19.59Z"/>
+                                <rect x="33.52" y="203.13" width="20.61" height="20.61"/>
+                                <polygon points="20.61 119.13 39.91 119.13 39.91 139.3 59.39 139.3 59.39 159.13 80 159.13 80 138.52 60.52 138.52 60.52 118.7 40.35 118.7 40.35 98.52 19.74 98.52 19.74 118.17 0 118.17 0 158.96 20.61 158.96 20.61 119.13"/><rect x="140.65" y="37.35" width="20.61" height="20.61"/><path d="M237.57,159v-.13h19.28V118.54H237.57V98.22H200.78v20.32H180.67v20.59H161.26V98.57H141.09V58.17H120.48V20.61H99.87V58.7h20.61V78.13H100.26V97.61H59.91v20.61H99.83V159h20.08v18.52H99.57v39H119.7v19.41h-.11v20.61H140.2V236.2h19.56v20.34h20.61V235.93H160V215.59H120.17V178.26H140.3v19.57h40.37v20.1H200.5v18h0v20.61h20.61V237.76h15.76V218.61h20V177.5H236.24v39.65h-35V197.83h19.33V177.22H200v20.11H180.7V177.22H140.52V157.65H120.43V118.17H100.61V98.74h19.87v.13h20.17v40.26h20v20.61h20.61V139.15h19.56V159Zm-36.29-20.61V118.83h35v19.56Z"/>
+                                <rect x="120.48" width="20.61" height="20.61"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="hover" data-menu="qrcode">QRCODE</div>
+                </div>
+            </div>
+        </div>
+        <div class="esc">
+            <div class="textEsc">
+                Press <b>ESC</b> To Close Menu
+            </div>
+        </div>
+
+
+        <section id="roleta" style="display:none">
+            <div id="roletando">
+                <div id="listaRoleta" class="listaRoleta">
+                    <div id="listaFalsa" class="listaFalsa">
+                        <div class="itemRoleta raro" data-index=1>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta normal" data-index=2>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta epico" data-index=3>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta raro" data-index=4>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta raro" data-index=4>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta raro" data-index=4>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta raro" data-index=4>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                        <div class="itemRoleta raro" data-index=4>
+                            <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" class="imagemItem">
+                            <div class="bordinha"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="definirPremios">
+                <div class="custo">
+                    <div class="text">Coins</div>
+                    <div id="custo">
+                        <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> <div id="custoCaixa">1.500</div>
+                    </div>
+                </div>
+
+                <div id="rolar">
+                    Bet Now!
+                </div>
+
+                <div class="quantidadeCaixas">
+                    <div class="qtd">1x</div>
+                    <div class="qtd">2x</div>
+                    <div class="qtd">3x</div>
+                    <div class="qtd">4x</div>
+                    <div class="qtd">5x</div>
+                    <div class="qtd">6x</div>
+                    <div class="qtd">7x</div>
+                </div>
+            </div>
+
+            <div id="premiosDisponiveis">
+                <div class="titlePremios">
+                    Prizes
+                </div>
+                <div class="listaPremios">
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340224158760960/ak103.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340225287159828/aks.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340226355265566/ak47.png" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340439073587230/lambari.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <div class="total">
+            <div class="text"><b>Coins</b></div>
+            <div id="total">
+                <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt="" id="jp2022"> <div id="totalCaixa">1.500</div>
+            </div>
+        </div>
+        <section id="shop" style="display: none;">
+            <div class="menuShop">
+                <div class="itemMenuShop">ITENS</div>
+                <div class="itemMenuShop" data-category='VEICULOS'>VEICULOS</div>
+                <div class="itemMenuShop">ARMAS</div>
+            </div>
+    
+            <div id="containerLoja">
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="itemShop">
+                    <div class="parteFoto">
+                        <img src="https://cdn.discordapp.com/attachments/712813090952970345/845364098917072906/repairkit.png" alt="" id="fotoItemShop">
+                    </div>
+                    <div class="infos">
+                        <div class="valorItem">
+                            <img src="https://cdn.discordapp.com/attachments/780886760078835712/855332650403233802/coin-stack.png?ex=6618d41b&is=66065f1b&hm=fee26756c99b0640b4432761e94b9b9d1c59f8e44f80c95188707d2cc43478ac&" alt=""> 
+                            <div class="valorCaixa">1.500</div>
+                        </div>
+                        <div class="comprar">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="qrcode" style="display: none">
+            
+                         
+            <div id="ou-clique">
+                Or Click Here
+            </div>
+            <div id="container-qrcode">       
+                <div id="text-top">
+                    Get Access To Our Discord Server
+                </div>
+                <div id="div-qrcode">
+                    <img id="qrcode-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://orion-rp.com" alt="">
+                </div>
+                <div id="text-bottom">
+                    Or Scan The QRCODE
+                </div>
+            </div>
+        </section>
+        <section id="notify" class="animate__animated animate__slideOutRight">
+            <div id="container-notify">
+                <img src="https://cdn.discordapp.com/attachments/712813090952970345/855340224158760960/ak103.png" alt="" id="foto-notify">
+                <div id="texto-notify">
+                    <b>Ricardinho</b> ganhou um item <b>LENDARIO</b>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="ponto"></div>
+    <script src="lightsaber.js"></script>
+</body>
+</html>

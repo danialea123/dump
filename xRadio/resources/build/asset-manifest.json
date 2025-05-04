@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/resources/build/static/css/main.62d3cb9c.css",
+    "main.js": "/resources/build/static/js/main.89eb0038.js",
+    "static/media/radio.svg": "/resources/build/static/media/radio.7bcdfecdd4d2bccc23c8.svg",
+    "index.html": "/resources/build/index.html",
+    "main.62d3cb9c.css.map": "/resources/build/static/css/main.62d3cb9c.css.map",
+    "main.89eb0038.js.map": "/resources/build/static/js/main.89eb0038.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62d3cb9c.css",
+    "static/js/main.89eb0038.js"
+  ]
+}

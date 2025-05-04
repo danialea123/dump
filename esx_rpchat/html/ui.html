@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <title> UI By AlaviOne</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Mulish:wght@200&display=swap" rel="stylesheet" />
+  
+</head>
+<body> 
+     <div id = 'card' class="card"  > 
+        <img src="img/bg.png">
+      <div class="Name"> Name  </div>
+      <div id = 'showname' class="showname" > ...</div>
+      <div class="citizen"> Citizen  ID  </div>
+      <div id = 'showid' class="showid" >... </div>
+      <div class="job"> Job  </div>
+      <div id = 'showjob' class="showjob" >  ... </div>
+      <div class="country"> Grade  </div>
+      <div id = 'country1' class="country1" > ... </div>
+     
+     <div  id = 'imagepd' class="imagepd" >  <img src = "img/police.png"></div>
+     <div  id = 'imagesh' class="imagesh" >  <img src = "img/sheriff.png"></div>
+     <div  id = 'imagemd' class="imagemd" >  <img src = "img/ambulance.png"></div>
+     <div  id = 'imagemecano' class="imagemecano" >  <img src = "img/mechanic.png"></div>
+     <div  id = 'imageforces' class="imageforces" >  <img src = "img/forces.png"></div>
+     <div  id = 'imagefbi' class="imagefbi" >  <img src = "img/fbi.png"></div>
+     <div  id = 'imageweazel' class="imageweazel" >  <img src = "img/weazel.png"></div>
+     <div  id = 'imagejustice' class="imagejustice" >  <img src = "img/justice.png"></div>
+     <div  id = 'other' class="other" >  <img src = "img/other.png"></div>
+     <div  id = 'imagetaxi' class="imagetaxi" >  <img src = "img/taxi.png"></div>
+     <div  id = 'imagecatcafe' class="imagecatcafe" >  <img src = "img/catcafe.png"></div>
+     <div  id = 'imagebahamas' class="imagebahamas" >  <img src = "img/bahamas.png"></div>
+     <div  id = 'imagebenny' class="imagebenny" >  <img src = "img/benny.png"></div>
+     <div  id = 'imagemedic' class="imagemedic" >  <img src = "img/ambulance.png"></div>
+     </div>
+
+    <script src="script.js " type="text/javascript "></script>
+</body>
+
+
+</html>

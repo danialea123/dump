@@ -1,0 +1,74 @@
+#overlay {
+    margin: 15vh auto;
+    height: 45vh;
+    width: 50%;
+    background-color: rgba(11, 239, 232, 0.829);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.logo {
+	position: absolute;
+	top: 75px;
+  left: 510px;
+  -webkit-transform:rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.logo img {
+	width: 120px;  /* MUDAR TAMANHO DA IMAGEM*/
+	opacity: 1;
+	transition: 0.2s all;
+}
+
+.logo img:hover {
+	animation: logo_rot 1s linear infinite;
+}
+
+.logos {
+	position: absolute;
+	top: 90px;
+  left: 1290px;
+  -webkit-transform:rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.logos img {
+	width: 90px;  /* MUDAR TAMANHO DA IMAGEM*/
+	opacity: 1;
+	transition: 2.20s all;
+}
+
+.logos img:hover {
+	animation: logo_rot 1s linear infinite;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#DefaultAim {
+    margin-left: 9%;
+}
+
+#DefaultHolster {
+    margin-left: 9%;
+}
+
+#FrontHolster {
+    margin-left: 9%;
+}
+
+.Images {
+    border-radius: 10px;
+    width: 23%;
+    margin: 2% 3%;
+}

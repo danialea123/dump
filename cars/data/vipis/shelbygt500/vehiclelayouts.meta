@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleMetadataMgr>
+  <ClipSetMaps>
+      <Item type="CClipSetMap">
+      <Name>ENTRY_CLIPSET_MAP_FREEWAY_FRONT_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@front@ds</ClipSetId>
+          <VarClipSetId>EntryVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>EXIT_CLIPSET_MAP_FREEWAY_FRONT_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@front@ds</ClipSetId>
+          <VarClipSetId>ExitVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>ENTRY_CLIPSET_MAP_FREEWAY_FRONT_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@front@ps</ClipSetId>
+          <VarClipSetId>EntryVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>EXIT_CLIPSET_MAP_FREEWAY_FRONT_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@front@ps</ClipSetId>
+          <VarClipSetId>ExitVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>INSIDE_CLIPSET_MAP_FREEWAY_FRONT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@front@base</ClipSetId>
+          <VarClipSetId>InsideVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>ENTRY_CLIPSET_MAP_FREEWAY_REAR_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@rear@ds</ClipSetId>
+          <VarClipSetId>EntryVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>EXIT_CLIPSET_MAP_FREEWAY_REAR_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@rear@ds</ClipSetId>
+          <VarClipSetId>ExitVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>ENTRY_CLIPSET_MAP_FREEWAY_REAR_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@rear@ps</ClipSetId>
+          <VarClipSetId>EntryVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>EXIT_CLIPSET_MAP_FREEWAY_REAR_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@rear@ps</ClipSetId>
+          <VarClipSetId>ExitVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>INSIDE_CLIPSET_MAP_FREEWAY_REAR</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@bike@police@rear@base</ClipSetId>
+          <VarClipSetId>InsideVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+	   <Item type="CClipSetMap">
+      <Name>COMMON_CLIPSET_MAP_BIKE_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@aligns@bike@ds</ClipSetId>
+          <VarClipSetId>CommonVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>COMMON_CLIPSET_MAP_BIKE_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@aligns@bike@ps</ClipSetId>
+          <VarClipSetId>CommonVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>COMMON_CLIPSET_MAP_BIKE_LOW_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@common@motorbike@low@ds</ClipSetId>
+          <VarClipSetId>CommonVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>COMMON_CLIPSET_MAP_BIKE_LOW_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@common@motorbike@low@ps</ClipSetId>
+          <VarClipSetId>CommonVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>COMMON_CLIPSET_MAP_BIKE_HIGH_LEFT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@common@motorbike@high@ds</ClipSetId>
+          <VarClipSetId>CommonVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    <Item type="CClipSetMap">
+      <Name>COMMON_CLIPSET_MAP_BIKE_HIGH_RIGHT</Name>
+      <Maps>
+        <Item>
+          <ClipSetId>clipset@veh@common@motorbike@high@ps</ClipSetId>
+          <VarClipSetId>CommonVarClipSet</VarClipSetId>
+          <ConditionFlags />
+          <InformationFlags />
+        </Item>
+      </Maps>
+    </Item>
+    </ClipSetMaps>
+  <VehicleDriveByInfos>
+      <Item type="CVehicleDriveByInfo">
+      <Name>DRIVEBY_BIKE_FREE</Name>
+      <MinAimSweepHeadingAngleDegs value="-190.000000" />
+      <MaxAimSweepHeadingAngleDegs value="190.000000" />
+	  <FirstPersonMinAimSweepHeadingAngleDegs value="-180.000000" />
+	  <FirstPersonMaxAimSweepHeadingAngleDegs value="180.000000" />
+	  <FirstPersonUnarmedMinAimSweepHeadingAngleDegs value="-90.000000" />
+	  <FirstPersonUnarmedMaxAimSweepHeadingAngleDegs value="90.000000" />
+      <MinRestrictedAimSweepHeadingAngleDegs value="-190.000000" />
+      <MaxRestrictedAimSweepHeadingAngleDegs value="190.000000" />
+      <MinSmashWindowAngleDegs value="0.000000" />
+      <MaxSmashWindowAngleDegs value="0.000000" />
+	  <MinSmashWindowAngleFirstPersonDegs value="0.000000" />
+      <MaxSmashWindowAngleFirstPersonDegs value="0.000000" />
+      <MaxSpeedParam value="0.2500000" />
+      <MaxLongitudinalLeanBlendWeightDelta value="0.250000" />
+      <MaxLateralLeanBlendWeightDelta value="0.250000" />
+      <ApproachSpeedToWithinMaxBlendDelta value="1.000000" />
+      <SpineAdditiveBlendInDelay value="0.050000" />
+      <SpineAdditiveBlendInDurationStill value="0.150000" />
+      <SpineAdditiveBlendInDuration value="0.750000" />
+      <SpineAdditiveBlendOutDelay value="0.000000" />
+      <SpineAdditiveBlendOutDuration value="0.500000" />
+      <DriveByAnimInfos>
+		<Item ref="FREEWAY_DB_ANIM_INFO_MELEE_DS" />
+        <Item ref="FREEWAY_DB_ANIM_INFO_UNARMED_DS" />
+        <Item ref="FREEWAYBIKE_DB_ANIM_INFO_ONE_HANDED_DS" />
+        <Item ref="FREEWAY_DB_ANIM_INFO_THROW_DS" />
+      </DriveByAnimInfos>
+      <DriveByCamera />
+      <DriveByFlags>UseMountedProjectileTask UseSpineAdditive</DriveByFlags>
+    </Item>
+    <Item type="CVehicleDriveByInfo">
+      <Name>DRIVEBY_BIKE_FREEWAY_PASSENGER</Name>
+      <MinAimSweepHeadingAngleDegs value="-190.000000" />
+      <MaxAimSweepHeadingAngleDegs value="190.000000" />
+	  <FirstPersonMinAimSweepHeadingAngleDegs value="-180.000000" />
+	  <FirstPersonMaxAimSweepHeadingAngleDegs value="180.000000" />
+	  <FirstPersonUnarmedMinAimSweepHeadingAngleDegs value="-180.000000" />
+	  <FirstPersonUnarmedMaxAimSweepHeadingAngleDegs value="180.000000" />
+      <MinRestrictedAimSweepHeadingAngleDegs value="-190.000000" />
+      <MaxRestrictedAimSweepHeadingAngleDegs value="190.000000" />
+      <MinSmashWindowAngleDegs value="0.000000" />
+      <MaxSmashWindowAngleDegs value="0.000000" />
+	  <MinSmashWindowAngleFirstPersonDegs value="0.000000" />
+      <MaxSmashWindowAngleFirstPersonDegs value="0.000000" />
+      <MaxSpeedParam value="0.500000" />
+      <MaxLongitudinalLeanBlendWeightDelta value="0.250000" />
+      <MaxLateralLeanBlendWeightDelta value="0.250000" />
+      <ApproachSpeedToWithinMaxBlendDelta value="1.000000" />
+      <SpineAdditiveBlendInDelay value="0.050000" />
+      <SpineAdditiveBlendInDurationStill value="0.150000" />
+      <SpineAdditiveBlendInDuration value="0.750000" />
+      <SpineAdditiveBlendOutDelay value="0.000000" />
+      <SpineAdditiveBlendOutDuration value="0.500000" />
+      <DriveByAnimInfos>
+		<Item ref="FREEWAY_DB_ANIM_INFO_MELEE_PS" />
+        <Item ref="FREEWAY_DB_ANIM_INFO_UNARMED_PS" />
+        <Item ref="FREEWAY_DB_ANIM_INFO_ONE_HANDED_PS" />
+        <Item ref="FREEWAY_DB_ANIM_INFO_THROW_PS" />
+      </DriveByAnimInfos>
+      <DriveByCamera />
+      <DriveByFlags>UseMountedProjectileTask UseSpineAdditive</DriveByFlags>
+    </Item>
+    </VehicleDriveByInfos>
+  <VehicleDriveByAnimInfos>
+  	<Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_MELEE_DS</Name>
+      <WeaponGroup ref="DRIVEBY_BIKE_MELEE" />
+      <DriveByClipSet/>
+      <FirstPersonDriveByClipSet/>
+      <AltFirstPersonDriveByClipSets/>
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_small_wpn</VehicleMeleeClipSet>
+	  <FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_small_wpn</FirstPersonVehicleMeleeClipSet>
+      <Network>MOUNTED_THROW</Network>
+    </Item>
+    <Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_UNARMED_DS</Name>
+      <WeaponGroup ref="DRIVEBY_DEFAULT_UNARMED" />
+      <DriveByClipSet>drive_by_bike@freeway@front@freeway</DriveByClipSet>
+      <FirstPersonDriveByClipSet>driveby@first_person@bike@driver@unarmed</FirstPersonDriveByClipSet>
+      <AltFirstPersonDriveByClipSets />
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_kick</VehicleMeleeClipSet>
+	  <FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_kick</FirstPersonVehicleMeleeClipSet>
+      <Network>STD_CAR_DRIVEBY</Network>
+    </Item>
+    <Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAYBIKE_DB_ANIM_INFO_ONE_HANDED_DS</Name>
+      <WeaponGroup ref="DRIVEBY_BIKE_ONE_HANDED" />
+      <DriveByClipSet>drive_by_bike_freeway@std_ds</DriveByClipSet>
+      <FirstPersonDriveByClipSet>driveby@first_person@bike@driver@1h</FirstPersonDriveByClipSet>
+      <AltFirstPersonDriveByClipSets>
+        <Item>
+          <Weapons>
+            <Item>WEAPON_COMPACTRIFLE</Item>
+            <Item>WEAPON_MICROSMG</Item>
+			<Item>WEAPON_SMG_MK2</Item>
+          </Weapons>
+          <ClipSet>driveby@first_person@bike@driver@smg</ClipSet>
+        </Item>
+        <Item>
+          <Weapons>
+            <Item>WEAPON_DBSHOTGUN</Item>
+			<Item>WEAPON_SAWNOFFSHOTGUN</Item>
+          </Weapons>
+          <ClipSet>driveby@first_person@bike@driver@sawnoff</ClipSet>
+        </Item>
+	  </AltFirstPersonDriveByClipSets>
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_1h</VehicleMeleeClipSet>
+	  <FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_1h</FirstPersonVehicleMeleeClipSet>
+      <Network>STD_CAR_DRIVEBY</Network>
+    </Item>
+	<Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_THROW_DS</Name>
+      <WeaponGroup ref="DRIVEBY_MOUNTED_THROW" />
+      <DriveByClipSet>drive_by_bike@freeway@front@grenade</DriveByClipSet>
+	  <FirstPersonDriveByClipSet>driveby@first_person@bike@driver@throw</FirstPersonDriveByClipSet>
+      <AltFirstPersonDriveByClipSets />
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_kick</VehicleMeleeClipSet>
+	  <FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_kick</FirstPersonVehicleMeleeClipSet>
+      <Network>MOUNTED_THROW</Network>
+    </Item>
+	<Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_MELEE_PS</Name>
+      <WeaponGroup ref="DRIVEBY_BIKE_MELEE" />
+      <DriveByClipSet/>
+      <FirstPersonDriveByClipSet/>
+      <AltFirstPersonDriveByClipSets/>
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_small_wpn_ps</VehicleMeleeClipSet>
+	  <!--<FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_small_wpn_ps</FirstPersonVehicleMeleeClipSet>-->
+      <Network>MOUNTED_THROW</Network>
+    </Item>
+	<Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_UNARMED_PS</Name>
+      <WeaponGroup ref="DRIVEBY_DEFAULT_UNARMED" />
+      <DriveByClipSet>drive_by_bike@freeway@rear@unarmed</DriveByClipSet>
+      <FirstPersonDriveByClipSet>driveby@first_person@bike@passenger@unarmed</FirstPersonDriveByClipSet>
+      <AltFirstPersonDriveByClipSets />
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_kick_ps</VehicleMeleeClipSet>
+	  <!--<FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_kick_ps</FirstPersonVehicleMeleeClipSet>-->
+      <Network>STD_CAR_DRIVEBY</Network>
+    </Item>
+    <Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_ONE_HANDED_PS</Name>
+      <WeaponGroup ref="DRIVEBY_BIKE_ONE_HANDED" />
+      <DriveByClipSet>drive_by_bike@freeway@rear@1h</DriveByClipSet>
+      <FirstPersonDriveByClipSet>driveby@first_person@bike@passenger@1h</FirstPersonDriveByClipSet>
+      <AltFirstPersonDriveByClipSets>
+        <Item>
+          <Weapons>
+            <Item>WEAPON_COMPACTRIFLE</Item>
+            <Item>WEAPON_MICROSMG</Item>
+			<Item>WEAPON_SMG_MK2</Item>
+          </Weapons>
+          <ClipSet>driveby@first_person@bike@passenger@smg</ClipSet>
+        </Item>
+        <Item>
+          <Weapons>
+            <Item>WEAPON_DBSHOTGUN</Item>
+			<Item>WEAPON_SAWNOFFSHOTGUN</Item>
+          </Weapons>
+          <ClipSet>driveby@first_person@bike@passenger@sawnoff</ClipSet>
+        </Item>
+	  </AltFirstPersonDriveByClipSets>
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_1h_ps</VehicleMeleeClipSet>
+	  <!--<FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_1h_ps</FirstPersonVehicleMeleeClipSet>-->
+      <Network>STD_CAR_DRIVEBY</Network>
+    </Item>
+    <Item type="CVehicleDriveByAnimInfo">
+      <Name>FREEWAY_DB_ANIM_INFO_THROW_PS</Name>
+      <WeaponGroup ref="DRIVEBY_MOUNTED_THROW" />
+      <DriveByClipSet>drive_by_bike@freeway@rear@grenade</DriveByClipSet>
+	  <FirstPersonDriveByClipSet>driveby@first_person@bike@passenger@throw</FirstPersonDriveByClipSet>
+      <AltFirstPersonDriveByClipSets />
+	  <VehicleMeleeClipSet>drive_by_bike_police@veh_melee_kick_ps</VehicleMeleeClipSet>
+	  <!--<FirstPersonVehicleMeleeClipSet>drive_by_bike@fp_veh_melee_kick_ps</FirstPersonVehicleMeleeClipSet>-->
+      <Network>MOUNTED_THROW</Network>
+    </Item>
+    </VehicleDriveByAnimInfos>
+  <VehicleCoverBoundOffsetInfos>
+    <Item type="CVehicleCoverBoundOffsetInfo">
+      <Name>RATLOADER2_COVER_OFFSET_INFO</Name>
+      <ExtraSideOffset value="0.050000" />
+      <ExtraForwardOffset value="-0.200000" />
+      <ExtraBackwardOffset value="-0.450000" />
+      <ExtraZOffset value="-0.100000" />
+      <CoverBoundInfos>
+        <Item>
+          <Name>FRONT</Name>
+          <Position x="0.000000" y="1.050000" z="0.400000" />
+          <Length value="2.750000" />
+          <Width value="2.050000" />
+          <Height value="1.100000" />
+          <ActiveBoundExclusions />
+        </Item>
+        <Item>
+          <Name>BACK</Name>
+          <Position x="0.000000" y="-1.125000" z="0.400000" />
+          <Length value="1.600000" />
+          <Width value="2.200000" />
+          <Height value="1.100000" />
+          <ActiveBoundExclusions />
+        </Item>
+      </CoverBoundInfos>
+    </Item>
+    <Item type="CVehicleCoverBoundOffsetInfo">
+      <Name>SLAMVAN_COVER_OFFSET_INFO</Name>
+      <ExtraSideOffset value="-0.100000" />
+      <ExtraForwardOffset value="-0.125000" />
+      <ExtraBackwardOffset value="-0.150000" />
+      <ExtraZOffset value="0.200000" />
+      <CoverBoundInfos />
+    </Item>
+    <Item type="CVehicleCoverBoundOffsetInfo">
+      <Name>OSIRIS_COVER_OFFSET_INFO</Name>
+      <ExtraSideOffset value="-0.100000" />
+      <ExtraForwardOffset value="-0.200000" />
+      <ExtraBackwardOffset value="-0.050000" />
+      <ExtraZOffset value="0.050000" />
+      <CoverBoundInfos />
+    </Item>
+	    <Item type="CVehicleCoverBoundOffsetInfo">
+      <Name>BIKE2_COVER_OFFSET_INFO</Name>
+      <ExtraSideOffset value="0.000000" />
+      <ExtraForwardOffset value="-0.250000" />
+      <ExtraBackwardOffset value="0.100000" />
+      <ExtraZOffset value="0.100000" />
+      <CoverBoundInfos />
+    </Item>
+	    <Item type="CVehicleCoverBoundOffsetInfo">
+      <Name>BIKE_COVER_OFFSET_INFO</Name>
+      <ExtraSideOffset value="0.000000" />
+      <ExtraForwardOffset value="-0.100000" />
+      <ExtraBackwardOffset value="0.000000" />
+      <ExtraZOffset value="0.100000" />
+      <CoverBoundInfos />
+    </Item>
+  </VehicleCoverBoundOffsetInfos>
+  <VehicleSeatInfos />
+  <VehicleSeatAnimInfos>
+     <Item type="CVehicleSeatAnimInfo">
+      <Name>SEAT_ANIM_BIKE_FREEWAY_FRONT</Name>
+      <DriveByInfo ref="DRIVEBY_BIKE_FREE" />
+      <InsideClipSetMap ref="INSIDE_CLIPSET_MAP_FREEWAY_FRONT" />
+      <PanicClipSet />
+      <AgitatedClipSet />
+	  <DuckedClipSet />
+      <FemaleClipSet />
+	  <LowriderLeanClipSet>clipset@veh@bike@police@front@base</LowriderLeanClipSet>
+	  <AltLowriderLeanClipSet>anim@veh@sit_variations@police@front@idle_a</AltLowriderLeanClipSet>
+      <LowLODIdleAnim>FREEWAY_BIKE_FRONT_IDLE</LowLODIdleAnim>
+      <SeatAmbientContext>ON_BIKE_POLICE</SeatAmbientContext>
+      <InVehicleMoveNetwork>VEHICLE_DEFAULT</InVehicleMoveNetwork>
+      <SeatAnimFlags>CanDetachViaRagdoll UseBikeInVehicleAnims SupportsInAirState UseRestrictedTorsoLeanIK FallsOutWhenDead</SeatAnimFlags>
+      <SteeringSmoothing value="0.100000" />
+      <ExitToAimInfoName />
+      <MaleGestureClipSetId />
+      <FemaleGestureClipSetId />
+    </Item>
+    <Item type="CVehicleSeatAnimInfo">
+      <Name>SEAT_ANIM_BIKE_FREEWAY_REAR</Name>
+      <DriveByInfo ref="DRIVEBY_BIKE_FREEWAY_PASSENGER" />
+      <InsideClipSetMap ref="INSIDE_CLIPSET_MAP_FREEWAY_REAR" />
+      <PanicClipSet />
+      <AgitatedClipSet />
+	  <DuckedClipSet />
+      <FemaleClipSet />
+      <LowLODIdleAnim>FREEWAY_BIKE_REAR_IDLE</LowLODIdleAnim>
+      <SeatAmbientContext />
+      <InVehicleMoveNetwork>VEHICLE_DEFAULT</InVehicleMoveNetwork>
+      <SeatAnimFlags>CanDetachViaRagdoll UseBikeInVehicleAnims SupportsInAirState UseRestrictedTorsoLeanIK FallsOutWhenDead</SeatAnimFlags>
+      <SteeringSmoothing value="0.100000" />
+      <ExitToAimInfoName />
+      <MaleGestureClipSetId />
+      <FemaleGestureClipSetId />
+    </Item>
+    </VehicleSeatAnimInfos>
+  <VehicleEntryPointInfos>
+      <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BIKE_FRONT_LEFT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BIKE_FRONT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BIKE_LEFT" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BIKE_FRONT_RIGHT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BIKE_FRONT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BIKE_RIGHT" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BIKE_REAR_LEFT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BIKE_REAR" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags>IsPassengerOnlyEntry</Flags>
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BIKE_REAR_RIGHT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BIKE_REAR" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags>IsPassengerOnlyEntry</Flags>
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BIKE_FRONT_LEFT_BATI</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BIKE_FRONT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BIKE_LEFT_BATI" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BIKE_FRONT_RIGHT_BATI</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BIKE_FRONT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BIKE_RIGHT_BATI" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    </VehicleEntryPointInfos>
+    <VehicleExtraPointsInfos>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BIKE_LEFT</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>PICK_UP_POINT</PointType>
+          <Position x="-1.600000" y="0.200000" z="1.000000" />
+          <Heading value="-1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>PULL_UP_POINT</PointType>
+          <Position x="-0.300000" y="0.100000" z="1.000000" />
+          <Heading value="-1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>QUICK_GET_ON_POINT</PointType>
+          <Position x="-1.100000" y="0.400000" z="1.000000" />
+          <Heading value="-1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BIKE_RIGHT</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>PICK_UP_POINT</PointType>
+          <Position x="1.575000" y="0.100000" z="1.000000" />
+          <Heading value="1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>PULL_UP_POINT</PointType>
+          <Position x="0.325000" y="-0.025000" z="1.000000" />
+          <Heading value="1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>QUICK_GET_ON_POINT</PointType>
+          <Position x="1.000000" y="0.100000" z="1.000000" />
+          <Heading value="1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BIKE_LEFT_BATI</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>PICK_UP_POINT</PointType>
+          <Position x="-1.600000" y="0.200000" z="1.000000" />
+          <Heading value="-1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>PULL_UP_POINT</PointType>
+          <Position x="-0.300000" y="0.100000" z="1.000000" />
+          <Heading value="-1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+        <Item>
+          <LocationType>WHEEL_GROUND_RELATIVE</LocationType>
+          <PointType>QUICK_GET_ON_POINT</PointType>
+          <Position x="-1.100000" y="0.400000" z="0.860000" />
+          <Heading value="-1.570000" />
+          <BoneName>wheel_lf</BoneName>
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+  </VehicleExtraPointsInfos>
+  <VehicleEntryPointAnimInfos>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_LOW_OSIRIS_FRONT_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_AUTOMOBILE_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_LOW_FRONT_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_LOW_INFERNUS_FRONT_LEFT" />
+      <AlternateTryLockedDoorClipId>LOW_Locked_DS</AlternateTryLockedDoorClipId>
+      <AlternateForcedEntryClipId>LOW_Force_Entry_DS</AlternateForcedEntryClipId>
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.980600" y="-0.753300" z="0.610300" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="1.570000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForMPPlaneWarp value="-2.000000" />
+      <EntryPointFlags>JackIncludesGetIn UsesNoDoorTransitionForExit UseOpenDoorBlendAnims UseGetUpAfterJack DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+      <NMJumpFromVehicleTuningSet />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_LOW_OSIRIS_FRONT_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_AUTOMOBILE_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_LOW_FRONT_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_LOW_INFERNUS_FRONT_RIGHT" />
+      <AlternateTryLockedDoorClipId>LOW_Locked_PS</AlternateTryLockedDoorClipId>
+      <AlternateForcedEntryClipId>LOW_Force_Entry_PS</AlternateForcedEntryClipId>
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="0.875000" y="-0.740000" z="0.610000" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="-1.570000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForMPPlaneWarp value="-2.000000" />
+      <EntryPointFlags>JackIncludesGetIn UsesNoDoorTransitionForExit UseOpenDoorBlendAnims UseGetUpAfterJack DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+      <NMJumpFromVehicleTuningSet />
+    </Item>
+	    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_FREEWAY_FRONT_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_HIGH_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_FREEWAY_FRONT_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_FREEWAY_FRONT_LEFT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.837200" y="0.194900" z="0.271000" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+	  <NMJumpFromVehicleTuningSet>MOTOBIKE</NMJumpFromVehicleTuningSet>
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_FREEWAY_FRONT_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_HIGH_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_FREEWAY_FRONT_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_FREEWAY_FRONT_RIGHT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="0.969800" y="0.128400" z="0.279300" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_FREEWAY_REAR_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_HIGH_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_FREEWAY_REAR_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_FREEWAY_REAR_LEFT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.837000" y="-0.220000" z="0.243400" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_FREEWAY_REAR_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_HIGH_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_FREEWAY_REAR_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_FREEWAY_REAR_RIGHT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="1.020000" y="-0.100000" z="0.243400" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+	    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_DIRT_FRONT_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_HIGH_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_DIRT_FRONT_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_DIRT_FRONT_LEFT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.848900" y="0.102200" z="0.067600" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn UsesNoDoorTransitionForEnter UsesNoDoorTransitionForExit FixUpMoverToEntryPointOnExit UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+	  <NMJumpFromVehicleTuningSet>MOTOBIKE</NMJumpFromVehicleTuningSet>
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_DIRT_FRONT_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_HIGH_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_DIRT_FRONT_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_DIRT_FRONT_RIGHT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="1.053100" y="0.064300" z="0.054600" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn UsesNoDoorTransitionForEnter UsesNoDoorTransitionForExit FixUpMoverToEntryPointOnExit UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_DIRT_REAR_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_DIRT_REAR_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_DIRT_REAR_LEFT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.713000" y="-0.350000" z="0.212000" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_DIRT_REAR_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_DIRT_REAR_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_DIRT_REAR_RIGHT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="0.880000" y="-0.282000" z="0.043000" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn UseGetUpAfterJack JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_SPORT_FRONT_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_LOW_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_SPORT_FRONT_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_SPORT_FRONT_LEFT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.686900" y="0.189300" z="0.104500" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+	  <NMJumpFromVehicleTuningSet>MOTOBIKE</NMJumpFromVehicleTuningSet>
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_SPORT_FRONT_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_LOW_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_SPORT_FRONT_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_SPORT_FRONT_RIGHT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="0.852300" y="0.245400" z="0.104500" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_SPORT_REAR_LEFT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_LEFT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_SPORT_REAR_LEFT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_SPORT_REAR_LEFT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="-0.657000" y="-0.299000" z="0.100000" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="-1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+    <Item type="CVehicleEntryPointAnimInfo">
+      <Name>ENTRY_POINT_ANIM_BIKE_SPORT_REAR_RIGHT</Name>
+      <CommonClipSetMap ref="COMMON_CLIPSET_MAP_BIKE_RIGHT" />
+      <EntryClipSetMap ref="ENTRY_CLIPSET_MAP_SPORT_REAR_RIGHT" />
+      <ExitClipSetMap ref="EXIT_CLIPSET_MAP_SPORT_REAR_RIGHT" />
+      <AlternateTryLockedDoorClipId />
+      <AlternateForcedEntryClipId />
+      <AlternateJackFromOutSideClipId />
+      <AlternateBeJackedFromOutSideClipId />
+      <AlternateEntryPointClipSetId />
+      <EnterVehicleMoveNetwork>ENTER_VEHICLE_STD</EnterVehicleMoveNetwork>
+      <EntryTranslation x="0.854000" y="-0.299000" z="-0.188000" />
+      <OpenDoorTranslation x="0.000000" y="0.000000" />
+      <OpenDoorHeadingChange value="0.000000" />
+      <EntryHeadingChange value="1.570000" />
+      <ExtraZForWaterEntry value="0.000000" />
+      <EntryPointFlags>JackIncludesGetIn FixUpMoverToEntryPointOnExit JackVariationsIncludeGetIn DeadJackIncludesGetIn</EntryPointFlags>
+      <EntryAnimVariations ref="NULL" />
+    </Item>
+  </VehicleEntryPointAnimInfos>
+   <VehicleExplosionInfos>
+    <Item type="CVehicleExplosionInfo">
+      <Name>EXPLOSION_INFO_BIKE</Name>
+      <ExplosionData>
+        <Item>
+          <ExplosionTag>BIKE</ExplosionTag>
+          <PositionAtPetrolTank value="false" />
+          <PositionInBoundingBox value="false" />
+          <DelayTimeMs value="34" />
+          <Scale value="1.000000" />
+          <PositionOffset x="0.000000" y="0.000000" z="0.000000" />
+        </Item>
+      </ExplosionData>
+      <AdditionalPartVelocityMinAngle value="0.000000" />
+      <AdditionalPartVelocityMaxAngle value="0.000000" />
+      <AdditionalPartVelocityMinMagnitude value="0.000000" />
+      <AdditionalPartVelocityMaxMagnitude value="0.000000" />
+      <VehicleExplosionLODs>
+        <Item>
+          <Radius value="0.000000" />
+          <PartDeletionChance value="0.000000" />
+        </Item>
+        <Item>
+          <Radius value="5.910000" />
+          <PartDeletionChance value="0.400000" />
+        </Item>
+        <Item>
+          <Radius value="8.360000" />
+          <PartDeletionChance value="0.800000" />
+        </Item>
+      </VehicleExplosionLODs>
+    </Item>
+  </VehicleExplosionInfos>
+  <VehicleLayoutInfos>
+    <Item type="CVehicleLayoutInfo">
+      <Name>LAYOUT_LOW_OSIRIS</Name>
+      <Seats>
+        <Item>
+          <SeatInfo ref="SEAT_STANDARD_FRONT_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_LOW_RESTRICTED_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_STANDARD_FRONT_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_LOW_RESTRICTED_FRONT_RIGHT" />
+        </Item>
+      </Seats>
+      <EntryPoints>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_LOW_OSIRIS_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_LOW_OSIRIS_FRONT_RIGHT" />
+        </Item>
+      </EntryPoints>
+      <LayoutFlags>StreamAnims NoArmIkOnInsideCloseDoor NoArmIkOnOutsideCloseDoor UseLeanSteerAnims UseSteeringWheelIk UseFinerAlignTolerance AutomaticCloseDoor</LayoutFlags>
+      <BicycleInfo ref="NULL" />
+      <AnimRateSet ref="STD_LOW_ANIM_RATE_SET" />
+      <HandsUpClipSetId>busted_vehicle_low</HandsUpClipSetId>
+      <SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+      <MaxXAcceleration value="15.000000" />
+      <BodyLeanXApproachSpeed value="10.000000" />
+      <BodyLeanXSmallDelta value="0.400000" />
+      <LookBackApproachSpeedScale value="1.000000" />
+	  <FirstPersonAdditiveIdleClipSets>
+        <Item>clipset@veh@low@ds@idle_a</Item>
+		<Item>clipset@veh@low@ds@idle_b</Item>
+		<Item>clipset@veh@low@ds@idle_c</Item>
+		<Item>clipset@veh@low@ds@idle_d</Item>
+		<Item>clipset@veh@low@ds@idle_e</Item>
+	  </FirstPersonAdditiveIdleClipSets>
+	  <FirstPersonRoadRageClipSets>
+        <Item>clipset@veh@low@ds@hit_wheel@idle_a</Item>
+		<Item>clipset@veh@low@ds@hit_wheel@idle_b</Item>
+		<Item>clipset@veh@low@ds@hit_wheel@idle_c</Item>
+	  </FirstPersonRoadRageClipSets>
+      <CellphoneClipsets>
+        <CellphoneClipsetDS>ANIM_GROUP_CELLPHONE_IN_CAR_DS</CellphoneClipsetDS>
+        <CellphoneClipsetPS>ANIM_GROUP_CELLPHONE_IN_CAR_PS</CellphoneClipsetPS>
+		<CellphoneClipsetDS_FPS>ANIM_GROUP_CELLPHONE_IN_CAR_LOW_FPS</CellphoneClipsetDS_FPS>
+        <CellphoneClipsetPS_FPS>ANIM_GROUP_CELLPHONE_IN_CAR_DS_FPS</CellphoneClipsetPS_FPS>
+      </CellphoneClipsets>
+    </Item>
+	    <Item type="CVehicleLayoutInfo">
+      <Name>LAYOUT_BIKE_FREEWAY</Name>
+      <Seats>
+        <Item>
+          <SeatInfo ref="SEAT_BIKE_FRONT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BIKE_FREEWAY_FRONT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BIKE_REAR" />
+          <SeatAnimInfo ref="SEAT_ANIM_BIKE_FREEWAY_REAR" />
+        </Item>
+      </Seats>
+      <EntryPoints>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BIKE_FRONT_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BIKE_FREEWAY_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BIKE_FRONT_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BIKE_FREEWAY_FRONT_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BIKE_REAR_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BIKE_FREEWAY_REAR_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BIKE_REAR_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BIKE_FREEWAY_REAR_RIGHT" />
+        </Item>
+      </EntryPoints>
+      <LayoutFlags>StreamAnims BikeLeansUnlessMoving UsePickUpPullUp UseStillToSitTransition UseFinerAlignTolerance DisableFastPoseWhenDrivebying</LayoutFlags>
+      <BicycleInfo ref="NULL" />
+      <HandsUpClipSetId>busted_vehicle_bike_police</HandsUpClipSetId>
+      <SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+    </Item>
+  </VehicleLayoutInfos>
+    <InVehicleOverrideInfos />
+    <FirstPersonDriveByLookAroundData>
+    <Item type="CFirstPersonDriveByLookAroundData">
+      <Name>LOW_OSIRIS_FRONT_LEFT</Name>
+      <AllowLookback value="false" />
+      <HeadingLimits x="-95.000000" y="100.000000" />
+      <DataLeft>
+        <Offsets>
+          <Item>
+            <Offset value="0.075000" />
+            <AngleToBlendInOffset x="20.000000" y="100.000000" />
+          </Item>
+          <Item>
+            <Offset value="-0.250000" />
+            <AngleToBlendInOffset x="0.000000" y="55.000000" />
+          </Item>
+          <Item>
+            <Offset value="0.030000" />
+            <AngleToBlendInOffset x="45.000000" y="100.000000" />
+          </Item>
+        </Offsets>
+        <ExtraRelativePitch x="0.000000" y="-7.500000" />
+        <AngleToBlendInExtraPitch x="0.000000" y="0.000000" />
+      </DataLeft>
+      <DataRight>
+        <Offsets>
+          <Item>
+            <Offset value="0.000000" />
+            <AngleToBlendInOffset x="0.000000" y="0.000000" />
+          </Item>
+          <Item>
+            <Offset value="-0.150000" />
+            <AngleToBlendInOffset x="0.000000" y="65.000000" />
+          </Item>
+          <Item>
+            <Offset value="0.000000" />
+            <AngleToBlendInOffset x="0.000000" y="0.000000" />
+          </Item>
+        </Offsets>
+        <ExtraRelativePitch x="0.000000" y="-7.500000" />
+        <AngleToBlendInExtraPitch x="0.000000" y="0.000000" />
+      </DataRight>
+      <WheelClipInfo>
+        <HeadingLimitsLeft x="0.380000" y="0.430000" />
+        <HeadingLimitsRight x="0.480000" y="0.530000" />
+        <PitchLimits x="0.470000" y="0.530000" />
+        <PitchOffset x="0.000000" y="0.050000" />
+        <WheelAngleLimits x="-0.700000" y="0.000000" />
+        <WheelAngleOffset x="0.010000" y="0.040000" />
+        <MaxWheelOffsetY value="0.000000" />
+        <WheelClipLerpInRate value="0.150000" />
+        <WheelClipLerpOutRate value="0.180000" />
+      </WheelClipInfo>
+    </Item>
+    <Item type="CFirstPersonDriveByLookAroundData">
+      <Name>LOW_OSIRIS_FRONT_RIGHT</Name>
+      <AllowLookback value="false" />
+      <HeadingLimits x="-95.000000" y="100.000000" />
+      <DataLeft>
+        <Offsets>
+          <Item>
+            <Offset value="0.000000" />
+            <AngleToBlendInOffset x="0.000000" y="0.000000" />
+          </Item>
+          <Item>
+            <Offset value="-0.100000" />
+            <AngleToBlendInOffset x="0.000000" y="65.000000" />
+          </Item>
+          <Item>
+            <Offset value="0.000000" />
+            <AngleToBlendInOffset x="0.000000" y="0.000000" />
+          </Item>
+        </Offsets>
+        <ExtraRelativePitch x="0.000000" y="-7.500000" />
+        <AngleToBlendInExtraPitch x="0.000000" y="0.000000" />
+      </DataLeft>
+      <DataRight>
+        <Offsets>
+          <Item>
+            <Offset value="-0.075000" />
+            <AngleToBlendInOffset x="20.000000" y="100.000000" />
+          </Item>
+          <Item>
+            <Offset value="-0.250000" />
+            <AngleToBlendInOffset x="0.000000" y="55.000000" />
+          </Item>
+          <Item>
+            <Offset value="0.030000" />
+            <AngleToBlendInOffset x="45.000000" y="100.000000" />
+          </Item>
+        </Offsets>
+        <ExtraRelativePitch x="0.000000" y="-7.500000" />
+        <AngleToBlendInExtraPitch x="0.000000" y="0.000000" />
+      </DataRight>
+      <WheelClipInfo>
+        <HeadingLimitsLeft x="0.380000" y="0.430000" />
+        <HeadingLimitsRight x="0.480000" y="0.530000" />
+        <PitchLimits x="0.470000" y="0.530000" />
+        <PitchOffset x="0.000000" y="0.050000" />
+        <WheelAngleLimits x="-0.700000" y="0.000000" />
+        <WheelAngleOffset x="0.010000" y="0.040000" />
+        <MaxWheelOffsetY value="0.000000" />
+        <WheelClipLerpInRate value="0.150000" />
+        <WheelClipLerpOutRate value="0.180000" />
+      </WheelClipInfo>
+    </Item>
+  </FirstPersonDriveByLookAroundData>
+</CVehicleMetadataMgr>

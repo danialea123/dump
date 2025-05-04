@@ -1,0 +1,206 @@
+body {
+    display: none;
+    margin: 0;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: transparent;
+}
+
+.case {
+    width: 800px;
+    height: auto;
+    margin: auto;
+    margin-top: 250px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+}
+
+.info {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#img {
+    position: absolute;
+    height: 160px;
+    width: auto;
+    top: -140px;
+    left: 580px;
+    z-index: 1;
+}
+
+#customers {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    color: white;
+}
+
+#customers td,
+#customers th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#customers tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#customers tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+#customers tr:hover {
+    background-color: rgba(104, 139, 252, 0.15);
+    transition: all 0.2s ease;
+}
+
+#customers th {
+    padding: 15px;
+    text-align: left;
+    background: rgba(104, 139, 252, 0.3);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #698bfc;
+}
+
+button {
+    border: none;
+    padding: 8px 15px;
+    width: auto;
+    min-width: 100px;
+    border-radius: 4px;
+    background: #698bfc;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #4c66bb;
+    box-shadow: 0 0 10px rgba(104, 139, 252, 0.4);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #698bfc;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4c66bb;
+}
+
+/* Header title styling */
+.header-title {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(104, 139, 252, 0) 0%, rgba(104, 139, 252, 0.3) 50%, rgba(104, 139, 252, 0) 100%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* Status indicators */
+.status-green {
+    color: #4CAF50;
+}
+
+.status-red {
+    color: #f44336;
+}
+
+/* Price column styling */
+.price-column {
+    font-weight: 600;
+    color: #4CAF50;
+}
+
+/* Navigation button specific styling */
+.nav-button {
+    background: rgba(104, 139, 252, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 5px;
+}
+
+#clsbtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #ff3333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+#clsbtn:hover {
+    color: #ff0000;
+    transform: scale(1.1);
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: -8.4%;
+    left: 66.3%;
+    font-size: 30px;
+    color: #ff3333;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+}
+
+.close-button:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*  */
+
+
+
+

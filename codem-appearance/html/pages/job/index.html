@@ -1,0 +1,105 @@
+<div class="w-full h-[100vh] flex items-start justify-start  "
+    style=" background-image: url(./images/binco/overlay.png);  background-size: 100% 100%;">
+    <div class="w-full h-full  ">
+        <div class="w-full h-[8.4%] flex items-center justify-center">
+            <div class="w-[95%] h-full flex" style="border-bottom: 0.1vw solid rgba(255, 255, 255, 0.27);">
+                <div class="w-[33.5%] h-full flex items-center justify-start ">
+                    <div class="w-[22%] h-[100%] flex items-center justify-center">
+                        <img class="w-full h-full" style="object-fit: contain;" src="./images/wardrobe/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-center ">
+                    <div class="w-[65%] h-full flex items-center justify-center"
+                        style="border-bottom: 0.2vw solid white;">
+
+                        <h2 class="text-[1.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['jobTitle']}}</h2>
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-end ">
+                    <div class="w-[30%] h-full mr-[0.5vw] flex items-center justify-end flex-wrap ">
+                        <h2
+                            class="w-full h-[50%] flex items-end justify-end  text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">
+                            {{this.$store.state.playerName}}</h2>
+                        <h2 class="w-full h-[50%] flex items-start justify-end  text-[0.7vw] ml-[1vw]  font-['sf-pro-rounded-medium'] text-[white] "
+                            style="filter  : drop-shadow(0vw 0vw 10vw white)">{{this.$store.state.playerJob.job_label}} - {{this.$store.state.playerJob.job_grade_label}}</h2>
+                    </div>
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <div class="w-[75%] h-[75%]  flex items-center justify-center rounded-[7vw]"
+                            style="border: 0.2vw solid white; filter  : drop-shadow(0vw 0vw 0.2vw white)">
+                            <img class="w-[94%] h-[92%]" style="object-fit: contain; border-radius: 7vw;" :src="this.$store.state.pp"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[87.5%]  flex items-end justify-start relative ">
+
+            <div class="w-[26%] h-full   flex items-end justify-end">
+                <div class="w-[90.5%] h-[95.5%] "
+                    style="background-image: url(./images/wardrobe/bg.png); background-size: 100% 100%;">
+                    <div class="w-full h-[7%]  flex items-center">
+                        <div class="w-[50%] h-full flex items-center">
+                            <h2 class="text-[1vw] ml-[1.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['jobTitle']}}
+                            </h2>
+                        </div>
+
+                    </div>
+                    <div class="w-full h-[50%]  flex items-start justify-center borde no-scrollbar" style="overflow: auto;">
+                        <div class="w-[90%] h-full    flex items-start flex-wrap justify-between no-scrollbar content-start"
+                            style="overflow: auto;">
+
+                            <div class="droppaleContainerUnClothing w-full   h-[60%]  mt-[1vw]">
+                                <!-- :style="currentClothingItems[data.id] ? {'background-image' : 'url(./images/wardrobe/bgactive.png)', 'filter'  : 'drop-shadow(0vw 0vw 0.2vw white)'} : {'background-image' : 'url(./images/wardrobe/bgnotactive.png)'}" -->
+
+                                <div class="w-full h-[1vw] "></div>
+                                <div v-for="(data,index) in jobClothing"
+                                    class="w-full h-[30%]   flex items-start justify-center content-start cursor-pointer "
+                                    @click="wearJobClothing(data)">
+                                    <div class="  w-[95%]  h-[7vh]  flex items-center justify-between"
+                                        :style="{'background-image' : 'url(./images/wardrobe/bgnotactive.png)'}"
+                                        style="background-size: 100% 100%;">
+                                        <h2 class="text-[1vw] ml-[1vw]  text-[white] font-['sf-pro-rounded-medium'] ">
+                                            {{data.outfitLabel}}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[50%]  flex items-start justify-center borde no-scrollbar " style="overflow: auto; border-top:2px solid white;">
+                        <div class="w-[90%] h-full    flex items-start flex-wrap justify-between no-scrollbar content-start"
+                            style="overflow: auto;">
+
+                            <div class="droppaleContainerUnClothing w-full   h-[60%]  mt-[1vw]">
+                                <!-- :style="currentClothingItems[data.id] ? {'background-image' : 'url(./images/wardrobe/bgactive.png)', 'filter'  : 'drop-shadow(0vw 0vw 0.2vw white)'} : {'background-image' : 'url(./images/wardrobe/bgnotactive.png)'}" -->
+
+                                <div class="w-full h-[1vw] "></div>
+                                <div 
+                                    class="w-full h-[30%]   flex items-start justify-center content-start cursor-pointer "
+                                    @click="mainClothes"
+                                    >
+                                    <div class="  w-[95%]  h-[7vh]  flex items-center justify-between"
+                                        :style="{'background-image' : 'url(./images/wardrobe/bgnotactive.png)'}"
+                                        style="background-size: 100% 100%;">
+                                        <h2 class="text-[1vw] ml-[1vw]  text-[white] font-['sf-pro-rounded-medium'] ">
+                                            Main Clothes</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="w-[55%] h-full flex items-end justify-center">
+                <div class="w-[70%] h-[10%] flex items-center justify-center">
+                    <img class="w-full h-full" style="object-fit: contain;" src="./images/dnapage/rotate.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

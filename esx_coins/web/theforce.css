@@ -1,0 +1,735 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;  
+    -webkit-user-select: none;    
+    -khtml-user-select: none;     
+    -moz-user-select: none;       
+    -ms-user-select: none;        
+    user-select: none;          
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+   display: none; 
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)), url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+
+#menu{
+   display: none; 
+    width: 70px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    float: right;
+    z-index: 1;
+}
+
+.item{
+    cursor: pointer;
+    width: 40px;
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    transition: .2s ease, color ease .5s;
+}
+
+.item .hover{
+    width: 140px;
+    height: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    position: relative;
+    left: 45px;
+    bottom: 37px;
+    background: #8d2aff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    animation: 1s ease-in-out 1;
+    align-items: center;
+    justify-content: flex-end;
+    float: left;
+    font-size: 13px;
+    box-shadow: 0 0 6px #8d2aff;
+    transition: abrindoHover ease .5, color ease .5;
+    display: none;
+}
+.item:hover{
+    border-left: 2px solid #8d2aff;
+
+}
+
+.item:hover .hover{
+    display: flex;
+}
+
+@keyframes abrindoHover{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.esc{
+    width: auto;
+    height: 99%;
+
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    float: right;
+}
+
+#roleta{
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+#roletando{
+    width: 881px;
+    height: 334px;
+    background-image: url(https://cdn.discordapp.com/attachments/831483081403531294/1021625772273840169/AN8IBrl.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.listaRoleta{
+    width: 748px;
+    height: 110px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    right: 4px;
+
+}
+
+.listaFalsa{
+    position: relative;
+    right: 0px;
+    min-width: 740px;
+    max-height: 110px;
+    white-space: nowrap;
+}
+.itemRoleta{
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 2px;
+    height: 100px;
+    background: linear-gradient(0deg, #11472a,#132a1e, #151615);
+    margin-left: 10px;
+    animation: teste 10s ease-in-out 1;
+    display: inline-block;
+}
+
+.itemRoleta img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+.itemRoleta:first-child{
+    margin-left: 0;
+}
+
+.bordinha{
+    width: 80%;
+    height: 2px;
+    background: #8d2aff;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.normal{
+    background: linear-gradient(0deg, #11472a,#132a1e, #151615);
+}
+
+.normal .bordinha, .circle.normal{
+    background: #2aff7c;
+}
+
+.raro{
+    background: linear-gradient(0deg, #004c58,#082b32, #141615);
+}
+
+.raro .bordinha, .circle.raro{
+    background: #00ddff;
+}
+
+.epico{
+    background: linear-gradient(0deg, #3e1a20,#251618, #161515);
+
+}
+
+.epico .bordinha, .circle.epico{
+    background: #ff002b;
+}
+
+.lendario{
+    background: linear-gradient(0deg, #473b10,#2a2513, #171715);
+    
+}
+
+.lendario .bordinha, .circle.lendario{
+    background: #ffc800;
+}
+
+
+
+#roleta::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.svgs{
+    fill: #8d2aff;
+    position: relative;
+    left: 15px;
+    top: 2px;
+    float: left;
+    
+}
+
+.item:hover .svgs{
+    fill: #fff;
+}
+
+.custo{
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.text{
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+#custo{
+    zoom: 0.8;
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.custo img{
+    width: 20px;
+    height: 20px;
+    margin-top: 7.5px;
+    margin-left: 5px;
+    float: left;
+}
+
+#custoCaixa{
+    width: 120px;
+    height: 30px;
+    background: #00000080;
+    float: left;
+    margin-top: 2.5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    padding-left: 8px;
+    color: #fff;
+}
+
+
+#rolar{
+    transition: all .2s ease-in-out;
+    float: left;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    width: 150px;
+    height: 35px;
+    font-weight: 800;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 22px;
+    margin-left: 202px;
+    /* border-radius: 5px; */
+}
+#rolar:hover{
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to right, rgb(88, 69, 255), rgb(255, 74, 212), rgb(252, 156, 45) ) 1;
+    transform: scale(1.1); 
+}
+
+.quantidadeCaixas{
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    margin-right: 40px;
+    float: right;
+}
+
+
+.qtd{
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 12px;
+    float: left;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.selecionado{
+    background: #a200ff !important;
+    color: #151515;
+    font-weight: 700 !important;
+}
+
+.menu_selecionado{
+    background: #000000cc !important;
+    font-weight: 500 !important;
+}
+.qtd:hover{
+    background: #a200ff9f;
+    color: white;
+    font-weight: 500;
+}
+.qtd:first-child{
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px 0 0 5px;
+    color: white;
+}
+
+.qtd:last-child{
+    border-radius: 0 5px 5px 0;
+}
+
+
+#premiosDisponiveis{
+    width: 85%;
+    height: 100px;
+    float: left;
+    margin-left: 55px;
+}
+
+.titlePremios{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    background-image: linear-gradient(to left, #00000000, #000, #00000000);
+}
+
+.listaPremios{
+    width: 85%;
+    height: 100px;
+    float: left;
+    margin-left: 55px;
+    margin-top: 10px;
+}
+
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffd800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 15px #ffd90039;
+}
+
+
+.circle img{
+    width: 50px;
+}
+
+
+.total{
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin-left: 85vw;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+.text{
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+#total{
+    zoom: 0.8;
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #8d2aff;
+}
+
+.total img{
+    width: 20px;
+    height: 20px;
+    margin-top: 7.5px;
+    margin-left: 5px;
+    float: left;
+}
+
+
+
+#totalCaixa{
+    width: 120px;
+    height: 30px;
+    background: #00000080;
+    float: left;
+    margin-top: 2.5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    padding-left: 8px;
+    color: #fff;
+}
+
+
+#shop{
+    width: 900px;
+    height: 550px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.menuShop{
+    min-width: 300px;
+    min-height: 30px;
+    border: 1px solid #00000080;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.itemMenuShop{
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+}
+
+.itemMenuShop:hover{
+    background: #00000080;
+}
+
+
+#containerLoja{
+    width: 700px;
+    height: 500px;
+    margin-top: 10px;
+    overflow: auto;
+}
+#containerLoja::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+  }
+  
+#containerLoja::-webkit-scrollbar-track {
+    background: #00000080;        /* color of the tracking area */
+  }
+  
+#containerLoja::-webkit-scrollbar-thumb {
+    background-color: #000000;    /* color of the scroll thumb */
+    border-radius: 0px;       /* roundness of the scroll thumb */
+  }
+
+.itemShop{
+    width: 150px;
+    height: 200px;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    float: left;
+    margin: 10px;
+    margin-top: 0;
+    transition: .3s ease-in-out;
+}
+
+.itemShop:hover{
+    /* transform: scale(1.05); */
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to right, rgb(88, 69, 255), rgb(255, 74, 212), rgb(252, 156, 45) ) 1;
+
+}
+
+.parteFoto{
+    width: 100%;
+    height: 70%;
+    background: #1a1a1a80;
+}
+#fotoItemShop{
+    width: 100px;
+    margin-top: 20px;
+}
+
+.valorItem{
+    zoom: 0.5;
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(to right, rgb(88, 69, 255), rgb(255, 74, 212), rgb(252, 156, 45) ) 1;
+}
+
+
+.infos{
+    width: 100%;
+    height: 30%;
+    background: #1a1a1a56;
+}
+.valorItem img{
+    width: 20px;
+    height: 20px;
+    margin-top: 7.5px;
+    margin-left: 5px;
+    float: left;
+}
+
+.valorCaixa{
+    width: 120px;
+    height: 30px;
+    background: #00000080;
+    float: left;
+    margin-top: 2.5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    padding-left: 8px;
+    color: #fff;
+}
+
+.comprar{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #00000080;
+    float: left;
+    margin-top:10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.comprar:hover{
+    transform: scale(1.04);
+}
+
+.nameItemShop{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-weight: 300;
+    font-size: 14;
+    white-space: nowrap;
+    bottom: 10px;
+}
+
+
+#notify{
+   display: none; 
+    width: 301px;
+    height: 100%;
+
+    
+    position: absolute;
+    right: 10px;
+}
+
+
+#container-notify{
+    width: 260px;
+    height: 60px;
+    /* background-image: linear-gradient(25deg, #8d2aff, #098342); */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)), url(https://grainy-gradients.vercel.app/noise.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-top: 20px;
+    /* border-radius: 5px; */
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.283);
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to right, rgb(88, 69, 255), rgb(255, 74, 212), rgb(252, 156, 45) ) 1;
+
+}
+
+
+#foto-notify{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 30px;
+}
+
+#texto-notify{
+    width: 150px;
+    height: 50px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    right: 25px;
+}
+
+
+
+#container-qrcode{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+    color: #fff;
+    text-align: center;
+}
+
+
+#div-qrcode{
+    width: 260px;
+    height: 260px;
+    background: #fff;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    margin-top: 6px;
+    margin-bottom: 6px;
+    z-index: 99999999999;
+    
+}
+
+
+#div-qrcode img{
+    width: 80%;
+    margin-top:10%;
+}
+
+#ou-clique{
+    width: 160px;
+    height: 30px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px; 
+    font-weight: 700;
+    background: #8d2aff; 
+    color: #1a1a1a;
+    float: right;
+    margin-top: -170px;
+    
+    position: absolute;
+    left: 400px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    
+}
+
+
+
+.ponto{
+    display: none;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    right: 19px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: red;
+}
+
+

@@ -1,0 +1,134 @@
+
+@font-face {
+    font-family: 'Digital Display';
+    src: url('../fonts/DigitalDisplay.ttf');
+}
+
+body {
+	font-family: Helvetica,Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+    padding: 0;
+    font-weight: 400;
+    outline: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#noselect {
+    -webkit-touch-callout: none;
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none; 
+              user-select: none; 
+}
+
+.box_bg {
+	width: 800px;
+    height: 530px;
+	background: url(../img/bg.gif);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border-radius: 7px;
+	padding: 15px;
+	display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5);
+}
+
+.notif {
+	color: #00c500;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 40px;
+    border-radius: 10px;
+    width: 600px;
+    padding: 6px 0px;
+    text-align: center;
+}
+
+.box_line {
+	display: flex;
+	background: transparent;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.btn1 {
+	width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.btn2 {
+	width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 5px solid rgba(0, 255, 0, 0.15);
+	color: #00c500;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.btnclosed {
+	background-color: #00c500;
+    border: 5px solid #00c500;
+}
+
+.btn2:hover {
+    border: 5px solid rgba(0, 200, 0, 0.6);
+}
+
+.timer_box_bg {
+	width: 800px;
+    height: 530px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	padding: 15px;
+}
+
+.timer_box {
+	width: 180px;
+    height: 80px;
+    background: url(../img/bg.gif);
+    position: absolute;
+    bottom: 95px;
+    right: 0;
+    transform: translate(0, 100%);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    color: #00c500;
+    font-family: 'Digital Display';
+    font-size: 50px;
+}

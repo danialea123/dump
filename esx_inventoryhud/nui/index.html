@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="progressbar.min.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>INVENTORY SLOT</title>
+</head>
+<body>
+    <div id="menu-principal">
+
+        <div class="background-color">
+            <div class="grid"></div>
+
+            <div class="top-menu">
+                <div class="inventory-title-menu">
+                    <div class="escolha-menu personagem">Profile</div>
+                    <div class="escolha-menu identidade">Craft</div>
+					
+                    <div class="line"></div>
+                    <div class="esc">
+                        <div class="texto">Esc<span>To Close</span></div>
+                    </div>
+                    <div class="margin-bottom-escolha"></div>
+                    <input id="barra-pesquisa" placeholder="Search Item" onkeyup="pesquisar()">
+                    <div class="line2"></div>
+                    <div class="toltip-pesquisa">
+                        <div class="text-toltip">
+                            When searching, filters will be reset
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chest-title-menu">
+                    <div class="name-car">Second Inventory</div>
+                    <div class="name-inventory">Your Inventory</div>
+                    <div class="line-chest"></div>
+                    <div class="esc">
+                        <div class="texto">Esc<span>To Close</span></div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="person-menu">
+
+                <div class="person-menu-inventory">
+                    <div class="identity-inicial" >
+                        <div class="identidade-js">
+                            <div class="title-identity">
+                                <img src="app/dedao.png">
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Full Name:</div>
+                                <div class="primeiro-identity segundo">Juninho berigela</div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Steam Hex:</div>
+                                <div class="primeiro-identity segundo"></div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Passaporte</div>
+                                <div class="primeiro-identity segundo">251</div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Registro geral</div>
+                                <div class="primeiro-identity segundo">k7mon10u</div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Telefone</div>
+                                <div class="primeiro-identity segundo">551-512</div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Profissão</div>
+                                <div class="primeiro-identity segundo">Policia Civil</div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Seu vip</div>
+                                <div class="primeiro-identity segundo">Platina</div>
+                            </div>
+                            <div class="itens-identity">
+                                <div class="primeiro-identity primeiro">Paypal</div>
+                                <div class="primeiro-identity segundo">$ 320.000</div>
+                            </div>
+                            <div class="itens-identity admin" >
+                                <div class="primeiro-identity primeiro">Admin</div>
+                                <div class="primeiro-identity segundo">Você é administrador</div>
+                            </div>
+                        </div>
+                        
+        
+                    </div>
+                    <div class="craft">
+                        <div class="box-craft-slot">
+                            <div class="slot-craft 0"></div>
+                            <div class="slot-craft 1"></div>
+                            <div class="slot-craft 2"></div>
+                            <div class="slot-craft 3"></div>
+                            <div class="slot-craft 4"></div>
+                            <div class="slot-craft 5"></div>
+                            <div class="slot-craft 6"></div>
+                            <div class="slot-craft 7"></div>
+                            <div class="slot-craft 8"></div>
+                        </div>
+                        <div class="box-result">
+                            <div class="arrows-craft">
+                                <img class="arrow-cima" src="app/flecha.png">
+                                <img class="arrow-baixo" src="app/flecha.png">
+                            </div>
+                            <div class="result-craft"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="person-menu-chest">
+                    <div class="left-menu-chest">
+                        <div class="line-circle"></div>
+                        <div id="circleChest">
+                            <div class="peso-texto-chest">76/90kg</div>
+                            <div class="desc-bau">Second Inv</div>
+                        </div>
+                        <div class="peso-sobrando-chest">14kg sobrando</div>
+                    </div>
+                  
+                    <div id="box-menu-item-chest">
+
+
+               
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        
+          
+
+           
+            <div class="filter-menu"  >
+                <div class="title">Filtar By:</div>
+                <div class="filtro-button arma">
+                    <img class="gun-image" src="app/gun.png">
+                </div>
+                <div class="filtro-button soda">
+                    <img class="soda-image" src="app/soda.png">
+                </div>
+                <div class="filtro-button food">
+                    <img class="food-image" src="app/apple.png">
+                </div>
+                <div class="filtro-button box">
+                    <img class="box-image" src="app/box.png">
+                </div>
+                <div class="clear-filter">Clear Filters</div>
+                <div class="box-amount-player">
+                    <input id="quantidade" placeholder="Enter Quantity">
+                    <div class="dividendo metade-item">Half</div>
+                    <div class="dividendo todos-itens">All</div>
+                </div>
+            
+            </div>
+
+            
+            <div class="itens-menu">
+                <div id="box-menu-item"></div>
+            </div>
+            <div class="descricao-menu">
+
+                <div class="desc-normal" style="display: none;">
+                    <div class="title-descricao">Description:</div>
+                    <div class="primeira-descricao">Delicioso hambúrguer bovino com queijo, alface, tomate</div>
+                    <div class="funcao-descricao"> <b>Função: </b> Reduz a fome em 60%</div>
+                    <div class="peso-descricao"> <b>Weight: </b> <span>1kg por unidade (10 = 10kg)</span></div>
+                </div>
+
+                <div class="desc-weapon" style="display: none;">
+                    <div class="title-descricao">Description:</div>
+
+                    <div class="informacao cadencia">
+                        <div class="title-info">Velocidade</div>
+                        <div class="backbar cadencia">
+                            <div class="frontbar cadencia"></div>
+                        </div>
+                    </div>
+
+                    <div class="informacao recuo">
+                        <div class="title-info">Recuo</div>
+                        <div class="backbar recuo">
+                            <div class="frontbar recuo"></div>
+                        </div>
+                    </div>
+
+                    <div class="informacao precisao">
+                        <div class="title-info">Precisão</div>
+                        <div class="backbar precisao">
+                            <div class="frontbar precisao"></div>
+                        </div>
+                    </div>
+
+                    <div class="informacao dano">
+                        <div class="title-info">Dano</div>
+                        <div class="backbar dano">
+                            <div class="frontbar dano"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bloco-image">
+                    <div class="item-name-desc">Adaga</div>
+                </div>
+            </div>
+            <div class="right-menu">
+                <div class="money">
+                    <div class="carteira-box">
+                        <div class="title-carteira">Money</div>
+                        <div class="saldo-carteira">$ 3.720,00</div>
+                    </div>
+                    <div class="banco-box">
+                        <div class="title-banco">Bank</div>
+                        <div class="saldo-banco">$ 13.720,00</div>
+                    </div>
+                </div>
+                <div class="box-peso">
+                    <div id="circle">
+                        <div class="peso-texto">76/90kg</div>
+                        <div class="desc-bau">Inventory</div>
+                    </div>
+                    <div class="peso-sobrando">14kg Remaining</div>
+                    <div class="box-circle-mochila">
+                        <div class="title-circle">Backpack Level</div>
+                        <div class="circle-mochila 1"></div>
+                        <div class="circle-mochila 2"></div>
+                        <div class="circle-mochila 3"></div>
+
+                    </div>
+                </div>
+                <div class="box-action">
+                    <div class="action usar">Use</div>
+                    <div class="action enviar">Give</div>
+                    <div class="action dropar">Drop</div>
+                </div>
+            </div>
+            <div class="notify"></div>
+
+
+        </div>
+    </div>
+</div>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="config.js" type="text/javascript"></script>
+    <script src="jquery.js" type="text/javascript"></script>
+
+</body>
+</html>

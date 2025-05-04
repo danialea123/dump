@@ -1,0 +1,107 @@
+<div class="w-full h-[100vh] flex items-start justify-start  " 
+    style=" background-image: url(./images/binco/overlay.png);  background-size: 100% 100%;">
+    <div class="w-full h-full  ">
+        <div class="w-full h-[8.4%] flex items-center justify-center">
+            <div class="w-[95%] h-full flex" style="border-bottom: 0.1vw solid rgba(255, 255, 255, 0.27);">
+                <div class="w-[33.5%] h-full flex items-center justify-start ">
+                    <div class="w-[22%] h-[100%] flex items-center justify-center">
+                        <img class="w-full h-full" style="object-fit: contain;" src="./images/wardrobe/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-center ">
+                    <div class="w-[65%] h-full flex items-center justify-center" style="border-bottom: 0.2vw solid white;">
+                    
+                        <h2 class="text-[1.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['wardrobeTitle']}}</h2>
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-end ">
+                    <div class="w-[30%] h-full mr-[0.5vw] flex items-center justify-end flex-wrap ">
+                        <h2 class="w-full h-[50%] flex items-end justify-end  text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.playerName}}</h2>
+                        <h2 class="w-full h-[50%] flex items-start justify-end  text-[0.7vw] ml-[1vw]  font-['sf-pro-rounded-medium'] text-[white] " style="filter  : drop-shadow(0vw 0vw 10vw white)">ID - {{this.$store.state.serverId}}</h2>
+                    </div>
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <div class="w-[75%] h-[75%]  flex items-center justify-center rounded-[7vw]" style="border: 0.2vw solid white; filter  : drop-shadow(0vw 0vw 0.2vw white)">
+                            <img class="w-[94%] h-[92%]" style="object-fit: contain; border-radius : 7vw;" :src="this.$store.state.pp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[87.5%]  flex items-end justify-start relative " >
+        
+            <div class="w-[26%] h-full   flex items-end justify-end">
+                <div class="w-[90.5%] h-[95.5%] " style="background-image: url(./images/wardrobe/bg.png); background-size: 100% 100%;">
+                    <div class="w-full h-[7%]  flex items-center">
+                        <div class="w-[50%] h-full flex items-center">
+                            <h2 class="text-[1vw] ml-[1.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['wardrobeTitle']}}</h2>
+                        </div>
+                        <div class="w-[50%] h-full flex items-center justify-end">
+                           <img v-if="!edit" @click="editButton(true)" class="w-[40%] h-[100%] cursor-pointer " style="object-fit: contain;" src="./images/wardrobe/edit.png" alt="">
+                           <img v-else @click="editButton(false)" class="w-[40%] h-[30%] cursor-pointer" style="object-fit: contain; transform: rotate(90deg);" src="./images/binco/dropdowndown.png" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full h-[90%]  flex items-start justify-center">
+                        <div class="w-[90%] h-full    flex items-start flex-wrap justify-between no-scrollbar content-start" style="overflow: auto;">
+                            <div v-for="(data,index) in playerCategory" style="min-height: 5vh;" class="w-full    droppableContainer  flex items-center justify-center content-start"  :data-id=data.id  @click="showDropDownMenu(data.id)">
+                                <div class="w-[95%] h-full   ">
+                                    <div class="w-full flex items-center justify-between cursor-pointer mt-[1vw]" style="height: 5vh;" >
+                                        <h2 class="text-[0.9vw]  ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                        <img v-if="!edit &&!dropDownMenu[data.id]" class="w-[7%] h-[30%] mr-[1vw]" style="object-fit: contain;" src="./images/binco/dropdowndown.png" alt="">
+                                        <img v-else-if="!edit && dropDownMenu[data.id]" class="w-[7%] h-[30%] mr-[1vw]" style="object-fit: contain; transform: rotate(180deg);" src="./images/binco/dropdowndown.png" alt="">
+                                        
+                                        <h2 v-else-if="edit" @click.stop @click="deleteCategory(data.id)" class="text-[0.9vw]  ml-[1vw] font-['sf-pro-rounded-medium'] " style="color: rgba(255, 59, 48, 1)">{{this.$store.state.locales['deleteButton']}}</h2>
+                                    </div>
+                             
+                                    <div class="dropdownListWrapper cursor-pointer  ">
+                                        <transition-group name="dropmenu">
+                                          <ul v-if="dropDownMenu[data.id]" v-for="clothing in data.items " class="active-dropdown-list  flex  cursor-pointer">
+                                            <li  @click="clothingBox(clothing)"
+                                             class="h-[7vh] w-full  draggeableClothing flex items-center  "
+                                            @click.stop 
+                                            style="background-size: 100% 100%; color:white; font-family: 'sf-pro-rounded-medium'; text-indent: 1vw;"
+                                            :style="currentClothingItems[clothing.id] ? {'background-image' : 'url(./images/wardrobe/bgactive.png)', 'filter'  : 'drop-shadow(0vw 0vw 10vw white)'} : {'background-image' : 'url(./images/wardrobe/bgnotactive.png)'}"
+                                            >{{clothing.name}}
+                                            
+                                            </li>
+                                            <div  v-if="edit"  @click="deleteClothing(clothing.id)" class="w-[20%] h-[75%] mt-[0.2vw] flex items-center justify-center">
+                                                <img  class="w-[80%] h-[80%] " style="object-fit: contain;" src="./images/wardrobe/deleteicon.png" alt="">
+                                            </div>
+                                          </ul>
+                                          </transition-group>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  class="droppaleContainerUnClothing w-full   h-[60%]  mt-[1vw]">
+                                <h2 class="text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium']  " >{{this.$store.state.locales['uncategorized']}}</h2>
+                                <div class="w-full h-[1vw] "></div>
+                                <div v-for="(data,index) in unnamedClothing" class="w-full h-[20%]   flex items-start justify-center content-start cursor-pointer " @click="clothingBox(data)" 
+                                >
+                                <div class="  w-[95%]  h-[7vh]  flex items-center justify-between"  :data-id = data.id :style="currentClothingItems[data.id] ? {'background-image' : 'url(./images/wardrobe/bgactive.png)', 'filter'  : 'drop-shadow(0vw 0vw 0.2vw white)'} : {'background-image' : 'url(./images/wardrobe/bgnotactive.png)'}" style="background-size: 100% 100%;">
+                                    <h2 class="text-[1vw] ml-[1vw]  text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                    
+                                </div>
+                                <div  v-if="edit" @click.stop @click="deleteClothing(data.id)" class="w-[20%] h-[75%] mt-[0.5vw] flex items-center justify-center">
+                                    <img  class="w-[80%] h-[80%] " style="object-fit: contain;" src="./images/wardrobe/deleteicon.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+               
+                    
+                  
+                </div>
+            </div>
+            <div class="w-[55%] h-full flex items-end justify-center">
+                <div class="w-[70%] h-[10%] flex items-center justify-center">
+                    <img class="w-full h-full" style="object-fit: contain;" src="./images/dnapage/rotate.png" alt="">
+                </div>
+
+            </div>
+         
+        </div>
+
+    </div>
+   
+</div>

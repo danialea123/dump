@@ -1,0 +1,56 @@
+<div class="w-full h-full flex items-start flex-wrap content-start justify-center no-scrollbar" style="overflow: auto;">
+    <div class="w-[90%] h-[8%]  flex items-center justify-start">
+        <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[0.1vw]">Eyes & Mouth</h2>
+        <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+    </div>
+    <div class="w-[90%] h-[40%]   flex flex-wrap items-start justify-center">
+        <div class="w-full h-[45%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">Type
+                </h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div @click="changeSkin('eye_color', getSkinByName('eye_color')-1)"
+                        class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer"
+                        style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png"
+                            alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center"
+                        style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input @change="changeSkin('eye_color', $event.target.value)" type="text"
+                            class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']"
+                            style="background-color: transparent; outline: none;" :value="getSkinByName('eye_color')">
+                    </div>
+                    <div @click="changeSkin('eye_color', getSkinByName('eye_color')+1)"
+                        class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer"
+                        style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);"
+                            src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[45%] flex  flex-wrap items-start mt-[0.1vw] " v-for="data in noseData">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">
+                    {{data.label}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-center items-center rounded-[0.5vw]"
+                    style="background: rgba(217, 217, 217, 0.15)">
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                    </div>
+                    <input @change="changeSkin(data.name, $event.target.value)" class="rangeForInput" type="range"
+                        step="1" :value="getSkinByName(data.name)" min="-10" max="10">
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,1035 @@
+@charset "UTF-8";
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none; /* Safari, Chrome ve Opera */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer */
+  user-select: none; /* Standart */
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+p,
+h1 {
+  cursor: default;
+}
+
+.gfxautopilot-main-contain {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2vh;
+  position: absolute;
+  top: 50%;
+  right: 2vh;
+  transform: translateY(-50%);
+  width: 71vh;
+  height: 0%;
+  background-color: transparent;
+}
+
+.-menu-opened {
+  height: 100% !important;
+}
+.-menu-opened .content-contain-size-button img {
+  transform: rotate(180deg) !important;
+}
+
+.apilot-main {
+  position: relative;
+  width: 53%;
+  height: 41%;
+  background-color: #FFFFFF;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.apilot-main .content-contain-size-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 3vh;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 99;
+}
+.apilot-main .content-contain-size-button img {
+  cursor: pointer;
+  position: relative;
+  width: 7.2vh;
+}
+.apilot-main .main-content-contain {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 94vh;
+}
+.apilot-main .main-content-contain .content-road-display {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  box-shadow: 0px 0px 21.4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.apilot-main .main-content-contain .content-road-display h1 {
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+  margin: 0;
+  padding: 1vh;
+  border-radius: 28px;
+  border: 4px solid #FB4E4E;
+  background: #FFF;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.6vh;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.apilot-main .main-content-contain .content-road-display .road-display {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.apilot-main .main-content-contain .content-fuel-contain {
+  position: relative;
+  width: 100%;
+  height: 7.4vh;
+  background: #D9D9D9;
+  overflow: hidden;
+}
+.apilot-main .main-content-contain .content-fuel-contain .progress-mask {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 97.5%;
+  height: 93%;
+  background-color: white;
+  border-radius: 0px 0px 18px 18px;
+}
+.apilot-main .main-content-contain .content-fuel-contain .progress-mask .fuel-text {
+  display: flex;
+  gap: 1vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.apilot-main .main-content-contain .content-fuel-contain .progress-mask .fuel-text img {
+  position: relative;
+  width: 1.6vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.apilot-main .main-content-contain .content-fuel-contain .progress-mask .fuel-text p {
+  color: var(--Black, #000);
+  font-family: Montserrat;
+  font-size: 1.6vh;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 0.374px;
+}
+.apilot-main .main-content-contain .content-fuel-contain .path {
+  position: absolute;
+  width: 0.001vh;
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(180deg, rgba(0, 102, 255, 0) 0%, rgba(255, 65, 65, 0) 0.01%, #FF4141 2.5%, #FF4141 100%);
+}
+.apilot-main .main-content-contain .KMnmore {
+  position: relative;
+  width: 100%;
+  height: 14.5vh;
+}
+.apilot-main .main-content-contain .KMnmore .speednap-infos {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  height: 4.8vh;
+  margin: 0 auto;
+}
+.apilot-main .main-content-contain .KMnmore .speednap-infos img {
+  position: relative;
+  width: 3vh;
+  height: 3vh;
+  animation: turning 3s linear infinite;
+}
+.apilot-main .main-content-contain .KMnmore .speednap-infos .speed-limit-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  width: 3.6vh;
+  height: 100%;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.apilot-main .main-content-contain .KMnmore .speednap-infos .speed-limit-contain h1 {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.8vh;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0.2vh 0vh 0vh 0vh;
+}
+.apilot-main .main-content-contain .KMnmore .speednap-infos .speed-limit-contain p {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+.apilot-main .main-content-contain .KMnmore .KMText {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  bottom: 2.5vh;
+}
+.apilot-main .main-content-contain .KMnmore .KMText h1 {
+  color: #2D2D2D;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 9vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+.apilot-main .main-content-contain .KMnmore .KMText p {
+  color: rgba(52, 52, 52, 0.4);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  line-height: 1px;
+  margin: 0;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2vh;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 52vh;
+  margin: 0 auto 2vh;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .autopilot-livemap-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 23.5vh;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .autopilot-livemap-contain #map {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.4vw;
+  z-index: 1;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .formodes button img {
+  position: relative;
+  width: 2.8vh !important;
+  padding-left: 0.5vh;
+  transition: 250ms all;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain h1 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  color: var(--Black, #000);
+  font-family: Montserrat;
+  font-size: 2.2vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.374px;
+  margin: 0;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 4vh;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons #emergencyBtn:hover {
+  background-color: #FF4141 !important;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons button {
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+  align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--Grey-90, #C1D3E9);
+  transition: 250ms all;
+  background-color: white;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons button:hover {
+  border-radius: 8px;
+  background: var(--Blue, #06F);
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons button:hover p {
+  color: white !important;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons button:hover img {
+  filter: invert(100%);
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons button img {
+  position: relative;
+  width: 2.4vh;
+  padding-left: 0.5vh;
+  transition: 250ms all;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .general-buttons button p {
+  color: var(--Black, #000);
+  font-family: "Montserrat";
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding-right: 1vh;
+  transition: 250ms all;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  height: 6.2vh;
+  margin-bottom: 2vh;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-width: 6vh;
+  height: 100%;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs:nth-child(2) {
+  align-items: flex-end;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-text {
+  display: flex;
+  align-items: center;
+  gap: 0.7vh;
+  position: relative;
+  cursor: pointer;
+  transition: 300ms all ease;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-text:hover img {
+  width: 3vh;
+  height: 3vh;
+  color: #06F;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-text:hover p {
+  color: #06F;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-text img {
+  transition: 300ms all ease;
+  position: relative;
+  width: 2.4vh;
+  height: 2.4vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-text p {
+  position: relative;
+  color: var(--Black, #000);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.374px;
+  margin: 0;
+  transition: 300ms all ease;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 6vh;
+  height: 2.6vh;
+  border-radius: 8px;
+  border: 2px solid var(--Grey-90, #C1D3E9);
+  cursor: pointer;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-button p {
+  color: var(--Black, #000);
+  font-family: "Montserrat";
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 12vh;
+  height: 2.6vh;
+  border-radius: 8px;
+  border: 2px solid var(--Grey-90, #C1D3E9);
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .-open p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: white !important;
+  font-family: "Montserrat";
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 600;
+  background-color: #06F;
+  border-radius: 0px 6px 6px 0px;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .-closed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 12vh;
+  height: 2.6vh;
+  border-radius: 8px;
+  border: 2px solid var(--Grey-90, #C1D3E9);
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .-closed p:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: white !important;
+  font-family: "Montserrat";
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 600;
+  background-color: #06F;
+  border-radius: 6px 0px 0px 6px;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-button-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 12vh;
+  height: 2.6vh;
+  border-radius: 8px;
+  border: 2px solid var(--Grey-90, #C1D3E9);
+  cursor: pointer;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .frunktrunk-contain .settings-boxs .boxs-button-two p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: var(--Black, #000);
+  font-family: "Montserrat";
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+}
+.apilot-main .main-content-contain .autopilot-contents-contain .content-wall {
+  position: absolute;
+  width: 100%;
+  height: 0.2vh;
+  bottom: 0;
+  border-radius: 32px;
+  background: var(--Grey-90, #C1D3E9);
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2vh;
+  position: relative;
+  width: 44.5%;
+  height: 100%;
+}
+.right-section .apilot-directions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 0vh;
+  background-color: #FFF;
+  border-radius: 22px;
+  opacity: 0;
+}
+.right-section .apilot-directions .direction-contain {
+  position: relative;
+  width: 90%;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.right-section .apilot-directions .direction-contain .direction {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+  position: relative;
+  width: 100%;
+  height: 6.5vh;
+}
+.right-section .apilot-directions .direction-contain .direction img {
+  position: relative;
+  width: 5vh;
+  height: 5vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.right-section .apilot-directions .direction-contain .direction h1 {
+  color: #2D2D2D;
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.right-section .apilot-directions .direction-contain .direction p {
+  color: rgba(52, 52, 52, 0.4);
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+.right-section .apilot-directions .direction-cancel-trip {
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  border: none;
+  outline: none;
+  background-color: rgba(48, 48, 48, 0.2);
+}
+.right-section .apilot-directions .direction-cancel-trip:hover {
+  background-color: rgba(32, 32, 32, 0.295);
+}
+.right-section .apilot-directions .direction-cancel-trip p {
+  color: #2D2D2D;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.right-section .apilot-directions .direction-distance-infos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 4.5vh;
+}
+.right-section .apilot-directions .direction-distance-infos p {
+  position: relative;
+  color: #2D2D2D;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.8vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+.right-section .apilot-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 0;
+  background-color: #FFF;
+  border-radius: 22px;
+  opacity: 0;
+}
+.right-section .apilot-options .options-header {
+  position: relative;
+  width: 90%;
+  height: 8vh;
+  margin-top: 1.5vh;
+}
+.right-section .apilot-options .options-header h1 {
+  color: var(--Black, #000);
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.374px;
+  margin: 0;
+}
+.right-section .apilot-options .options-header p {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1.2vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.374px;
+  margin: 0;
+}
+.right-section .apilot-options .options-boxs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  height: 26.5vh;
+  owerflow-x: hidden;
+  overflow-y: scroll;
+}
+.right-section .apilot-options .options-boxs::-webkit-scrollbar {
+  display: none;
+}
+.right-section .apilot-options .options-boxs .option {
+  display: flex;
+  align-items: center;
+  gap: 0.6vh;
+  position: relative;
+  width: 100%;
+  height: 4vh;
+}
+.right-section .apilot-options .options-boxs .option img {
+  position: relative;
+  width: 2.4vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.right-section .apilot-options .options-boxs .option h1 {
+  color: var(--Black, #000);
+  font-family: Montserrat;
+  font-size: 1.4vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.374px;
+}
+
+.bg-bos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.toggle-switch {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 8.9vh;
+  height: 3vh;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  border: 1px solid var(--Grey-90, #C1D3E9);
+  transition: background-color 0.4s;
+}
+
+.toggle-label:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 4.5vh;
+  background-color: #06F;
+  border-radius: 7px;
+  transition: transform 0.4s;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: transparent;
+}
+.toggle-input:checked + .toggle-label .on {
+  color: black !important;
+}
+.toggle-input:checked + .toggle-label .off {
+  color: white !important;
+}
+
+.toggle-input:checked + .toggle-label:before {
+  transform: translateX(43px);
+}
+
+.on,
+.off {
+  color: #fff;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Montserrat";
+  font-size: 1.4vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  /* 157.143% */
+}
+
+.on {
+  left: 2px;
+  z-index: 99;
+}
+
+.off {
+  right: 2px;
+  z-index: 99;
+  color: black;
+}
+
+.selected {
+  border-radius: 8px;
+  background: #06F !important;
+}
+.selected p {
+  color: white !important;
+}
+.selected img {
+  filter: invert(100%);
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    height: 0vh;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    height: 37.6vh;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideout {
+  from {
+    opacity: 1;
+    height: 37.6vh;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    height: 0vh;
+    transform: translateX(100%);
+  }
+}
+@keyframes slideindirection {
+  from {
+    opacity: 0;
+    height: 0vh;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    height: 18.4vh;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideoutdirection {
+  from {
+    opacity: 1;
+    height: 18.4vh;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    height: 0vh;
+    transform: translateX(100%);
+  }
+}
+@keyframes slideInMain {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 94%;
+  }
+}
+@keyframes slideOutMain {
+  from {
+    opacity: 1;
+    height: 94%;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+.popupScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+}
+.popupScreen .InformationPopup {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+.popupScreen .InformationPopup .popup-header {
+  text-align: center;
+}
+.popupScreen .InformationPopup .popup-header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.popupScreen .InformationPopup #information {
+  margin-top: 10px;
+}
+.popupScreen .InformationPopup #wish {
+  display: block;
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+.popupScreen .InformationPopup #otopilotName {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.popupScreen .InformationPopup .popup-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+}
+.popupScreen .InformationPopup .popup-footer .checkBoxDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
+}
+.popupScreen .InformationPopup .popup-footer .checkBoxDiv input {
+  width: 1.5vh;
+  height: 1.5vh;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.popupScreen .InformationPopup .popup-footer .checkBoxDiv p {
+  font-size: 1.2704vh;
+}
+.popupScreen .InformationPopup .popup-footer button {
+  background: transparent;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 14px;
+  display: block;
+}
+.popupScreen .InformationPopup .popup-footer button:hover {
+  background: #06F;
+  color: white;
+}
+.popupScreen .InformationPopup .popup-checkbox {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 14px;
+  display: block;
+}
+.popupScreen .enterNameLocation {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 1vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 65%;
+  height: 40%;
+  background-color: transparent;
+  z-index: 99;
+}
+.popupScreen .enterNameLocation .enterName {
+  position: relative;
+  background-color: #fff;
+  padding: 2.5vh;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  opacity: 0;
+  animation: slideinpopup 1s forwards;
+}
+.popupScreen .enterNameLocation .enterName #enterName {
+  background: transparent;
+  height: 1.3889vh;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.374px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  transition: all 0.5s ease-in-out;
+}
+.popupScreen .enterNameLocation .enterName #enterNameButton {
+  display: block;
+  justify-content: flex-end;
+  align-items: end;
+  background: transparent;
+  color: black;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 14px;
+  transition: all 0.5s ease-in-out;
+}
+.popupScreen .enterNameLocation .enterName #enterNameButton:hover {
+  background: #06F;
+  color: white;
+}
+
+/* İlgili öğe kapalı durumdayken gizli olsun */
+.popupScreen.hidden {
+  display: none;
+}
+
+@keyframes slideinpopup {
+  from {
+    opacity: 0;
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    height: 20%;
+  }
+}
+@keyframes turning {
+  0%, 100% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+}
+.hide {
+  visibility: hidden;
+}
+
+.trafficLight {
+  display: none;
+  position: absolute;
+  right: 7vh;
+  top: 1vh;
+  z-index: 99;
+}
+
+.redLight {
+  display: block;
+}
+
+.yellowLight {
+  display: block;
+}
+
+.greenLight {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

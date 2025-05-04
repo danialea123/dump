@@ -1,0 +1,312 @@
+<div class="w-full h-full">
+    <div class="w-[93%] h-full flex items-center justify-end">
+        <div class="w-[80.3%] h-full">
+            <div class="w-full h-full">
+                <div class="w-full h-[10%] flex">
+                    <div class="w-[37%] h-full">
+                        <div class="w-full h-[53%]"></div>
+                        <div class="w-full h-[47%]">
+                            <div class="w-full h-[20%]" style="border-top: 1px solid rgba(255, 255, 255, 0.46)"></div>
+                            <div class="w-full h-[60%] flex items-center justify-start">
+                                <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">
+                                    {{this.$store.state.locales['menuTitleDNA']}}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[63%] h-full flex">
+                        <div class="w-[70%] h-full">
+                            <div class="w-full h-[50%] flex flex-wrap items-end justify-end">
+                                <div class="w-full h-[50%]"></div>
+                                <div class="w-full h-[50%] flex items-center justify-end">
+                                    <h2
+                                        class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.1vw]"
+                                        style="text-shadow: 0px 0px 50px 50px white"
+                                    >
+                                        {{this.$store.state.locales['characterTitle']}}
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="w-full h-[50%]">
+                                <div class="w-full h-[50%] flex items-center justify-end">
+                                    <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">
+                                        {{this.$store.state.locales['creationTitle']}}
+                                    </h2>
+                                </div>
+                                <div class="w-full h-[50%]"></div>
+                            </div>
+                        </div>
+                        <div class="w-[30%] h-full flex items-center justify-end">
+                            <div class="w-[85%] h-full flex items-center justify-end">
+                                <img class="w-[100%] h-[62%]" src="./images/createpage/char-icon.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-[74vh] bg-[length:100%_100%] no-scrollbar"
+                    style="background-image: url(./images/dnapage/background.png); overflow: auto"
+                >
+                    <div class="w-full flex flex-wrap items-start justify-center h-[14%]">
+                        <div class="w-[92%] h-[30%] flex items-center justify-start">
+                            <h2 class="text-[0.6vw] font-['sf-pro-rounded-medium'] text-white tracking-[0.05vw]">
+                                {{this.$store.state.locales['genderTitle']}}
+                            </h2>
+                        </div>
+                        <div class="w-[92%] h-[70%] flex items-center justify-between">
+                            <div
+                                @click="changeSkin('sex', 0)"
+                                class="w-[48%] h-[90%] rounded-[0.5vw] flex flex-wrap items-center justify-start"
+                                style="background-color: rgba(0, 196, 255, 0.5)"
+                            >
+                                <div class="w-[30%] h-full flex items-center justify-center">
+                                    <img class="w-[30%] h-[30%]" style="object-fit: contain" src="./images/dnapage/male-icon.png" alt="" />
+                                </div>
+                                <div class="w-[70%] h-full flex items-center justify-start cursor-pointer">
+                                    <h2 class="text-[0.8vw] ml-[1.5vw] font-['sf-pro-rounded-medium'] text-white tracking-[0.05vw]">
+                                        {{this.$store.state.locales['malesTitle']}}
+                                    </h2>
+                                </div>
+                            </div>
+                            <div
+                                @click="changeSkin('sex', 1)"
+                                class="w-[48%] h-[90%] rounded-[0.5vw] flex flex-wrap items-center justify-start"
+                                style="background-color: rgba(255, 120, 196, 0.5)"
+                            >
+                                <div class="w-[30%] h-full flex items-center justify-center cursor-pointer">
+                                    <img class="w-[30%] h-[30%]" style="object-fit: contain" src="./images/dnapage/female-icon.png" alt="" />
+                                </div>
+                                <div class="w-[70%] h-full flex items-center justify-start">
+                                    <h2 class="text-[0.8vw] ml-[1vw] font-['sf-pro-rounded-medium'] text-white tracking-[0.05vw]">
+                                        {{this.$store.state.locales['femalesTitle']}}
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[4%] flex items-center justify-center">
+                        <div class="w-[91%] flex items-end justify-center h-full">
+                            <h2 class="text-[0.6vw] text-white font-['sf-pro-rounded-medium']">Face</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[9.5%] flex items-end justify-center">
+                        <div class="w-[28%] h-[45%] rounded-[0.5vw] flex">
+                            <div
+                                class="w-[50%] h-full flex items-center justify-center cursor-pointer"
+                                :style="familyCategory == 'father' ? {'background-color' : 'rgba(255, 229, 138, 1)', 'border-radius' : '0.5vw'} : {}"
+                                @click="changeFamilyCategory('father')"
+                            >
+                                <h2
+                                    class="text-[0.5vw] font-['sf-pro-rounded-bold'] tracking-[0.1vw]"
+                                    :style="familyCategory == 'father' ? {'color' : 'rgba(148, 133, 81, 1)'} : {'color' : 'rgba(255, 255, 255, 0.5)'}"
+                                >
+                                    {{this.$store.state.locales['fatherTitle']}}
+                                </h2>
+                            </div>
+                            <div
+                                class="w-[50%] h-full flex items-center justify-center cursor-pointer"
+                                :style="familyCategory == 'mother' ? {'background-color' : 'rgba(255, 229, 138, 1)', 'border-radius' : '0.5vw'} : {}"
+                                @click="changeFamilyCategory('mother')"
+                            >
+                                <h2
+                                    class="text-[0.5vw] font-['sf-pro-rounded-bold'] tracking-[0.1vw]"
+                                    :style="familyCategory == 'mother' ? {'color' : 'rgba(148, 133, 81, 1)'} : {'color' : 'rgba(255, 255, 255, 0.5)'}"
+                                >
+                                    {{this.$store.state.locales['motherTitle']}}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[53.5%] flex items-end justify-center">
+                        <div class="w-[92%] h-[96%] flex flex-wrap no-scrollbar" style="overflow: auto">
+                            <div
+                                v-for="data in familyTable[familyCategory]"
+                                class="w-[30%] h-[30%] rounded-[0.5vw] ml-[0.5vw] mt-[0.3vw] cursor-pointer"
+                                :style="selectFamily[data.name] ? {'background-image' : 'url(./images/dnapage/select.png)'} : {'background-image' : 'url(./images/dnapage/notselect.png)'}"
+                                style="background-size: 100% 100%"
+                                @click="selectMyFamily(data.name, data.index)"
+                            >
+                                <img class="w-full h-full" :src="'./images/dnapage/'+familyCategory+'-images/'+data.name+'.png'" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[5%] flex items-center justify-center">
+                        <div class="w-[91%] flex items-center justify-start h-full">
+                            <h2 class="text-[0.7vw] text-white font-['sf-pro-rounded-medium'] tracking-[0.1vw]">
+                                {{this.$store.state.locales['inheritanceTitle']}}
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="w-full h-[8%] flex items-center justify-center">
+                        <div
+                            class="w-[90%] h-full flex items-center justify-center"
+                            style="background-image: url(./images/dnapage/bgmix.png); background-size: 100% 100%"
+                        >
+                            <div class="w-[60%] flex items-center justify-start h-full">
+                                <input
+                                    @change="changeSkin('face_md_weight', $event.target.value)"
+                                    type="range"
+                                    class="rangeForInput"
+                                    step="1"
+                                    :value="getSkinByName('face_md_weight')"
+                                    min="0"
+                                    max="100"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[4%] flex items-center justify-center">
+                        <div class="w-[91%] flex items-end justify-center h-full">
+                            <h2 class="text-[0.6vw] text-white font-['sf-pro-rounded-medium']">Skin</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[9.5%] flex items-end justify-center">
+                        <div class="w-[28%] h-[45%] rounded-[0.5vw] flex">
+                            <div
+                                class="w-[50%] h-full flex items-center justify-center cursor-pointer"
+                                :style="familyCategorySkin == 'father' ? {'background-color' : 'rgba(255, 229, 138, 1)', 'border-radius' : '0.5vw'} : {}"
+                                @click="changeFamilyCategorySkin('father')"
+                            >
+                                <h2
+                                    class="text-[0.5vw] font-['sf-pro-rounded-bold'] tracking-[0.1vw]"
+                                    :style="familyCategorySkin == 'father' ? {'color' : 'rgba(148, 133, 81, 1)'} : {'color' : 'rgba(255, 255, 255, 0.5)'}"
+                                >
+                                    {{this.$store.state.locales['fatherTitle']}}
+                                </h2>
+                            </div>
+                            <div
+                                class="w-[50%] h-full flex items-center justify-center cursor-pointer"
+                                :style="familyCategorySkin == 'mother' ? {'background-color' : 'rgba(255, 229, 138, 1)', 'border-radius' : '0.5vw'} : {}"
+                                @click="changeFamilyCategorySkin('mother')"
+                            >
+                                <h2
+                                    class="text-[0.5vw] font-['sf-pro-rounded-bold'] tracking-[0.1vw]"
+                                    :style="familyCategorySkin == 'mother' ? {'color' : 'rgba(148, 133, 81, 1)'} : {'color' : 'rgba(255, 255, 255, 0.5)'}"
+                                >
+                                    {{this.$store.state.locales['motherTitle']}}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[53.5%] flex items-end justify-center">
+                        <div class="w-[92%] h-[96%] flex flex-wrap no-scrollbar" style="overflow: auto">
+                            <div
+                                v-for="data in familyTable[familyCategorySkin]"
+                                class="w-[30%] h-[30%] rounded-[0.5vw] ml-[0.5vw] mt-[0.3vw] cursor-pointer"
+                                :style="selectFamilySkin[data.name] ? {'background-image' : 'url(./images/dnapage/select.png)'} : {'background-image' : 'url(./images/dnapage/notselect.png)'}"
+                                style="background-size: 100% 100%"
+                                @click="selectMyFamilySkin(data.name, data.index)"
+                            >
+                                <img class="w-full h-full" :src="'./images/dnapage/'+familyCategorySkin+'-images/'+data.name+'.png'" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[5%] flex items-center justify-center">
+                        <div class="w-[91%] flex items-center justify-start h-full">
+                            <h2 class="text-[0.7vw] text-white font-['sf-pro-rounded-medium'] tracking-[0.1vw]">
+                                {{this.$store.state.locales['inheritanceTitle']}}
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="w-full h-[8%] flex items-center justify-center">
+                        <div
+                            class="w-[90%] h-full flex items-center justify-center"
+                            style="background-image: url(./images/dnapage/bgmix2.png); background-size: 100% 100%"
+                        >
+                            <div class="w-[60%] flex items-center justify-start h-full">
+                                <input
+                                    @change="changeSkin('skin_md_weight', $event.target.value)"
+                                    type="range"
+                                    class="rangeForInput"
+                                    step="1"
+                                    :value="getSkinByName('skin_md_weight')"
+                                    min="0"
+                                    max="100"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[4%] flex items-center justify-center">
+                        <div class="w-[91%] flex items-end justify-center h-full">
+                            <h2 class="text-[0.6vw] text-white font-['sf-pro-rounded-medium']">{{this.$store.state.locales['DNANote']}}</h2>
+                        </div>
+                    </div>
+                    <div class="w-full h-[10%] flex items-center justify-center mt-[1vh]">
+                        <div class="w-[90%] h-full">
+                            <div class="w-full h-[10%] flex items-center justify-start">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">Shape</h2>
+                            </div>
+                            <div class="w-full h-[80%] mt-[1vh]">
+                                <div
+                                    class="w-full h-full flex justify-center items-center rounded-[0.5vw]"
+                                    style="background: rgba(217, 217, 217, 0.15)"
+                                >
+                                    <div class="w-[15%] h-full flex items-center justify-center">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                                    </div>
+                                    <input
+                                        @change="changeSkin('skin_color', $event.target.value)"
+                                        :value="getSkinByName('skin_color')"
+                                        min="0"
+                                        max="45"
+                                        class="rangeForInput"
+                                        type="range"
+                                        step="1"
+                                    />
+                                    <div class="w-[15%] h-full flex items-center justify-center">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[10%] flex items-center justify-center mt-[1vh]">
+                        <div class="w-[90%] h-full">
+                            <div class="w-full h-[10%] flex items-center justify-start">
+                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">Skin Opacity</h2>
+                            </div>
+                            <div class="w-full h-[80%] mt-[1vh]">
+                                <div
+                                    class="w-full h-full flex justify-center items-center rounded-[0.5vw]"
+                                    style="background: rgba(217, 217, 217, 0.15)"
+                                >
+                                    <div class="w-[15%] h-full flex items-center justify-center">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">-1</h2>
+                                    </div>
+                                    <input
+                                        @change="changeSkin('skin_opacity', $event.target.value)"
+                                        :value="getSkinByName('skin_opacity')"
+                                        min="0"
+                                        max="1.0"
+                                        class="rangeForInput"
+                                        type="range"
+                                        step="0.1"
+                                    />
+                                    <div class="w-[15%] h-full flex items-center justify-center">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">1</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-[12.5vh] flex items-end justify-center">
+                    <div
+                        @click="createcharacter"
+                        class="w-[100%] h-[94%] flex items-center justify-center bg-[length:100%_100%]"
+                        style="background-image: url(./images/pedpage/createchar.png)"
+                    >
+                        <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">
+                            {{this.$store.state.locales['createCharacterButton']}}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

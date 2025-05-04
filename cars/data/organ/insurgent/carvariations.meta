@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVariation>
+  <variationData>
+	<Item>
+      <modelName>armyinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="132" />
+            <Item value="0" />
+            <Item value="0" />
+            <Item value="156" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="1" />
+      <sirenSettings value="0" />
+    </Item>
+	<Item>
+      <modelName>fibinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="12" />
+            <Item value="0" />
+            <Item value="0" />
+            <Item value="0" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="23" />
+      <sirenSettings value="45050" />
+    </Item>
+	<Item>
+      <modelName>lspdinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="12" />
+            <Item value="0" />
+            <Item value="0" />
+            <Item value="0" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="23" />
+      <sirenSettings value="45090" />
+    </Item>
+	<Item>
+      <modelName>sahpinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="12" />
+            <Item value="0" />
+            <Item value="0" />
+            <Item value="0" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="23" />
+      <sirenSettings value="45080" />
+    </Item>
+	<Item>
+      <modelName>bcsdinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="155" />
+            <Item value="155" />
+            <Item value="0" />
+            <Item value="155" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="23" />
+      <sirenSettings value="45070" />
+    </Item>
+	<Item>
+      <modelName>bcsoinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="12" />
+            <Item value="0" />
+            <Item value="0" />
+            <Item value="0" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="23" />
+      <sirenSettings value="45070" />
+    </Item>
+	<Item>
+      <modelName>nooseinsur</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            <Item value="12" />
+            <Item value="0" />
+            <Item value="0" />
+            <Item value="0" />
+          </indices>
+          <liveries />
+        </Item>
+      </colors>
+      <kits />
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="23" />
+      <sirenSettings value="45060" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>

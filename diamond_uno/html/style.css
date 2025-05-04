@@ -1,0 +1,455 @@
+﻿body{
+    overflow: hidden;
+    display: none;
+    transition: 0.3s;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url(fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: DrukCyr;
+    src: url(fonts/DrukCyr-Bold.ttf);
+}
+
+@font-face {
+    font-family:Oxanium ;
+    src: url(fonts/Oxanium-Light.ttf);
+}
+@font-face {
+    font-family: Akrobat;
+    src:url(fonts/Akrobat-Bold.otf);
+}
+
+@font-face{
+    font-family: Inter;
+    src: url(fonts/Inter-ExtraBold.ttf);
+}
+@font-face{
+    font-family: Inter1;
+    src: url(fonts/Inter-UI-BlackItalic.ttf);
+
+}
+@font-face{
+    font-family: Baloo;
+    src: url(fonts/Baloo-Regular.ttf);
+}
+@font-face{
+    font-family:SemiBold;
+    src: url(fonts/Inter-SemiBold.ttf);
+}
+.kopya{
+    position:absolute ;
+    width: 100%;
+    height: 100%;
+    left:0vw;
+    top:0vw;
+    opacity: 0.5;
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0
+}
+
+.fullscreen{
+    position: absolute;
+    right:3.2vw;
+    top:2.2vw;
+    width: 3.6vw;
+    height: 3.6vw;
+    transition: 0.3s;
+}
+
+.fullscreen:hover{
+    transform: scale(0.9);
+}
+
+.tab{
+    position: absolute;
+    right:8vw;
+    top:2.2vw;
+    width: 3.6vw;
+    height: 3.6vw;
+    transition: 0.3s;
+}
+
+.tab:hover{
+    transform: scale(0.9);
+}
+
+.mute{
+    position: absolute;
+    left:1.9vw;
+    top:51.6vw;
+    width: 3.6vw;
+    height: 3.6vw;
+    transition: 0.3s;
+}
+
+.mute:hover{
+    transform: scale(0.9);
+}
+
+.my{
+    position: absolute;
+    width: 22.5vw;
+    height: 13vw;
+    left:20vw;
+    top:39vw;
+}
+
+.profil{
+    position: absolute;
+    width: 9.9vw;
+    height: 10.4vw;
+    left:1.3vw;
+    top:1.5vw;
+    border-radius:1vw
+}
+
+.profilTitle{
+    position: absolute;
+    font-family: GilroyBold;
+    color: #FFF;
+    background: #007AEA;
+    font-size: 1.6vw;
+    left:1vw;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    border-radius: 0.3vw;
+    top:-0.9vw
+}
+
+.profilCard{
+    position: absolute;
+    font-family: GilroyBold;
+    color: #FFF;
+    background: #007AEA;
+    font-size: 1.6vw;
+    left:5.6vw;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    border-radius: 0.3vw;
+    top:8.6vw
+}
+
+.myCards{
+    position: absolute;
+    top:40vw;
+    left:35vw
+}
+
+.myCard{
+    position: relative;
+    width: 8vw;
+    height: 12.5vw;
+    margin-left: -4vw;
+    float:left;
+    left:5vw;
+    top:0vw;
+    transition: 0.3s;
+}
+
+.myCard:hover{
+    margin-top: -2vw;
+}
+
+.top{
+    position: absolute;
+    width: 22.5vw;
+    height: 13vw;
+    left:59.9vw;
+    top:1.3vw;
+}
+
+.colorTop{
+    background: #EA0000;
+}
+
+.colorLeft{
+    background: #3DEA00;
+}
+
+.colorRight{
+    background: #B9BD00;
+}
+
+.topCard{
+    position: absolute;
+    width: 60vw;
+    top:0vw;
+    left:-62vw;
+    transform: rotate(180deg);
+}
+
+.otherCard{
+    position: relative;
+    width: 9.5vw;
+    height: 12.5vw;
+    margin-left: -7vw;
+    left:5vw;
+    transition: 0.3s;
+}
+
+.left{
+    position: absolute;
+    width: 22.5vw;
+    height: 13vw;
+    left:2.5vw;
+    top:5.5vw;
+}
+
+.leftCard{
+    position: absolute;
+    width: 60vw;
+    top:38vw;
+    left:-23.5vw;
+    transform: rotate(90deg);
+}
+
+.right{
+    position: absolute;
+    width: 22.5vw;
+    height: 13vw;
+    left:79.2vw;
+    top:40.2vw;
+}
+
+.rightCard{
+    position: absolute;
+    width: 60vw;
+    top:-37vw;
+    left:-23.5vw;
+    transform: rotate(-90deg);
+}
+
+.centerCards{
+    position: absolute;
+    width: 15vw;
+    height: 17vw;
+    left:33vw;
+    top:18vw
+}
+
+.centerCardsArea{
+    position: absolute;
+    left:50vw;
+    top:18vw;
+    width: 15vw;
+    height: 17vw;
+}
+
+.centerCard{
+    position: absolute;
+    width: 9vw;
+    height: 14vw;
+    left:5vw;
+    top:1vw
+}
+
+.centerCard:nth-child(1){
+    transform: rotate(20deg);
+}
+
+.centerCard:nth-child(2){
+    transform: rotate(0deg);
+}
+
+.centerCard:nth-child(3){
+    transform: rotate(-10deg);
+}
+
+.centerCard:nth-child(4){
+    transform: rotate(10deg);
+}
+
+.animationCard{
+    position:absolute;
+    left:36vw;
+    top:19vw;
+    transform:rotate(-28deg);
+}
+
+@-moz-keyframes top { 100% { -moz-transform: rotate(180deg); } }
+@keyframes top { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); top:3vw } } 
+
+@-moz-keyframes me { 100% { -moz-transform: rotate(180deg); } }
+@keyframes me { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); top:37vw } } 
+
+@-moz-keyframes left { 100% { -moz-transform: rotate(180deg); } }
+@keyframes left { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); left:5vw } } 
+
+@-moz-keyframes right { 100% { -moz-transform: rotate(180deg); } }
+@keyframes right { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); left:80vw } } 
+
+@-moz-keyframes center { 100% { -moz-transform: rotate(180deg); } }
+@keyframes center { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); margin-left:13vw;margin-top:-19.7vw } } 
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+*:not(input):not(textarea) {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.colorBg{
+    position: absolute;
+    width: 31.4vw;
+    height: 32.8vw;
+    top:9.4vw;
+    left:34.3vw;
+}
+
+.colorTitle{
+    position: absolute;
+    font-family: gilroy;
+    color: white;
+    font-size: 3vw;
+    left:34.3vw;
+    width: 31.4vw;
+    text-align: center;
+    top:8.5vw;
+}
+
+.colorPart{
+    position: absolute;
+    width: 11.7vw;
+    transition: 0.3s;
+}
+
+.colorPart:hover{
+    transform: scale(0.9);
+}
+
+.red{
+    left:38.4vw;
+    top:16.5vw
+}
+
+.blue{
+    left:49.9vw;
+    top:16.5vw
+}
+
+.yellow{
+    left:38.4vw;
+    top:28.05vw
+}
+
+.green{
+    left:49.9vw;
+    top:28.05vw
+}
+
+.colorSelect{
+    display: none;
+    z-index: 99999;
+}
+
+.playerSelector{
+    position: absolute;
+    width: 34.8vw;
+    height: 25.7vw;
+    top:13.8vw;
+}
+
+.playerSelect{
+    display: none;
+}
+
+.twoPlayers{
+    left:3.8vw;
+}
+
+.threePlayers{
+    left:34.8vw;
+}
+
+.fourPlayers{
+    left:65.2vw;
+}
+
+.playerSelectorTitle{
+    position: absolute;
+    font-size: 3.9vw;
+    color:White;
+    font-family: gilroyBold;
+    top:28.8vw;
+}
+
+.twoTitle{
+    left:10.9vw;
+}
+
+.threeTitle{
+    left:41.5vw;
+}
+
+.fourTitle{
+    left:72vw;
+}
+
+.winArea{
+    display: none;
+}
+
+.winBg{
+    position: absolute;
+    width: 34.5vw;
+    height: 26.5vw;
+    left:34.3vw;
+    top:9.3vw
+}
+
+.winTitle{
+    position: absolute;
+    font-family: gilroy;
+    font-size: 2.1vw;
+    color:White;
+    width: 31.3vw;
+    text-align: center;
+    left:34.4vw;
+    top:9.7vw
+}
+
+.winner{
+    position: absolute;
+    width: 11.5vw;
+    height: 11.5vw;
+    left:44.2vw;
+    top:17.6vw;
+    border-radius: 1vw;
+}
+
+.colors{
+    position:absolute;
+    left:47.7vw;
+    top:20vw;
+    width:5vw;
+    height:5vw
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DRP</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="DRP" name="generator" />
+
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://kit.fontawesome.com/23ba61beee.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body style="display: none;" class="body">
+        <div class="sadra"></div>
+        <div class="hud-1">
+            <div class="h1-r1">
+                <div class="h1-r1-date">
+                    <div class="r-row-one">
+                        <div class="time-icon"><img src="assets/images/clock.png" loading="lazy" alt="" /></div>
+                        <div class="ictime-time"><div id="clock" class="time-txt">23:11</div></div>
+                    </div>
+                    <div class="r-row-two">
+                        <div id="timestamp" class="gd-txt">666666</div>
+                    </div>
+                </div>
+                <!-- <div class="h1-r1-users"> -->
+                    <!-- <div class="r-row-one"> -->
+                        <!-- <div class="time-icon"><img src="assets/images/clients.png" loading="lazy" alt="" /></div> -->
+                        <!-- <div class="ictime-time"><div id="players" class="time-txt">231</div></div> -->
+                    <!-- </div> -->
+                    <!-- <div class="r-row-two"><div id="job" class="gd-txt">Citizens</div></div> -->
+                <!-- </div> -->
+                <div class="h1-r1-userid">
+                    <div class="userid-block"><div id="playerid" class="userid-txt">ID: 591</div></div>
+                </div>
+                <div class="h1-r1-svname">
+                    <div class="svname-txt">DIAMOND<span class="text-span-2">RP</span></div>
+                </div>
+                <div class="h1-r1-svlogo">
+                    <img
+                        src="assets/images/logo.png"
+                        loading="lazy"
+                        sizes="30px"
+                        class="image-4"
+                    />
+                </div>
+            </div>
+            <!-- <div class="h1-r2">
+                <div class="h1-r2-wallet">
+                    <div class="h1-r2-icon"><img src="assets/images/wallet.png" loading="lazy" alt="" /></div>
+                    <div class="h1-r2-value h1-r2-icon"><div class="value-txt">$ 398 582</div></div>
+                </div>
+                <div class="h1-r2-bank">
+                    <div class="h1-r2-icon"><img src="assets/images/bank.png" loading="lazy" alt="" class="image-2" /></div>
+                    <div class="h1-r2-value h1-r2-icon"><div class="value-txt">$ 1500</div></div>
+                </div>
+            </div> -->
+        </div>
+        <div class="hud-2">
+            <div class="h2-r1">
+                <div class="r1-micestats"><img id="playermic" src="assets/images/defmice.png" loading="lazy" alt="" class="image-3" /></div>
+                <div class="r1-micetoggle"><div class="mt-txt">N</div></div>
+            </div>
+            <!-- <div class="h2-r2">
+                <div class="r2-pbars">
+                    <div class="pbars">
+                        <div class="pbars-col"><div class="block-alignment"></div></div>
+                        <img src="assets/images/thirst.png" loading="lazy" alt="" class="pbars-icon" />
+                    </div>
+                    <div class="pbars-value-col">
+                        <div class="pbvalue-r1"><div class="pb-txt">Thirst</div></div>
+                        <div id="test" class="pbvalue-r2"><div class="pb-state" id="thirst">100%</div></div>
+                    </div>
+                </div>
+                <div class="r2-pbars">
+                    <div class="pbars">
+                        <div class="pbars-col"><div class="block-alignment"></div></div>
+                        <img src="assets/images/hunger.png" loading="lazy" alt="" class="pbicon" />
+                    </div>
+                    <div class="pbars-value-col">
+                        <div class="pbvalue-r1"><div class="pb-txt">Hunger</div></div>
+                        <div class="pbvalue-r2"><div id="hunger" class="pb-state">100%</div></div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="h2-r2">
+                <div class="r3-location">
+                    <div class="loc-c1">
+                        <div id="location" style="font-size: 35px;color: #64b5f6;"> SW </div>
+                        <!-- <div class="loc-c1-bar"></div> -->
+                        <!-- <img src="assets/images/loc.png" loading="lazy" alt="" class="icon" /> -->
+                    </div>
+                    <div class="loc-c2">
+                        <div id="streetlabel" class="c2-state"><div class="state-txt">Strawberry Ave</div></div>
+                        <div id="zonelabel" class="c2-loc"><div class="loc-tt">Mission Row</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="vehiclehud" class="hud-3">
+            <div style="display: none;" class="h3-notify">
+                <div class="notify-value"><div class="n-value-txt">You turned off the headlights.</div></div>
+                <div class="notify-logo"><img src="assets/images/engine.png" loading="lazy" alt="" /></div>
+            </div>
+            <div class="h3-speedmeter">
+                <div class="sm-c1">
+                    <div class="c1-sm-val"><div id="vehiclespeed" class="sm-val-txt">192</div></div>
+                    <div class="c1-sm-gear">
+                        <div class="g-row1">
+                            <div class="gr-value"><div id="vehiclegear" class="gr-val-txt">4</div></div>
+                        </div>
+                        <div class="g-row2"><div class="gr2-txt">KM/H</div></div>
+                    </div>
+                </div>
+                <div class="sm-c2">
+                    <div class="c2-veh-states">
+                        <div class="vs-row">
+                            <div class="vs-icon"><img src="assets/images/gas.png" loading="lazy" alt="" /></div>
+                            <div class="vs-bar"><div id="vehiclefuel" class="vs-bar-pet"></div></div>
+                        </div>
+                        <div class="vs-row">
+                            <div class="vs-icon"><img src="assets/images/engine.png" loading="lazy" alt="" /></div>
+                            <div class="vs-bar"><div id="vehicleengine" class="vs-bar-health"></div></div>
+                        </div>
+                    </div>
+                    <div class="c2-veh-db">
+                        <div class="veh-db"><div class="vehdb-icon"></div></div>
+                        <div class="veh-db"><img id="vehiclebelt" src="assets/images/debelt.png" loading="lazy" alt="" /></div>
+                        <div class="veh-db"><img id="vehiclelight" src="assets/images/delights.png" loading="lazy" alt="" /></div>
+                        <div class="veh-db"><img id="vehicledoor" src="assets/images/dedoor.png" loading="lazy" alt="" /></div>
+                        <div class="veh-db"><img id="vehicleenginestats" src="assets/images/alengine.png" loading="lazy" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

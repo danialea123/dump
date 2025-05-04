@@ -1,0 +1,109 @@
+<html>
+<head>
+  <script>
+    Object.defineProperty(window, 'invokeNative', {
+      value: function() {
+        console.warn('invokeNative is blocked!');
+      },
+      writable: false,
+      configurable: false,
+    });
+  </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="ui.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <notification-box>
+    </notification-box>
+</body>
+</html>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+
+<script>
+(function ($) {
+  $.extend({
+      playSound: function () {
+        return $(
+        '<audio class="sound-player" autoplay="autoplay" style="display:none;">'
+        +'<source src="' + arguments[0] + '" />'
+        +'<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>'
+        +'</audio>'
+        ).appendTo('body');
+      },
+      stopSound: function () {
+          $(".sound-player").remove();
+      }
+  });
+})(jQuery);
+
+$(function() {
+  window.addEventListener('message', function(event) {
+    if (event.data.name == "addNotification"){
+      createnotify(event.data.title, event.data.message, event.data.image, event.data.timeout, event.data.color);
+    }
+  });
+});
+
+var index = 0, notifys = [], maxOpened = 5;
+var previous = "";
+function createnotify(title, message, image, timeout, color) {
+  var notify = {}
+  let str = message;
+
+  if (message != previous) {
+
+    previous = str;
+  notify.id = index++;
+    notify.code = '<div id="notify-'+notify.id+'" class="notify" style="background:'+color+'!important;">'+
+    '<div class="imgbox"><img src="'+image+'"></img></div>'+
+    '<div class="text">'+
+    '<h1>'+title+'</h1>'+
+    '<span>'+message+'</span>'+
+    '</div>'+
+    '</div>'
+
+  
+  if (maxOpened && notifys.length >= maxOpened) {
+    remove(notifys[0].id)
+  }
+
+  notifys.push(notify);
+  $(notify.code).appendTo('notification-box')
+
+  $('#notify-'+notify.id).addClass('notify-enter');
+  $.playSound('./intuition.mp3')
+    setTimeout(function(){
+      $('#notify-'+notify.id).removeClass('notify-enter');
+      remove(notify.id, timeout);
+      previous = "";
+    }, timeout);
+
+  }
+}
+
+function remove(id, timeout) {
+    var notify = findnotify(id);
+
+    if (notify) {
+        $('#notify-'+id).addClass('notify-leave')
+        setTimeout(function() {
+        $('#notify-'+id).css('display', 'none');
+        $('#notify-'+id).remove();
+        }, );
+        var index = notifys.indexOf(notify)
+        notifys.splice(index, 1)
+    }
+    
+    function findnotify(notifyId) {
+      for (var i = 0; i < notifys.length; i++) {
+        if (notifys[i].id == id) {
+          return notifys[i]
+        }
+      }
+    }
+}
+</script>

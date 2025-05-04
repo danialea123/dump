@@ -1,0 +1,437 @@
+<div class="w-full h-[100vh] flex items-start justify-start" 
+    style=" background-image: url(./images/ponsonbys/overlay.png);  background-size: 100% 100%;">
+    <div class="w-full h-full  ">
+        <div class="w-full h-[8.4%] flex items-center justify-center">
+            <div class="w-[95%] h-full flex" style="border-bottom: 1px solid rgba(255, 255, 255, 0.27);">
+                <div class="w-[33.5%] h-full flex items-center justify-start ">
+                    <div class="w-[22%] h-[20%] flex items-center justify-center">
+                        <img class="w-full h-full" src="./images/ponsonbys/bincotext.png" alt="">
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-center ">
+                    <div class="w-[77%] h-full flex items-center justify-center" style="border-bottom: 3px solid white;">
+                    
+                        <h2 class="text-[1.3vw] ml-[1vw] text-[white] font-['Proxima Nova'] " style="font-weight: 600; letter-spacing: 0.2vw ">{{this.$store.state.locales['ponsonbysTitle']}}</h2>
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-end ">
+                    <div class="w-[30%] h-full mr-[0.5vw] flex items-center justify-end flex-wrap ">
+                        <h2 class="w-full h-[50%] flex items-end justify-end  text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.playerName}}</h2>
+                        <h2 class="w-full h-[50%] flex items-start justify-end  text-[0.7vw] ml-[1vw]  font-['sf-pro-rounded-medium'] text-[#E1D194] " v-if="this.$store.state.selectedMoneyType == 'cash'" style="filter  : drop-shadow(0px 0px 10px #E1D194)">{{this.$store.state.playerMoney.cash.toFixed(0)}} $</h2>
+                        <h2 class="w-full h-[50%] flex items-start justify-end  text-[0.7vw] ml-[1vw]  font-['sf-pro-rounded-medium'] text-[#E1D194] " v-else style="filter  : drop-shadow(0px 0px 10px #E1D194)">{{this.$store.state.playerMoney.bank.toFixed(0)}} $</h2>
+                    </div>
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <div class="w-[75%] h-[75%]  flex items-center justify-center rounded-[7vw]" style="border: 2px solid rgba(188, 132, 255, 0.41); filter  : drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))">
+                            <img class="w-[94%] h-[92%]" style="object-fit: contain; border-radius: 7vw;" :src="this.$store.state.pp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[87.5%]  flex items-end justify-start relative" >
+            <div v-if="buynowModal" class="w-full h-[110%] mb-[-5vw] absolute  flex-col flex items-center justify-center  blur-menu" style="z-index: 30;">
+                <div class="w-[30%]  mr-[-4vw] h-[38%] ">
+                    <div class="w-full  h-[85%] " style="background-image: url(./images/ponsonbys/bincocard.png); background-size: 100% 100%;">
+                        <div class="w-full h-[25%]  flex items-end justify-start">
+                            <h2 class="text-[1.9vw] ml-[2.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['buyNowButton']}}</h2>
+                        </div>
+                        <div class="w-full h-[20%]  flex items-end justify-start">
+                            <h2 class="text-[1.9vw] ml-[2.5vw] text-[#BC84FF] font-['sf-pro-rounded-medium'] ">${{this.$store.state.outfitPrice}}</h2>
+                        </div>
+                        <div class="w-full h-[15%]  flex items-end justify-start">
+                            <h2 class="text-[1vw] ml-[2.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['thanksText']}} {{this.$store.state.locales['ponsonbysText']}} </h2>
+                        </div>
+                        <div class="w-full h-[33%]   flex items-end justify-center">
+                            <div class="w-[84%] h-[75%]  flex items-center justify-between">
+                                <div class="w-[66%] h-full  flex items-center justify-center cursor-pointer"  @click="saveSkin()">
+                                    <h2 class="text-[1.7vw] text-[white] font-['sf-pro-rounded-medium'] buynowtext ">{{this.$store.state.locales['buyNowButton']}}</h2>
+                                </div>
+                                <div class="w-[32%] h-full flex items-center justify-center cursor-pointer" @click="buynow(false)" >
+                                    <img class="w-[40%] h-[40%]" style="object-fit: contain;" src="./images/ponsonbys/closeicon.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[15%]  flex">
+                        <div class="w-[65%] h-full  flex items-center justify-end">
+                            <h2 class="text-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['saveOutfitText']}}</h2>
+                        </div>
+                        <div class="w-[45%] h-full  flex items-center justify-start">
+                            <img v-if="!crateClothingModal" @click="showInput(true)" class="ml-[1vw] cursor-pointer" src="./images/ponsonbys/saveoutfit.png" alt="">
+                            <img v-else class="ml-[1vw]" @click="showInput(false)" src="./images/ponsonbys/saveoutfittick.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div v-if="crateClothingModal" class="w-[30%]  mr-[-4vw] h-[10%]  flex items-center justify-center">
+                    <input v-model="createClothingModalInput" type="text" class="w-[90%] h-[70%] font-['sf-pro-rounded-medium'] text-[white]"
+                     style="background: linear-gradient(90deg, rgba(130, 130, 130, 0.62) 0%, rgba(123, 113, 88, 0.62) 100%); 
+                     text-indent: 0.7vw; border-radius: 0.5vw; outline: none; border: none;" :placeholder= "this.$store.state.locales['giveOutfitNameText'] ">
+
+                </div>
+
+            </div>
+            <div class="w-[26%] h-[95.5%]   flex items-center justify-end">
+                <div class="w-[90%] h-full   flex flex-wrap" :style="{'background-image' : 'url(./images/ponsonbys/'+currentCategory+'background.png)'}" style=" background-size: 100% 100%; ">
+                    <div class="w-[12.5%] h-full  ">
+                        <div class="w-full flex items-center justify-center h-[7.2%] " @click="changeCategory('main', this.$store.state.locales['allponsonbysCloting'])">
+                            <img v-if="currentCategory == 'main'" class="w-[50%] h-[50%]" style="object-fit: contain;" src="./images/ponsonbys/bincologo.png" alt="">
+                            <img v-else class="w-[50%] h-[50%]" style="object-fit: contain;" src="./images/ponsonbys/bincoicon.png" alt="">
+                        </div>
+                        <div class="w-full h-[48%] relative ">
+                            <div class="absolute w-[90%] h-[0.1%] bottom-[0vw] ml-[0.2vw]" style="border: 1px solid rgba(255, 255, 255, 0.20);"></div>
+                                <div v-for="data in firstCategory" class="w-full h-[14%] flex items-center justify-center cursor-pointer" @click="changeCategory(data.name,data.headerText)">
+                                    <img v-if="currentCategory !== data.name" class="w-[40%] h-[25%]" :src="'./images/ponsonbys/'+data.icon+'.png'" alt="">
+                                    <img v-else class="w-[40%] h-[40%]" :src="'./images/ponsonbys/'+data.icon+'active.png'" alt="">
+                                </div>
+                        </div>
+                        <div v-if="!thirstCategoryValue" class="w-full h-[25%] ">
+                          
+                            <div v-for="data in secondCategory" class="w-full h-[25%] flex items-center justify-center cursor-pointer" @click="changeCategory(data.name,data.headerText)">
+                                <img v-if="currentCategory !== data.name" style="object-fit: contain;" class="w-[40%] h-[40%]" :src="'./images/ponsonbys/'+data.icon+'.png'" alt="">
+                                <img v-else class="w-[40%] h-[40%]" style="object-fit: contain;" :src="'./images/ponsonbys/'+data.icon+'active.png'" alt="">
+                            </div>
+                        </div>
+                        <div v-if="thirstCategoryValue" class="w-full h-[25%] ">
+                            <div v-for="data in thirstCategory" class="w-full h-[25%] flex items-center justify-center cursor-pointer" @click="changeCategory(data.name,data.headerText)">
+                                <img v-if="currentCategory !== data.name" class="w-[40%] h-[40%]" style="object-fit: contain;" :src="'./images/ponsonbys/'+data.icon+'.png'" alt="">
+                                <img v-else class="w-[40%] h-[40%]"  style="object-fit: contain;"  :src="'./images/ponsonbys/'+data.icon+'active.png'" alt="">
+                            </div>
+                        </div>
+                        <div class="w-full h-[8%]  flex items-center justify-center cursor-pointer relative" @click="thirsCategoryButton">
+                            <div class="absolute w-[90%] h-[0.1%] bottom-[0vw] ml-[0.2vw]" style="border: 1px solid rgba(255, 255, 255, 0.20);"></div>
+                            <img v-if="!thirstCategoryValue" class="w-[50%] h-[50%]" style="object-fit: contain; filter  : drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))"   src="./images/ponsonbys/downbutton.png" alt="">
+                            <img v-else  class="w-[50%] h-[50%]" style="object-fit: contain; filter  : drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))"  src="./images/ponsonbys/upbutton.png" alt="">
+                        </div>
+                        <div class="w-full h-[12%]  flex items-center justify-center cursor-pointer" @click="changeCategory('saved')">
+                            <img style="object-fit: contain;" class="w-[50%] h-[50%]" src="./images/ponsonbys/whiteicon.png" alt="">
+                        </div>
+                    </div>
+                    <div class="w-[87.5%] h-full  relative">
+                        <div v-if="currentCategory !== 'saved' " class="w-full h-[7%] flex flex-wrap ">
+                            <div class="w-[80%] h-full  flex items-center justify-start">
+                                <h2 class="text-[0.9vw] ml-[1.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{headerText}}</h2>
+                            </div>
+                            <div class="w-[20%] h-full  flex items-center justify-start">
+                            </div>
+                        </div>
+                        <div v-if="currentCategory == 'saved' " class="w-full h-[7%]  flex flex-wrap items-center justify-between ">
+                            <div class="w-[44%] h-full  flex items-center justify-center">
+                                <div class="w-[90%] h-[50%] rounded-[1vw] flex items-center justify-center  cursor-pointer" @click="changeSavedCategory('saved')" :style="savedCatetory == 'saved' ? {'background-color': '#BC84FF', 'filter' : 'drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))'}:{ 'background-color' : 'transparent'}">
+                                    <h2 class="text-[0.7vw] font-['sf-pro-rounded-medium'] text-[#FFF] " :style="savedCatetory == 'saved' ? {'color': '#573D76'} : {'color ':'white'}">{{this.$store.state.locales['savedOutfits']}}</h2>
+                                </div>
+                            </div>
+                            <div class="w-[44%] h-full  flex items-center justify-center">
+                                <div class="w-[90%] h-[50%] rounded-[1vw] flex items-center justify-center cursor-pointer" @click="changeSavedCategory('unpaid')" :style="savedCatetory == 'unpaid' ? {'background-color': '#BC84FF' , 'filter' : 'drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))'}:{ 'background-color' : 'transparent'}">
+                                    <h2 class="text-[0.7vw] font-['sf-pro-rounded-medium'] text-[#FFF]  " :style="savedCatetory == 'unpaid' ? {'color': '#573D76'} : {'color ':'white'}">{{this.$store.state.locales['unpaidOutfits']}}</h2>
+                                </div>
+                            </div>
+                           
+                        </div>
+                     
+                        <div v-if="currentCategory == 'saved' && savedCatetory == 'saved'" class="w-[22%] h-[9%] absolute bottom-[1vw] right-[1vw] cursor-pointer" style="z-index: 1;" @click="createCategoryModel(true)">
+                            <img class="w-full h-full" style="object-fit: contain;filter  : drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))" src="./images/ponsonbys/createcategory.png" alt="">
+                        </div>
+                        <div v-if="currentCategory == 'saved' && savedCatetory == 'saved' && createNewCategoryModal" class="w-[90%] h-[20%] absolute bottom-[1vw] rounded-[0.5vw] right-[1vw] bg-[#BC84FF] " style="z-index: 2;">
+                            <div class="w-full h-[30%]  flex items-end justify-start">
+                                <h2 class="text-[1.2vw] text-[white] ml-[1vw] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['createNewTitle']}}</h2>
+                            </div>
+                            <div class="w-full h-[35%]  flex items-end justify-center">
+                                <input v-model="createCategoryModalInput" type="text" class="w-[90%] h-[70%] font-['sf-pro-rounded-medium'] text-[white]" style="background-color: #C59009; text-indent: 0.7vw; border-radius: 0.5vw; outline: none; border: none;" :placeholder= "this.$store.state.locales['colectionName'] ">
+                            </div>
+                            <div class="w-full h-[30%]  flex items-end justify-center">
+                                <div class="w-[90%] h-[80%]  flex items-center justify-between">
+                                    <div class="w-[45%] h-full  rounded-[0.5vw] flex items-center justify-center" style="background-color: #FFFFFF;" @click="createCategory(createCategoryModalInput)">
+                                        <h2 class="text-[0.9vw] text-[black] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['createButton']}}</h2>
+                                    </div>
+                                    <div class="w-[45%] h-full  rounded-[0.5vw] flex items-center justify-center cursor-pointer" style="background-color: #575757;" @click="createCategoryModel(false)">
+                                        <h2 class="text-[0.9vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['cancelButton']}}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="w-full h-[90.5%] flex items-start  justify-center content-start mt-[1vw] flex-wrap no-scrollbar" style="overflow: auto;">
+                            <div v-if="currentCategory == 'main' && currentCategory !== 'saved' " v-for="data in bincoClothing" style="background-size: 100% 100%;" :style="{'background-image' : 'url(./images/ponsonbys/'+data.background+'.png)'}" class="w-[88%] h-[27%] mt-[1vw]">
+                                <div class="w-full h-[20%]  flex items-end justify-start">
+                                    <h2 class="text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.label}}</h2>
+                                </div>
+                                <div class="w-full h-[35%]  flex flex-wrap items-end justify-center">
+                                    <div class="w-[88%] h-full  flex  flex-wrap items-end justify-start">
+                                        <h2 class="text-[0.7vw] mb-[0.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['typeTitle']}}</h2>
+                                        <div class="w-full h-[60%]  flex items-center justify-between">
+                                            <div  @click="changeSkin(data.name, getSkinByName(data.name)-1)" class="w-[14.5%] h-full flex items-center justify-center cursor-pointer " style="background-color: rgba(0, 0, 0, 0.20); border-top-left-radius: 0.3vw; border-bottom-left-radius: 0.3vw;">
+                                                <img src="./images/clothespage/left.png" alt="">
+                                            </div>
+                                            <div class="w-[70%] h-full flex items-center justify-center" style="background-color: rgba(0, 0, 0, 0.20);">
+                                                <input @change="changeSkin(data.name, $event.target.value)" type="text" class=" clothes-inputplaceholder w-full h-full font-['sf-pro-rounded-medium'] text-white text-center" style="background-color: transparent; outline: none; border:none;" :value="getSkinByName(data.name)">
+                                            </div>
+                                            <div @click="changeSkin(data.name, getSkinByName(data.name)+1)" class="w-[14.5%] h-full flex items-center justify-center cursor-pointer" style="background-color: rgba(0, 0, 0, 0.20); border-top-right-radius: 0.3vw; border-bottom-right-radius: 0.3vw;">
+                                                <img  style="transform: rotate(180deg);" src="./images/clothespage/left.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-[88%] h-full  flex  flex-wrap items-end justify-start">
+                                        <h2 class="text-[0.7vw]  text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['variationsTitle']}}</h2>
+                                        <div class="w-full h-[60%]  flex items-center justify-between">
+                                            <div @click="changeSkin(data.texture_name, getSkinByName(data.texture_name)-1)" class="w-[14.5%] h-full flex items-center justify-center cursor-pointer " style="background-color: rgba(0, 0, 0, 0.20); border-top-left-radius: 0.3vw; border-bottom-left-radius: 0.3vw;">
+                                                <img src="./images/clothespage/left.png" alt="">
+                                            </div>
+                                            <div class="w-[70%] h-full flex items-center justify-center" style="background-color: rgba(0, 0, 0, 0.20);">
+                                                <input  @change="changeSkin(data.texture_name, $event.target.value)" type="text" class=" clothes-inputplaceholder w-full h-full font-['sf-pro-rounded-medium'] text-white text-center" style="background-color: transparent; outline: none; border:none;" :value="getSkinByName(data.texture_name)">
+                                            </div>
+                                            <div @click="changeSkin(data.texture_name, getSkinByName(data.texture_name)+1)" class="w-[14.5%] h-full flex items-center justify-center cursor-pointer" style="background-color: rgba(0, 0, 0, 0.20); border-top-right-radius: 0.3vw; border-bottom-right-radius: 0.3vw;">
+                                                <img  style="transform: rotate(180deg);" src="./images/clothespage/left.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="currentCategory !== 'main' && currentCategory !== 'saved' " class="w-full h-full ">
+                                    <div class="w-full h-[20%]  flex items-center justify-center">
+
+                                        <h2 class="text-[2vw]  text-[white] font-['sf-pro-rounded-medium'] ">{{headerText}}</h2>
+                                    </div>
+                                    <div class="w-full h-[47%]  flex flex-wrap content-start items-start justify-start">
+                                        <div @click="changeSkin(getTextureName, getSkinByName(getTextureName)+1)" class="w-full h-[26%]  flex items-end justify-center">
+                                            <!-- üsttaraf arttırma -->
+                                            <div class="w-[20%] h-[75%]  cursor-pointer"></div>
+                                        </div>
+                                        <div @click="changeSkin(getModelName, getSkinByName(getModelName)-1)" class="w-[24%] h-[52%]  flex items-center justify-end">
+                                            <!-- sol taraf arttırma -->
+                                            <div class="w-[75%] h-[39%] mt-[0.5vw]   cursor-pointer"></div>
+                                        </div>
+                                        <div class="w-[52%] h-[52%] flex items-center flex-wrap flex-col content-center justify-center">
+                                            <h2 class="text-[1.5vw] mb-[0.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['model']}} {{getSkinByName(getModelName)}}</h2>
+                                            <h2 class="text-[0.8vw] mb-[0.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['Veriation']}} {{getSkinByName(getTextureName)}}</h2>
+                                        </div>
+                                        <div @click="changeSkin(getModelName, getSkinByName(getModelName)+1)" class="w-[24%] h-[52%]  flex items-center justify-start">
+                                            <!-- sağ taraf arttırma -->
+                                            <div class="w-[75%] h-[39%] mt-[0.5vw]    cursor-pointer"></div>
+                                        </div>
+                                        <div  @click="changeSkin(getTextureName, getSkinByName(getTextureName)-1)" class="w-full h-[22%]  flex items-end justify-center">
+                                            <!-- alt taraf arttırma -->
+                                            <div class="w-[22%] h-[90%]    cursor-pointer"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full h-[30%]  flex items-end justify-start flex-wrap">
+                                        <div class="w-full h-[40%] flex items-center justify-center">
+                                            <div class="w-[40%] h-[20%] flex items-center justify-center">
+                                                <img class="w-full h-full" style="object-fit: contain;" src="./images/ponsonbys/bincotext.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="w-[80%] h-[20%]  flex items-center justify-end">
+                                            <input @change="changeSkin(getModelName, $event.target.value)" type="text" class="w-[87%] h-full font-['sf-pro-rounded-medium'] text-white text-start" style="background-color: transparent; outline: none; border:none; font-size: 0.6vw;" :placeholder= "this.$store.state.locales['modelNumberText']">
+                                        </div>
+                                    </div>
+
+                            </div>
+                            <div v-if="currentCategory == 'saved'" class="w-full h-full">
+                                <transition name="unpaidclothing">
+                                <div v-if="savedCatetory == 'saved'" class="w-full h-full   relative">
+                                    <div v-if="!createNewCategoryModal" class="w-full h-full  ">
+                                   
+                                        <div v-for="(data,index) in playerCategory" style="min-height: 5vh;" class="w-full mt-[1vw]  droppableContainer  flex items-center justify-center"  :data-id=data.id  @click="showDropDownMenu(data.id)">
+                                            <div class="w-[95%] h-full   ">
+                                                <div class="w-full flex items-center justify-between cursor-pointer" style="height: 5vh;" >
+                                                    <h2 class="text-[0.9vw]  ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                                    <img v-if="!dropDownMenu[data.id]" class="w-[7%] h-[30%] mr-[1vw]" style="object-fit: contain;" src="./images/ponsonbys/dropdowndown.png" alt="">
+                                                    <img v-else class="w-[7%] h-[30%] mr-[1vw]" style="object-fit: contain; transform: rotate(180deg);" src="./images/ponsonbys/dropdowndown.png" alt="">
+                                                </div>
+                                         
+                                                <div class="dropdownListWrapper cursor-pointer">
+                                                    <transition-group name="dropmenu">
+                                                      <ul v-if="dropDownMenu[data.id]" v-for="clothing in data.items " class="active-dropdown-list  cursor-pointer">
+                                                        <li  @click="clothingBox(clothing)"
+                                                         class="h-[7vh] w-full  draggeableClothing flex items-center "
+                                                        @click.stop 
+                                                        :data-id = clothing.id
+                                                        @mouseover="handleMouseOverClothing"
+                                                        @mouseleave="handleMouseLeaveClothing"
+                                                        style="background-size: 100% 100%; color:white; font-family: 'sf-pro-rounded-medium'; text-indent: 1vw;"
+                                                        :style="currentClothingItems[clothing.id] ? {'background-image' : 'url(./images/ponsonbys/clothingbgactive.png)', 'filter'  : 'drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))'} : {'background-image' : 'url(./images/ponsonbys/clothingbg.png)'}"
+                                                        >{{clothing.name}}
+                                                        </li>
+                                                      
+                                                      </ul>
+                                                      </transition-group>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div  class="droppaleContainerUnClothing w-full h-[30%] mt-[3vw]">
+                                                <h2 class="text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium']  " >{{this.$store.state.locales['uncategorized']}}</h2>
+                                                <div class="w-full h-[1vw]"></div>
+                                                <div v-for="(data,index) in unnamedClothing" class="w-full h-[30%] mt-[1vw] flex items-start justify-center content-start cursor-pointer " @click="clothingBox(data)"  @mouseover="handleMouseOver"
+                                                @mouseleave="handleMouseLeave">
+                                                <div class=" dragPanel w-[23rem] h-[5rem]  flex items-center justify-between"  :data-id = data.id :style="currentClothingItems[data.id] ? {'background-image' : 'url(./images/ponsonbys/clothingbgactive.png)', 'filter'  : 'drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))'} : {'background-image' : 'url(./images/ponsonbys/clothingbg.png)'}" style="background-size: 100% 100%;">
+                                                    <h2 class="text-[1vw] ml-[1vw]  text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                                
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                     
+
+                                    </div>
+
+                                    <div v-if="createNewCategoryModal" class="w-full h-full ">
+                                        <div v-for="(data,index) in playerCategory"  class="w-full h-[5%]  flex items-center justify-center">
+                                            <div class="w-[90%] h-full  flex flex-wrap items-center justify-between">
+                                                <h2 class="text-[0.7vw]  text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                                <h2 class="text-[0.7vw] cursor-pointer text-[#FF3B30] font-['sf-pro-rounded-medium'] " @click="deleteCategory(data.id)">{{this.$store.state.locales['deleteButton']}}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                </transition>
+                                <transition name="unpaidclothing">
+                                    <div v-if="savedCatetory == 'unpaid'" class="w-full h-full   relative no-scrollbar flex items-start justify-start flex-wrap content-start" style="overflow: auto;">
+                                    
+                                            <h2 class="text-[1vw] ml-[1vw]  text-[white] font-['sf-pro-rounded-medium'] " style="font-size: 0.7vw;"> {{this.$store.state.locales['savedForLaterOutfits']}}</h2>
+
+                                            <div v-for="data in unpaidOutfits" class="w-full h-[10%] mt-[1vw] flex items-start justify-center content-start cursor-pointer " @click="unpaidClothing(data)" >
+                                            <div class=" w-[90%] h-[100%]  flex items-center justify-between" 
+                                             :style="currentClothingItems[data.id] ? {'background-image' : 'url(./images/ponsonbys/clothingbgactive.png)', 'filter'  : 'drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))'} : {'background-image' : 'url(./images/ponsonbys/clothingbg.png)'}" style="background-size: 100% 100%;">
+                                                <h2 class="text-[1vw] ml-[1vw]  text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                            
+                                            </div>
+                                        
+                                            </div>
+                                    </div>
+                                </transition>
+                            </div>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[55%] h-full  ">
+                <div class="w-full h-full  flex items-end justify-center">
+                    <div class="w-full h-[20%] flex items-end  justify-center flex-wrap content-start ">
+                     
+                        <div class="w-full h-[60.5%]   flex items-end justify-center">
+                            <div class="w-[27%] h-[72%]  flex items-center justify-between">
+                                <div @click="ChangeCamera(data.id)" v-for="data in cameraData" class="w-[30%] h-full flex items-center justify-center cursor-pointer" :style="cameraActive === data.id ? {'background-image' : 'url(./images/ponsonbys/select.png)'} : {'background-image' : 'url(./images/binco/notselectcamera.png)'}" style="background-size: 100% 100%;">
+                                        <img class="w-[50%] h-[50%]" style="object-fit: contain;" :style="cameraActive === data.id ? {'opacity' : '1.0'} : {'opacity' : '0.3'}" :src="'/html/images/binco/camera'+data.id+'.png'" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-[40.5%]  flex items-center justify-center">
+                            <div class="w-[55%] h-full  ">
+                                <img class="w-full h-full" src="./images/ponsonbys/rotate.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[16.5%] h-full ">
+                <div class="w-full h-[82%]  flex items-end ">
+                    <div v-if="!openSharingModal" class="w-full h-[92%] relative" style="background-image: url(./images/ponsonbys/summarybg.png); background-size: 100% 100%;">
+                        <div v-if="!currentClothingItemsValue" class="w-full  h-[12%] flex items-center justify-start">
+                            <h2 class="text-[1.3vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['summaryTitle']}}</h2>
+                        </div>
+                        <div v-else class="w-full h-[12%] flex items-center justify-between">
+                            <h2 class="text-[1.3vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{currentClothingItemsValue.name}}</h2>
+                            <img class="w-[25%] h-[25%] cursor-pointer" @click="openSharingModalVal" style="object-fit: contain;" src="./images/suburban/shareoutfit.png" alt="">
+                        </div>
+                        <div class="w-full  h-[87%]  flex items-center justify-center">
+                            <div class="w-[88%] h-full flex items-center flex-wrap content-start ">
+                                <div class="w-[95%] h-[6%] mt-[0.1vw] flex" v-for="data in summaryData">
+                                    <div class="w-[50%] flex items-center justify-start h-full">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.label}}</h2>
+                                    </div>
+                                    <div class="w-[50%] flex items-center justify-end h-full">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.model}}-{{data.texture}}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-if="sharingModal && shareOutfitData" class="w-full h-[30%] absolute bottom-[0vw]" style="background-image: url(./images/binco/accept.png); background-size: 100% 100%;" >
+                            <h2 class="text-[1.1vw] ml-[1vw] mt-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['sharingRequestTitle']}}</h2>
+                            <div class="w-full h-[75%]  flex items-start justify-center ">
+                                <div class="w-[90%] h-full ">
+                                    <h2 class="text-[0.9vw] mt-[0.2vw] text-[white] font-['sf-pro-rounded-medium'] "> <span style="color: #BC84FF;">{{shareOutfitData.sender}}</span> {{this.$store.state.locales['sharingRequestText']}} - <span style="color: #BC84FF">${{this.$store.state.outfitPrice}}</span></h2>
+                                <div class="w-full h-[60%]  flex items-center justify-center">
+                                    <div class="w-full h-[60%]  flex items-center justify-between">
+                                        <div class="w-[48%] h-full flex items-center justify-center cursor-pointer" style="background-color: #BC84FF; border-radius: 0.4vw;">
+                                            <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-medium'] " @click="AccepOutfitSharing">{{this.$store.state.locales['acceptButton']}}</h2>
+                                        </div>
+                                        <div class="w-[48%] h-full flex items-center justify-center cursor-pointer" @click="SharingModalValue(false)" style="background-color: #757575; border-radius: 0.4vw;">
+                                            <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['declineButton']}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="openSharingModal" class="w-full h-[92%]  relative " style="background-image: url(./images/ponsonbys/summarybg.png); background-size: 100% 100%;">
+                        <div class="w-full  h-[12%] flex items-center justify-between ">
+                            <h2 class="text-[1.3vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['shareOutfitTitle']}}</h2>
+                            <img  class="w-[7%] h-[25%] cursor-pointer mr-[1.2vw]" @click="closeSharingModal" style="object-fit: contain; transform: rotate(90deg);" src="./images/ponsonbys/dropdowndown.png" alt="">
+                        </div>
+                        <div class="w-full  h-[87%]  flex items-center justify-center">
+                            <div class="w-[88%] h-full flex items-center flex-wrap content-start mt-[1vw] no-scrollbar" style="overflow: auto;">
+                                <h2 class="text-[0.8vw] ml-[0.3vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['nearbyPlayers']}}</h2>
+                                <div class="w-[95%]  h-[15%] mt-[0.1vw] flex items-center justify-center" v-for="data in nearbyPlayers">
+                                    <div class="w-full h-[80%]  flex items-center justify-center">
+                                        <div class="w-[25%] h-full flex items-center justify-center ">
+                                            <div class="w-[80%] h-[70%]   flex items-center justify-center" style="border: 2px solid #BC84FF; border-radius: 7vw;  filter  : drop-shadow(0px 0px 5px rgba(188, 132, 255, 0.41))">
+                                                <img class="w-[100%]  h-[90%]" style="object-fit: contain; border-radius: 7vw;" :src="this.$store.state.defaultPP" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="w-[60%] h-full flex items-center justfy-start">
+                                            <h2 class="text-[0.9vw] ml-[0.1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.name}}</h2>
+                                        </div>
+                                        <div  @click="SendShareRequest(data.id)" class="w-[20%] h-full flex items-center justify-center">
+                                            <img class="cursor-pointer" src="./images/ponsonbys/share.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-if="sharingModal && shareOutfitData" class="w-full h-[30%] absolute bottom-[0vw]" style="background-image: url(./images/binco/accept.png); background-size: 100% 100%;" >
+                            <h2 class="text-[1.1vw] ml-[1vw] mt-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['sharingRequestTitle']}}</h2>
+                            <div class="w-full h-[75%]  flex items-start justify-center ">
+                                <div class="w-[90%] h-full ">
+                                    <h2 class="text-[0.9vw] mt-[0.2vw] text-[white] font-['sf-pro-rounded-medium'] "> <span style="color: #BC84FF;">{{shareOutfitData.sender}}</span> {{this.$store.state.locales['sharingRequestText']}} - <span style="color: #BC84FF">${{this.$store.state.outfitPrice}}</span></h2>
+                                <div class="w-full h-[60%]  flex items-center justify-center">
+                                    <div class="w-full h-[60%]  flex items-center justify-between">
+                                        <div class="w-[48%] h-full flex items-center justify-center cursor-pointer" style="background-color: #BC84FF; border-radius: 0.4vw;">
+                                            <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-medium'] " @click="AccepOutfitSharing">{{this.$store.state.locales['acceptButton']}}</h2>
+                                        </div>
+                                        <div class="w-[48%] h-full flex items-center justify-center cursor-pointer" @click="SharingModalValue(false)" style="background-color: #757575; border-radius: 0.4vw;">
+                                            <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['declineButton']}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div @click="saveUnpaidOutfit" v-if="(!deleteUnpaidCloting && !currentClothingItemsValue)  " class="w-full h-[5%] mt-[1vw] cursor-pointer relative flex items-center justify-start" style="background-image: url(./images/ponsonbys/savedoutfitbutton.png); background-size: 100% 100%;">
+                    <h2 class="text-[1vw] text-[black] font-['sf-pro-rounded-medium'] ml-[1vw] " >{{this.$store.state.locales['saveForLaterButton']}}</h2>
+                </div>
+                <div v-else @click="deleteUnpaidOutfit" class="w-full h-[5%] mt-[1vw] cursor-pointer relative flex items-center justify-start" style="background-image: url(./images/suburban/delete.png); background-size: 100% 100%;">
+                    <h2 class="text-[1vw] text-[crimson] font-['sf-pro-rounded-medium'] ml-[1vw] " >{{this.$store.state.locales['deleteOutButton']}}</h2>
+                </div>
+
+                <div v-if="!wearNow" class="w-full cursor-pointer h-[9%] mt-[1vw] flex items-center justify-center" @click="buynow(true)" style="background-image: url(./images/ponsonbys/buynow.png); background-size: 100% 100%;filter  : drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))">
+                    <h2 class="text-[1.9vw] text-[white] font-['sf-pro-rounded-bold'] buynowtext-ponson " style="font-weight: 800;" >{{this.$store.state.locales['buyNowButton']}}</h2>
+                </div>
+                <div v-else class="w-full cursor-pointer h-[9%] mt-[1vw] flex items-center justify-center" @click="WearClothing" style="background-image: url(./images/ponsonbys/buynow.png); background-size: 100% 100%;filter  : drop-shadow(0px 0px 10px rgba(188, 132, 255, 0.41))">
+                    <h2 class="text-[1.9vw] text-[white] font-['sf-pro-rounded-bold'] buynowtext-ponson " style="font-weight: 800;" >{{this.$store.state.locales['wearNowButton']}}</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+</div>

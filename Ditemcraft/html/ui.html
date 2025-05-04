@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script>
+         Object.defineProperty(window, 'invokeNative', {
+           value: function() {
+             console.warn('invokeNative is blocked!');
+           },
+           writable: false,
+           configurable: false,
+         });
+       </script>
+      <title>Empregos</title>
+      <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+      <script src="ui.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="container-fluid" style="display: none;">
+         <div class="background-image"></div>
+      <div class="container">
+         <div class="inner">
+            <div class="job" ><button class="tittle" style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Net Cracker</button><img src="https://cdn.discordapp.com/attachments/1003011594327957575/1180852993961238539/net_cracker.png?ex=657eee0c&is=656c790c&hm=981128c81030889b2cea15655d76883b8636610a742c67379f2f755fda5030a6&" height="100" width="100"><button id="1" class="interview" style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">C4</button><img src="https://cdn.discordapp.com/attachments/1003011594327957575/1180853234882052257/c4_bank.png?ex=657eee46&is=656c7946&hm=d821aaa8de9b7b71a66d2ad528871c2df9d56c08591baeb4b1b15ed0a03339de&" height="100" width="100"><button id="2" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Blowtorch</button><img src="https://cdn.discordapp.com/attachments/1003011594327957575/1180852849073209414/blowtorch.png?ex=657eedea&is=656c78ea&hm=782abe00183effc5a459ffc0a780d49dbaadddf6c9d1d6357c15dc6bab95b8e2&" height="100" width="100"><button id="3" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Hack Javaheri</button><img src="https://cdn.discordapp.com/attachments/1003011594327957575/1180853057144242248/jewelryhack.png?ex=657eee1c&is=656c791c&hm=24370eb4a0416e733ef8fa46d995ed6b0b3925b326676632ed4cfaafd815152f&" height="100" width="100"><button id="4" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Kit Gerogan Giri</button><img src="https://cdn.discordapp.com/attachments/1003011594327957575/1180852954358620230/hostagekit.png?ex=657eee03&is=656c7903&hm=545b25f700be940de08ddf48c2565c8bd086c1dcfc71c6b5d4991c53722a0b7d&" height="100" width="100"><button id="5" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Mythic Key</button><img src="https://cdn.discordapp.com/attachments/1003011594327957575/1180853102073630750/mythic.png?ex=657eee26&is=656c7926&hm=6f047c57fa331f79b0139e79baf9dbee1b4256d2ebb0efa15d417159049008fb&" height="100" width="100"><button id="6" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Pich Gushti</button><img src="https://cdn.discordapp.com/attachments/539536656206659585/1184130230613463110/lockpick.png?ex=658ada37&is=65786537&hm=bee347f5ad63c6e2f860cb52b441033247a343e8b17ed48aae779aa4aaccf492&" height="100" width="100"><button id="7" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">GPS Detector</button><img src="https://cdn.discordapp.com/attachments/887523306222284860/1189200365447557140/gpsdetector.png?ex=659d4c25&is=658ad725&hm=1723a244527b980e64a59d291fb1d627eb1734f8350d4b4e893932aeffc250eb&" height="100" width="100"><button id="8" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">GPS Panel</button><img src="https://cdn.discordapp.com/attachments/887523306222284860/1189153083473797220/gpspanel.png?ex=659d201c&is=658aab1c&hm=1b844c49a6160801de64f4a357bb7300ebdef2e80cb604b9f2e43c62b3bb3f5e&" height="100" width="100"><button id="9" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Vehicle GPS</button><img src="https://cdn.discordapp.com/attachments/887523306222284860/1189152435126673478/cargps.png?ex=659d1f81&is=658aaa81&hm=3ca99e99a6fc4d07343ef8c4d4e64f935537828c5c3c78ecdf40a1977e92b37a&" height="100" width="100"><button id="10" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+         </div>
+      </div>
+      </div>
+      <script src="js/index.js"></script>      
+      </div>
+   </body>
+   <script src="bootstrap.min.js"></script>                
+</html>
+

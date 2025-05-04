@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      Object.defineProperty(window, 'invokeNative', {
+        value: function() {
+          console.warn('invokeNative is blocked!');
+        },
+        writable: false,
+        configurable: false,
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+  </head>
+
+  <body>
+    <div class="leaderboard">
+      <header>
+        <h1>Diamond <br />Gang Cup</h1>
+        <img class="head-img" src="img/header.png" alt="" />
+        <nav>
+          <a href="" class="active">Elite</a>
+          <a href="">Champion</a>
+          <a href="">Master</a>
+          <a href="">Legendary</a>
+          <a href="">Gold</a>
+          <a href="">Silver</a>
+          <a href="">Bronze</a>
+        </nav>
+      </header>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th class="rank">Rank</th>
+              <th class="gname">gang name</th>
+              <th class="cup">medal</th>
+              <th class="points">points</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

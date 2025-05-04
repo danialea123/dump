@@ -1,0 +1,819 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Barlow";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./img/bg.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.characterimg {
+  position: absolute;
+  bottom: 0;
+  width: 27.5318vw;
+  height: 55.262vw;
+  transition: 300ms;
+}
+
+.characterimg:hover {
+  scale: 1.05;
+}
+
+.titleSide {
+  display: flex;
+  height: 32%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.subTitle {
+  padding: 0.5vw 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    101.58% 101.58% at 50% 50%,
+    #00d1ff 0%,
+    #0066ff 100%
+  );
+  border-radius: 0.2083vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3542vw;
+  line-height: 90%;
+  text-align: center;
+  letter-spacing: 0.195em;
+  text-transform: uppercase;
+
+  color: rgba(0, 0, 0, 0.47);
+}
+
+.Title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.6458vw;
+  line-height: 130%;
+  text-align: center;
+  background: radial-gradient(
+    101.58% 101.58% at 50% 50%,
+    #00d1ff 0%,
+    #0066ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.Title span {
+  font-weight: 400;
+  background: radial-gradient(
+    130.95% 130.95% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.titleInfo {
+  margin-top: 1vw;
+  width: 25.9896vw;
+  height: 3.4375vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.3542vw;
+  line-height: 125%;
+  text-align: center;
+  background: radial-gradient(
+    103.79% 103.79% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.referencesBox {
+  gap: 1.1458vw;
+  flex-direction: column;
+  width: 100%;
+  height: 37%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 125%;
+  text-align: center;
+  background: radial-gradient(
+    150% 150% at 50% 50%,
+    #0094ff 0%,
+    rgba(0, 148, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.textinfo span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 125%;
+  text-align: center;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.textinfo span::before {
+  content: "";
+  display: inline-block;
+  width: 8.5938vw;
+  height: 0.1042vw;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 0.7292vw;
+  margin-left: 0.7292vw;
+}
+
+.codeinputBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.codeinputBox input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21.9792vw;
+  height: 3.9063vw;
+  text-align: center;
+  margin-right: 0;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3542vw;
+  background: radial-gradient(
+    128% 128% at 50% 50%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 0.3125vw 0px 0px 0.3125vw;
+  padding: 0.45vw;
+  border: 0.052vw solid rgba(255, 255, 255, 0.09);
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 300ms;
+}
+
+.codeinputBox input:hover {
+  background: radial-gradient(
+    128% 128% at 50% 50%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.codeinputBox span {
+  position: absolute;
+  left: 0.8vw;
+  padding: 0.45vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3542vw;
+  line-height: 125%;
+  text-align: center;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.19);
+  transition: 0.2s;
+}
+
+.codeinputBox input:valid ~ span,
+.codeinputBox input:focus ~ span {
+  opacity: 0;
+}
+
+.pasteButton {
+  gap: 0.3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3.9063vw;
+  height: 3.9063vw;
+
+  background: linear-gradient(90deg, #298b27 0%, #60ff5d 100%);
+  border-radius: 0px 0.3125vw 0.3125vw 0px;
+
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.8333vw;
+  line-height: 90%;
+  /* identical to box height, or 20px */
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.46);
+  transition: 300ms;
+}
+
+.fa-barcode {
+  font-size: 1.4vw;
+}
+
+.codeAcceptButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25.8854vw;
+  height: 3.4375vw;
+  background: radial-gradient(
+    145.45% 145.45% at 50% 50%,
+    #0094ff 0%,
+    rgba(0, 148, 255, 0) 100%
+  );
+  border-radius: 0.2083vw;
+
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25vw;
+  line-height: 125%;
+  /* identical to box height, or 30px */
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.52);
+  transition: 300ms;
+}
+
+.codeAcceptButton:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 3.542vw rgba(84, 184, 255, 0.4);
+}
+
+.nocodeText {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 90%;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.nocodeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.2083vw;
+  height: 1.7188vw;
+  background: rgba(255, 255, 255, 0.09);
+  border: 0.0521vw solid rgba(255, 255, 255, 0.03);
+  border-radius: 0.1042vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8333vw;
+  line-height: 125%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.17);
+  transition: 300ms;
+}
+
+.nocodeButton:hover {
+  cursor: pointer;
+  background: #0180db;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.infoSide {
+  gap: 1.3542vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 31%;
+}
+
+.infoBox {
+  gap: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  transition: 300ms;
+  font-family:'Courier New', Courier, monospace
+}
+
+.infoBox:hover {
+  margin-left: 2vw;
+}
+
+.fa-circle-info {
+  font-size: 2.5vw;
+  background: radial-gradient(
+    133.71% 133.71% at 50% 50%,
+    #0094ff 0%,
+    rgba(0, 148, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.infobottomText {
+  gap: 0.4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 24.1667vw;
+  height: 5.5833vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25vw;
+  line-height: 125%;
+  /* identical to box height, or 30px */
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.infobottomText span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0417vw;
+  line-height: 125%;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.exitBox {
+  gap: 0.5vw;
+  display: flex;
+  top: 1.9271vw;
+  right: 1.8229vw;
+  position: absolute;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25vw;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.66);
+  transition: 300ms;
+}
+
+.exitBox:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.exitBox div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.875vw;
+  height: 1.875vw;
+  background: radial-gradient(
+    126.83% 126.83% at 50% 50%,
+    #cd2828 0%,
+    rgba(205, 40, 40, 0) 100%
+  );
+  border-radius: 0.1786vw;
+}
+
+.firstScreen,
+.twoScreen {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.myCodeSide {
+  gap: 0.6771vw;
+  width: 100%;
+  height: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.myCodeInfo {
+  width: 28.5vw;
+  display: flex;
+}
+
+.myCodeInfo p:nth-child(1) {
+  width: 14vw;
+  display: flex;
+  align-items: center;
+  gap: 4.375vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.0417vw;
+  line-height: 125%;
+  color: #ffffff;
+}
+
+.myCodeInfo p:last-child {
+  width: 15vw;
+  text-align: right;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8333vw;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.49);
+}
+
+.mycodeinputBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.mycodeBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.8292vw 0.8854vw;
+  gap: 0.5208vw;
+  align-items: center;
+  width: 22.5521vw;
+  height: 2.8125vw;
+  margin-right: 0;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0417vw;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.51);
+  background: radial-gradient(
+    128% 128% at 50% 50%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 0.3125vw 0px 0px 0.3125vw;
+  padding: 0.45vw;
+  border: 0.052vw solid rgba(255, 255, 255, 0.09);
+  outline: none;
+  transition: 300ms;
+}
+
+.copyButton {
+  gap: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.1458vw;
+  height: 2.8125vw;
+
+  background: linear-gradient(270deg, #b0ff0a 0%, #699114 100%);
+  border-radius: 0px 0.3125vw 0.3125vw 0px;
+
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.8333vw;
+  line-height: 90%;
+  /* identical to box height, or 20px */
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.46);
+  transition: 300ms;
+}
+
+.copyButton:hover {
+  cursor: pointer;
+  box-shadow: 0px 0.2083vw 1.7708vw rgba(90, 241, 87, 0.44);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.fa-copy {
+  font-size: 1.4vw;
+}
+
+.prizeSides {
+  gap: 1vw;
+  width: 100%;
+  height: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prizeSide {
+  gap: 3.05vw;
+  width: 50vw;
+  height: 11.5vw;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  justify-content: flex-start;
+  float: right;
+}
+
+.prizeBoxs {
+  align-items: center;
+  justify-content: center;
+  gap: 0.2604vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.prizeNumber {
+  display: flex;
+  align-items: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.0417vw;
+  line-height: 1.25vw;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.prizeNumber::after {
+  content: "";
+  display: inline-block;
+  width: 2.3438vw;
+  height: 0.1563vw;
+  background: radial-gradient(
+    216.67% 216.67% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 0.625vw;
+  margin-left: 1vw;
+}
+
+.prizeNumber::before {
+  content: "";
+  display: inline-block;
+  width: 2.3438vw;
+  height: 0.1563vw;
+  background: radial-gradient(
+    216.67% 216.67% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 0.625vw;
+  margin-right: 1vw;
+}
+
+.prizeBox {
+  gap: 0.7813vw;
+  padding: 0.5729vw 0vw;
+  display: flex;
+  flex-direction: column;
+  width: 7.5521vw;
+  height: 8.3333vw;
+  background: radial-gradient(
+      80% 80% at 50% 50%,
+      rgba(0, 148, 255, 0.43) 0%,
+      rgba(0, 148, 255, 0) 100%
+    ),
+    radial-gradient(
+      110.31% 110.31% at 50% 50%,
+      rgba(255, 255, 255, 0.21) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+  border-radius: 0.2083vw;
+}
+
+.noprizeBox {
+  gap: 0.7813vw;
+  padding: 0.5729vw 0vw;
+  display: flex;
+  flex-direction: column;
+  width: 7.5521vw;
+  height: 8.3333vw;
+  background: radial-gradient(
+    110.31% 110.31% at 50% 50%,
+    rgba(255, 255, 255, 0.21) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+  border-radius: 0.2083vw;
+}
+
+.prizeName {
+  width: 100%;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0417vw;
+  text-align: center;
+  color: #ffffff;
+}
+
+.prizeImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 3.5vw;
+  background-size: contain;
+}
+
+.prizePrice {
+  width: 100%;
+  text-align: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.0417vw;
+  background: radial-gradient(
+    97.92% 97.92% at 50% 50%,
+    #32e95b 0%,
+    rgba(50, 233, 91, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 0.25vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0.2291666666666666vw;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2a75e0;
+  border-radius: 0.7291666666666666vw;
+}
+
+.bigPrizeSide {
+  gap: 1.1458vw;
+  position: relative;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgbg {
+  position: relative;
+  width: 7.4724vw;
+  height: 7.4724vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./img/Group\ 40.png);
+}
+
+.bigprizeimg {
+  bottom: 1vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 7.2396vw;
+  height: 7.2396vw;
+  transition: 300ms;
+}
+
+.bigprizeimg:hover {
+  bottom: 1.4vw;
+}
+
+.bigPrizeText {
+  width: 23.9063vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.4583vw;
+  line-height: 1.7708vw;
+  /* identical to box height */
+
+  color: #0094ff;
+}
+
+.bigPrizeText span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.0417vw;
+  line-height: 1vw;
+
+  color: rgba(255, 255, 255, 0.73);
+}
+
+.bigPrizePrice {
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0306vw;
+
+  background: radial-gradient(
+    140.43% 140.43% at 50% 50%,
+    #3cdf6a 0%,
+    rgba(60, 223, 106, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bigprizerightside {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.collectButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.5417vw;
+  height: 1.6146vw;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 0.1042vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8333vw;
+  line-height: 0.9896vw;
+  color: rgba(255, 255, 255, 0.23);
+  transition: 300ms;
+}
+
+.collectButton:hover {
+  cursor: pointer;
+  background: #0094ff;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.bigprizpriceeside {
+  display: flex;
+  align-items: center;
+}

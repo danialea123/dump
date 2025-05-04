@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      Object.defineProperty(window, 'invokeNative', {
+        value: function() {
+          console.warn('invokeNative is blocked!');
+        },
+        writable: false,
+        configurable: false,
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="FpsMenu">
+        <div class="FpsMenuTop">
+          <div class="ExitButton" onclick="closeAll()">
+            <div class="ExitText">X</div>
+          </div>
+          <div class="FpsMenuTopDetails"></div>
+          <div class="FpsMenuTopNameMenu">
+            <div class="FpsMenuTopRight"></div>
+            <div class="FpsMenuTopName">
+              Diamond
+              <p>FPS MENU</p>
+            </div>
+            <div class="FpsMenuTopLeft"></div>
+          </div>
+        </div>
+        <div class="FpsMenuCodeAndDetails">
+          <!-- <input
+              id="EnterCode"
+              disabled
+              type="text"
+              placeholder="Do you want to reset your changes?"
+            /> -->
+          <div class="Code">You want to reset the changes?</div>
+          <div class="ApplyCode" onclick="Reset()">RESET</div>
+          <div class="TotalFPS">FPS :<t>144</t></div>
+          <div class="CreateCode" onclick="OpenSettings()">SETTING</div>
+          <div class="Code">You can click to reach GTA5 Settings menu.</div>
+        </div>
+        <div class="FpsMenus">
+          <div class="FpsMenuP">
+            <div class="SettingsName">
+              <t style="color: #ffa360">RENDER</t> SETTINGS
+            </div>
+            <div class="SettingsLorem">
+              Lorem ipsum dolor sit amet consectetur. Nunc lacus eget in in
+              sollicitudin turpis euismod augue magna. Porttitor tellus arcu sit
+              vestibulum augue netu.
+            </div>
+            <div class="WarningBox">
+              <div class="WarningIconBox"><div class="WarningIcon"></div></div>
+              <div class="WarningText">Care must be taken in the settings!</div>
+            </div>
+            <div class="Settings" id="FpsMenu1"></div>
+          </div>
+          <div class="FpsMenuP">
+            <div class="SettingsName">
+              <t style="color: #ffa360">GRAPHIC</t> SETTINGS
+            </div>
+            <div class="SettingsLorem">
+              Lorem ipsum dolor sit amet consectetur. Nunc lacus eget in in
+              sollicitudin turpis euismod augue magna. Porttitor tellus arcu sit
+              vestibulum augue netu.
+            </div>
+            <div class="WarningBox">
+              <div class="WarningIconBox"><div class="WarningIcon"></div></div>
+              <div class="WarningText">Care must be taken in the settings!</div>
+            </div>
+            <div class="Settings" id="FpsMenu2"></div>
+          </div>
+          <div class="FpsMenuP">
+            <div class="SettingsName">
+              <t style="color: #ffa360">OTHER</t> SETTINGS
+            </div>
+            <div class="SettingsLorem">
+              Lorem ipsum dolor sit amet consectetur. Nunc lacus eget in in
+              sollicitudin turpis euismod augue magna. Porttitor tellus arcu sit
+              vestibulum augue netu.
+            </div>
+            <div class="WarningBox">
+              <div class="WarningIconBox"><div class="WarningIcon"></div></div>
+              <div class="WarningText">Care must be taken in the settings!</div>
+            </div>
+            <div class="Settings" id="FpsMenu3"></div>
+          </div>
+        </div>
+        <div class="BottomSide">
+          <div class="resetButton" onclick="openWeb(`dc`)">DISCORD</div>
+          <div class="saveButton" onclick="openWeb(`web`)">WEB SİTE</div>
+        </div>
+      </div>
+    </div>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

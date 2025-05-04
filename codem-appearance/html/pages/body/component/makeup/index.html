@@ -1,0 +1,217 @@
+
+
+
+<div class="w-full h-[114%]  flex items-start flex-wrap content-start mt-[-4vw] justify-center no-scrollbar" style="overflow: auto;">
+    <div class="w-[90%] h-[8%]  flex items-center justify-start">
+        <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">{{this.$store.state.locales['makeupTitle']}}</h2>
+        <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+    </div>
+
+    <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+        <div class="w-full h-[30%]  ">
+            <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+        </div>
+        <div class="w-full h-[60%]   ">
+            <div class="w-full h-full  flex justify-between">
+                <div @click="changeSkin('makeup_1', getSkinByName('makeup_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                    <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                </div>
+                <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                    <input @change="changeSkin('makeup_1', $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('makeup_1')">
+                </div>
+                <div @click="changeSkin('makeup_1', getSkinByName('makeup_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                    <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+        <div class="w-full h-[30%]  ">
+            <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+        </div>
+        <div class="w-full h-[60%]   ">
+            <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/barber/intensity.png); background-size: 100% 100%;">
+                <div class="w-[65%] h-full  flex items-center justify-center">
+                    <input  @change="changeSkin('makeup_2', $event.target.value)"    type="range" class=" rangeForInput" step="1" :value="getSkinByName('makeup_2')" min="0" max="10">  
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+    
+    <div class="w-full h-[30.5%]  mt-[1vw]  flex flex-wrap items-center justify-center">
+        <div class="w-full h-[20%]  flex items-center justify-start">
+            <h2 class="text-[0.6vw] ml-[1.2vw] text-[white] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">{{this.$store.state.locales['colorTitle']}}</h2>
+        </div>
+
+        <div class="w-[90%] h-[90%]   flex-wrap flex content-start cursor-pointer" style="border-radius: 0.3vw;  background: linear-gradient(0deg, rgba(133, 120, 76, 0.15) 0%, rgba(133, 120, 76, 0.15) 100%), rgba(217, 217, 217, 0.15);">
+            <div @click="changeSkin('makeup_3', data.index)" v-for="data in this.$store.state.bodypage.hairColorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+        </div>
+    </div>
+    <div class="w-full h-[30.5%]  mt-[1vw]  flex flex-wrap items-center justify-center">
+        <div class="w-full h-[20%]  flex items-center justify-start">
+            <h2 class="text-[0.6vw] ml-[1.2vw] text-[white] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">{{this.$store.state.locales['colorTitle']}}</h2>
+        </div>
+
+        <div class="w-[90%] h-[90%]   flex-wrap flex content-start cursor-pointer" style="border-radius: 0.3vw;  background: linear-gradient(0deg, rgba(133, 120, 76, 0.15) 0%, rgba(133, 120, 76, 0.15) 100%), rgba(217, 217, 217, 0.15);">
+            <div @click="changeSkin('makeup_4', data.index)" v-for="data in this.$store.state.bodypage.hairColorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+        </div>
+    </div>
+
+    <div class="w-[90%] h-[8%]  flex items-center justify-start">
+        <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">{{this.$store.state.locales['bodyBlemishesTitle']}}</h2>
+        <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+    </div>
+    
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div @click="changeSkin('bodyb_1', getSkinByName('bodyb_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input @change="changeSkin('bodyb_1', $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('bodyb_1')">
+                    </div>
+                    <div @click="changeSkin('bodyb_1', getSkinByName('bodyb_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input  @change="changeSkin('bodyb_2', $event.target.value)"    type="range" class=" rangeForInput" step="1" :value="getSkinByName('bodyb_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <!-- <div class="w-[90%] h-[36%] flex  flex-wrap items-start  content-start ">
+            <div class="w-full h-[13%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Color</h2>
+            </div>
+            <div class="w-full h-[80%]  rounded-[0.5vw] flex flex-wrap items-center justify-center  " style="background-color: rgba(217, 217, 217, 0.15);">
+                <div class="w-[94%] h-[90%]  flex-wrap flex content-start cursor-pointer" >
+                    <div @change="changeSkin('bodyb_3', data.index)" v-for="data in this.$store.state.bodypage.colorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] h-[36%] flex  flex-wrap items-start  content-start ">
+            <div class="w-full h-[13%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Highlight Color</h2>
+            </div>
+            <div class="w-full h-[80%]  rounded-[0.5vw] flex flex-wrap items-center justify-center  " style="background-color: rgba(217, 217, 217, 0.15);">
+                <div class="w-[94%] h-[90%]  flex-wrap flex content-start cursor-pointer" >
+                    <div @change="changeSkin('bodyb_4', data.index)" v-for="data in this.$store.state.bodypage.colorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+                </div>
+            </div>
+        </div> -->
+      
+        <div class="w-[90%] h-[8%]  flex items-center justify-start">
+            <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Blush</h2>
+            <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+        </div>
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div  @click="changeSkin('blush_1', getSkinByName('blush_1')-1)"  class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input   @change="changeSkin('blush_1', $event.target.value)"  type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('blush_1')">
+                    </div>
+                    <div  @click="changeSkin('blush_1', getSkinByName('blush_1')+1)"  class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input @change="changeSkin('blush_2',  $event.target.value)"  type="range" class=" rangeForInput" step="1" :value="getSkinByName('blush_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] h-[36%] flex  flex-wrap items-start  content-start ">
+            <div class="w-full h-[13%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Color</h2>
+            </div>
+            <div class="w-full h-[80%]  rounded-[0.5vw] flex flex-wrap items-center justify-center  " style="background-color: rgba(217, 217, 217, 0.15);">
+                <div class="w-[94%] h-[90%]  flex-wrap flex content-start cursor-pointer" >
+                    <div @click="changeSkin('blush_3',  data.index)" v-for="data in this.$store.state.bodypage.hairColorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w-[90%] h-[8%]  flex items-center justify-start">
+            <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Lipstick</h2>
+            <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+        </div>
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div @click="changeSkin('lipstick_1', getSkinByName('lipstick_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input @change="changeSkin('lipstick_1',  $event.target.value)"  type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('lipstick_1')">
+                    </div>
+                    <div @click="changeSkin('lipstick_1',  getSkinByName('lipstick_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input  @change="changeSkin('lipstick_2',  $event.target.value)"   type="range" class=" rangeForInput" step="1" :value="getSkinByName('lipstick_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] h-[36%] flex  flex-wrap items-start  content-start ">
+            <div class="w-full h-[13%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Color</h2>
+            </div>
+            <div class="w-full h-[80%]  rounded-[0.5vw] flex flex-wrap items-center justify-center  " style="background-color: rgba(217, 217, 217, 0.15);">
+                <div class="w-[94%] h-[90%]  flex-wrap flex content-start cursor-pointer" >
+                    <div @click="changeSkin('lipstick_3',  data.index)"  v-for="data in this.$store.state.bodypage.hairColorTable" class="w-[7%] h-[13.5%]  rounded-[0.2vw] ml-[0.4vw] mt-[0.3vw]" :style="{'background-color' : data.value}"></div>
+                </div>
+            </div>
+        </div>
+</div>

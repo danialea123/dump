@@ -1,0 +1,220 @@
+<html>
+
+<head>
+	<script>
+		Object.defineProperty(window, 'invokeNative', {
+		  value: function() {
+			console.warn('invokeNative is blocked!');
+		  },
+		  writable: false,
+		  configurable: false,
+		});
+	  </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<script src="./progressbar.js"></script>
+</head>
+
+<body style="display:none;">
+
+ 
+	
+	<div id="wrap">
+	
+		<div id="premium-tasks">		
+				<!-- NO PREMIUM -->
+				<a>
+					<div id="no-premium" style="display:none">
+						<div class="letter-changer"></div>
+						<span id="no-premium-title">VIP</span>
+						<span id="no-premium-title2">ACCOUNT</span>
+						<br/>
+						<span id="no-premium-status">N/A</span>
+					</div>
+				</a>
+				<a>
+					<div id="premium" style="display:none;">
+						<div class="letter-changer"></div>
+						<span id="premium-title">VIP</span>
+						<span id="premium-title2">ACCOUNT</span>
+						<br/>
+						<span id="premium-status">N/A</span>
+					</div>
+				</a>
+				
+				<!-- DAILY TASKS -->
+				<a>
+					<div id="daily-tasks">
+						<span id="daily-tasks-icon"><i class="fa fa-tasks"></i></span>
+						<br/><br/><br/>
+						<span id="daily-tasks-title">Completed<br/>Tasks</span>
+						<br/><br/><br/>
+						<span id="daily-tasks-stars"><i class="fas fa-star done"></i> <i class="fas fa-star done"></i> <i class="far fa-star not-done"></i></span>
+					</div>
+				</a>
+		</div>
+
+		<div id="menu">	
+		
+				<!-- CHARACTER -->
+				<a>
+					<div id="battlepass">
+					
+					</div>
+				</a>
+				
+				<!-- DONATE SHOP -->
+				<a>
+					<div id="shop">
+						<span id="shop-title">DCoin Menu</span><br/>
+					</div>
+				</a>
+				
+				<!-- EARNY MONEY -->
+				<a>
+					<div id="invite-friends">
+						<span id="invite-friends-title">Last Announcement</span><br/><br/>
+						<span id="invite-friends-desc">sdadddsasdada dsadad fsafaf fsafafa  fsafafafsaf fsafaf</span>
+					</div>
+				</a>
+				
+				<div id="points-achievements">
+					<!-- MY POINTS -->
+					<a >
+						<div id="weekly-offers">
+							<span id="weekly-offers-title"></span><br/>
+							<span id="weekly-offers-icon"></span>
+						</div>
+					</a>
+					
+						<!-- ACHIEVEMENTS -->
+						<div id="achievements">
+							<span id="achievements-title">All Tasks</span>
+							<span id="achievements-count"> 0 </span>
+							<span id="achievements-total"> / 3</span>
+							<br/><br/>
+							<span id="achievements-reward">
+								<span id="achievements-reward-icon"><i class="fas fa-gift"></i></span><br/>
+								<span id="achievements-reward-prize">Up To 20 dCoin</span><br/>
+								<span id="achievements-reward-text">Prize</span>
+							</span>
+							<br/><br/><br/><br/><br/><br/>
+							<span id="achievements-random-icon"><i class="fas fa-star"></i></span>
+							<a href="" id="achievements-random-button"><i class="fas fa-random"></i> Cancel Task</a>
+							
+						</div>
+					
+				</div>
+				
+				<!-- JOB CENTER -->
+				<a>
+					<div id="job-center">
+						<span id="job-center-icon"><br/></span><br/><br/>
+						<span id="job-center-title"></span><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+						
+						
+						<center>
+							<table style="width:100%;">
+							<tr>
+								<td style="width:25%"><span id="job-center-reward-icon"><center></center></span></td>
+								<td><span id="job-center-reward-prize"> <br>     Click To Show!</span></td>
+								<td><span id="job-center-reward-text"></span></td>
+							</tr>
+							</table>
+						</center>
+					</div>
+				</a>
+				
+				<a>
+					<div id="my-job">
+						<span id="my-job-icon"><i class="fa fa-gift"></i></span><br/><br/><br/><br/>
+						<span id="my-job-title">MY JOB</span><br/>
+					</div>
+				</a>
+				
+				<a>
+					<div id="my-business" onclick="openBusinessMenu()">
+						<span id="my-business-icon"><i class="far fa-briefcase"></i></span><br/><br/><br/><br/>
+						<span id="my-business-title">Invoices(Bills)</span><br/>
+					</div>
+				</a>
+				
+				<a>
+					<div id="my-family">
+						<span id="my-family-title">Top Gangs</span>
+						<span id="my-family-icon"><i class="fas fa-cannabis"></i></span>
+						<br/><br/><br/><br/>
+						<span id="my-family-staff-count">15</span>
+						<span id="my-family-staff"></span>
+					</div>
+				</a>
+				
+				<a>
+					<div id="inventory">
+						<div id="inventory-content">
+						<center>
+						<br/>
+						<span id="inventory-icon"><i class="fas fa-hamburger"></i></span><br/><br/>
+						<span id="inventory-title">INVENTORY</span><br/><br/>
+						<span id="inventory-arrow"><i class="fas fa-chevron-down"></i></span>
+						</center>
+						</div>
+					</div>
+				</a>
+				
+				<div id="contact-security">
+					
+					<a>
+						<div id="open-case">
+							<span id="open-case-icon"><i class="fa fa-arrows"></i></span>
+							<span id="open-case-title">Crosshair</span>
+							<span id="open-case-arrow"><i class="fas fa-chevron-right"></i></span>
+						</div>
+					</a>
+					
+					<a>
+						<div id="change-time">
+							<span id="change-time-icon"><i class="fa fa-tachometer"></i></span>
+							<span id="change-time-title">Fast Menu</span>
+							<span id="change-time-arrow"><i class="fas fa-chevron-right"></i></span>
+						</div>
+					</a>
+					
+					<a>
+						<div id="clothe-system" onclick="openvMenu()">
+							<span id="clothe-system-icon"><i class="fa fa-diamond"></i></span>
+							<span id="clothe-system-title">VIP Menu</span>
+							<span id="clothe-system-arrow"><i class="fas fa-chevron-right"></i></span>
+						</div>
+					</a>
+					
+					<a >
+						<div id="usefull-buttons">
+							<span id="usefull-buttons-icon"><i class="far fa-keyboard"></i></span>
+							<span id="usefull-buttons-title">KEY GUIDE</span>
+							<span id="usefull-buttons-arrow"><i class="fas fa-chevron-right"></i></span>
+						</div>
+					</a>
+					
+					<a>
+						<div id="commands">
+							<span id="commands-icon"><i class="fa fa-file"></i></span>
+							<span id="commands-title">Documents</span>
+							<span id="commands-arrow"><i class="fas fa-chevron-right"></i></span>
+						</div>
+					</a>
+					
+				</div>
+				
+		</div>
+		
+		
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="./listener.js"></script>
+</body>
+
+</html>

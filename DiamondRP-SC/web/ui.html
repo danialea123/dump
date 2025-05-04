@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <meta charset="UTF-8">
+    <title>DoseOfWeed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Mulish:wght@200&display=swap"
+        rel="stylesheet" />
+        
+</head>
+
+
+
+
+<body style="display: block;">
+    <div class="Scoreboard" id="Scoreboard" style="display: none;">
+         <span style="color:#08daff"> 
+        <div class="info"> <i class="fas fa-address-card Jobs"></i> <i class="fas fa-mask Robs"></i> <i
+            
+
+                class="fas fa-info-circle Home"></i> <i class="fas fa-book-open users"></i> <i class="diamondB"><img
+                    src="img/dblack.png"></i> </div>
+        <div class="HomePage" id="HomePage" style="display: block ;">
+    
+            <div class="PlayerSteam">
+                <i class="fab fa-steam"></i>
+                <span id="MySteam">DoseOfWeed</span>
+            </div>
+            <div class="PlayerHex">
+                <i class="fab fa-steam-square"></i>
+                <span id="MyHex">steam:110000146b622ac</span>
+                <button class="Copy" id="CopyHex"><i class="fas fa-clone"></i></button>
+            </div>
+            <div class="PlayerLeveL">
+                <i class="fas fa-hard-hat"></i>
+                <span id="Myjob2"> Miner Taze Kar</span>
+            </div>
+            <div class="PlayerId">
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <span id="MyLeveL"> Level 8 </span>
+            </div>
+   
+            <div class="Discord">
+                <i class="fab fa-discord"></i>
+                <span id="Discord"> discord.gg/diamond-rp</span>
+                <button class="Copy" id="CopyDiscord"><i class="fas fa-clone"></i></button>
+            </div>
+            <div class="Rules">
+                <i class="fas fa-balance-scale"></i>
+                <span id="Rules" style="position:absolute;left: 20%;">Rules</span>
+                <button class="Copy" id="CopyRules"><i class="fas fa-clone"></i></button>
+            </div>
+            <div class="DiamondRP"><img src="img/logo.png"></div>
+            <div class="ShowAllPlayer" id="ShowAllPlayer">
+                <p> ONLINE</p>
+                <span id='AllP'> 0</span>
+            </div>
+            <div class="SetTime">
+                <p id="clock"> 12:30</p>
+            </div>
+            <div class="Clock"> <i class="far fa-clock"></i></div>
+        </div>
+        <div class="JobsPage" id="JobsPage" style="display: none ;">
+            <div class="ShowInfoJob"><img src="img/police.png" id="setImageJob"> </div>
+            <div class="ShowTextInfo">
+                <p id="setJobName" style="position:absolute; left: 1%;">POLICE</p>
+                <p style="position:absolute; top: 30%;"> <i class="fas fa-user-alt"
+                        style="color: rgb(112, 252, 18) ;"></i> <i id="Online"> 5 </i> </p>
+                <p style="font-size: 15px ;position:absolute; top: 60% ;" id="Tozihat">The duty of the police is to
+                    ensure the security of the city</p>
+                <p style="font-size: 15px ;position:absolute; top: 90%;"> To join this job, visit <i>Discord</i></p>
+            </div>
+            <div class="joblist">
+                <img src="img/police.png" class="policeimg" id='police'>
+                <img src="img/FBI-1.png" class="FBI-1img" id='FBI-1'>
+                <img src="img/justice.png" class="justiceimg" id='justice'>
+                <img src="img/sheriff.png" class="sheriffimg" id='sheriff'>
+                <img src="img/ambulance.png" class="ambulanceimg" id='ambulance'>
+                <img src="img/taxi.png" class="taxiimg" id='taxi'>
+                <img src="img/mechanic.png" class="mecanoimg" id='mechanic'>
+                <img src="img/weazel.png" class="weazelimg" id='weazel'>
+                <img src="img/sf.png" class="force" id='force'>
+                <img src="img/benny.png" class="benny" id='benny'>
+            </div>
+          
+
+        </div>
+        <div class="RobsPage" id="RobsPage" style="display: none ;">
+            <div class="ShowInfoRob">
+                <video width="320" height="220" controls>
+                    <source id="vp" src="mp4/bobcat.mp4" type="video/mp4">
+                </video>
+                <img src="img/CargoActive.png">
+            </div>
+            <div class="ShowTextInfoRob">
+                <p id="setRobName" style="position:absolute; left: 1%;">BOBCAT</p>
+                <p style="position:absolute; top: 30%;"> <i class="fas fa-user-shield"
+                        style="color: rgb(255, 255, 255) ;"></i> <i id="PDMax"> 8 </i> </p>
+                <p style="position:absolute; top: 30%;left:20% ;"> <i class="fas fa-user-ninja"
+                        style="color: rgb(238, 18, 18) ;"></i> <i id="RobMax"> 7 </i> </p>
+                <p style="font-size: 15px ;position:absolute; top: 60% ;" id="TozihatRob">Teadad Robbery Hadeaghal 5
+                    nafar va Hadeaksar 7 nafar va Police 8 nafar Shamel 3 swat + 5 officer + Vahed Air , Robbery Ha
+                    Hatman dakhel Makan Asli Ke Ghav Sandogh Vojod Darad Bashand </p>
+
+                <p style="font-size: 15px ;position:absolute; top: 105%;"> Robbery Is <i
+                        style="color: rgb(150, 243, 11);" class="ColdDown" id="ColdDown">...</i></p>
+                <p id="jamal" style="display: none; font-size: 15px ;position:absolute; top: 120%">CoolDown Ends In: <i style="color: rgb(237, 165, 10)" id="RobDown"> 05:12:00 </i></p>
+            </div>
+            <div class="Roblist">
+                <img src="img/CargoActive.png" class="Cargo" id='Cargo'>
+                <img src="img/CBankActive.png" class="CBank" id='CBank'>
+                <img src="img/MythicActive.png" class="Mythic" id='Mythic'>
+                <img src="img/ShipmentActive.png" class="Shipment" id='Shipment'>
+                <img src="img/BobcatActive.png" class="Bobcat" id='Bobcat'>
+                <img src="img/LifeInsuranceActive.png" class="LifeInsurance" id='LifeInsurance'>
+                <img src="img/ShBankActive.png" class="ShBank" id='ShBank'>
+                <img src="img/JewelryActive.png" class="Jewelry" id='Jewelry'>
+                <img src="img/minijw.png" class="minijewelry" id='minijewelry'>
+                <img src="img/lib.png" class="liberty" id='liberty'>
+                <img src="img/MazeBankActive.png" class="MazeBank" id='MazeBank'>
+                <img src="img/Jewelry2Active.png" class="Jewelry2" id='Jewelry2'>
+                <img src="img/FleecaBankActive.png" class="FleecaBank" id='FleecaBank'>
+                <img src="img/Jewelry3Active.png" class="Jewelry3" id='Jewelry3'>
+                <img src="img/PursuitActive.png" class="Pursuit" id='Pursuit'>
+                <img src="img/ShopActive.png" class="Shop" id='Shop'>
+            </div>
+
+
+        </div>
+        <div class="usersPage" id="usersPage" style="display: none ;"> <!-- LearnPage-->
+
+            <div class="movlist">
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/housing.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/gangwar.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/trade.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/carsell.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/robbery.mp4"
+                        type="video/mp4">
+                </video>
+
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/gps.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/plant.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/wine.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/battlefield.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/target.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" id="vp" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/bobcat.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" height="240" id="vp" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/sky.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" height="240" id="vp" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/taxi.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" height="240" id="vp" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/boat.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/pursuit.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" id="vp" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/hunting.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" height="240" id="vp" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/chopshop.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vp" width="340" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/fishing2.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" id="vp" height="240" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/market.mp4"
+                        type="video/mp4">
+                </video>
+                <video width="340" height="240" id="vp" controls>
+                    <source
+                        src="https://media.diamondrp.ir/learn/delivery.mp4"
+                        type="video/mp4">
+                </video>
+
+            </div>
+
+
+
+        </div>
+        <div class="infoPage" id="infoPage" style="display: none ;">
+
+        </div>
+
+    </div>
+    <script src="js/script.js" type="text/javascript "></script>
+</body>
+
+
+</html>

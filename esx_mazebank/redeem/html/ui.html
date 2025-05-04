@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      Object.defineProperty(window, 'invokeNative', {
+        value: function() {
+          console.warn('invokeNative is blocked!');
+        },
+        writable: false,
+        configurable: false,
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <img class="characterimg" src="./img/character.png" />
+    <div class="firstScreen" style="display: none">
+      <div class="titleSide">
+        <div class="subTitle">Diamond RP</div>
+        <div class="Title">Redeem <span>SYSTEM</span></div>
+        <div class="titleInfo">
+          <strong>در صورتی که کد هدیه ای دارید جهت دریافت جایزه آن را وارد کنید</strong>
+        </div>
+      </div>
+      <div class="referencesBox">
+        <div class="textinfo">Redeem Code <span>Code</span></div>
+        <div class="codeinputBox">
+          <input type="text" id="code_input" required="required" />
+          <span>Code...</span>
+          <div class="pasteButton" onclick="paste()">
+            <i class="fa-solid fa-barcode"></i>
+          </div>
+        </div>
+        <div class="codeAcceptButton" onclick="accept()">ACCEPT</div>
+      </div>
+      <div class="infoSide">
+        <div class="infoBox">
+          <i class="fa-solid fa-circle-info"></i>
+          <div class="infobottomText">
+            Information 1<br />
+            <span>
+            <strong>کد ها به حروف کوچک و بزرگ حساس نیستند دقت کنید که به طور صحیح وارد کنید</strong> 
+            </span
+            >
+          </div>
+        </div>
+        <div class="infoBox">
+          <i class="fa-solid fa-circle-info"></i>
+          <div class="infobottomText">
+            Information 2<br />
+            <span>
+              <strong>کد های هدیه یکبار مصرف هستند</strong> 
+           </span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="twoScreen" style="display: none">
+      <div class="titleSide">
+        <div class="subTitle">DEBUXSCRIPT ROLEPLAY</div>
+        <div class="Title">REFERENCES <span>SYSTEM</span></div>
+        <div class="titleInfo">
+          Invite new people to our server with your own referral code and you
+          can win the reward
+        </div>
+      </div>
+      <div class="myCodeSide">
+        <div class="myCodeInfo">
+          <p>Your Reference code</p>
+          <p>Redeem this code and winn.</p>
+        </div>
+        <div class="mycodeinputBox">
+          <div class="mycodeBox">NO DATA LOADİNG</div>
+          <div class="copyButton" onclick="copy()">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+          </div>
+        </div>
+      </div>
+      <div class="prizeSides">
+        <div class="prizeSide"></div>
+      </div>
+      <div class="bigPrizeSide">
+        <div class="imgbg">
+          <div
+            class="bigprizeimg"
+            style="background-image: url(./img/money.png)"
+          ></div>
+        </div>
+        <div class="bigprizerightside">
+          <div class="bigPrizeText">
+            GREAT PRIZE<br /><span
+              >If you reach Max Reference code redemption, you will earn the
+              following total amount</span
+            >
+          </div>
+          <div class="bigprizpriceeside">
+            <div class="bigPrizePrice">$150.000</div>
+            <div class="collectButton" onclick="clollect()">Collect</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="exitBox" onclick="CloseMenu()">
+      Exit
+      <div>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+  </body>
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js.js"></script>
+</html>

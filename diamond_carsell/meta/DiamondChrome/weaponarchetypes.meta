@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>w_ar_assaultrifle_mag2diamondchrome</modelName>
+			<txdName>w_ar_assaultrifle_mag2diamondchrome</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_assaultrifle_mag1diamondchrome</modelName>
+			<txdName>w_ar_assaultrifle_mag1diamondchrome</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_assaultriflediamondchrome</modelName>
+			<txdName>w_ar_assaultriflediamondchrome</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

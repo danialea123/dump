@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@import url('https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css');
+
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(BebasNeueBold.ttf);
+}
+html {
+    overflow: hidden;
+    font-family: 'Tahoma', sans-serif;
+  }
+  
+  body{
+      display: none;
+      color: #a8a8aa00;
+	  
+  }
+
+.tablet {
+	width: 60%;
+	height: 50%;
+	margin: 0;
+	position: absolute;
+	user-select: none;
+	top: 50%;
+
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	background-color: #2d3436;
+	border: 15px solid #0f1114;
+	border-radius: 5%;
+}
+.exit button {
+	width: 4%;
+	height: 5%;
+	margin: 0;
+	position: absolute;
+	top: 5%;
+	left: 95%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	font-size: 15px;
+	font-weight: 300;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+	user-select: none;
+	background-color: #2d3436;
+	border: 1px solid #0f1114;
+	border-radius: 3%;
+}
+.exit :hover { 
+	background: #dfe6e9;
+	color: #2d3436;
+	user-select: none;
+
+}
+.start button { 
+	width: 20%;
+	height: 15%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	font-size: 30px;
+	font-weight: 300;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+	user-select: none;
+	background-color: #2d3436;
+	border: 3px solid #0f1114;
+	border-radius: 3%;
+}
+.start :hover { 
+	background: #dfe6e9;
+	color: #2d3436;
+	user-select: none;
+
+}
+.starttext h1 { 
+	width: 100%;
+	height: 10%;
+	margin: 0;
+	position: absolute;
+	top: 30%;
+	left: 75%;
+	user-select: none;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	font-size: 30px;
+	font-weight: 300;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+} 
+.starttext2 h1 { 
+	width: 100%;
+	height: 10%;
+	margin: 0;
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	font-size: 30px;
+	user-select: none;
+	font-weight: 300;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+} 
+.shipment { 
+	width: 30%;
+	height: 80%;
+	margin: 0;
+	position: absolute;
+	user-select: none;
+	top: 50%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	background-color: #181818d5;
+	border: 3px solid #222224;
+	border-radius: 5%;
+}
+.shipmentotherinfo h1 { 
+	margin-left: 20%;
+	color: rgba(3, 3, 3, 0.753);
+	user-select: none;
+	font-weight: 500;
+	font-size: 30px;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #ffffff;
+}
+.shipmentotherinfo {
+	width: 100%;
+	height: 70%;
+	color: rgba(3, 3, 3, 0.753);
+	user-select: none;
+	font-weight: 100;
+	font-size: 20px;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+
+}
+.shipmentphoto { 
+	width: 100%;
+	height: 30%;
+	background-color: #158bac;
+	background-image: url(https://cdn.discordapp.com/attachments/976749545331494932/989494943624101928/20220623142023_1.jpg)
+}
+.shipmentotherinfobuy button { 
+	width: 20%;
+	height: 10%;
+	margin: 0;
+	position: absolute;
+	top: 95%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999; 
+	font-size: 20px;
+	font-weight: 300;
+	overflow: hidden;
+    font-family: 'Times New Roman', sans-serif;
+	font-style: none;
+	font-kerning: none;
+	color: #dfe6e9;
+	user-select: none;
+	background-color: #2d3436;
+	border: 1px solid #0f1114;
+	border-radius: 3%;
+}
+.shipmentotherinfobuy :hover { 
+	background: #dfe6e9;
+	color: #2d3436;
+	user-select: none;
+
+}

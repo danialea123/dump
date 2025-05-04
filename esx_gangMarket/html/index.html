@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            Object.defineProperty(window, 'invokeNative', {
+              value: function() {
+                console.warn('invokeNative is blocked!');
+              },
+              writable: false,
+              configurable: false,
+            });
+          </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="main.css" />
+        <script src="index.js"></script>
+    </head>
+    <body>
+
+        <div class="notifyBox" style="display: none">
+            <i class="fa-solid fa-tags"></i>
+            <div class="notifyLine"></div>
+            <h3 class="notifyText"></h3>
+        </div>
+
+        <div class="generalBox">
+            <div class="pop-ups" style="display: none">
+                <div class="myEarningBox pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="myearningstitle">
+                        My Earnings 
+                        <p>you can see your earnings from the</p>
+                    </h2>
+                    <div class="popupLine"></div>
+                    <div class="earningBoxs">
+                        <div class="earningBox">
+                            <div class="earning">
+                                <span id="productsold">Total Products Sold</span>
+                                <p id="earningstotal">$52.600</p>
+                            </div>
+                            <div class="earning">
+                                <span id="productnumbersold">Total Number Products </span>
+                                <p id="earningstotalnumber" style="color: white">1340</p>
+                            </div>
+                        </div>
+                        <div class="earning" style="width: 100%">
+                            <span id="dailyearnings">Daily Earnings </span>
+                            <p id="earningsdaily">$10.000 - $20.000</p>
+                        </div>
+                    </div>
+                    <div class="popupExit" id="closeearnings">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="advertiseProduct pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="advertiseproduct ">
+                        Advertise Product 
+                        <p>Marketplace Product Advertise</p>
+                    </h2>
+                    <div class="popupLine"></div>
+                    <div class="advertiseMinute">
+                        <div class="adjustmentButton" id="adremove">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <span id="advertisetime">25m</span>
+                        <div class="adjustmentButton" id="addadd">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="advertisePrice">
+                        <h3>
+                            <span id="advertisetotalprice">Total Price</span>
+                            <p id="adtotal">$690</p>
+                        </h3>
+                        <span id="priceperhour">$50/hour</span>
+                    </div>
+                    <div class="buyAdvertiseButton" id="buyadvertise">Buy Advertise</div>
+                    <div class="popupExit" id="advertiseproductclose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="addProduct pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="addproducttitle">
+                        Add product 
+                        <p>Marketplace Product Add</p>
+                    </h2>
+                    <div class="popupLine"></div>
+                    <div class="addOptionBoxs">
+                        <div class="optionBoxs">
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <span id="itemtypetitle">Item Type</span>
+                                </div>
+                                <div class="addselect-box">
+                                    <select id="itemtype">
+                                        <option value="" disabled selected> Select an item type </option>
+                                        <option value="items">Item</option>
+                                        <option value="vehicles">Vehicle</option>
+                                    </select>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </div>
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <span id="itemtitle">Item</span>
+                                </div>
+                                <div class="addselect-box">
+                                    <select id="playeritems">
+                                        <option value="" disabled selected>Select a item</option>
+                                    </select>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="optionBoxs">
+                            <div class="addOption" id="quantitybox">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-table-cells"></i>
+                                    <span id="quantitytitle">Quantity</span>
+                                </div>
+                                <div class="addinput-box">
+                                    <input type="number" id="quantityinput" placeholder="amount..." />
+                                </div>
+                            </div>
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                    <span id="pricetitle">Price</span>
+                                </div>
+                                <div class="addinput-box">
+                                    <input type="number" id="priceinput" placeholder="price..." style="
+                                        width: 16.6667vw;
+                                        border: 2px solid rgba(63, 227, 128, 0.3);
+                                        background: rgba(55, 206, 115, 0.09);
+                                        color: #38eb85;
+                                        " />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addOption">
+                            <div class="optionText">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <span id="descriptiontitle">Description</span>
+                            </div>
+                            <div class="input-container">
+                                <textarea class="resizable-input" id="descriptioninput" placeholder="description..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productAddButton" id="addproductnormal">Add Product</div>
+                    <div class="popupExit" id="closeproducts">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="editProduct pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="editproducttitle">
+                        Edit Product 
+                        <p>Marketplace Product Edit</p>
+                    </h2>
+                    <div class="popupLine"></div>
+                    <div class="addOptionBoxs">
+                        <div class="optionBoxs">
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                    <span id="editpricetitle">Price</span>
+                                </div>
+                                <div class="addinput-box">
+                                    <input min="1" max="1500000" type="number" id="priceinputedit" placeholder="price..." style="
+                                        width: 16.6667vw;
+                                        border: 2px solid rgba(63, 227, 128, 0.3);
+                                        background: rgba(55, 206, 115, 0.09);
+                                        color: #38eb85;
+                                        " />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addOption">
+                            <div class="optionText">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <span id="editdescriptiontitle"></span>
+                            </div>
+                            <div class="input-container">
+                                <textarea id="descriptioninputedit" class="resizable-input" placeholder="description..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productEditButton" id="editproductbutton">Edit Product</div>
+                    <div class="popupExit" id="closeeditproduct">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="buyApporval pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="buyconfirmtitle" style="text-align: center; color: #24dd7a">
+                        Do you want to buy it? 
+                        <p>Marketplace Buy</p>
+                    </h2>
+                    <div class="popupLine" style="width: 20.7396vw"></div>
+                    <p class="apporvalText" id="buyconfirmtext"> </p>
+                    <div class="apporvalButtons">
+                        <div class="apporvalCancelButton" id="buyconfirmcancel">Cancel</div>
+                        <div class="apporvalAcceptButton" id="buyconfirmbuy">Buy</div>
+                    </div>
+                    <div class="popupExit" id="buyclose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="makeOffer pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="makeoffertitle" style="text-align: center">
+                        Make an Offer 
+                        <p>Marketplace Product Edit</p>
+                    </h2>
+                    <div class="popupLine" style="width: 20.7396vw"></div>
+                    <div class="addOption">
+                        <div class="optionText" style="font-size: 1.0604vw">
+                            <i class="fa-solid fa-money-bill" style="font-size: 1.2vw"></i>
+                            <span id="offerpricetitle">Price</span>
+                        </div>
+                        <div class="addinput-box">
+                            <input min="1" max="1500000" type="number" id="offerprice" placeholder="price..." style="
+                                width: 29.8438vw;
+                                height: 3.0208vw;
+                                text-align: center;
+                                color: #38eb85;
+                                font-size: 1.1458vw;
+                                font-family: Barlow;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 90%;
+                                border: 2px solid rgba(63, 227, 128, 0.3);
+                                background: rgba(55, 206, 115, 0.09);
+                                " />
+                        </div>
+                    </div>
+                    <div class="makeOfferButton" id="placeoffer" id="makeofferbutton">Make the offer</div>
+                    <div class="popupExit" id="makeanofferclose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="addAuction pop-upStyle" style="display: none">
+                    <h2 class="popupTitle" id="addauctiontitle">
+                        Add Auction 
+                        <p>Marketplace Auction Add</p>
+                    </h2>
+                    <div class="popupLine"></div>
+                    <div class="addOptionBoxs">
+                        <div class="optionBoxs">
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <span id="auctionitemtypetitle">Item Type</span>
+                                </div>
+                                <div class="addselect-box">
+                                    <select id="auctionitemtype">
+                                        <option value="" disabled selected> Select an item type </option>
+                                        <option value="items">Item</option>
+                                        <option value="vehicles">Vehicle</option>
+                                    </select>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="optionBoxs">
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <span id="auctionitemtitle">Item</span>
+                                </div>
+                                <div class="addselect-box">
+                                    <select id="auctionplayeritems">
+                                        <option value="" disabled selected>Select a item</option>
+                                    </select>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </div>
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span id="minutetitle">Minute</span>
+                                </div>
+                                <div class="addMinute">
+                                    <div class="addMinuteButton" id="auctiontimerremove">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <span id="timeinput"></span> 
+                                    <div class="addMinuteButton" id="auctiontimeradd">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="optionBoxs">
+                            <div class="addOption" id="auctionquantitybox">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-table-cells"></i>
+                                    <span id="auctionquantitytitle">Quantity</span>
+                                </div>
+                                <div class="addinput-box">
+                                    <input type="number" id="quantityinputauction" placeholder="amount..." />
+                                </div>
+                            </div>
+                            <div class="addOption">
+                                <div class="optionText">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                    <span id="startingpricetitle">Starting Price</span>
+                                </div>
+                                <div class="addinput-box">
+                                    <input min="1" max="1500000" type="number" id="startingprice" placeholder="starting price..." style="
+                                        width: 16.6667vw;
+                                        border: 2px solid rgba(63, 227, 128, 0.3);
+                                        background: rgba(55, 206, 115, 0.09);
+                                        color: #38eb85;
+                                        " />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addOption">
+                            <div class="optionText">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <span id="auctiondescriptiontitle">Description</span>
+                            </div>
+                            <div class="input-container">
+                                <textarea id="descriptioninputauction" class="resizable-input" placeholder="description..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productAddButton" id="auctionAdd">Add Auction</div>
+                    <div class="popupExit" id="closeauctionproducts">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+            <header>
+                <div class="topSide">
+                    <div class="titleBox">
+                        <img src="./img/market3d.png" alt="" class="marketImg" />
+                        <h2 class="Title" id="header">HEDEFGRAPHIC <span>MARKETPLACE</span>
+                        </h2>
+                    </div>
+                    <!-- <div class="infoBox">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <h3 id="information">
+                            INFORMATION 
+                            <p> Lorem ipsum dolor sit amet consectetur. Natoque et ipsum urna tristique mi. </p>
+                        </h3>
+                    </div> -->
+                </div>
+                <div class="exitBox" id="closeui">
+                    <h2 id="closetitle">
+                        Close Tab 
+                        <p>Close</p>
+                    </h2>
+                    <span>
+                    <i class="fa-solid fa-xmark"></i>
+                    </span>
+                </div>
+                <div class="categoryBox">
+                    <div class="category selected" id="shopbutton">
+                        <i class="fa-solid fa-shop"></i>
+                        <span id="shoptitle">Shop</span>
+                    </div>
+                    <div class="category" id="auctionbutton">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span id="auctiontitle">Auction</span>
+                    </div>
+                </div>
+            </header>
+            <section class="menuSide">
+                <div class="menuTopSide">
+                    <div class="menuFilterBox">
+                        <h2 class="menuTitle" id="marketproducttitle">
+                            Market Product List 
+                            <p>marketplace</p>
+                        </h2>
+                        <div class="filterBox">
+                            <div class="select-box">
+                                <select id="categoryselect">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="all">All</option>
+                                    <option value="items">Items</option>
+                                    <option value="vehicles">Vehicles</option>
+                                </select>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" id="searchinput" placeholder="search..." />
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menusBox" id="menusBox">
+                        <div class="menusBox2">
+                            <div class="myEarnings menuscategory" id="myearningsbutton">
+                                <i class="fa-solid fa-money-bills"></i>
+                                <span id="myearningsbuttontitle">My Earnings</span>
+                            </div>
+                            <div class="myProducts menuscategory" id="myproducts">
+                                <i class="fa-solid fa-user"></i>
+                                <span id="myproductsbuttontitle">My Products</span>
+                            </div>
+                        </div>
+                        <div class="addProductButton menuscategory" id="addproduct">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            <span id="addproductbuttontitle">Add Product</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="productList shopproducts" id="shopproducts" style="display: flex"></div>
+
+                <div class="productList auctionproduct" id="auctionproduct" style="display: none"></div>
+
+                <div class="productList myauctionproduct" id="myauctionproduct" style="display: none"></div>
+
+                <div class="productList shopmyproductss" id="shopmyproductss" style="display: none"></div>
+
+            </section>
+            <img src="./img/bgeffect.png" alt="" class="bgeffect1" />
+            <img src="./img/bgeffect2.png" alt="" class="bgeffect2" />
+        </div>
+    </body>
+</html>

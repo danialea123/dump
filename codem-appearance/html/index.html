@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            Object.defineProperty(window, 'invokeNative', {
+              value: function() {
+                console.warn('invokeNative is blocked!');
+              },
+              writable: false,
+              configurable: false,
+            });
+          </script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+        <script src="./js/vue.global.js"></script>
+        <script src="./js/vuex.global.js"></script>
+        <script src="https://cdn.tailwindcss.com/3.3.5"></script>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <title>Codem CharCreator</title>
+    </head>
+
+    <body>
+        <div id="app" style="display: none">
+            <div class="absolute w-[25vw] h-[5vw] top-[0] right-[0] flex items-center justify-start" style="overflow: hidden">
+                <transition-group name="fade">
+                    <div
+                        class="w-[80%] h-[80%]"
+                        style="background-image: url(./images/createpage/notification.png); background-size: 100% 100%"
+                        v-for="notification in notifications"
+                        :key="notification.id"
+                    >
+                        <div class="w-full h-[50%] flex items-end">
+                            <h2 class="text-[0.8vw] ml-[1vw] text-[#F7B510] font-['sf-pro-rounded-medium']">Notification</h2>
+                        </div>
+                        <div class="w-full h-[50%] flex items-start">
+                            <h2 class="text-[0.8vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium']">{{notification.text}}</h2>
+                        </div>
+                    </div>
+                </transition-group>
+            </div>
+
+            <div class="absolute left-1/2 top-0 transform z-20 -translate-x-1/2 w-[35%] h-[70%] mouse-move"></div>
+
+            <div v-if="pageToOpen === 'createCharacter' || pageToOpen === 'surgery'">
+                <div
+                    class="w-full h-[100vh] flex items-center justify-start"
+                    style="background-image: url(./images/createpage/overlay.png); background-size: 100% 100%"
+                >
+                    <div class="w-[22.5%] h-full">
+                        <div class="w-full h-full">
+                            <div class="w-[81%] h-full flex items-center justify-end">
+                                <div class="w-[85%] h-full relative">
+                                    <div
+                                        class="w-full h-full flex items-start justify-end"
+                                        style="background-image: url(./images/createpage/Ellipse_1.png); background-size: 100% 100%"
+                                    >
+                                        <div
+                                            class="w-[80.5%] h-[22%] cursor-pointer relative"
+                                            style="overflow: hidden"
+                                            @click="changeAppearancePage('dnapage')"
+                                        >
+                                            <div class="w-full h-[15%] absolute bottom-[5vw] flex items-center justify-start">
+                                                <div class="w-[80%] h-full flex items-center justify-center">
+                                                    <h2
+                                                        class="text-[1.1vw] font-['sf-pro-rounded-medium']"
+                                                        :style="currentApparenceCategory == 'dnapage' ? {'color' : 'white'} : {'color' : 'rgba(255, 255, 255, 0.50)'}"
+                                                        style="font-weight: 600; letter-spacing: 0.15vw"
+                                                    >
+                                                        {{this.$store.state.locales['menuTitleDNA']}}
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <transition name="categoryImage">
+                                                <img
+                                                    v-if="currentApparenceCategory == 'dnapage'"
+                                                    class="w-full h-full"
+                                                    src="./images/createpage/dna.png"
+                                                    alt=""
+                                                />
+                                            </transition>
+                                        </div>
+                                        <div
+                                            class="absolute w-[61.5%] h-[33%] cursor-pointer"
+                                            @click="changeAppearancePage('bodypage')"
+                                            style="margin-top: 15.5vh; margin-right: 6.1vw"
+                                        >
+                                            <div class="w-full h-[15%] absolute bottom-[6vw] flex items-center justify-start">
+                                                <div class="w-[90%] h-full flex items-center justify-center">
+                                                    <h2
+                                                        class="text-[1.1vw] font-['sf-pro-rounded-medium']"
+                                                        :style="currentApparenceCategory == 'bodypage' ? {'color' : 'white'} : {'color' : 'rgba(255, 255, 255, 0.50)'}"
+                                                        style="font-weight: 600; letter-spacing: 0.15vw"
+                                                    >
+                                                        {{this.$store.state.locales['menuTitleBody']}}
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <transition name="categoryImage">
+                                                <img
+                                                    v-if="currentApparenceCategory == 'bodypage'"
+                                                    class="w-full h-full"
+                                                    src="./images/createpage/body.png"
+                                                    alt=""
+                                                />
+                                            </transition>
+                                        </div>
+                                        <div
+                                            class="absolute w-[59.5%] h-[33%] top-[47.5vh] mr-[6.5vw] cursor-pointer"
+                                            @click="changeAppearancePage('clothespage')"
+                                        >
+                                            <div class="w-full h-[15%] absolute bottom-[8vw] flex items-center justify-start">
+                                                <div class="w-[90%] h-full flex items-center justify-center">
+                                                    <h2
+                                                        class="text-[1.1vw] font-['sf-pro-rounded-medium']"
+                                                        :style="currentApparenceCategory == 'clothespage' ? {'color' : 'white'} : {'color' : 'rgba(255, 255, 255, 0.50)'}"
+                                                        style="font-weight: 600; letter-spacing: 0.15vw"
+                                                    >
+                                                        {{this.$store.state.locales['menuTitleClothes']}}
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <transition name="categoryImage">
+                                                <img
+                                                    v-if="currentApparenceCategory == 'clothespage'"
+                                                    class="w-full h-full"
+                                                    src="./images/createpage/clothes.png"
+                                                    alt=""
+                                                />
+                                            </transition>
+                                        </div>
+                                        <div
+                                            class="absolute w-[86.5%] h-[25%] top-[75vh] mr-[-0.15vw] cursor-pointer"
+                                            @click="changeAppearancePage('pedpage')"
+                                        >
+                                            <div class="w-full h-[15%] absolute bottom-[3.5vw] flex items-center justify-start">
+                                                <div class="w-[90%] h-full flex items-center justify-center">
+                                                    <h2
+                                                        class="text-[1.1vw] font-['sf-pro-rounded-medium']"
+                                                        :style="currentApparenceCategory == 'pedpage' ? {'color' : '#FFE58A'} : {'color' : '#FFE58A'}"
+                                                        style="font-weight: 600; letter-spacing: 0.15vw"
+                                                    >
+                                                        {{this.$store.state.locales['menuTitlePeds']}}
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <transition name="categoryImage">
+                                                <img
+                                                    v-if="currentApparenceCategory == 'pedpage'"
+                                                    class="w-full h-full"
+                                                    src="./images/createpage/peds-open.png"
+                                                    alt=""
+                                                />
+                                            </transition>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[45.5%] h-full">
+                        <div class="w-full h-full flex items-end relative justify-center">
+                            <div
+                                v-if="this.$store.state.charAcceptModal"
+                                class="w-[42%] h-[22%] flex items-center justify-center absolute top-[19vw]"
+                                style="z-index: 21; background-image: url(./images/createpage/modal.png); background-size: 100% 100%"
+                            >
+                                <div class="w-[90%] h-[90%]">
+                                    <div class="w-full h-[50%] flex">
+                                        <div class="w-[60%] h-full flex items-center justify-center">
+                                            <h2 class="ml-[1vw] text-1">
+                                                {{this.$store.state.locales['characterConfirmationText']}} COST : ${{this.$store.state.surgeryPrice}}
+                                            </h2>
+                                        </div>
+                                        <div class="w-[40%] h-full flex items-start justify-center">
+                                            <img class="w-[90%] h-[70%]" style="object-fit: contain" src="./images/wardrobe/logo.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-[40%] flex items-end justify-center">
+                                        <div
+                                            class="w-[60%] flex items-center justify-center ml-[0.5vw] h-[70%] cursor-pointer"
+                                            @click="createCharacterModal"
+                                        >
+                                            <h2
+                                                class="mr-[0.5vw]"
+                                                style="
+                                                    color: white;
+                                                    font-family: sf-pro-rounded-medium;
+                                                    font-size: 1.2vw;
+                                                    font-style: normal;
+                                                    font-weight: 800;
+                                                    line-height: normal;
+                                                "
+                                            >
+                                                {{this.$store.state.locales['characterConfirmationButtonText']}}
+                                            </h2>
+                                        </div>
+                                        <div
+                                            class="w-[30%] ml-[0.3vw] h-[70%] flex items-center justify-center cursor-pointer"
+                                            @click="closeCharModal"
+                                        >
+                                            <img class="w-[50%] h-[50%]" style="object-fit: contain" src="./images/binco/closeicon.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full h-[30%]">
+                                <div class="w-full h-[37%] flex items-end justify-center">
+                                    <div @click="randomize" class="w-[13%] cursor-pointer h-[75%] flex items-start flex-wrap justify-center">
+                                        <div class="w-[50%] h-[72%]">
+                                            <img src="./images/createpage/random.png" alt="" />
+                                        </div>
+                                        <div class="w-full h-[28%] flex items-end justify-center">
+                                            <h2 class="text-[0.8vw] text-[white] font-['sf-pro-rounded-medium']">
+                                                {{this.$store.state.locales['randomizeButton']}}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-[32.5%] flex items-end justify-center">
+                                    <div class="w-[31%] h-[72%] flex items-center justify-between">
+                                        <div
+                                            @click="ChangeCamera(data)"
+                                            v-for="data in 3"
+                                            class="w-[30%] h-full flex items-center justify-center cursor-pointer"
+                                            :style="selectedCamera === data ? {'background-image' : 'url(./images/createpage/select.png)'} : {'background-image' : 'url(./images/createpage/notselect.png)'}"
+                                            style="background-size: 100% 100%"
+                                        >
+                                            <img
+                                                class="w-[50%] h-[50%]"
+                                                style="object-fit: contain"
+                                                :style="selectedCamera === data ? {'opacity' : '1.0'} : {'opacity' : '0.3'}"
+                                                :src="'./images/createpage/camera'+data+'.png'"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-[20.5%] flex items-center justify-center">
+                                    <div class="w-[80%] h-full">
+                                        <img class="w-full h-full" src="./images/dnapage/rotate.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[32%] h-full">
+                        <component v-if="activePage" :is="activePage"></component>
+                    </div>
+                </div>
+            </div>
+            <div v-if="pageToOpen === 'bincoClothing'">
+                <bincopage></bincopage>
+            </div>
+            <div v-if="pageToOpen === 'ponsonbysClothing'">
+                <ponsonbyspage></ponsonbyspage>
+            </div>
+            <div v-if="pageToOpen === 'suburbanClothing'">
+                <suburbanpage></suburbanpage>
+            </div>
+            <div v-if="pageToOpen === 'totto'">
+                <tottopage></tottopage>
+            </div>
+            <div v-if="pageToOpen === 'barber'">
+                <barberpage></barberpage>
+            </div>
+            <div v-if="pageToOpen === 'wardrobe'">
+                <wardrobepage></wardrobepage>
+            </div>
+            <div v-if="pageToOpen === 'job'">
+                <jobpage></jobpage>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="./js/app.js" type="module"></script>
+    </body>
+</html>

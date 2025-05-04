@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+@keyframes Push {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes Out {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
+notification-box {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+
+.notify {
+  min-width: 362px;
+  max-width: 362px;
+  min-height: 100px;
+  max-height: 200px;
+  background: rgba(0, 0, 0, 0.4);
+  /* background: linear-gradient(89.59deg, rgba(121, 134, 161, 0) 0.33%, #419BDC 100%); */
+  border-radius: 12px;
+  display: flex;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+
+.notify h1 {
+ font-size: 16px;
+}
+
+
+.notify .text {
+  max-width: 280px;
+  margin-top: 12px;
+  margin-left: 10px;
+  margin-bottom: 12px;
+  line-height: 18px;
+}
+
+.notify .imgbox {
+  position: absolute;
+  width: 98px;
+  height: 100%;
+  border-radius: 12px;
+  right: 0px;
+}
+
+.notify img {
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 15px;
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.notify-enter {
+  animation: Push 0.5s ease;
+}
+
+.notify-leave {
+  animation: Out 1s ease;
+}

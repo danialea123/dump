@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ShopVehicleDataArray>
+	<Vehicles>
+
+		<Item>
+			<lockHash>CU_VEH_x6m</lockHash>
+			<modelNameHash>x6m</modelNameHash>
+			<cost value="100" />
+			<textLabel>x6m</textLabel>
+			<vehicleMods />
+		</Item>
+
+
+	</Vehicles>	
+</ShopVehicleDataArray>

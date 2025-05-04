@@ -1,0 +1,160 @@
+<div class="w-full h-[100vh] flex items-start justify-start " 
+    style=" background-image: url(./images/binco/overlay.png);  background-size: 100% 100%;">
+    <div class="w-full h-full  ">
+        <div class="w-full h-[8.4%] flex items-center justify-center">
+            <div class="w-[95%] h-full flex" style="border-bottom: 1px solid rgba(255, 255, 255, 0.27);">
+                <div class="w-[33.5%] h-full flex items-center justify-start ">
+                    <div class="w-[22%] h-[100%] flex items-center justify-center">
+                        <img class="w-full h-full" src="./images/totto/tottologo.png" alt="">
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-center ">
+                    <div class="w-[65%] h-full flex items-center justify-center" style="border-bottom: 3px solid white;">
+                    
+                        <h2 class="text-[1.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['blazingTitle']}}</h2>
+                    </div>
+                </div>
+                <div class="w-[33.5%] h-full flex items-center justify-end ">
+                    <div class="w-[30%] h-full mr-[0.5vw] flex items-center justify-end flex-wrap ">
+                        <h2 class="w-full h-[50%] flex items-end justify-end  text-[0.9vw] ml-[1vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.playerName}}</h2>
+                        <h2 class="w-full h-[50%] flex items-start justify-end  text-[0.7vw] ml-[1vw]  font-['sf-pro-rounded-medium'] text-[#E1D194] " v-if="this.$store.state.selectedMoneyType == 'cash'" style="filter  : drop-shadow(0px 0px 10px #E1D194)">{{this.$store.state.playerMoney.cash.toFixed(0)}} $</h2>
+                        <h2 class="w-full h-[50%] flex items-start justify-end  text-[0.7vw] ml-[1vw]  font-['sf-pro-rounded-medium'] text-[#E1D194] " v-else style="filter  : drop-shadow(0px 0px 10px #E1D194)">{{this.$store.state.playerMoney.bank.toFixed(0)}} $</h2>
+                    </div>
+                    <div class="w-[15%] h-full  flex items-center justify-center">
+                        <div class="w-[75%] h-[75%]  flex items-center justify-center rounded-[7vw]" style="border: 2px solid #E1D194; filter  : drop-shadow(0px 0px 10px #E1D194)">
+                            <img class="w-[94%] h-[92%]" style="object-fit: contain; border-radius: 7vw;" :src="this.$store.state.pp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[87.5%]  flex items-end justify-start relative " >
+            <div v-if="buyModal" class="w-full h-[110%] mb-[-5vw] absolute flex items-center justify-center  blur-menu" style="z-index: 30;">
+                <div class="w-[30%] mr-[-4vw] h-[38%] ">
+                    <div class="w-full h-[85%] " style="background-image: url(./images/totto/buymodal.png); background-size: 100% 100%;">
+                        <div class="w-full h-[25%]  flex items-end justify-start">
+                            <h2 class="text-[1.9vw] ml-[2.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['buyNowButton']}}</h2>
+                        </div>
+                        <div class="w-full h-[20%]  flex items-end justify-start">
+                            <h2 class="text-[1.9vw] ml-[2.5vw] text-[#F34240] font-['sf-pro-rounded-medium'] ">${{GetTotalBasketPrice}}</h2>
+                        </div>
+                        <div class="w-full h-[15%]  flex items-end justify-start">
+                            <h2 class="text-[1vw] ml-[2.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['thanksText']}} {{this.$store.state.locales['blazingText']}}</h2>
+                        </div>
+                        <div class="w-full h-[33%]   flex items-end justify-center">
+                            <div class="w-[84%] h-[75%]  flex items-center justify-between">
+                                <div  @click="Buy" class="w-[66%] h-full  flex items-center justify-center cursor-pointer">
+                                    <h2 class="text-[1.7vw] text-[#F34240] font-['sf-pro-rounded-medium'] buynowtext " >{{this.$store.state.locales['buyNowButton']}}</h2>
+                                </div>
+                                <div class="w-[32%] h-full flex items-center justify-center cursor-pointer" @click="buynow(false)" >
+                                    <img class="w-[40%] h-[40%]" style="object-fit: contain;" src="./images/binco/closeicon.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+            <div class="w-[26%] h-full   flex items-end justify-end">
+                <div class="w-[90.5%] h-[95.5%] " style="background-image: url(./images/totto/bg.png); background-size: 100% 100%;">
+                    <div class="w-full h-[7%]  flex items-center">
+                        <h2 class="text-[1vw] ml-[1.5vw] text-[white] font-['sf-pro-rounded-medium'] ">{{this.$store.state.locales['blazingTitle']}}</h2>
+                    </div>
+                    <div class="w-full h-[9%]  flex items-center justify-center">
+                        <div class="w-[90%] h-full  flex items-center justify-between">
+                            <div v-for="(data,key) in categorys"  class="w-[20%] h-full flex items-center justify-center" @click="changeCategory(key)">
+                                <img v-if="currentCategory !== key"  :src="'./images/totto/'+ key +'.png'" alt="">
+                                <img v-else  :src="'./images/totto/'+ key +'active.png'" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[30%] content-start" v-for="data in clothingCategory[currentCategory]">
+                        <div class="w-full h-[25.5%]  flex flex-wrap items-end justify-center">
+                            <div class="w-[90%] h-full  flex items-center justify-start">
+                                <h2 class="text-[0.8vw] text-[#F34240] font-['sf-pro-rounded-bold'] tracking-[0.1vw]">{{data.text}}</h2>
+                                <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 255, 255, 0.46);"></div>
+                            </div>
+                        </div>
+                        <div class="w-full h-[36.5%]  flex flex-wrap items-center justify-center">
+                            <div class="w-[90%] h-full flex-wrap  flex items-start justify-start">
+                                <h2 class="text-[0.6vw] text-[white] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">{{this.$store.state.locales['tattoosTitle']}}</h2>
+                                <div class="w-full h-[75%] mt-[0.5vw]  flex justify-between">
+                                    <div @click="DecreaseValue(data.name)" class="w-[15%] h-full flex items-center justify-center" style="border-top-left-radius: 0.3vw; border-bottom-left-radius: 0.3vw; background-color: rgba(243, 66, 64, 0.15);">
+                                        <img class="w-[30%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                                    </div>
+                                    <div class="w-[69%] h-full flex items-center justify-center" style="background-color: rgba(243, 66, 64, 0.15);">
+                                        <div class="w-full h-full text-center flex items-center justify-center font-['sf-pro-rounded-medium'] text-white" style="background-color: transparent; outline: none; border: none;" v-if="this.tattoos[data.name] && this.tattoos[data.name][this.values[data.name]]">{{this.tattoos[data.name][this.values[data.name]].Name}}</div>
+                                    </div>
+                                    <div @click="IncreaseValue(data.name)" class="w-[15%] h-full flex items-center justify-center " style="border-top-right-radius: 0.3vw; border-bottom-right-radius: 0.3vw;background-color: rgba(243, 66, 64, 0.15);">
+                                        <img class="w-[30%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-if="this.tattoos[data.name] && this.tattoos[data.name][this.values[data.name]]" @click="toggleTattoBasket(data.name, this.tattoos[data.name][this.values[data.name]].Name)"  class="w-full h-[25.5%] mt-[1vw]  flex flex-wrap items-end justify-center">
+                            <div class="w-[90%] h-full flex-wrap  flex items-center justify-center rounded-[0.3vw] cursor-pointer" style="background: linear-gradient(90deg, #F34240 0%, #FF7539 100%), rgba(243, 66, 64, 0.15)">
+                                <h2 class="text-[0.9vw] text-[white] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">{{CheckAlreadyPurchased(this.tattoos[data.name][this.values[data.name]].HashNameMale, this.tattoos[data.name][this.values[data.name]].HashNameFemale) ? this.$store.state.locales['removeTattooTitle']  : CheckBasket( this.tattoos[data.name][this.values[data.name]].Name) ? this.$store.state.locales['removeBasket'] : this.$store.state.locales['addBasket'] }} </h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                  
+                </div>
+            </div>
+            <div class="w-[55%] h-full flex items-end justify-center">
+                <div class="w-[70%] h-[10%] flex items-center justify-center">
+                    <img class="w-full h-full" style="object-fit: contain;" src="./images/totto/rotate.png" alt="">
+                </div>
+
+            </div>
+            <div class="w-[19%] h-full  mb-[-2.1vw] flex items-start  justify-between flex-wrap">
+                <div class="w-[87%] h-full ">
+                    <div class="w-full h-[55%]  " style="background-image: url(./images/totto/summarybg.png); background-size: 100% 100%;">
+                        <div class="w-full h-[12%]  flex items-center justify-start">
+                            <h2 class="text-[1vw] ml-[1.2vw] text-[white] font-['sf-pro-rounded-medium']">{{this.$store.state.locales['summaryTitle']}}</h2>
+                        </div>
+                        <div class="w-full h-[87%]  flex items-center justify-center">
+                            <div class="w-[85%] h-full flex items-center flex-wrap content-start ">
+                                <div class="w-[95%] h-[7%] mt-[0.1vw] flex" v-for="data in summaryData">
+                                    <div class="w-[50%] flex items-center justify-start h-full">
+                                        <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] ">{{data.label}}</h2>
+                                    </div>
+                                    <div class="w-[50%] flex items-center justify-end h-full">
+                                        <h2 class="text-[0.7vw] text-[#F34240] font-['sf-pro-rounded-medium'] ">$ {{data.price}}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[12%] mt-[1vw]  " style="background-image: url(./images/totto/removetotto.png); background-size: 100% 100%;">
+                        <div class="w-full h-[40%]  flex items-end justify-start">
+                            <h2 class="text-[1.2vw] text-[white] ml-[1vw]   font-['sf-pro-rounded-medium']">{{this.$store.state.locales['removeTattooTitle']}}</h2>
+                        </div>
+                        
+                        <div class="w-full h-[60%]   flex items-center  justify-start flex-wrap">
+                            <div @click="RemoveTattoo(data.zones)" v-for="(data,key) in categorys" class="w-[15%] flex items-center justify-center ml-[1.3vw] h-[30%]  cursor-pointer ">
+                                <img :src="'./images/totto/'+key+'.png'" alt="">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="w-full h-[13.5%] mt-[1.2vw]  " style="background-image: url(./images/totto/button.png); background-size: 100% 100%;">
+                        <div class="w-full h-[40%] flex items-end  justify-start">
+                            <h2 class="text-[1.2vw] text-[white] ml-[1vw] font-['sf-pro-rounded-medium']">{{this.$store.state.locales['totalPrice']}}</h2>
+                        </div>
+                        <div class="w-full h-[45%] flex items-end  justify-start">
+                            <h2 class="text-[1.7vw] text-[#F34240] ml-[1vw] font-['sf-pro-rounded-medium']" style="filter  : drop-shadow(0px 0px 10px #F34240)">${{GetTotalBasketPrice}}</h2>
+                        </div>
+                    </div>
+                    <div class="w-full h-[13.5%] mt-[1vw] flex items-start justify-center  " @click="buynow(true)" style="background-image: url(./images/totto/paynow.png); background-size: 100% 100%; filter  : drop-shadow(0px 0px 10px rgba(243, 66, 64, 1), rgba(255, 117, 57, 1))">
+                        <h2 class="text-[1.7vw] text-[#F34240] mt-[1vw] font-['sf-pro-rounded-medium']">{{this.$store.state.locales['payNowButton']}}</h2>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+   
+</div>

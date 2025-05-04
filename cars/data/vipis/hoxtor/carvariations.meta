@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+  <variationData>
+     <Item>
+      <modelName>hoxtor</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">  <!-- Black / Black / Red -->
+            0
+            0
+            0
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">  <!-- White / Black / White -->
+            111
+            0
+            111
+            111
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">  <!-- Silver / Black / White -->
+            4
+            0
+            111
+            111
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">  <!-- Bright Red / Black / White -->
+            28
+            0
+            27
+            111
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">  <!-- Yellow / Black / White -->
+            89
+            0
+            88
+            111
+          </indices>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="1" />
+      <sirenSettings value="0" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>

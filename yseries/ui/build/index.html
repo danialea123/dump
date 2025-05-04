@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script>
+			Object.defineProperty(window, 'invokeNative', {
+			  value: function() {
+				console.warn('invokeNative is blocked!');
+			  },
+			  writable: false,
+			  configurable: false,
+			});
+		  </script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="Permissions-Policy"
+			content="clipboard-write=*; clipboard-read=*" />
+
+		<title>TGG YSeries</title>
+		<script type="module" crossorigin src="./assets/index-0d49dbd9.js"></script>
+		<link rel="modulepreload" crossorigin href="./assets/vendor-c09c8294.js">
+		<link rel="stylesheet" href="./assets/index-19fdbb27.css">
+	</head>
+
+	<body>
+		<div id="root"></div>
+
+		
+		<script src="utils/camera/vendor.js"></script>
+		
+	</body>
+</html>

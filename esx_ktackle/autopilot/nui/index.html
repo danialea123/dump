@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://discord.gg/vf1 -->
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>GFX AUTOPILOT</title>
+</head>
+
+<body>
+    <div class="popupScreen">
+        <div class="InformationPopup">
+            <div class="popup-header">
+                <h1 id="popupHeadder">Autopilot</h1>
+            <p id="information">
+                راننده خودکار یک سیستم هوش مصنوعی برای رانندگی خودکار است
+لطفاً تنظیمات پیشنهادی را برای رانندگی ایمن در چارچوب قوانین ترافیکی دنبال کنید
+می‌توانید تنظیمات را به دلخواه تغییر دهید، اما ما مسئولیت نادیده گرفتن قوانین را نمی‌پذیریم
+همیشه نظارت یک راننده واقعی الزامی است. </p>
+            <span id="wish"> ما برای شما تجربه‌ای ایمن در رانندگی آرزو می‌کنیم</span>
+            <input id="otopilotName" type="text" placeholder="[Enter Autopilot Name]">
+            </div>
+            <div class="popup-footer">
+                <div class="checkBoxDiv">
+                    <input type="checkbox" class="popup-checkbox" required>
+                    <p> I understand and accept the terms and conditions </p>
+                </div>
+                <button id="autoPilotNameSubmit">Submit</button>
+            </div>
+        </div>
+        <div class="enterNameLocation">
+            <div class="enterName">
+                <input type="text" id="enterName" placeholder="Enter Location Name" required>
+                <input type="submit" id="enterNameButton" placeholder="Enter">
+            </div>
+        </div>
+    </div>
+    <div class="gfxautopilot-main-contain">
+        
+        <div class="right-section">
+            <div class="apilot-directions">
+                <div class="direction-contain">
+                    <div class="direction leftDirection">
+                        <img src="assets/directions/leftturn-icon-active.png" alt="">
+                        <div class="texts">
+                            <h1 class="turnDistance">1.5 mi</h1>
+                            <p class="currentLocation">Exit 87</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="direction-cancel-trip"><p>CANCEL TRIP</p></button>
+                <div class="direction-distance-infos">
+                    <p id="destinationDistance">20.7 mi</p>
+                    <p id="gameDay">37 min</p>
+                    <p id="gameTime">10:58 AM</p>
+                </div>
+            </div>
+            <div class="apilot-options">
+                <div class="options-header">
+                    <h1>Auto Pilot Preference</h1>
+                    <p>When enabled, the rules become applicable; switch to the off position for the autopilot not to violate the rules</p>
+                </div>
+
+                <div class="options-boxs">
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Traffic Lights</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle1" class="toggle-input" value="128">
+                            <label for="toggle1" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Stop before vehicles</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle2" class="toggle-input" value="1">
+                            <label for="toggle2" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Avoid Vehicles</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle3" class="toggle-input" value="4" checked>
+                            <label for="toggle3" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Avoid Parked Vehicles</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle4" class="toggle-input" value="8" checked>
+                            <label for="toggle4" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Avoid Objects</h1>
+                        
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle7" class="toggle-input" value="32" checked>
+                            <label for="toggle7" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Stop Before Citizen</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle5" class="toggle-input" value="2" checked>
+                            <label for="toggle5" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Avoid Citizen</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle6" class="toggle-input" value="16" checked>
+                            <label for="toggle6" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt=""  >
+                        <h1>Overtaking Vehicle</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle10" class="toggle-input" value="512" checked>
+                            <label for="toggle10" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt=""  >
+                        <h1>Take Shortest Path</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle9" class="toggle-input" value="262144" checked>
+                            <label for="toggle9" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Reckless Drive</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle8" class="toggle-input" value="524288" checked>
+                            <label for="toggle8" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Drive in reverse gear</h1>
+                        
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle11" class="toggle-input" value="1024" checked>
+                            <label for="toggle11" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Ignore roads</h1>
+                        
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle12" class="toggle-input" value="4194304" checked>
+                            <label for="toggle12" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Avoid highways</h1>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle13" class="toggle-input" value="536870912" checked>
+                            <label for="toggle13" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <img src="assets/settings-preferences-icon.png" alt="">
+                        <h1>Ignore all pathing </h1>
+                        
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle14" class="toggle-input" value="16777216" checked>
+                            <label for="toggle14" class="toggle-label">
+                                <span class="on">On</span>
+                                <span class="off">Off</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="apilot-main">
+            
+            <button class="content-contain-size-button" id="content-contain-size-button">
+                <img src="assets/size-button-icon.png" alt="">
+            </button>
+            <div class="main-content-contain">
+                <div class="content-fuel-contain">
+                    <div class="path"></div>
+                    <div class="progress-mask">
+
+                        <div class="fuel-text">
+                            <img src="assets/fuel-icon.png" alt="">
+                            <p>350 km</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content-road-display">
+
+                    <h1 class="speedLimitText">50</h1>
+                    <!-- Traffik Light -->
+                    <svg class="trafficLight" width="2.3148vh" height="5.1852vh" viewBox="0 0 80 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="80" height="176" rx="40" fill="#BEBEBE"/>
+                        <rect x="4.5" y="4.5" width="71" height="167" rx="35.5" fill="white" stroke="#E6E6E6"/>
+                        <rect x="21" y="25" width="38" height="38" rx="19" fill="white" stroke="#E6E6E6" stroke-width="2"/>
+                        <mask id="mask0_1_51" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="24" y="28" width="32" height="32">
+                        <rect x="24" y="28" width="32" height="32" rx="16" fill="#EB5757"/>
+                        </mask>
+                        <!-- kırmızı ışık -->
+                        <g class="redLight" mask="url(#mask0_1_51)">  
+                        <rect x="24" y="28" width="32" height="32" rx="16" fill="#BC4646"/>
+                        <rect x="24" y="32" width="32" height="32" rx="16" fill="#EB5757"/>
+                        </g>
+                        <rect x="21" y="69" width="38" height="38" rx="19" fill="white" stroke="#E6E6E6" stroke-width="2"/>
+                        <mask id="mask1_1_51" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="24" y="72" width="32" height="32">
+                        <rect x="24" y="72" width="32" height="32" rx="16" fill="#EB5757"/>
+                        </mask>
+                        <!-- sarı ışık -->
+                        <g class="yellowLight" mask="url(#mask1_1_51)">
+                        <rect x="24" y="72" width="32" height="32" rx="16" fill="#C2A13D"/>
+                        <rect x="24" y="76" width="32" height="32" rx="16" fill="#F2C94C"/>
+                        </g>
+                        <rect x="21" y="113" width="38" height="38" rx="19" fill="white" stroke="#E6E6E6" stroke-width="2"/>
+                        <mask id="mask2_1_51" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="24" y="116" width="32" height="32">
+                        <rect x="24" y="116" width="32" height="32" rx="16" fill="#EB5757"/>
+                        </mask>
+                        <!-- yeşil ışık -->
+                        <g class="greenLight" mask="url(#mask2_1_51)">
+                        <rect x="24" y="116" width="32" height="32" rx="16" fill="#1F8B4D"/>
+                        <rect x="24" y="120" width="32" height="32" rx="16" fill="#27AE60"/>
+                        </g>
+                    </svg>
+                    
+                    <svg class="road-display" width="28.2vh" height="15.2vh" viewBox="0 0 282 154" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g filter="url(#filter0_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M159.373 41.1034L187.306 104.696C192.75 117.088 183.693 131 170.183 131H111.539C98.0284 131 88.9718 117.088 94.4152 104.696L122.349 41.1034C125.58 33.7479 132.841 29 140.861 29C148.88 29 156.142 33.7479 159.373 41.1034V41.1034Z"
+                                fill="url(#paint0_linear_46_895)" />
+                        </g>
+                        <g filter="url(#filter1_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M166.033 148.043C166.033 153.389 155.049 157.724 141.5 157.724C127.951 157.724 116.967 153.389 116.967 148.043C116.967 142.696 127.951 138.362 141.5 138.362C155.049 138.362 166.033 142.696 166.033 148.043Z"
+                                fill="black" />
+                        </g>
+                        <g filter="url(#filter2_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M203 119.5C203 119.5 175.018 162 140.5 162C105.982 162 78 119.5 78 119.5C78 96.0279 105.982 77 140.5 77C175.018 77 203 96.0279 203 119.5Z"
+                                fill="url(#paint1_linear_46_895)" />
+                        </g>
+                        <g filter="url(#filter3_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M175.826 138.503C175.826 152.587 160.01 164.003 140.5 164.003C120.99 164.003 105.174 152.587 105.174 138.503C105.174 124.42 120.99 125.003 140.5 125.003C160.01 125.003 175.826 124.42 175.826 138.503Z"
+                                fill="white" fill-opacity="0.3" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M124.458 137.883C123.26 138.032 122.71 138.69 122.585 139H119.027C118.028 137.945 116.031 134.792 116.031 130.622C116.031 125.409 116.031 122.245 116.78 121.128C117.529 120.011 119.776 112.191 120.151 108.282C120.525 104.372 121.275 95.9946 122.211 94.319C123.147 92.6435 124.271 91.1541 125.956 90.5956C127.642 90.0371 128.765 90.0371 129.515 90.0371C130.114 90.0371 130.888 90.6577 131.2 90.968C133.26 90.8438 138.466 90.5956 141.313 90.5956H141.5C144.347 90.5956 149.553 90.8438 151.613 90.968C151.925 90.6577 152.699 90.0371 153.298 90.0371C154.047 90.0371 155.171 90.0371 156.856 90.5956C158.542 91.1541 159.665 92.6435 160.602 94.319C161.538 95.9946 162.287 104.372 162.662 108.282C163.036 112.191 165.284 120.011 166.033 121.128C166.782 122.245 166.782 125.409 166.782 130.622C166.782 134.792 164.784 137.945 163.785 139H160.227C160.103 138.69 159.553 138.032 158.355 137.883C156.856 137.697 144.122 137.511 141.5 137.511H141.313C138.691 137.511 125.956 137.697 124.458 137.883Z"
+                            fill="#F7F7F7" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M118.499 116.145C120.182 115.799 122.532 114.834 123.149 112.75C123.393 111.924 123.586 110.907 123.792 109.826C124.374 106.766 125.054 103.19 127.269 101.952H154.985C157.199 103.19 157.879 106.766 158.461 109.826C158.667 110.907 158.861 111.924 159.105 112.75C159.798 115.092 162.681 116.021 164.344 116.246C163.592 113.55 162.863 110.362 162.663 108.282C162.642 108.057 162.619 107.818 162.595 107.566C162.202 103.432 161.486 95.8984 160.603 94.319C159.667 92.6435 158.543 91.1541 156.857 90.5956C155.172 90.0371 154.049 90.0371 153.299 90.0371C152.7 90.0371 151.926 90.6577 151.614 90.968C149.554 90.8438 144.348 90.5956 141.501 90.5956H141.314C138.467 90.5956 133.261 90.8438 131.201 90.968C130.889 90.6577 130.115 90.0371 129.516 90.0371C128.767 90.0371 127.643 90.0371 125.958 90.5956C124.272 91.1541 123.149 92.6435 122.212 94.319C121.33 95.8984 120.613 103.432 120.22 107.566C120.196 107.818 120.174 108.057 120.152 108.282C119.955 110.337 119.241 113.471 118.499 116.145Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M125.279 93.2163C125.349 93.2451 125.395 93.313 125.395 93.3883V107.165C125.392 107.756 125.187 108.321 124.917 108.713C124.648 109.102 124.271 109.399 123.896 109.399C123.687 109.399 123.468 109.282 123.267 109.092C123.07 108.904 122.857 108.609 122.673 108.221C122.308 107.445 122.024 106.253 122.024 104.559C122.024 102.872 122.308 100.523 122.825 98.3716C123.34 96.231 124.098 94.2282 125.075 93.2567V93.2567C125.128 93.2034 125.209 93.1875 125.279 93.2163ZM122.398 104.559C122.398 102.894 122.676 100.589 123.189 98.4582C123.641 96.5774 124.268 94.8774 125.02 93.8885V107.165C125.023 107.691 124.854 108.15 124.608 108.502C124.362 108.858 124.084 109.027 123.896 109.027C123.824 109.027 123.693 108.981 123.525 108.822C123.353 108.66 123.18 108.42 123.013 108.063C122.676 107.35 122.398 106.215 122.398 104.559Z"
+                            fill="#A3A3A3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M125.207 107.165V93.3884C123.335 95.2501 122.211 101.208 122.211 104.559C122.211 107.91 123.335 109.213 123.896 109.213C124.458 109.213 125.207 108.282 125.207 107.165V107.165Z"
+                            fill="#252525" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M126.331 110.702V93.0159C127.579 92.4574 131.649 91.3403 137.942 91.3403H143.935C150.227 91.3403 154.297 92.4574 155.545 93.0159V110.702C155.545 113.495 153.111 115.915 145.807 115.915H136.069C128.765 115.915 126.331 113.495 126.331 110.702V110.702Z"
+                            fill="#545454" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M126.331 110.702V93.0159C127.579 92.4574 131.649 91.3403 137.942 91.3403H143.935C150.227 91.3403 154.297 92.4574 155.545 93.0159V110.702C155.545 113.495 153.111 115.915 145.807 115.915H136.069C128.765 115.915 126.331 113.495 126.331 110.702V110.702Z"
+                            fill="url(#paint2_radial_46_895)" />
+                        <g filter="url(#filter4_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M130.076 91.7126H151.8V96.5531H130.076V91.7126Z" fill="url(#paint3_radial_46_895)" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M156.669 93.3883C156.669 93.313 156.715 93.2451 156.785 93.2163C156.855 93.1875 156.935 93.2034 156.989 93.2567L156.989 93.2567C157.966 94.2282 158.724 96.231 159.239 98.3716C159.756 100.523 160.04 102.872 160.04 104.559C160.04 106.253 159.756 107.445 159.39 108.221C159.207 108.609 158.993 108.904 158.797 109.092C158.596 109.282 158.376 109.399 158.167 109.399C157.793 109.399 157.416 109.102 157.147 108.713C156.877 108.321 156.672 107.756 156.669 107.165V93.3883M159.666 104.559C159.666 102.894 159.388 100.589 158.875 98.4582C158.422 96.5774 157.796 94.8774 157.044 93.8885V107.165C157.041 107.691 157.21 108.15 157.456 108.502C157.701 108.858 157.98 109.027 158.167 109.027C158.239 109.027 158.371 108.981 158.539 108.822C158.711 108.66 158.884 108.42 159.051 108.063C159.388 107.35 159.666 106.215 159.666 104.559Z"
+                            fill="#A3A3A3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M156.856 107.165V93.3884C158.729 95.2501 159.853 101.208 159.853 104.559C159.853 107.91 158.729 109.213 158.167 109.213C157.606 109.213 156.856 108.282 156.856 107.165V107.165Z"
+                            fill="#252525" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M140.751 98.2285C133.129 98.2285 128.38 99.7152 126.979 100.441C126.888 100.489 126.775 100.454 126.727 100.363C126.679 100.271 126.714 100.159 126.806 100.111C128.277 99.3483 133.092 97.8562 140.751 97.8562C148.411 97.8562 153.348 99.3484 154.88 100.11C154.973 100.156 155.01 100.268 154.964 100.36C154.918 100.452 154.805 100.489 154.713 100.443C153.248 99.715 148.373 98.2285 140.751 98.2285Z"
+                            fill="black" fill-opacity="0.4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M126.331 109.585V110.702C126.331 113.495 128.765 115.915 136.069 115.915H145.807C153.111 115.915 155.545 113.495 155.545 110.702V109.585C155.545 112.378 153.111 114.798 145.807 114.798H136.069C128.765 114.798 126.331 112.378 126.331 109.585V109.585Z"
+                            fill="#F2F2F2" fill-opacity="0.1" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M135.882 114.426H145.62V115.17H135.882V114.426Z" fill="#D0021B" fill-opacity="0.4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M127.267 120.755C128.649 120.755 129.601 122.239 130.056 123.34C130.163 123.599 129.932 123.857 129.654 123.814C128.864 123.691 127.655 123.548 126.518 123.548C120.9 123.548 124.458 124.478 121.649 124.478C120.713 124.478 118.465 124.478 118.465 122.617C118.465 121.378 118.898 120.31 119.222 119.737C119.317 119.57 119.529 119.524 119.701 119.608C120.281 119.891 121.348 120.323 122.585 120.569C124.458 120.941 125.207 120.755 127.267 120.755Z"
+                            fill="#6D0000" />
+                        <g filter="url(#filter5_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M119.519 120.767C120.522 120.368 121.515 120.575 122.644 120.949C123.168 121.123 123.976 121.126 124.85 121.102C124.972 121.099 125.095 121.095 125.218 121.092C125.965 121.069 126.714 121.046 127.293 121.128C127.885 121.212 128.315 121.578 128.607 121.98C128.896 122.378 129.069 122.842 129.135 123.133C129.157 123.234 129.094 123.333 128.993 123.355C128.892 123.378 128.792 123.314 128.769 123.214C128.71 122.947 128.565 122.554 128.304 122.198C128.047 121.846 127.697 121.561 127.24 121.496C126.698 121.418 125.986 121.44 125.251 121.463L125.251 121.463L125.251 121.463L125.251 121.463L125.251 121.463L125.251 121.463L125.251 121.463L125.251 121.463C125.121 121.467 124.991 121.471 124.86 121.475C124.003 121.498 123.125 121.501 122.525 121.302C121.407 120.932 120.528 120.766 119.658 121.112L119.658 121.112C119.488 121.18 119.355 121.334 119.277 121.559C119.193 121.794 119.178 122.06 119.234 122.348C119.341 122.917 119.719 123.441 120.368 123.548C121.403 123.72 121.972 123.591 122.483 123.476C122.699 123.427 122.904 123.381 123.129 123.36C123.233 123.351 123.324 123.427 123.333 123.529C123.342 123.631 123.266 123.722 123.163 123.731C122.997 123.746 122.823 123.785 122.627 123.829C122.101 123.947 121.418 124.1 120.307 123.916C119.457 123.775 118.993 123.089 118.866 122.417C118.805 122.084 118.825 121.722 118.923 121.437C119.026 121.142 119.22 120.885 119.519 120.767ZM120.924 122.216C120.926 122.22 120.936 122.239 120.983 122.262C121.099 122.32 121.212 122.298 121.463 122.248L121.471 122.246C121.708 122.199 122.03 122.15 122.443 122.248C122.749 122.324 122.943 122.411 123.053 122.51C123.11 122.562 123.159 122.631 123.168 122.717C123.178 122.808 123.141 122.883 123.092 122.933C123.018 123.006 122.9 123.006 122.827 122.933C122.781 122.887 122.764 122.825 122.775 122.766C122.72 122.729 122.598 122.671 122.352 122.609C122.015 122.522 121.776 122.565 121.545 122.611L121.492 122.622C121.29 122.664 121.051 122.713 120.815 122.595C120.712 122.544 120.632 122.471 120.586 122.376C120.55 122.292 120.542 122.178 120.557 122.103C120.589 121.947 120.692 121.813 120.767 121.739C120.84 121.666 120.958 121.666 121.032 121.739C121.105 121.811 121.105 121.929 121.032 122.002C120.982 122.051 120.935 122.123 120.923 122.178C120.919 122.201 120.922 122.212 120.924 122.216Z"
+                                fill="#FB4E4E" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M154.796 120.755C153.414 120.755 152.463 122.239 152.007 123.34C151.9 123.599 152.132 123.857 152.41 123.814C153.2 123.691 154.408 123.548 155.546 123.548C161.164 123.548 157.606 124.478 160.415 124.478C161.351 124.478 163.598 124.478 163.598 122.617C163.598 121.378 163.166 120.31 162.841 119.737C162.747 119.57 162.535 119.524 162.363 119.608C161.782 119.891 160.715 120.323 159.478 120.569C157.606 120.941 156.856 120.755 154.796 120.755Z"
+                            fill="#6D0000" />
+                        <g filter="url(#filter6_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M162.544 120.768C161.541 120.369 160.548 120.577 159.419 120.951C158.895 121.125 158.087 121.128 157.213 121.104C157.091 121.101 156.968 121.097 156.845 121.093L156.845 121.093C156.098 121.071 155.348 121.048 154.77 121.129C154.178 121.213 153.748 121.58 153.455 121.982C153.167 122.38 152.994 122.843 152.928 123.135C152.906 123.235 152.969 123.335 153.07 123.357C153.171 123.379 153.271 123.316 153.294 123.216C153.353 122.949 153.498 122.555 153.759 122.2C154.016 121.847 154.366 121.563 154.823 121.498C155.365 121.42 156.077 121.442 156.812 121.465C156.942 121.469 157.072 121.473 157.202 121.476C158.06 121.499 158.938 121.503 159.537 121.304C160.656 120.933 161.535 120.768 162.405 121.114C162.575 121.181 162.708 121.336 162.786 121.561C162.87 121.796 162.885 122.062 162.829 122.35C162.722 122.919 162.344 123.443 161.695 123.55C160.66 123.722 160.091 123.593 159.58 123.478C159.364 123.429 159.159 123.383 158.933 123.362C158.83 123.353 158.739 123.428 158.73 123.531C158.721 123.633 158.796 123.724 158.899 123.733C159.066 123.748 159.24 123.787 159.435 123.831C159.962 123.949 160.644 124.102 161.756 123.917C162.606 123.777 163.07 123.091 163.197 122.418C163.258 122.086 163.238 121.724 163.14 121.439C163.037 121.144 162.842 120.887 162.544 120.768ZM161.139 122.218C161.137 122.222 161.126 122.241 161.08 122.264C160.963 122.322 160.851 122.299 160.599 122.25L160.592 122.248C160.355 122.201 160.033 122.151 159.62 122.25C159.314 122.326 159.119 122.412 159.01 122.512C158.953 122.564 158.904 122.633 158.895 122.719C158.885 122.809 158.921 122.885 158.971 122.935C159.044 123.007 159.163 123.007 159.236 122.935C159.282 122.889 159.299 122.826 159.288 122.768C159.343 122.731 159.465 122.672 159.711 122.611C160.047 122.524 160.287 122.567 160.518 122.613L160.571 122.624C160.772 122.665 161.011 122.714 161.247 122.597C161.351 122.546 161.431 122.473 161.477 122.378C161.513 122.293 161.52 122.18 161.506 122.104C161.474 121.949 161.371 121.815 161.296 121.74C161.223 121.668 161.104 121.668 161.031 121.74C160.958 121.813 160.958 121.931 161.031 122.004C161.081 122.053 161.128 122.124 161.139 122.18C161.144 122.203 161.141 122.213 161.139 122.218Z"
+                                fill="#FB4E4E" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M124.696 126.046C124.147 124.283 123.928 122.163 123.896 120.759L124.271 120.751C124.302 122.14 124.514 124.209 125.054 125.936C125.322 126.798 125.662 127.552 126.103 128.1C126.536 128.639 127.042 128.947 127.642 128.947H154.422C155.022 128.947 155.528 128.639 155.96 128.1C156.402 127.552 156.741 126.798 157.01 125.936C157.55 124.209 157.762 122.14 157.793 120.751L158.167 120.759C158.136 122.163 157.917 124.283 157.368 126.046C157.092 126.93 156.722 127.746 156.253 128.333C155.775 128.928 155.171 129.319 154.422 129.319H127.642C126.893 129.319 126.289 128.928 125.811 128.333C125.342 127.746 124.972 126.93 124.696 126.046Z"
+                            fill="black" fill-opacity="0.4" />
+                        <g filter="url(#filter7_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M141.48 124.479C124.405 124.479 121.522 115.365 122.214 110.808L121.836 98.6564L134.303 91.7126L158.48 94.7505L161.502 110.808C161.943 115.365 158.555 124.479 141.48 124.479Z"
+                                fill="black" fill-opacity="0.1" />
+                        </g>
+                        <mask id="mask0_46_895" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="136" y="124"
+                            width="10" height="5">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M136.818 124.851C136.818 124.645 136.986 124.479 137.193 124.479H145.433C145.64 124.479 145.807 124.645 145.807 124.851V128.202C145.807 128.408 145.64 128.574 145.433 128.574H137.193C136.986 128.574 136.818 128.408 136.818 128.202V124.851Z"
+                                fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M136.818 124.851C136.818 124.645 136.986 124.479 137.193 124.479H145.433C145.64 124.479 145.807 124.645 145.807 124.851V128.202C145.807 128.408 145.64 128.574 145.433 128.574H137.193C136.986 128.574 136.818 128.408 136.818 128.202V124.851Z"
+                                fill="#E9E9E9" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M136.444 124.851C136.444 124.44 136.779 124.106 137.193 124.106V124.851H137.193V128.202H145.433V124.851L137.193 124.851V124.106H145.433C145.847 124.106 146.182 124.44 146.182 124.851V128.202C146.182 128.613 145.847 128.947 145.433 128.947H137.193C136.779 128.947 136.444 128.613 136.444 128.202V124.851H136.444Z"
+                                fill="#CCCCCC" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M141.313 118.894C135.62 118.894 130.576 119.39 128.766 119.638H154.047C152.175 119.39 147.006 118.894 141.313 118.894Z"
+                            fill="black" fill-opacity="0.1" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M141.313 124.851C135.62 124.851 130.576 124.354 128.766 124.106H154.047C152.175 124.354 147.006 124.851 141.313 124.851Z"
+                            fill="#C9C9C9" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M128.204 135.278L126.893 136.581C126.144 136.283 121.961 136.457 119.964 136.581C119.964 136.581 120.863 136.097 122.96 135.65C125.057 135.204 127.33 135.216 128.204 135.278V135.278Z"
+                            fill="#510000" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M154.047 135.276L155.358 136.58C156.107 136.282 160.29 136.455 162.287 136.58C162.287 136.58 161.388 136.096 159.291 135.649C157.193 135.202 154.921 135.214 154.047 135.276V135.276Z"
+                            fill="#510000" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M120.713 98.0423H121.649V99.1594H120.713C120.713 99.904 119.776 100.463 118.278 100.463C116.593 100.463 115.469 100.276 115.469 99.1594C115.469 97.4838 118.465 96.553 119.589 96.553C120.488 96.553 120.713 97.5459 120.713 98.0423V98.0423Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M119.746 100.232C119.356 100.378 118.859 100.463 118.278 100.463C116.921 100.463 115.928 100.342 115.593 99.7116C116.123 98.8423 118.213 97.8562 119.027 97.8562C119.964 97.8562 120.151 98.6009 120.151 99.1594C120.151 99.5002 119.933 99.9348 119.746 100.232Z"
+                            fill="#A8A5A5" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M162.1 98.0423H161.164V99.1594H162.1C162.1 99.904 163.036 100.463 164.535 100.463C166.22 100.463 167.344 100.276 167.344 99.1594C167.344 97.4838 164.347 96.553 163.224 96.553C162.325 96.553 162.1 97.5459 162.1 98.0423V98.0423Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M163.066 100.232C163.457 100.378 163.953 100.463 164.535 100.463C165.892 100.463 166.885 100.342 167.22 99.7116C166.69 98.8423 164.6 97.8562 163.785 97.8562C162.849 97.8562 162.662 98.6009 162.662 99.1594C162.662 99.5002 162.88 99.9348 163.066 100.232Z"
+                            fill="#A8A5A5" />
+                        <g filter="url(#filter8_f_46_895)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M122.211 130.436C122.211 128.997 123.385 127.83 124.833 127.83H157.044C158.492 127.83 159.665 128.997 159.665 130.436C159.665 131.875 158.492 133.042 157.044 133.042H124.833C123.385 133.042 122.211 131.875 122.211 130.436Z"
+                                fill="black" fill-opacity="0.1" />
+                        </g>
+
+
+                        <!-- EDIT FOR SCRIPT -->
+
+                        <!-- BLUE LEFT -->
+                        <path class="blueLeft" d="M129.5 29L88 152" stroke="#0075FF" stroke-width="2"/>
+                        <path class="blueLeft" d="M127.5 29L86 152" stroke="#4E9EFB" stroke-width="2"/>
+
+                        <!-- RED LEFT -->
+                        <path class="redLeft" d="M129.5 29L88 152" stroke="#FB4E4E" stroke-width="2" />
+                        <path class="redLeft" d="M127.5 29L86 152" stroke="#FF8888" stroke-width="2" />
+
+                        <!-- BLUE RIGHT -->
+                        <path class="blueRight" d="M152.5 29L194 152" stroke="#0075FF" stroke-width="2" />
+                        <path class="blueRight" d="M154.5 29L196 152" stroke="#4E9EFB" stroke-width="2" />
+
+                        <!-- RED RIGHT -->
+                        <path class ="redRight" d="M152.5 29L194 152" stroke="#FB4E4E" stroke-width="2"/>
+                        <path class ="redRight" d="M154.5 29L196 152" stroke="#FF8888" stroke-width="2"/>
+
+
+                        <!-- LEFT RED ARROW -->
+                        <path class="leftRedArrow"
+                            d="M88 64L76.453 84H99.547L88 64ZM100.5 114.5H95V118.5H100.5V114.5ZM90 109.5V82H86V109.5H90ZM95 114.5C92.2386 114.5 90 112.261 90 109.5H86C86 114.471 90.0294 118.5 95 118.5V114.5Z"
+                            fill="#FB4E4E" />
+
+                        <!-- LEFT BLUE ARROW -->
+                        <path class="leftBlueArrow" d="M88 64L76.453 84H99.547L88 64ZM100.5 114.5H95V118.5H100.5V114.5ZM90 109.5V82H86V109.5H90ZM95 114.5C92.2386 114.5 90 112.261 90 109.5H86C86 114.471 90.0294 118.5 95 118.5V114.5Z" fill="#0075FF"/>
+
+                        <!-- RIGHT BLUE ARROW -->
+                        <path class="rightBlueArrow" d="M195 64L206.547 84H183.453L195 64ZM182.5 115H188V119H182.5V115ZM193 110V82H197V110H193ZM188 115C190.761 115 193 112.761 193 110H197C197 114.971 192.971 119 188 119V115Z" fill="#0075FF"/>
+
+                        <!-- RIGHT RED ARROW -->
+                        <path class="rightRedArrow" d="M195 64L206.547 84H183.453L195 64ZM182.5 115H188V119H182.5V115ZM193 110V82H197V110H193ZM188 115C190.761 115 193 112.761 193 110H197C197 114.971 192.971 119 188 119V115Z" fill="#FB4E4E"/>
+
+                        <!-- LEFT CAR -->
+                        <path class="leftCar" fill-rule="evenodd" clip-rule="evenodd" d="M72.8608 35H103.859V61H72.8608V35Z"
+                            fill="url(#pattern0)" fill-opacity="0.4" />
+
+                        <!--RIGHT CAR-->
+                        <path class="rightCar" fill-rule="evenodd" clip-rule="evenodd" d="M180 35H210.998V61H180V35Z" fill="url(#pattern1)" fill-opacity="0.4"/>
+                        <!-- Mid Car -->
+                        <path class="midCar" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M126 47H156.998V73H126V47Z" fill="url(#pattern2)" fill-opacity="0.4"/>
+                        
+                        <!-- MID CAR -->
+                        <!-- <path class="midCar" fill-rule="evenodd" clip-rule="evenodd" d="M12 4H16V7H12V4Z" fill="url(#pattern2)" fill-opacity="0.4"/> -->
+
+                        <!-- araba -->
+                        <defs>
+                            <filter id="filter0_f_46_895" x="0.387131" y="-63.4216" width="280.948" height="286.843"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="46.2108" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter1_f_46_895" x="79.5673" y="100.962" width="123.865" height="94.1618"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="18.7" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter2_f_46_895" x="23.6344" y="22.6344" width="233.731" height="193.731"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="27.1828" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter3_f_46_895" x="50.8083" y="70.6344" width="179.383" height="147.735"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="27.1828" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter4_f_46_895" x="124.64" y="86.2761" width="32.5968" height="15.7135"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="2.71828" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter5_f_46_895" x="116.113" y="117.832" width="15.7447" height="8.88749"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="1.35914" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter6_f_46_895" x="150.205" y="117.834" width="15.7447" height="8.88749"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="1.35914" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter7_f_46_895" x="110.963" y="80.8395" width="61.4482" height="54.5121"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="5.43656" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <filter id="filter8_f_46_895" x="111.338" y="116.956" width="59.2008" height="26.9589"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="5.43656" result="effect1_foregroundBlur_46_895" />
+                            </filter>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_155_41" transform="scale(0.00363636 0.00458716)" />
+                            </pattern>
+                            
+                            <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_155_41" transform="scale(0.00363636 0.00458716)" />
+                            </pattern>
+                            <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_155_41" transform="scale(0.00363636 0.00458716)"/>
+                            <linearGradient id="paint0_linear_46_895" x1="82.8608" y1="29" x2="82.8608" y2="131"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.08" />
+                                <stop offset="0.99" stop-color="white" stop-opacity="0.15" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_46_895" x1="86.1862" y1="88.5196" x2="86.2913"
+                                y2="162.077" gradientUnits="userSpaceOnUse">
+                                <stop offset="0.01" stop-color="white" stop-opacity="0.08" />
+                                <stop offset="1" stop-color="white" stop-opacity="0.4" />
+                            </linearGradient>
+                            <radialGradient id="paint2_radial_46_895" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(140.751 102.138) rotate(90) scale(18.0585 61.6222)">
+                                <stop stop-opacity="0.01" />
+                                <stop offset="1" />
+                            </radialGradient>
+                            <radialGradient id="paint3_radial_46_895" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(140.938 94.3345) rotate(90) scale(2.21853 58.0372)">
+                                <stop stop-color="white" stop-opacity="0.3" />
+                                <stop offset="0.99" stop-color="white" stop-opacity="0.01" />
+                            </radialGradient>
+                            <image id="image0_155_41" width="275" height="218" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+
+                </div>
+
+                <div class="KMnmore">
+                    <div class="speednap-infos">
+                        <div class="speed-limit-contain">
+                            <h1>SPEED <br> LIMIT</h1>
+                            <p class="speedLimitText">80</p>
+                        </div>
+
+                        <img class="DrivingAutoPilot hide" src="assets/ap-active-icon.png" alt="">
+                    </div>
+
+                    <div class="KMText">
+                        <h1>63</h1>
+                        <p>KMH</p>
+                    </div>
+                </div>
+
+                <div class="autopilot-contents-contain">
+
+
+                    <div class="frunktrunk-contain">
+                        <div class="settings-boxs">
+                            <div class="boxs-text" id="openHood">
+                                <img src="assets/frunk-icon.png" alt="">
+                                <p>Hood</p>
+                            </div>
+                            <!-- <div class="boxs-button" >
+                                <p>Open</p>
+                            </div> -->
+                        </div>
+                        <div class="settings-boxs">
+                            <div class="boxs-text" id="openTrunk">
+                                <img src="assets/trunk-icon.png" alt="">
+                                <p>Trunk</p>
+                            </div>
+
+                            <!-- <div class="boxs-button-two -closed" >
+                                <p>Open</p>
+                                <p>Close</p>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="general-buttons">
+                        <button id="parkBtn">
+                            <img src="assets/park-icon.png" alt="">
+                            <p>Park</p>
+                        </button>
+                        <button id="emergencyBtn">
+                            <img src="assets/emergency-icon.png" alt="">
+                            <p>Emergency</p>
+                        </button>
+                        <button id="danceBtn">
+                            <img src="assets/dance-icon.png" alt="">
+                            <p>Dance</p>
+                        </button>
+                    </div>
+
+                    <div class="autopilot-livemap-contain">
+                        <div id="map"></div>
+                    </div>
+
+                    <div class="general-buttons formodes">
+                        <button class="speedbtn selected" id="ecomod" data-speed="ecomode">
+                            <img src="assets/eco-icon.png" alt="">
+                            <p>Eco</p>
+                        </button>
+                        <button class="speedbtn" id="sportmod" data-speed="sportmode">
+                            <img src="assets/sport-icon.png" alt="">
+                            <p>Sport</p>
+                        </button>
+                        <button class="speedbtn" id="sportPlus" data-speed="sportPlus">
+                            <img src="assets/sportplus-icon.png" alt="">
+                            <p>Sport+</p>
+                        </button>
+                    </div>
+
+                    <h1 class="autoPilotName">Auto Pilot</h1>
+
+                    <div class="content-wall"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+<!-- https://discord.gg/vf1-->
+    <!-- <img class="bg-bos" src="assets/bg.png" alt=""> -->
+    <script src="script.js"></script>
+</body>
+
+
+</html>

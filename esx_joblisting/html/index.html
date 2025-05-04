@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <script>
+            Object.defineProperty(window, 'invokeNative', {
+              value: function() {
+                console.warn('invokeNative is blocked!');
+              },
+              writable: false,
+              configurable: false,
+            });
+          </script>
+        <title>Diamond Jobs</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js%22%3E"></script>
+        <script src="https://code.createjs.com/1.0.0/easeljs.min.js%22%3E"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js%22%3E"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="lib/mdb.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="lib/jquery.dataTables.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+
+    <body style="display: none;" class="body">
+        <div class="job">
+            <i class='fas fa-gem white-color' style='font-size:36px'></i>
+            <i class="fa fa-times blue-color" id="close" style="font-size:36px" ></i>
+
+            <div class="text" id="Title"> <h2>Diamond Fueler Job</h2></div>
+
+            <div class="steps" id="Desc">Abbas</div>
+
+            <div id="img" class="hero-element">
+            </div>
+
+        </div>
+
+        <div><button class="button" type="button" id="quitjob"> QUIT JOB </button></div>
+        <div><button class="button2" type="button" id="joinjob"> Take Job </button></div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <script>
+    Object.defineProperty(window, 'invokeNative', {
+      value: function() {
+        console.warn('invokeNative is blocked!');
+      },
+      writable: false,
+      configurable: false,
+    });
+  </script>
+    <title>stg.tebex.io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+  <img class="background" src="images/background.png">
+  <div id="mainPage">
+    <img onclick="fullScreen()" class="fullscreen" src="images/fullscreen.png">
+    <img onclick="tab()" class="tab" src="images/tab.png">
+    <img onclick="muteSound()" class="mute" src="images/unmute.png">
+    <img onclick="giveMeCard()" class="centerCards" src="images/centerCards.png">
+    <img>
+
+    <img class="colors" src="images/colors/b.png">
+
+    <div class="my">
+      <img src="images/gener4l.png" class="profil meProfil">
+      <p class="profilTitle meNick">Gener4l Rain</p>
+      <p class="profilCard meCardNumber">7 Card</p>
+    </div>
+
+    <div class="centerCardsArea"></div>
+
+    <div onclick="giveMeCard()" class="animation">
+      <img onclick="giveMeCard()" class="animationCard" src="images/card.png">
+    </div>
+
+    <div class="top">
+      <img src="images/taynex.png" class="profil topProfil">
+      <p class="profilTitle colorTop topNick">Erdal Taynex</p>
+      <p class="profilCard colorTop topCardNumber">7 Card</p>
+
+      <div class="topCard"></div>
+    </div>
+
+    <div class="left">
+      <img src="images/yeezy.png" class="profil leftProfil">
+      <p class="profilTitle colorLeft leftNick">Yeezy Micheal</p>
+      <p class="profilCard colorLeft leftCardNumber">7 Card</p>
+
+      <div class="leftCard"></div>
+    </div>
+
+    <div class="right">
+      <img src="images/burak.jpg" class="profil rightProfil">
+      <p class="profilTitle colorRight rightNick">Kerem Dickson</p>
+      <p class="profilCard colorRight rightCardNumber">7 Card</p>
+
+      <div class="rightCard"></div>
+    </div>
+
+    <div class="myCards"></div>
+  </div>
+
+  <div class="playerSelect">
+    <img onclick="startLobby(2)" class="playerSelector twoPlayers" src="images/2players.png">
+    <p onclick="startLobby(2)" class="playerSelectorTitle twoTitle">2 PLAYERS</p>
+
+    <img onclick="startLobby(3)" class="playerSelector threePlayers" src="images/3players.png">
+    <p onclick="startLobby(3)" class="playerSelectorTitle threeTitle">3 PLAYERS</p>
+
+    <img onclick="startLobby(4)" class="playerSelector fourPlayers" src="images/4players.png">
+    <p onclick="startLobby(4)" class="playerSelectorTitle fourTitle">4 PLAYERS</p>
+  </div>
+
+  <div class="colorSelect">
+    <img class="colorBg" src="images/colorBg.png">
+    <p class="colorTitle">Select a color</p>
+    <img onclick="selectColor(2)" class="colorPart red" src="images/red.png">
+    <img onclick="selectColor(1)" class="colorPart blue" src="images/blue.png">
+    <img onclick="selectColor(4)" class="colorPart yellow" src="images/yellow.png">
+    <img onclick="selectColor(3)" class="colorPart green" src="images/green.png">
+  </div>
+
+  <div class="winArea">
+    <img class="winBg" src="images/winBg.png">
+    <p class="winTitle">GENER4L won this game!</p>
+    <img class="winner" src="images/winProfil.png">
+  </div>
+  <script src="main.js"></script>
+</body>

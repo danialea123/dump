@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleMetadataMgr>
+  <AnimRateSets />
+  <ClipSetMaps />
+  
+  
+  
+  
+  
+  <VehicleCoverBoundOffsetInfos />
+  
+  <BicycleInfos />
+  
+  <POVTuningInfos />
+  
+  <EntryAnimVariations />
+  
+  <VehicleExtraPointsInfos />
+  
+  
+  
+  
+  <DrivebyWeaponGroups />
+  
+  
+  
+  
+  
+  <VehicleDriveByAnimInfos />
+    
+	
+	
+	
+	
+  <VehicleSeatInfos>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r1</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r1</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+        <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r2</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r2</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+        <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r3</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r3</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+      <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r4</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r4</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r5</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r5</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r6</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r6</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_dside_r7</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+     <Item type="CVehicleSeatInfo">
+      <Name>SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2</Name>
+      <SeatBoneName>seat_pside_r7</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>IsIdleSeat</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+  </VehicleSeatInfos>
+  
+  
+  
+  
+  
+  <VehicleSeatAnimInfos />
+  
+  
+  
+  
+  
+  <VehicleEntryPointInfos>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_CATAMARAN_FRONT_LEFT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_FRONT_LEFT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+	<Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_PSIDE_F</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_FRONT_RIGHT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_LEFT2</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_RIGHT2</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT2" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+        <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_LEFT3</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT3" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_RIGHT3</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT3" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+        <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_LEFT4</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT4" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_RIGHT4</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT4" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+      <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_LEFT5</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT5" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_RIGHT5</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT5" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+      <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_LEFT6</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT6" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_RIGHT6</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT6" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_LEFT7</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT7" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BOAT_MARQUIS_REARCLIMB_RIGHT7</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_REAR</VehicleSide>
+      <AccessableSeats>
+		<Seat ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT7" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_DINGHY_LEFT" />
+      <Flags />
+    </Item>
+	<Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_RIO_WARP</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+		<Item ref="SEAT_BOAT_NO_SHUFFLE_FRONT_LEFT" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_FRONT_RIGHT" />
+		<Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT" />
+		<Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT2" />
+    <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT3" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT3" />
+    <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT4" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT4" />
+    <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT5" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT5" />
+    <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT6" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT6" />
+    <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT7" />
+        <Item ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT7" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags>IgnoreSmashWindowCheck MPWarpInOut SPEntryAllowedAlso</Flags>
+      <BlockJackReactionSides />
+    </Item>
+  </VehicleEntryPointInfos>
+  
+  
+  
+  
+  
+  <VehicleEntryPointAnimInfos />
+  <VehicleExplosionInfos />
+  <VehicleLayoutInfos>
+    <Item type="CVehicleLayoutInfo">
+      <Name>LAYOUT_BOAT_CATAMARAN</Name>
+      <Seats>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_FRONT_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_TROPIC_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_FRONT_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_TROPIC_FRONT_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+		<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT2" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+      	<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT2" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+      		<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT3" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+      	<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT3" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+      		<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT4" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+      	<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT4" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT5" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+       	<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT5" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT6" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+       	<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT6" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_LEFT7" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>
+       	<Item>
+          <SeatInfo ref="SEAT_BOAT_NO_SHUFFLE_REAR_RIGHT7" />
+          <SeatAnimInfo ref="SEAT_ANIM_BOAT_PASSENGER_REAR_LEFT" />
+        </Item>  
+      </Seats>
+      <EntryPoints>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BOAT_SUNTRAP_FRONT_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BOAT_SUNTRAP_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BOAT_SUNTRAP_FRONT_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BOAT_SUNTRAP_FRONT_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BOAT_SUNTRAP_FRONTCLIMB_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BOAT_SUNTRAP_FRONTCLIMB_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BOAT_SUNTRAP_FRONTCLIMB_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BOAT_SUNTRAP_FRONTCLIMB_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BOAT_SUNTRAP_REARCLIMB_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BOAT_SUNTRAP_REARCLIMB_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_BOAT_SUNTRAP_REARCLIMB_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BOAT_SUNTRAP_REARCLIMB_RIGHT" />
+        </Item>
+      </EntryPoints>
+      <LayoutFlags>StreamAnims UseLeanSteerAnims DisableJackingAndBusting</LayoutFlags>
+      <BicycleInfo ref="NULL" />
+	  <AnimRateSet ref="BOAT_ANIM_RATE_SET" />
+      <HandsUpClipSetId>busted_vehicle_std</HandsUpClipSetId>
+      <SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+    </Item>
+  </VehicleLayoutInfos>
+  
+  
+  <VehicleScenarioLayoutInfos />
+  
+  
+  <SeatOverrideAnimInfos />
+  
+  
+  <InVehicleOverrideInfos />
+    
+  <FirstPersonDriveByLookAroundData />
+</CVehicleMetadataMgr>

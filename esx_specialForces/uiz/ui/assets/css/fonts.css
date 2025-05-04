@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Fa solid 900';
+    src: url('../fonts/font-awesome/fa-solid-900.woff2') format('woff2'),
+    url('../fonts/font-awesome/fa-solid-900.eot') format('embedded-opentype'),
+    url('../fonts/font-awesome/fa-solid-900.woff') format('woff'),
+    url('../fonts/font-awesome/fa-solid-900.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins/Poppins.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Proxima";
+    src: url("../fonts/Proxima/ProximaNovaRegular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+} */

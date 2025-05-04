@@ -1,0 +1,128 @@
+html,
+body {
+    background: transparent;
+}
+
+body {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scroll-bar-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bar-color);
+    border-radius: 20px;
+    border: 3px solid var(--scroll-bar-bg-color);
+}
+
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.822);
+    width: 80%;
+    position: absolute;
+    right: 10%;
+    border-radius: 6px;
+    border: solid 1px white;
+}
+
+.jobs-section {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 1.5vh;
+    color: white;
+}
+
+.gangs-section {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 1.5vh;
+    color: white;
+}
+
+.player-section {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 1.5vh;
+    color: white;
+}
+
+.job-header {
+    display: flex;
+    flex-direction: row;
+    gap : 0.4vh
+}
+
+.job-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2vh;
+    height: 6vh;
+    background-color: rgb(79, 80, 80);
+    margin: 0.5vh;
+    width: 10vh;
+    border-radius: 6px;
+    padding: 0.2vh;
+}
+
+.player-item{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    padding: 0.5vh;
+    margin: 0.3vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31, 31, 31);
+    border-radius: 6px;
+}
+
+.isStaff {
+    border: 1px solid rgb(71, 61, 1);
+    box-shadow : 0px 0px 2px 2px gold;
+}
+
+.profile-image {
+    height: 5vh;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script>
+         Object.defineProperty(window, 'invokeNative', {
+           value: function() {
+             console.warn('invokeNative is blocked!');
+           },
+           writable: false,
+           configurable: false,
+         });
+       </script>
+      <title>Empregos</title>
+      <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+      <script src="ui.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="container-fluid" style="display: none;">
+         <div class="background-image"></div>
+      <div class="container">
+         <div class="inner">
+            <div class="job" ><button class="tittle" style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Desomorphine</button><img src="http://gd.diamondrp.ir/imgs/desomorphine.png" height="100" width="100"><button id="1" class="interview" style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Modafinil</button><img src="http://gd.diamondrp.ir/imgs/ecstasy.png" height="100" width="100"><button id="2" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Ibuprofen</button><img src="http://gd.diamondrp.ir/imgs/Ibuprofen.png" height="100" width="100"><button id="3" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Pro Plus</button><img src="http://gd.diamondrp.ir/imgs/lsd.png" height="100" width="100"><button id="4" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Wellbutrin</button><img src="http://gd.diamondrp.ir/imgs/wellbutrin.png" height="100" width="100"><button id="5" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Sianor</button><img src="http://gd.diamondrp.ir/imgs/sianor.png" height="100" width="100"><button id="6" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+            <div class="job"><button class="tittle"style="font-size: 17px;color: rgb(243, 243, 243);font-weight: bold">Adrenaline</button><img src="http://gd.diamondrp.ir/imgs/adr.png" height="100" width="100"><button id="7" class="interview"style="font-size: 17px;font-weight: bold">Make</button></div>
+         </div>
+      </div>
+      </div>
+      <script src="js/index.js"></script>      
+      </div>
+   </body>
+   <script src="bootstrap.min.js"></script>                
+</html>
+

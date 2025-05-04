@@ -1,0 +1,133 @@
+
+<div class="w-full h-full ">
+    <div class="w-[93%] h-full flex items-center justify-end">
+        <div class="w-[80.3%] h-full ">
+            <div class="w-full h-full ">
+                <div class="w-full h-[10%]  flex ">
+                    <div class="w-[37%] h-full ">
+                        <div class="w-full h-[53%] "></div>
+                        <div class="w-full h-[47%] ">
+                            <div class="w-full h-[20%] " style="border-top: 1px solid rgba(255, 255, 255, 0.46);"> </div>
+                            <div class="w-full h-[60%] flex items-center justify-start ">
+                                <h2 class="text-[1.4vw]  text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">{{this.$store.state.locales['menuTitlePeds']}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[63%] h-full  flex">
+                        <div class="w-[70%] h-full ">
+                            <div class="w-full h-[50%]  flex flex-wrap items-end justify-end">
+                                <div class="w-full h-[50%] "></div>
+                                <div class="w-full h-[50%]  flex items-center justify-end">
+                                    <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.1vw]" style="text-shadow: 0px 0px 50px 50px white;">{{this.$store.state.locales['characterTitle']}}</h2>
+                                </div>
+                            </div>
+                            <div class="w-full h-[50%] ">
+                               
+                                <div class="w-full h-[50%]  flex items-center justify-end">
+                                    <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">{{this.$store.state.locales['creationTitle']}}</h2>
+                                </div>
+                                <div class="w-full h-[50%] "></div>
+                            </div>
+                        </div>
+                        <div class="w-[30%] h-full  flex items-center justify-end">
+                            <div class="w-[85%] h-full  flex items-center justify-end">
+                                <img class="w-[100%] h-[62%] " src="./images/createpage/char-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="pedPage == 'tebex'"  class="w-full h-[74vh]  rounded-[0.8vw] bg-[url('./images/pedpage/pedbackground.png')] bg-[length:100%_100%]">
+                    <div class="w-full h-[32%] flex items-end justify-center ">
+                        <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.15vw]">{{this.$store.state.locales['pedsLocked']}}</h2>
+                    </div>
+                    <div class="w-full h-[17%] flex items-end justify-center ">
+                        <h2 class="text-[0.6vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{this.$store.state.locales['pedsDescription1']}}</h2>
+                    </div>
+                    <div class="w-full h-[13%] flex items-end justify-center ">
+                        <div class="w-[90%] h-[65%]  rounded-[0.5vw]">
+                            <input type="text" class="w-full h-full rounded-[0.5vw] bg-[#FFE58A26] text-[0.8vw] text-white text-center" placeholder="TBX ID" style="border:2px solid #FFE58A;">
+                        </div>
+                    </div>
+                    <div class="w-full h-[10%] flex  items-end justify-center ">
+                        <div class="w-[70%] h-[50%]  flex items-center flex-wrap justify-center">
+                            <div class="w-full h-[50%] flex items-center justify-center">
+                              
+                                <h2 class="text-[0.6vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{this.$store.state.locales['pedsDescription2']}}</h2>
+                            </div>
+                            <div class="w-full h-[50%]  flex items-center justify-center">
+                                <h2 class="text-[0.6vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{this.$store.state.locales['pedsTebex']}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[23%] flex items-end justify-center ">
+                        <div class="w-[90%] h-[36%] flex items-center justify-center  rounded-[0.5vw]  bg-[#FFE58A] cursor-pointer">
+                            <h2 class="text-[0.7vw] text-[#8F8355] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{this.$store.state.locales['unlockButton']}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div v-else-if="pedPage == 'lockedped'"  class="w-full h-[74vh]  rounded-[0.8vw] bg-[url('./images/pedpage/pedlocked.png')] bg-[length:100%_100%]">
+                    <div class="w-full h-[60%] flex items-end justify-center ">
+                        <h2 class="text-[1.4vw] text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[0.15vw]">{{this.$store.state.locales['pedsLocked']}}</h2>
+                    </div>
+                </div>
+
+                <div v-else-if="pedPage == 'pedspage'"  class="w-full  h-[66vh]  bg-[length:100%_100%]" :style="{'background-image' : 'url(./images/pedpage/'+padPageCategory+'.png)'}">
+                    <div class="w-full h-[6%]  flex">
+                        <div v-if="padPageCategory !== 'animals'" class="w-[50%] h-full  flex items-center justify-center cursor-pointer" @click="changePedCategory('males')">
+                            <h2 class="text-[1vw] font-['sf-pro-rounded-bold'] tracking-[0.15vw]" :style="padPageCategory == 'males' ? {'color' : '#FFE58A'} : { 'color' : 'rgba(243, 221, 143, 0.33)'}">{{this.$store.state.locales['malesTitle']}}</h2>
+                        </div>
+                        <div  v-if="padPageCategory !== 'animals'" class="w-[50%] h-full  flex items-center justify-center cursor-pointer" @click="changePedCategory('females')">
+                            <h2 class="text-[1vw]  font-['sf-pro-rounded-bold'] tracking-[0.15vw]" :style="padPageCategory == 'females' ? {'color' : '#FFE58A'} : { 'color' : 'rgba(243, 221, 143, 0.33)'}" >{{this.$store.state.locales['femalesTitle']}}</h2>
+                        </div>
+                        <div  v-if="padPageCategory == 'animals'" class="w-[100%] h-full  flex items-center justify-center">
+                            <h2 class="text-[1vw] text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[0.15vw]" >{{this.$store.state.locales['animalsTitle']}}</h2>
+                        </div>
+                    </div>
+                    <div class="w-full h-[8%]  flex items-end justify-center">
+                        <div class="w-[90%] h-[72%] flex items-center justify-center  bg-[#FFE58A26] rounded-[0.5vw] flex">
+                            <input v-model="pedListInput" type="text" class="seactbarplaceholder w-[90%] h-full font-['sf-pro-rounded-medium']  text-[0.8vw] text-[#FFE58A] text-start" style="background-color: transparent; text-indent: 1vw; outline: none;" placeholder="Search">
+                            <img class="w-[5%] h-[50%] mr-[1vw]" src="./images/pedpage/search.png" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full h-[6%]  flex items-end justify-center">
+                        <div class="w-[90%] h-full  flex">
+                            <div class="w-[37%] h-full  flex items-center justify-start">
+                                <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-bold']  tracking-[0.1vw]">{{padPageCategory == 'animals' ? 'Animals' : 'Ambient Models'}}</h2>
+                            </div>
+                            <div class="w-[63%] h-full">
+                                <div class="w-full h-[50%]  " style="border-bottom: 1px solid #FFE58A"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[78%]  flex items-center justify-center">
+                        <div class="w-[90%] no-scrollbar h-full  flex flex-wrap content-start overflow-auto">
+                            <div v-for="data in filterByTermPed" class="w-[32%]  h-[25%]  ml-[0.2vw] mt-[0.2vw]" @click="selectPed(data)" :style="selectedPed[data] ? {'background-image' : 'url(./images/pedpage/pedselect.png)'} : {'background-image' : 'url(./images/pedpage/pednotselect.png)'}" style=" background-size: 100% 100%;">
+                                <div class="w-full h-[83%]  flex items-center justify-center">
+                                    <img class="w-[72%] h-[80%] cursor-pointer" style="object-fit: contain;" :src="'https://docs.fivem.net/peds/'+data+'.webp'" alt="">
+                                </div>
+                                <div class="w-full h-[18%]  flex items-center justify-center">
+                                    <h2 class="text-[0.6vw] text-[white] font-['sf-pro-rounded-medium'] tracking-[0.05vw]">{{data}}</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="w-full h-[9%]  flex items-end justify-center">
+                    <div class="w-[100%] h-[95%] cursor-pointer flex items-center justify-center " @click="changePedCategory('animals')" style="background-image: url(./images/pedpage/animalbuttons.png); background-size: 100% 100%;">
+                        <h2 class="text-[1vw]  text-[#FFE58A] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">{{padPageCategory == 'animals' ? 'MALES&FAMALES' : 'ANIMALS'}}</h2>
+                    </div>
+                </div>
+                <div class="w-full h-[12.5vh]  flex items-end justify-center">
+                    <div @click="createcharacter" class="w-[100%] h-[94%] flex items-center justify-center bg-[length:100%_100%]" style="background-image: url(./images/pedpage/createchar.png);">
+                        <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{this.$store.state.locales['createCharacterButton']}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+
+</div>

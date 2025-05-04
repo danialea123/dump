@@ -1,0 +1,33 @@
+
+body {
+ background-color: black;
+ margin-top: 30px;
+ display: none;
+}
+/*#main {
+  width: 540px;
+  margin: 0 auto;
+  display: none;
+}*/
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    zoom: 160%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#frame {
+    display: none;
+    position: absolute;
+    height: 97%;
+    width: 99%;
+    background-image: url(frame.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}

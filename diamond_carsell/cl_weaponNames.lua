@@ -1,0 +1,8 @@
+AddTextEntry("WEAPON_AKVALO1", "Valo G")
+AddTextEntry("WEAPON_pistolluxe", "Luxe Pistol")
+AddTextEntry("WEAPON_rhrif", "HS2")
+AddTextEntry("WEAPON_pistolgold", "Gold Pistol")
+AddTextEntry("WEAPON_HKG", "Carbine HKG")
+AddTextEntry("WEAPON_M16G", "M16 G")
+AddTextEntry("WEAPON_AKDIAMOND", "Diamond AK")
+AddTextEntry("WEAPON_DiamondChrome", "AK D1")

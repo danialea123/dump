@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleMetadataMgr>
+	<VehicleLayoutInfos>
+		<Item type="CVehicleLayoutInfo">
+			<Name>LAYOUT_HELI_BUZZARD3</Name>
+			<Seats>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_FRONT_LEFT" />
+					<SeatAnimInfo ref="SEAT_ANIM_HELI_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_FRONT_RIGHT" />
+					<SeatAnimInfo ref="SEAT_ANIM_HELI_FRONT_RIGHT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_REAR_LEFT" />
+					<SeatAnimInfo ref="SEAT_ANIM_HELI_SWIFT_REAR_LEFT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_REAR_RIGHT" />
+					<SeatAnimInfo ref="SEAT_ANIM_HELI_SWIFT_REAR_RIGHT" />
+				</Item>
+			</Seats>
+			<EntryPoints>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_LEFT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_RIGHT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_RIGHT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_STANDARD_REAR_LEFT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_STANDARD_REAR_RIGHT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_RIGHT" />
+				</Item>
+			</EntryPoints>
+			<LayoutFlags>StreamAnims UseFinerAlignTolerance Use2DBodyBlend</LayoutFlags>
+			<BicycleInfo ref="NULL" />
+			<HandsUpClipSetId>busted_vehicle_std</HandsUpClipSetId>
+			<SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+		</Item>
+		<Item type="CVehicleLayoutInfo">
+			<Name>LAYOUT_HELI_BUZZARD4</Name>
+			<Seats>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_FRONT_LEFT" />
+					<SeatAnimInfo ref="SEAT_ANIM_HELI_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_FRONT_RIGHT" />
+					<SeatAnimInfo ref="SEAT_ANIM_HELI_FRONT_RIGHT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_REAR_LEFT" />
+					<SeatAnimInfo ref="SEAT_ANIM_BARRACKS_REAR_LEFT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_STANDARD_REAR_RIGHT" />
+					<SeatAnimInfo ref="SEAT_ANIM_BARRACKS_REAR_RIGHT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_EXTRA_LEFT_1" />
+					<SeatAnimInfo ref="SEAT_ANIM_BARRACKS_REAR_LEFT" />
+				</Item>
+				<Item>
+					<SeatInfo ref="SEAT_EXTRA_RIGHT_1" />
+					<SeatAnimInfo ref="SEAT_ANIM_BARRACKS_REAR_RIGHT" />
+				</Item>
+			</Seats>
+			<EntryPoints>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_LEFT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_RIGHT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_RIGHT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_BUZZARD4_BENCH_FRONT_LEFT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_RIGHT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_BUZZARD4_BENCH_FRONT_RIGHT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_BUZZARD4_BENCH_REAR_LEFT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_LEFT" />
+				</Item>
+				<Item>
+					<EntryPointInfo ref="ENTRY_POINT_BUZZARD4_BENCH_REAR_RIGHT" />
+					<EntryPointAnimInfo ref="ENTRY_POINT_ANIM_HELI_BUZZARD_FRONT_RIGHT" />
+				</Item>
+			</EntryPoints>
+			<LayoutFlags>StreamAnims UseFinerAlignTolerance Use2DBodyBlend</LayoutFlags>
+			<BicycleInfo ref="NULL" />
+			<HandsUpClipSetId>busted_vehicle_std</HandsUpClipSetId>
+			<SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+		</Item>
+	</VehicleLayoutInfos>
+	<VehicleEntryPointInfos>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BUZZARD4_BENCH_FRONT_LEFT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_STANDARD_REAR_LEFT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BUZZARD4_FRONT_LEFT" />
+      <Flags>BlockJackReactionUntilJackerIsReady</Flags>
+      <BlockJackReactionSides>
+        <Item>SIDE_RIGHT</Item>
+      </BlockJackReactionSides>
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BUZZARD4_BENCH_FRONT_RIGHT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_STANDARD_REAR_RIGHT" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BUZZARD4_FRONT_RIGHT" />
+      <Flags>BlockJackReactionUntilJackerIsReady</Flags>
+      <BlockJackReactionSides>
+        <Item>SIDE_RIGHT</Item>
+      </BlockJackReactionSides>
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BUZZARD4_BENCH_REAR_LEFT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_LEFT_1" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BUZZARD4_REAR_LEFT" />
+      <Flags>BlockJackReactionUntilJackerIsReady</Flags>
+      <BlockJackReactionSides>
+        <Item>SIDE_RIGHT</Item>
+      </BlockJackReactionSides>
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_BUZZARD4_BENCH_REAR_RIGHT</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_RIGHT_1" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="EXTRA_VEHICLE_POINTS_BUZZARD4_REAR_RIGHT" />
+      <Flags>BlockJackReactionUntilJackerIsReady</Flags>
+      <BlockJackReactionSides>
+        <Item>SIDE_RIGHT</Item>
+      </BlockJackReactionSides>
+    </Item>
+	</VehicleEntryPointInfos>
+	<VehicleExtraPointsInfos>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BUZZARD4_FRONT_LEFT</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>SEAT_RELATIVE</LocationType>
+          <PointType>GET_IN</PointType>
+          <Position x="-0.100000" y="0.100000" z="0.000000" />
+          <Heading value="1.570000" />
+          <BoneName />
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BUZZARD4_FRONT_RIGHT</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>SEAT_RELATIVE</LocationType>
+          <PointType>GET_IN</PointType>
+          <Position x="-0.100000" y="0.100000" z="0.000000" />
+          <Heading value="-1.570000" />
+          <BoneName />
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BUZZARD4_REAR_LEFT</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>SEAT_RELATIVE</LocationType>
+          <PointType>GET_IN</PointType>
+          <Position x="0.100000" y="0.100000" z="0.000000" />
+          <Heading value="1.570000" />
+          <BoneName />
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+    <Item type="CVehicleExtraPointsInfo">
+      <Name>EXTRA_VEHICLE_POINTS_BUZZARD4_REAR_RIGHT</Name>
+      <ExtraVehiclePoints>
+        <Item>
+          <LocationType>SEAT_RELATIVE</LocationType>
+          <PointType>GET_IN</PointType>
+          <Position x="-0.100000" y="0.100000" z="0.000000" />
+          <Heading value="-1.570000" />
+          <BoneName />
+        </Item>
+      </ExtraVehiclePoints>
+    </Item>
+	</VehicleExtraPointsInfos>
+</CVehicleMetadataMgr>

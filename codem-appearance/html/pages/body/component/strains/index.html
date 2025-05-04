@@ -1,0 +1,188 @@
+
+
+
+<div class="w-full h-[114%]  flex items-start flex-wrap content-start mt-[-4vw] justify-center no-scrollbar" style="overflow: auto;">
+    <div class="w-[90%] h-[8%]  flex items-center justify-start">
+        <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Blemishes</h2>
+        <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+    </div>
+    
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div @click="changeSkin('blemishes_1', getSkinByName('blemishes_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input  @change="changeSkin('blemishes_1',  $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('blemishes_1')">
+                    </div>
+                    <div @click="changeSkin('blemishes_1', getSkinByName('blemishes_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input  @change="changeSkin('blemishes_2',  $event.target.value)"   type="range" class=" rangeForInput" step="1" :value="getSkinByName('blemishes_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] h-[8%]  flex items-center justify-start">
+            <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Ageing</h2>
+            <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+        </div>
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div  @click="changeSkin('age_1', getSkinByName('age_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input  @change="changeSkin('age_1',  $event.target.value)"  type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;"  :value="getSkinByName('age_1')">
+                    </div>
+                    <div  @click="changeSkin('age_1', getSkinByName('age_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input @change="changeSkin('age_2',  $event.target.value)"   type="range" class=" rangeForInput" step="1" :value="getSkinByName('age_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] h-[8%]  flex items-center justify-start">
+            <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Sun Damage</h2>
+            <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+        </div>
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div @click="changeSkin('sun_1', getSkinByName('sun_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input  @change="changeSkin('sun_1',  $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('sun_1')">
+                    </div>
+                    <div @click="changeSkin('sun_1', getSkinByName('sun_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input   @change="changeSkin('sun_2',  $event.target.value)"  type="range" class=" rangeForInput" step="1" :value="getSkinByName('sun_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="w-[90%] h-[8%]  flex items-center justify-start">
+            <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Complexion</h2>
+            <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+        </div>
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div  @click="changeSkin('complexion_1', getSkinByName('complexion_1')-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input  @change="changeSkin('complexion_1',  $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName('complexion_1')">
+                    </div>
+                    <div  @click="changeSkin('complexion_1', getSkinByName('complexion_1')+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input  @change="changeSkin('complexion_2',  $event.target.value)"  type="range" class=" rangeForInput" step="1" :value="getSkinByName('complexion_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+
+        <div class="w-[90%] h-[8%]  flex items-center justify-start">
+            <h2 class="text-[0.8vw] text-[#FFE58A] font-['sf-pro-rounded-medium'] tracking-[0.1vw]">Mole & Freckless</h2>
+            <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 229, 138, 0.46);"></div>
+        </div>
+        <div class="w-[90%] h-[15%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">{{this.$store.state.locales['typeTitle']}}</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div class="w-full h-full  flex justify-between">
+                    <div  @click="changeSkin('moles_1', getSkinByName('moles_1')-1)"  class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/bodypage/left.png" alt="">
+                    </div>
+                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                        <input  @change="changeSkin('moles_1',  $event.target.value)"  type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;"  :value="getSkinByName('moles_1')">
+                    </div>
+                    <div  @click="changeSkin('moles_1', getSkinByName('moles_1')+1)"  class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/bodypage/left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="w-[90%] h-[16%] flex  flex-wrap items-start  ">
+            <div class="w-full h-[30%]  ">
+                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-medium'] mt-[0.2vw] tracking-[0.05vw]">Intensity</h2>
+            </div>
+            <div class="w-full h-[60%]   ">
+                <div  class="w-full h-full  flex justify-center items-center" style="background-image: url(./images/bodypage/rangebg.png); background-size: 100% 100%;">
+                    <div class="w-[65%] h-full  flex items-center justify-center">
+                        <input @change="changeSkin('moles_2',  $event.target.value)"   type="range" class=" rangeForInput" step="1"  :value="getSkinByName('moles_2')" min="0" max="10">  
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+
+</div>

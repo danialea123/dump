@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+      <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <title> UI  Mythic By AlaviOne</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="Box" >
+      <img src="background.png">
+        </div>
+        <div class="titlesh">
+            <h2>Mythic</h2>
+        </div> 
+        <div class="Tozihat">
+            <p style="color: rgb(0, 204, 255);">Police <p style="">  10</p></p>
+             <br>
+            <p style="color: rgb(255, 0, 0);">Robber <p style="">  10</p></p>
+            <br>
+            <p style="color: rgb(81, 255, 0);">Joiner <p style="">  ❌ </p></p>
+            <br>
+            <p style="color: rgb(255, 238, 0);">Key <p style="">  MyThic Key ✔️ </p></p>
+          <br>
+            <p style="color: rgb(21, 255, 0);">Money <p style="color: rgb(9, 255, 50);">  500.000$ </p></p>
+        </div>
+        <div class="StartRobbery"></div>
+        <div class="helpclick">START</div>
+    
+       
+        <script src="main.js " type="text/javascript "></script>
+    </body>
+</html>

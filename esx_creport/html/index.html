@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        Object.defineProperty(window, 'invokeNative', {
+          value: function() {
+            console.warn('invokeNative is blocked!');
+          },
+          writable: false,
+          configurable: false,
+        });
+      </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Report Modal</title>
+</head>
+
+<body>
+    <div style="display: none;" id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2 style="color: #343a40;"> 🛡️ Diamond Report 🛡️</h2>
+            <form id="reportForm" action="#">
+                <label for="reportType">Select Report Type:</label>
+                <div class="select-btn">
+                    <span class="btn-text">Select Multiple Reasons</span>
+                    <span class="arrow-dwn">
+                        >
+                    </span>
+                </div>
+                <ul class="list-items">
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">AimBot</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">WallHack</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Teleport</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Speed</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">GodMode</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Magic Bullet</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">NoReload</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Others...</span>
+                    </li>
+                </ul>
+
+                <div id = "kill" class="id__section" style="display: none;">
+                    <label for="reportType">You Have Been Killed By:</label>
+                    <input type="text" id="killData" name="reportType" placeholder="data" disabled>
+                </div>
+
+                <div class="id__section">
+                    <label for="reportType">Enter ID:</label>
+                    <input type="text" id="reportType" name="reportType" placeholder="Enter ID">
+                </div>
+
+                <label for="reportReason">Details:</label>
+                <textarea id="reportReason" name="reportReason" placeholder="Enter your details"></textarea>
+                <button type="submit" class="submit">Submit Report</button>
+                <p class="thank-you-message" id="thankYouMessage"></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

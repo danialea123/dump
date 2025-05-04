@@ -1,0 +1,593 @@
+body {
+    overflow: none;
+    /*  background-image: url(./Screenshot_2.png); */
+}
+
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#logo {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+
+#logo img {
+    width: 160px;
+    height: 160px;
+}
+
+#street {
+    width: 65%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#oxigen {
+    width: 35%;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+.svIp {
+    width: 385px;
+    height: 40px;
+
+    width: 385px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svIp p {
+    font-family: monospace;
+    font-size: .8vw;
+    color: rgb(216, 213, 213);
+}
+
+#street,
+#oxigen {
+    /*  border-top-right-radius: 17px; */
+    /*    border-top-left-radius: 17px; */
+    /*  border-bottom-right-radius: 17px; */
+    /* border-bottom-left-radius: 17px; */
+    border-radius: 17px;
+    overflow: hidden;
+    background-color: #232C37;
+    opacity: 0.75;
+}
+
+#visors {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+
+    zoom: .8;
+}
+
+main {
+    /* footer */
+    display: flex;
+    align-self: flex-end;
+}
+
+#static-01,
+#static-02,
+#static-03 {
+    align-self: flex-end;
+    background-color: #232C37;
+}
+
+#static-01 {
+    width: 6px;
+    border-radius: 5px;
+    height: 60%;
+    bottom: 0;
+    margin-right: 7px;
+}
+
+#static-02 {
+    width: 6px;
+    border-radius: 5px;
+    height: 80%;
+    bottom: 0;
+    margin-right: 7px;
+}
+
+#static-03 {
+    width: 6px;
+    border-radius: 5px;
+    height: 100%;
+    bottom: 0;
+    font-family: var(--font)
+}
+
+aside {
+    display: flex;
+    align-self: flex-end;
+    width: 35px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+footer {
+    display: flex;
+    width: 382px;
+
+}
+
+header {
+    display: flex;
+}
+
+
+#health,
+#armour,
+#thirst,
+#hunger,
+#energy {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    /*  border-top-right-radius: 17px; */
+    /*  border-top-left-radius: 17px; */
+    /*  border-bottom-right-radius: 17px; */
+    /*   border-bottom-left-radius: 17px; */
+    border-radius: 17px;
+    overflow: hidden;
+    background: #232C37;
+    opacity: 0.75;
+}
+
+.marginRight {
+    margin-right: 8px;
+}
+
+header {
+    width: 385px;
+    height: 40px;
+    margin-bottom: 10px;
+
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.velocityDiv {
+    position: relative;
+    width: 385px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -5px;
+
+    overflow: hidden;
+}
+
+#fuelIcon {
+    position: absolute;
+    bottom: 285px;
+    right: 170px;
+}
+
+#toolsIcon {
+    position: absolute;
+    bottom: 240px;
+    right: 230px;
+}
+
+.engineLevel {
+    box-sizing: border-box;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    top: 40px;
+    left: 83px;
+
+    border-top: 8px solid rgba(0, 0, 0, 0);
+    border-left: 8px solid rgba(0, 0, 0, 0);
+    border-right: 8px solid rgba(0, 0, 0, 0);
+    border-bottom: 8px solid rgba(0, 0, 0, 0);
+
+    transform: rotate(-45deg);
+}
+
+.slicerFuel {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+
+    top: -75px;
+    right: -35px;
+    transform: rotate(-5deg);
+    overflow: hidden;
+}
+
+.fuelLevelMarker {
+    box-sizing: border-box;
+    position: absolute;
+    width: 286px;
+    height: 286px;
+    border-radius: 50%;
+    top: 70px;
+    left: -180px;
+
+    border-right: 6px solid #2a2a2a;
+    border-bottom: 6px solid #ffa02f;
+    border-top: 6px solid rgba(0, 0, 0, 0);
+    border-left: 6px solid rgba(0, 0, 0, 0);
+    transition: all .5s linear;
+    /*  transform: rotate(-120deg); */
+
+    animation: fuel-up 8s ease;
+}
+
+/* 
+@keyframes fuel-up {
+    from {
+        transform: rotate(-50deg)
+    }
+    to {
+        transform: rotate(-120deg)
+    }  
+}
+*/
+.slicerEngine {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+
+    top: 54px;
+    left: 54px;
+    transform: rotate(-16deg);
+    overflow: hidden;
+}
+
+.engineLevelMarker {
+    box-sizing: border-box;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+
+    border-top: 6px solid #2a2a2a;
+    border-left: 6px solid #2d4dbc;
+    border-right: 6px solid rgba(0, 0, 0, 0);
+    border-bottom: 6px solid rgba(0, 0, 0, 0);
+
+
+
+    transition: all .5s linear;
+    /*  transform: rotate(30deg); */
+    /*  animation: engine-reduce 4s ease; */
+}
+
+@keyframes engine-reduce {
+    0% {
+        transform: rotate(-30deg)
+    }
+
+    100% {
+        transform: rotate(30deg)
+    }
+}
+
+#main {
+    width: 270px;
+    height: 270px;
+    /* background-color: rgba(0, 0, 0, 0.185); */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    white-space: nowrap;
+}
+
+.velocityCircle {
+    fill: none;
+    stroke-width: 14;
+    stroke: #2A2A2A;
+    stroke-opacity: 1;
+    transform: translate(10px, 10px);
+
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+}
+
+circle:nth-child(1) {
+    stroke-dashoffset: 0;
+
+}
+
+circle:nth-child(2) {
+    /*   stroke-dashoffset: calc(800 - (800 * 100) / 100); */
+    stroke: #01FF66;
+    animation: animate-circle 4s cubic-bezier(0, 0.23, 1, .1);
+}
+
+#healthProgress,
+#armourProgress,
+#oxigenProgress,
+#thirstProgress,
+#hungerProgress,
+#energyProgress {
+    float: right;
+    /*  border-top-right-radius: 17px; */
+    /*  border-top-left-radius: 17px; */
+    /*  border-bottom-right-radius: 17px; */
+    /*  border-bottom-left-radius: 17px; */
+    border-radius: 17px;
+    overflow: hidden;
+    height: 100%;
+    transition: all .5s linear;
+}
+
+#healthProgress {
+    /*   width: 70%; */
+    background: linear-gradient(90deg, #01FF66 -193.75%, #2EA05B 100%);
+}
+
+#armourProgress {
+    /*  width: 70%; */
+    background: linear-gradient(90deg, #0194FF -27.07%, #020E26 192.32%);
+}
+
+#thirstProgress {
+    /*  width: 70%; */
+    background: linear-gradient(90deg, #635DE2 0%, #4C46D2 100%);
+}
+
+#hungerProgress {
+    /*  width: 70%; */
+    background: linear-gradient(90deg, #C8955B -5.17%, #8C663C 100%);
+}
+
+#energyProgress {
+    /*  width: 70%; */
+    background: linear-gradient(90deg, #2AC793 0%, #37AD86 100%);
+}
+
+#oxigenProgress {
+    /*  width: 70%; */
+    background: linear-gradient(90deg, #0194FF 0%, #035B9B 100%);
+
+}
+
+/* Rectangle 26 */
+
+header svg {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#oxigen svg {
+    position: absolute;
+    right: 260px;
+    margin-top: 8px;
+
+}
+
+#key {
+    position: absolute;
+    right: 100px;
+
+    bottom: 95px;
+}
+
+#engine {
+    position: absolute;
+    right: 170px;
+
+    bottom: 45px;
+}
+
+#belt {
+    position: absolute;
+    right: 240px;
+    bottom: 95px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+#velocity {
+    position: absolute;
+    bottom: 115px;
+    right: 160px;
+    width: 60px;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#velocityCount {
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 63px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+
+
+    margin-top: -40px;
+}
+
+#velocityAnalog {
+    margin-top: 70px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#engineCount {
+    position: absolute;
+    right: 235px;
+    bottom: 110px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid aqua;
+    border-left-color: #000;
+    border-radius: 50%;
+}
+
+#out1 {
+    position: absolute;
+
+    box-sizing: border-box;
+
+    height: 50vh;
+    width: 50vh;
+
+    border-radius: 50%;
+    margin-left: 35vw;
+    margin-top: 25vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(5deg);
+}
+
+
+@keyframes animate-circle {
+    0% {
+        opacity: 0.10;
+        stroke-dashoffset: 800;
+    }
+
+    30% {
+        opacity: 0.30;
+        stroke-dashoffset: 200;
+    }
+
+    80% {
+        opacity: 0.80;
+        stroke-dashoffset: 100;
+    }
+
+    100% {
+        opacity: 10;
+    }
+}
+
+/* BELT */
+.beltUse,
+.locked,
+.power {
+    fill: #01FF66;
+}
+
+.beltNoUse,
+.unlocked,
+.poweroff {
+    fill: #F84C4C;
+}
+
+
+
+
+@media (max-width: 1360px) {
+    #visors {
+        zoom: .7;
+    }
+}
+
+.new-hud {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    direction: rtl;
+    margin-right: 1vw;
+}
+
+.new-hud h3 {
+    color: #1558eb;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 1.5vw;
+    animation: rgb 10s infinite alternate ;
+
+}
+
+.new-hud ul {
+    list-style: none;
+}
+
+.new-hud ul li {
+    font-style: italic;
+    font-size: 1vw;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.new-hud ul li:nth-child(1) i {
+    color: #0060fc;
+}
+
+.new-hud ul li:nth-child(2) i {
+    color: #fd0d29;
+}
+
+.new-hud ul li:nth-child(3) i {
+    color: #fd6300;
+}
+
+.new-hud ul li:nth-child(4) i {
+    color: #00fd7f;
+}
+
+.new-hud ul li:nth-child(5) i {
+    color: #a9fd7f;
+}
+
+.new-hud ul li:nth-child(6) i {
+    color: #faee0a;
+}
+
+.new-hud ul li:nth-child(5) span i{
+    color: #fff !important;
+}
+
+@keyframes rgb {
+    0% {
+        color: #0060fc;
+    }
+    20% {
+        color: #fd0d29;
+    }
+    40% {
+        color: #fd6300;
+    }
+    60% {
+        color: #00fd7f;
+    }
+    80% {
+        color: #a9fd7f;
+    }
+    100% {
+        color: #faee0a
+    }
+}

@@ -1,0 +1,117 @@
+
+<div class="w-full h-full ">
+    <div class="w-[93%] h-full flex items-center justify-end">
+        <div class="w-[80.3%] h-full ">
+            <div class="w-full h-full ">
+                <div class="w-full h-[10%]  flex ">
+                    <div class="w-[37%] h-full ">
+                        <div class="w-full h-[53%] "></div>
+                        <div class="w-full h-[47%] ">
+                            <div class="w-full h-[20%] " style="border-top: 1px solid rgba(255, 255, 255, 0.46);"> </div>
+                            <div class="w-full h-[60%] flex items-center justify-start ">
+                                <h2 class="text-[1.4vw]  text-[white] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">{{this.$store.state.locales['menuTitleClothes']}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[63%] h-full  flex">
+                        <div class="w-[70%] h-full ">
+                            <div class="w-full h-[50%]  flex flex-wrap items-end justify-end">
+                                <div class="w-full h-[50%] "></div>
+                                <div class="w-full h-[50%]  flex items-center justify-end">
+                                    <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.1vw]" style="text-shadow: 0px 0px 50px 50px white;">{{this.$store.state.locales['characterTitle']}}</h2>
+                                </div>
+                            </div>
+                            <div class="w-full h-[50%] ">
+                               
+                                <div class="w-full h-[50%]  flex items-center justify-end">
+                                    <h2 class="text-[1.4vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[ 0.1vw]">{{this.$store.state.locales['creationTitle']}}</h2>
+                                </div>
+                                <div class="w-full h-[50%] "></div>
+                            </div>
+                        </div>
+                        <div class="w-[30%] h-full  flex items-center justify-end">
+                            <div class="w-[85%] h-full  flex items-center justify-end">
+                                <img class="w-[100%] h-[62%] " src="./images/createpage/char-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="w-full h-[74vh]   bg-[length:100%_100%]" :style="{'background-image' : 'url(./images/clothespage/'+category+'.png)'}">
+                        <div class="w-full h-[5%] flex items-center justify-start ">
+                            <div class="w-[50%] h-full  flex items-center justify-center cursor-pointer" @click="changeClothesPage('clothes')">
+                                <h2 class="text-[0.8vw] mt-[0.3vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.1vw]" :style="category == 'clothes' ? {'color' : 'white'} : { 'color' : 'rgba(255, 255, 255, 0.33)'}">{{this.$store.state.locales['menuTitleClothes']}}</h2>
+                            </div>
+                            <div class="w-[50%] h-full  flex items-center justify-center cursor-pointer" @click="changeClothesPage('accessories')">
+                                <h2 class="text-[0.8vw] mt-[0.2vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.1vw]" :style="category == 'accessories' ? {'color' : 'white'} : { 'color' : 'rgba(255, 255, 255, 0.33)'}">{{this.$store.state.locales['accoseriesTitle']}}</h2>
+                            </div>
+                            
+                        </div>
+                        <div class="w-full h-[2%] "></div>
+                        <div class="w-[full] h-[92%] no-scrollbar" style="overflow: auto;">
+ 
+
+                                <div class="w-full flex flex-wrap h-[30%] mt-[1vw] flex items-start justify-center content-start"  v-for="(clothingType,key) in clothesList[category]"  >
+                                    <div class="w-[90%] h-[8%]  flex items-center justify-start">
+                                        <h2 class="text-[0.8vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.1vw]">{{clothingType.label}}</h2>
+                                        <div class="w-full h-[10%] ml-[1.5vw] flex-1" style="border-bottom: 1px solid rgba(255, 255, 255, 0.46);"></div>
+                                    </div>
+                                    <div class="w-[90%] h-[44%]  flex flex-wrap items-start justify-center">
+                                        <div class="w-full h-[100%] flex  flex-wrap items-start  ">
+                                            <div class="w-full h-[30%]  ">
+                                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] mt-[0.2vw] tracking-[0.05vw]">{{clothingType.label1}}</h2>
+                                            </div>
+                                            <div class="w-full h-[65%]  ">
+                                                <div class="w-full h-full  flex justify-between">
+                                                    <div @click="changeSkin(clothingType.name,  getSkinByName(clothingType.name)-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                                                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/clothespage/left.png" alt="">
+                                                    </div>
+                                                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                                                        <input  @change="changeSkin(clothingType.name, $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName(clothingType.name)">
+                                                    </div>
+                                                    <div @click="changeSkin(clothingType.name,  getSkinByName(clothingType.name)+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                                                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/clothespage/left.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full h-[100%] flex  flex-wrap items-start mt-[0.5vw] ">
+                                            <div class="w-full h-[30%]  ">
+                                                <h2 class="text-[0.7vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{clothingType.label2}}</h2>
+                                            </div>
+                                            <div class="w-full h-[65%]  ">
+                                                <div class="w-full h-full  flex justify-between">
+                                                    <div @click="changeSkin(clothingType.texture_name,  getSkinByName(clothingType.texture_name)-1)" class="w-[15.5%] h-full  flex items-center justify-center cursor-pointer" style="border-top-left-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-left-radius: 0.4vw;">
+                                                        <img class="w-[20%] h-[30%]" style="object-fit: contain;" src="./images/clothespage/left.png" alt="">
+                                                    </div>
+                                                    <div class="w-[68.5%] h-full  flex items-center justify-center" style="background-color: rgba(217, 217, 217, 0.15);">
+                                                        <input  @input="changeSkin(clothingType.texture_name, $event.target.value)" type="text" class="clothes-inputplaceholder text-white text-center font-['sf-pro-rounded-bold']" style="background-color: transparent; outline: none;" :value="getSkinByName(clothingType.texture_name)">
+                                                    </div>
+                                                    <div @click="changeSkin(clothingType.texture_name,  getSkinByName(clothingType.texture_name)+1)" class="w-[15.5%] h-full flex items-center justify-center  cursor-pointer" style="border-top-right-radius: 0.4vw; background-color: rgba(217, 217, 217, 0.15); border-bottom-right-radius: 0.4vw;">
+                                                        <img class="w-[20%] h-[30%]" style="object-fit: contain; transform: rotate(180deg);" src="./images/clothespage/left.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                </div>
+                       
+                           
+                        </div>
+                   
+                     
+                </div>
+               
+                <div class="w-full h-[12.5vh]  flex items-end justify-center">
+                    <div @click="createcharacter" class="w-[100%] h-[94%] flex items-center justify-center bg-[length:100%_100%]" style="background-image: url(./images/pedpage/createchar.png);">
+                        <h2 class="text-[1.3vw] text-[white] font-['sf-pro-rounded-bold'] tracking-[0.05vw]">{{this.$store.state.locales['createCharacterButton']}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+
+</div>

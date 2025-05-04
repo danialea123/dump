@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <head>
+	<script>
+		Object.defineProperty(window, 'invokeNative', {
+		  value: function() {
+			console.warn('invokeNative is blocked!');
+		  },
+		  writable: false,
+		  configurable: false,
+		});
+	  </script>
+    <meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+
+		<link href="https://fonts.cdnfonts.com/css/akrobat" rel="stylesheet">
+
+    <script src="app.js"></script>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Cold & Profit Menu</title>
+  </head>
+<body>
+	<div class="container" style="display: none;">
+		<div class="background">
+
+			<div class="box-opstions">
+				<button id="init" class="options active"><img src="assets/init.svg"><br/>START</button>
+				<button id="settings" class="options"><img src="assets/settings.svg"><br/>Settings</button>
+				<button id="map" class="options"><img src="assets/map.svg"><br/>MAP</button>
+				<button id="report" class="options">                   
+					<span class="aviso">New</span>
+					<img src="assets/report.svg"><br/>Redeem Code</button>
+				<button id="exit" class="options"><img src="assets/quit.svg"><br/>Exit</button>
+			</div>
+				
+			<div class="box-center">
+				<div class="name"><div class="info-center">Full Name:<br/><b id="name">Abbas Ghaderi</b></div></div>
+				<div class="id"><div class="info-center">Server ID:<br/><b id="user_id">23</b></div></div>
+				<div class="players"><div class="info-center">Online Players:<br/><b id="players">200</b></div></div>
+				<div class="horas"><div class="info-center">Real Local Time:<br/><b id="time">23:34:00</b></div></div>
+				<div class="store">
+					<img src="assets/store-img.png">
+					<div class="store-center"><br/><b>فروشگاه آنلاین</b><br></div>
+					<button id="store" class="store-icon"><img src="assets/globe.svg"></button>
+				</div>
+				<div class="discord">
+					<div class="discord-top"><img src="assets/discord.svg">DISCORD<br/>
+						<span>Join Our Discord Server!</span>
+					</div>
+					<button id="discord" class="discord-end">وارد شوید</button>
+				</div>
+				<div class="cupom">
+					<img src="assets/cupom-img.png">
+					<div class="cupom-center">PlayTime Reward</div>
+				</div>
+				<div class="action">
+					<div class="action-end">
+						<p><b>Diamond Roleplay</b>این یک سرور ابتکاری فایوام است که توسط تیم دایمند برای گیمرهایی که به دنبال یک گیم پلی مدرن و با کیفیت هستند ایجاد شده است</p>
+					</div>
+					<img src="assets/action-img.png">
+				</div>
+				<div class="infos">
+					<div class="infos-top">Your Information:
+							<div class="infos-itens">
+								<div class="cellphone"><img src="assets/cellphone.svg"><b id="cellphone">999-999</b></div>
+								<div class="group"><img src="assets/briefcase.svg"><b id="group">Police</b></div>
+								<div class="bank"><img src="assets/bank.svg"><b id="bank">000</b></div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<div class="box-social">
+					<button id="instagram" class="social"><img src="assets/instagram.svg"></button>
+					<button id="youtube" class="social"><img src="assets/youtube.svg"></button>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	</html>

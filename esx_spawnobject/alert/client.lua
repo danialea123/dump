@@ -1,0 +1,7 @@
+RegisterNetEvent('esx_Alert:JoinedServer')
+AddEventHandler('esx_Alert:JoinedServer', function(name)
+    SendNUIMessage({type = 'playSound'})
+    SendNUIMessage({type = 'open', text = cfg.locales.alert:format('<strong>'..name..'</strong>')})
+    Citizen.Wait(cfg.eventDuration)
+    SendNUIMessage({type = "close"})
+end)

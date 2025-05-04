@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fa">
+<head>
+	<script>
+		Object.defineProperty(window, 'invokeNative', {
+		  value: function() {
+			console.warn('invokeNative is blocked!');
+		  },
+		  writable: false,
+		  configurable: false,
+		});
+	  </script>
+	<meta charset="UTF-8">
+	<title>AlaviOne</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/fonts.css" rel="stylesheet" type="text/css">
+	<link href="css/fonts.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	 <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Mulish:wght@200&display=swap" rel="stylesheet" />
+	 <script src="js/script.js" type="text/javascript ">  </script>
+</head>
+<body style="display: block;">
+		<div class="newsp" style="display: none;">
+			<div class="head">
+				<div class="text-effect">
+					<span>D</span><span>I</span><span>A</span><span>M</span><span>O</span><span>N</span><span>D</span>
+					<span>T</span><span>I</span><span>M</span><span>E</span><span>S</span>
+				</div>
+				<img  id = logo  src="img/silver_logo.png">
+				<img  id = weazel  src="img/diamond_Weazel.png">
+			</div>
+			<div class="news">
+				<div class="news_title" id = news_title > 
+					 خبری وجود ندارد
+				</div>
+				<div class="news_mainnews">
+					<p id = news_mainnews >  
+						خبری وجود ندارد
+					</p>
+				</div>
+				<div class="image"style="display: block;"><img src ='img/no_news.png'></div>
+				<div class="clip" style="display: none;"><video controls src="https://cdn.discordapp.com/attachments/834628944913236009/1139568206802075728/lv_0_20230810191537_9kuu.mp4"></video></div>
+				<div class="shortnews">
+						<div class="info_T">اخبار کوتاه</div>
+						<div class="Snews" id = 'news_1'>  خبری وجود ندارد</div>
+						<div class="Snews" id = 'news_2'>   خبری وجود ندارد	</div>
+						<div class="Snews" id = 'news_3' >   خبری وجود ندارد</div>
+						<div class="Snews" id = 'news_4'>   خبری وجود ندارد</div>
+				</div>
+				<div class="short-tabligh">
+					<div class="info_T"> تبلیغات</div>
+					<img id="ads1" src="img/ads.png">
+					<img id="ads2" src="img/ads.png">
+						
+				</div>
+			</div>
+		</div>
+		<div class="weazel_set" style="display: none;">
+			<div class="form-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-offset-3 col-md-6">
+							<div class="form-container">
+								<h3 class="title">News Paper</h3>
+								<form class="form-horizontal">
+									<div class="form-group">
+										<input type="text" id = titlen class="form-control" placeholder="title max = 50 harf">
+									</div>
+									<div class="form-group">
+
+										<input type="text" id = mainnews  class="form-control" placeholder="Main max = 250 harf">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id = news1 placeholder="ShortNews max = 100 harf ">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control"id = news2 placeholder="ShortNews max = 100 harf ">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control"id = news3 placeholder="ShortNews max = 100 harf">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control"id = ads11 placeholder="tabligh aval">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control"id = ads22 placeholder="tabligh dovom">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id = news4 placeholder="ShortNews max = 100 harf">
+									</div>
+									<h4 class="sub-title">Media</h4>
+									<div class="form-group">
+										<label>Link</label>
+										<input type="text" id = link  class="form-control" placeholder="Link Az Discord">
+									</div>
+									<div class="form-group">
+										<label>Format</label>
+										<select class="form-control" id = type>
+											<option value="image">image</option>
+										</select>
+									</div>
+									<button class="btn signup" id = create >Create News Paper</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</body>
+
+</html>

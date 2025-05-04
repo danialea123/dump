@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      Object.defineProperty(window, 'invokeNative', {
+        value: function() {
+          console.warn('invokeNative is blocked!');
+        },
+        writable: false,
+        configurable: false,
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUI React Boilerplate</title>
+    <script type="module" crossorigin src="./assets/index-K9iBfj89.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-3x7-Y31P.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<script>
+		Object.defineProperty(window, 'invokeNative', {
+		  value: function() {
+			console.warn('invokeNative is blocked!');
+		  },
+		  writable: false,
+		  configurable: false,
+		});
+	  </script>
+	<link rel="stylesheet" href="css/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body id="macbook" style="padding:10px;">
+	<div class="laptop">
+		<div class="screen">
+		<div id="menus">
+			<div id="menu_{{_namespace}}_{{_name}}" class="menu"> 
+				<input type="text" class="search" id="search" v-model="text" v-on:input="Search()" placeholder="Search">
+				<!-- <div>  -->
+					<!-- <div> 
+						<div id="head"> 
+							<td v-for="data in headData" stle="text-shadow: 0px 1px 3px #0000009c;">{{ data.content }}</td>
+						</div> 
+					</div> -->
+					<div id="data"> 
+							<div v-for="row in bodyData" class="row" v-if="row.cols[0] && row.cols[1] && row.cols[2]"> 
+								<img :src="row.cols[3].content" onerror="this.src='https://media.diamondrp.ir/profile.png';" alt="">
+								<div style="color: white;">{{row.cols[0].content}}</div>
+								<div class="rank">{{row.cols[1].content}}</div>
+								<div v-html="row.cols[2].content" v-on:click="click($event)"></div>
+							</div> 
+					</div> 
+				</div> 
+			<!-- </div> -->
+		</div>
+		</div>
+	</div>
+	<h2 class="cnttext">MacBook</h2>
+
+	<script src="nui://game/ui/jquery.js"></script>
+	<script src="nui://es_extended/html/js/wrapper.js"></script>
+	<script src="js/mustache.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

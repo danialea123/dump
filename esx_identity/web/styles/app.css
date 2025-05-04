@@ -1,0 +1,637 @@
+:root {
+    --color: #428eff;
+    --gradient: linear-gradient(315deg, #428eff 0%, #1f3548 100%);
+}
+
+div,
+input {
+    font-size: 0.833vw;
+}
+svg {
+    width: 0.833vw;
+    height: 0.833vw;
+}
+
+img,
+.socials svg,
+.text-input svg {
+    width: 60%;
+    height: 60%;
+}
+
+div.datedropper {
+    --dd-color1: var(--color);
+    --dd-color2: rgba(27, 27, 27, 0.9);
+    --dd-color3: white;
+    --dd-color4: white;
+    --dd-radius: 0.313vw;
+    --dd-width: 9.375vw;
+    --dd-shadow: 0 0 1.667vw 0 rgba(0, 0, 0, 0.1);
+}
+
+div.datedropper .picker {
+    backdrop-filter: blur(0.26vw);
+    border-radius: 1.042vw !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+input,
+.gender-item {
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    color: white;
+    font-family: AliBabaNormal;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: TekoSemiBold;
+    src: url(/web/fonts/Teko-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: AliBabaBold;
+    src: url(/web/fonts/AlibabaSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: AliBabaNormal;
+    src: url(/web/fonts/AlibabaSans-Regular.ttf);
+}
+@font-face {
+    font-family: Akrobat;
+    src: url(/web/fonts/Akrobat-ExtraBold.otf);
+}
+
+input {
+    font-family: AliBabaNormal;
+}
+
+label svg,
+.title svg {
+    fill: var(--color);
+}
+
+/* FORM STYLES */
+
+.register-form {
+    height: 100vh;
+    width: 100%;
+}
+
+.register-form > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.register-form .leftside {
+    position: absolute;
+    top: 5.208vw;
+    left: 6.771vw;
+}
+
+.register-form .leftside .title {
+    font-family: TekoSemiBold;
+    margin-left: 3.646vw;
+    font-size: 3.125vw;
+    color: transparent;
+    -webkit-text-stroke-width: 0.104vw; /* 1px Stroke */
+    -webkit-text-stroke-color: var(--color); /* White Color */
+}
+
+.input {
+    margin-top: 1.563vw;
+}
+
+.input label {
+    font-family: AliBabaBold;
+    display: flex;
+    align-items: center;
+    gap: 0.313vw;
+    font-size: 0.833vw;
+}
+
+.input .text-input {
+    margin-top: 0.26vw;
+    width: 17.031vw;
+    height: 3.75vw;
+    position: relative;
+}
+
+.input .text-input .icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient);
+    border-radius: 0.677vw;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.042vw;
+}
+
+.input .text-input input {
+    font-family: AliBabaNormal;
+    color: white;
+    border-radius: 1.25vw;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.26vw);
+    width: 100%;
+    height: 100%;
+    padding: 0 2.083vw;
+}
+
+.input .text-input .state {
+    position: absolute;
+    right: 1.042vw;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.input.height .text-input {
+    width: 7.969vw;
+}
+
+.height-gender {
+    display: flex;
+    align-items: end;
+    gap: 1.094vw;
+}
+
+.gender {
+    display: flex;
+    gap: 0.521vw;
+}
+
+.gender .gender-item {
+    cursor: pointer;
+    width: 3.385vw;
+    height: 3.385vw;
+    border-radius: 1.25vw;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.26vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.referral-form {
+    display: flex;
+    gap: 1.563vw;
+    position: relative;
+    left: -0.521vw;
+    margin-top: 0.521vw;
+}
+
+.referral {
+    display: flex;
+    position: relative;
+    margin-top: 2.083vw;
+    width: 10.781vw;
+    height: 3.854vw;
+}
+
+.referral input {
+    border: none;
+    outline: none;
+    width: 10.781vw;
+    height: 3.854vw;
+    border-radius: 1.25vw;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.26vw);
+    color: white;
+    padding: 0 2.604vw;
+}
+
+.referral .icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient);
+    border-radius: 0.677vw;
+    position: absolute;
+    z-index: 2;
+    top: -0.521vw;
+    left: -0.521vw;
+}
+
+.referral .box {
+    width: 1.406vw;
+    height: 1.406vw;
+    border-radius: 0.417vw;
+    background: var(--color);
+}
+
+.referral .box[data-idx="1"] {
+    position: absolute;
+    left: -0.26vw;
+    bottom: -0.26vw;
+    z-index: -1;
+}
+
+.referral .box[data-idx="2"] {
+    position: absolute;
+    right: -0.26vw;
+    top: -0.26vw;
+    z-index: -1;
+}
+
+.referral .apply {
+    position: absolute;
+    bottom: -1.354vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7.656vw;
+    height: 2.188vw;
+    border-radius: 0.625vw;
+    background: url(/web/images/bg-button.png), var(--color);
+    border: none;
+    color: white;
+    font-family: AliBabaBold;
+    font-size: 0.833vw;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.referral .apply:hover {
+    opacity: 0.9;
+}
+
+.referral .apply:disabled {
+    opacity: 0.7;
+}
+
+.referral .user-code {
+    font-family: AliBabaNormal;
+    border: none;
+    outline: none;
+    width: 10.781vw;
+    height: 3.854vw;
+    border-radius: 1.25vw;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.26vw);
+    color: white;
+    padding: 0 2.604vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.referral label {
+    font-family: AliBabaBold;
+    display: flex;
+    align-items: center;
+    gap: 0.313vw;
+    position: absolute;
+    top: -1.302vw;
+}
+
+.create {
+    margin-top: 3.125vw;
+    width: 17.031vw;
+    height: 3.698vw;
+    background: url(/web/images/bg-button.png), var(--color);
+    border-radius: 0.625vw;
+    border: none;
+    color: white;
+    font-family: AliBabaBold;
+    font-size: 1.042vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create:hover {
+    opacity: 0.8;
+}
+
+/* SOCIALS STYLE */
+
+.socials {
+    position: absolute;
+    right: -4.688vw;
+    top: 25.521vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.833vw;
+}
+
+.socials .social {
+    display: flex;
+    align-items: center;
+    gap: 0.781vw;
+    text-decoration: none;
+    color: white;
+    font-family: AliBabaNormal;
+    font-size: 0.938vw;
+    transition: all 0.3s ease;
+}
+#instagram:hover {
+    transform: translateX(-5vw);
+}
+#discord:hover {
+    transform: translateX(-4.167vw);
+}
+#Website:hover {
+    transform: translateX(-4.167vw);
+}
+
+.social p {
+    font-weight: 900;
+}
+
+.socials .social .icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.677vw;
+}
+
+/* REWARD STYLES */
+
+#rewards-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    width: 22.604vw;
+    height: 31.615vw;
+}
+
+#reward-items {
+    position: relative;
+}
+
+.reward {
+    width: 22.604vw;
+    height: 31.615vw;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reward > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.reward-detail {
+    margin-top: 1.563vw;
+    width: 13.021vw;
+    height: 3.073vw;
+    position: relative;
+}
+
+.reward-detail .content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.833vw;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.26vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reward-detail .content h1 {
+    font-size: 0.729vw;
+}
+
+.reward-detail .icon {
+    position: absolute;
+    left: -0.521vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.563vw;
+    width: 1.563vw;
+    border-radius: 0.417vw;
+    background: var(--gradient);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reward-detail .icon svg {
+    width: 0.938vw;
+}
+
+.reward-detail .title {
+    font-family: AliBabaBold;
+    position: absolute;
+    top: -1.302vw;
+    left: 1.042vw;
+}
+
+.reward-detail.item {
+    width: 13.021vw;
+    height: 6.354vw;
+}
+
+.claim {
+    margin-top: 1.042vw;
+    width: 12.76vw;
+    height: 2.708vw;
+    background: url(/web/images/bg-button.png), var(--color);
+    border-radius: 0.625vw;
+    border: none;
+    color: black;
+    font-family: AliBabaBold;
+    font-size: 0.833vw;
+    cursor: pointer;
+}
+
+.loading {
+    animation: rotate 1s ease 0s infinite forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(365deg);
+    }
+}
+
+.loader-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.521vw;
+    background: rgba(0, 0, 0, 0.923);
+    z-index: 999;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    display: inline-block;
+    width: 0.156vw;
+    height: 1.042vw;
+    background-color: var(--color);
+    opacity: 0.5;
+    border-radius: 0.521vw;
+    animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+    height: 1.823vw;
+    margin: 0 0.26vw;
+    animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+    20% {
+        opacity: 1;
+        background-color: var(--color);
+        transform: scaleY(1.5);
+    }
+
+    40% {
+        transform: scaleY(1);
+    }
+}
+
+#reward-claim:disabled {
+    opacity: 0.8;
+}
+
+#reward-code:hover {
+    cursor: pointer;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10.417vw;
+    height: 10.417vw;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hover {
+    position: absolute;
+    left: -0.521vw;
+    bottom: -0.521vw;
+    z-index: -1;
+    width: 1.042vw;
+    height: 1.042vw;
+    background: var(--gradient);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.active .hover {
+    transform: scale(10);
+    opacity: 1;
+}
+
+/* TUTORIAL */
+
+.tutorial {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.tutorial .bg {
+    width: 31.25vw;
+    height: 5.208vw;
+    filter: blur(5.208vw);
+    z-index: -2;
+    background: var(--color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tutorial .title {
+    font-family: Akrobat;
+    font-size: 7.292vw;
+}
+
+.tutorial .description {
+    max-width: 36.458vw;
+}
+
+.hide_tutorial {
+    opacity: 0;
+}
+
+#reward-item-image {
+    width: 90%;
+    height: 70%;
+    object-fit: contain;
+}
